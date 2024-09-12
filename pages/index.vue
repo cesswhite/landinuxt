@@ -1,5 +1,3 @@
 <template>
-  <UContainer>
-    Test
-  </UContainer>
+  <LandingHero />
 </template>

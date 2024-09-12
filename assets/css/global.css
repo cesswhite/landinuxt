@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  min-width: 0;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  background-color: inherit;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+#__nuxt {
+  isolation: isolate;
+  height: 100%;
+}
+/* p,
+img {
+  margin: 0 auto;
+} */
+
+.center-top {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.center-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+.center-bottom {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Default class for <Transition> component */
+.fade-enter-active,
+.fade-leave-active {
+  will-change: transition;
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* For Testing purposes */
+.\? {
+  outline: 1px solid red;
+}
