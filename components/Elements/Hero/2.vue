@@ -1,59 +1,27 @@
 <template>
-    <header class="w-full relative flex items-center justify-between bg-white dark:bg-gray-950 px-4 py-2">
-        <div class="size-8">
-            <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
-                class="size-full object-contain object-center" loading="lazy" alt="my-company-logo-description"
-                :placeholder="[50, 25, 75, 5]" />
-        </div>
-        <nav class="hidden md:flex items-center justify-start">
-            <UButton variant="link" color="primary" size="lg" to="/">
-                Home
-            </UButton>
-            <UButton variant="link" color="primary" size="lg" to="/">
-                About
-            </UButton>
-            <UButton variant="link" color="primary" size="lg" to="/">
-                Services
-            </UButton>
-            <UButton variant="link" color="primary" size="lg" to="/">
-                Contact
-            </UButton>
-            <UButton variant="link" color="primary" size="lg" to="/">
-                Blog
-            </UButton>
-        </nav>
-        <div class="inline-block md:hidden">
-            <UButton icon="i-heroicons-bars-3" variant="link" color="primary" size="lg"
-                @click="isOpenResponsiveMenu = true" />
-        </div>
-        <USlideover v-model="isOpenResponsiveMenu">
-            <div class="p-4">
-                <div class="flex items-center justify-end">
-                    <UButton icon="i-heroicons-x-mark" variant="link" color="primary" size="lg"
-                        @click="isOpenResponsiveMenu = false" />
+    <div class="relative flex h-full min-h-dvh w-full items-center justify-center bg-gray-50 dark:bg-gray-950">
+        <div class="relative z-20 w-11/12 md:w-10/12">
+            <div class="flex flex-col items-center justify-center">
+                <UBadge variant="soft" class="border-primary rounded-full border px-4 text-center md:px-12" size="lg">
+                    Beatifult hand-crafter components
+                </UBadge>
+                <h1
+                    class="mt-8 text-center text-5xl font-semibold text-gray-900 sm:text-6xl md:text-7xl dark:text-gray-100">
+                    Build your <br />
+                    Dream Home
+                </h1>
+                <p
+                    class="text-primary-950/60 dark:text-primary-50/50 mt-4 w-full text-center text-lg leading-8 sm:w-1/2 2xl:w-1/3 2xl:text-xl">
+                    Unlock your construction project's full potential with our
+                    comprehensive suite of tools and services
+                </p>
+                <div class="mt-8 flex flex-col-reverse items-center justify-center gap-4 lg:flex-row">
+                    <UButton variant="ghost" to="#" size="lg"> More info </UButton>
+                    <UButton variant="solid" to="#" size="lg">
+                        Explore components
+                    </UButton>
                 </div>
-                <nav class="flex flex-col items-center justify-start w-full mt-12">
-                    <UButton block variant="link" color="primary" size="lg" to="/">
-                        Home
-                    </UButton>
-                    <UButton block variant="link" color="primary" size="lg" to="/">
-                        About
-                    </UButton>
-                    <UButton block variant="link" color="primary" size="lg" to="/">
-                        Services
-                    </UButton>
-                    <UButton block variant="link" color="primary" size="lg" to="/">
-                        Contact
-                    </UButton>
-                    <UButton block variant="link" color="primary" size="lg" to="/">
-                        Blog
-                    </UButton>
-                </nav>
             </div>
-        </USlideover>
-    </header>
+        </div>
+    </div>
 </template>
-
-<script setup lang="ts">
-const isOpenResponsiveMenu = ref(false)
-</script>

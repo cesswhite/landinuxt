@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full relative pt-24 px-4 ">
+    <div class="w-full relative py-24 px-4 ">
         <ContentList path="/headers" v-slot="{ list }">
             <template v-for="(item, index) in list" :key="item._path">
                 <div class="rounded-md h-full  p-2 mb-12">
@@ -12,7 +12,7 @@
                                 :variant="item.preview ? 'solid' : 'link'" />
                             <UButton @click="item.preview = false" icon="i-heroicons-code-bracket" label="Code"
                                 :variant="!item.preview ? 'solid' : 'link'" />
-                            <UButton @click="copy(item.body.children[0].props.code)"
+                            <UButton @click="copy(item.body?.children[0]?.props?.code)"
                                 :icon="copied ? 'i-heroicons-clipboard-document-check' : 'i-heroicons-clipboard-document-list'"
                                 variant="ghost" />
                         </div>
