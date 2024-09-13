@@ -1,7 +1,7 @@
 <template>
   <div class="relative w-full px-4 py-24">
     <div class="mb-6">
-      <ElementsHeader name="Hero" />
+      <ElementsHeader name="Hero" :number="_hero.length" />
     </div>
     <ContentList path="/hero" v-slot="{ list }">
       <template v-for="(item, index) in list" :key="item._path">
@@ -100,6 +100,7 @@ import type { HeroTemplates } from "~/types/index";
 import { useClipboard } from "@vueuse/core";
 
 const current = ref<HeroTemplates | null>(null);
+const _hero = await queryContent("hero").find();
 
 function copyCode(code: string, name: HeroTemplates) {
   const { copy, copied } = useClipboard();
