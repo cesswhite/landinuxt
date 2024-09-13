@@ -1,14 +1,3 @@
----
-title: "saas"
-description: "Header component with middle navigation, logo and buttons to auth user"
-dark: true
-parent: "headers"
-component: 2
-preview: true
-copied: false
----
-
-```html
 <template>
   <header
     class="relative flex w-full items-center justify-between bg-white px-4 py-2 dark:bg-gray-950"
@@ -81,6 +70,5 @@ copied: false
 </template>
 
 <script setup lang="ts">
-  const isOpenResponsiveMenu = ref(false);
+const isOpenResponsiveMenu = ref(false);
 </script>
-```
