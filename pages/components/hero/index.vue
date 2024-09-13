@@ -1,8 +1,13 @@
 <template>
   <div class="relative w-full px-4 py-24">
+    <div class="mb-6">
+      <ElementsHeader name="Hero" />
+    </div>
     <ContentList path="/hero" v-slot="{ list }">
       <template v-for="(item, index) in list" :key="item._path">
-        <div class="mb-12 h-full overflow-hidden rounded-md p-2 lg:h-full">
+        <div
+          class="mb-12 h-full overflow-hidden rounded-md border border-gray-500/10 p-2 lg:h-full"
+        >
           <div class="flex flex-col items-start justify-between">
             <div class="text-base">
               <div class="flex items-center gap-2">
