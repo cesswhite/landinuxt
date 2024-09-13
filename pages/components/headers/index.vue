@@ -67,6 +67,9 @@
               <ElementsHeaders2
                 v-if="item.title === ('saas' as HeadersTemplates)"
               />
+              <ElementsHeaders3
+                v-if="item.title === ('indeed' as HeadersTemplates)"
+              />
             </div>
             <div
               v-else
