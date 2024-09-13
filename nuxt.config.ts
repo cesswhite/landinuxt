@@ -26,12 +26,7 @@ export default defineNuxtConfig({
   },
   css: ["~/assets/css/global.css"],
   devtools: { enabled: true },
-  modules: [
-    "@nuxt/ui",
-    "@nuxt/content",
-    "@nuxt/image",
-    "@pinia/nuxt",
-  ],
+  modules: ["@nuxt/ui", "@nuxt/content", "@nuxt/image", "@pinia/nuxt", "nuxt-marquee"],
   content: {
     highlight: {
       theme: 'dracula-soft',

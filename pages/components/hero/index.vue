@@ -71,6 +71,9 @@
               />
               <ElementsHero2 v-if="item.title === ('main' as HeroTemplates)" />
               <ElementsHero3 v-if="item.title === ('half' as HeroTemplates)" />
+              <ElementsHero4
+                v-if="item.title === ('marquee' as HeroTemplates)"
+              />
             </div>
             <div
               v-else

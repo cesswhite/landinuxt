@@ -16,6 +16,7 @@
     "@nuxt/ui": "^2.18.4",
     "@pinia/nuxt": "^0.5.4",
     "nuxt": "^3.12.4",
+    "nuxt-marquee": "^1.0.4",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6"
   },

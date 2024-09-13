@@ -1,2 +1,2 @@
-export type HeroTemplates = 'simple' | 'main' | 'half'
+export type HeroTemplates = 'simple' | 'main' | 'half' | 'marquee'
 export type HeadersTemplates = 'simple' | 'saas' | 'indeed'
