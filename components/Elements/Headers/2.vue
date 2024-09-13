@@ -2,16 +2,16 @@
   <header
     class="relative flex w-full items-center justify-between bg-white px-4 py-2 dark:bg-gray-950"
   >
-    <div class="size-8">
+    <div class="flex w-auto items-center justify-start md:w-full">
       <NuxtImg
         src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
-        class="size-full object-contain object-center"
+        class="size-auto object-contain object-center"
         loading="lazy"
         alt="my-company-logo-description"
         :placeholder="[50, 25, 75, 5]"
       />
     </div>
-    <nav class="hidden items-center justify-start md:flex">
+    <nav class="hidden w-full items-center justify-center lg:flex">
       <UButton variant="link" color="primary" size="lg" to="#"> Home </UButton>
       <UButton variant="link" color="primary" size="lg" to="#"> About </UButton>
       <UButton variant="link" color="primary" size="lg" to="#">
@@ -22,8 +22,12 @@
       </UButton>
       <UButton variant="link" color="primary" size="lg" to="#"> Blog </UButton>
     </nav>
-    <div class="inline-block md:hidden">
+    <div class="flex w-full items-center justify-end gap-4">
+      <UButton label="Sign in" variant="ghost" color="primary" size="lg" />
+      <UButton label="Sign up" variant="solid" color="primary" size="lg" />
+
       <UButton
+        class="inline-block lg:hidden"
         icon="i-heroicons-bars-3"
         variant="link"
         color="primary"
@@ -31,6 +35,7 @@
         @click="isOpenResponsiveMenu = true"
       />
     </div>
+
     <USlideover v-model="isOpenResponsiveMenu">
       <div class="p-4">
         <div class="flex items-center justify-end">
