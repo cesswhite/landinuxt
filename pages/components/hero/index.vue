@@ -12,7 +12,9 @@
                                 :variant="item.preview ? 'solid' : 'link'" />
                             <UButton @click="item.preview = false" icon="i-heroicons-code-bracket" label="Code"
                                 :variant="!item.preview ? 'solid' : 'link'" />
-                            <UButton icon="i-heroicons-clipboard-document-list" variant="ghost" />
+                            <UButton @click="copy(item.body?.children[0]?.props?.code)"
+                                :icon="copied ? 'i-heroicons-clipboard-document-check' : 'i-heroicons-clipboard-document-list'"
+                                variant="ghost" />
                         </div>
                     </div>
                     <Transition name="fade" mode="out-in">
@@ -34,3 +36,10 @@
         </ContentList>
     </div>
 </template>
+
+<script setup lang="ts">
+import { useClipboard } from '@vueuse/core'
+
+const { copy, copied } = useClipboard()
+
+</script>

@@ -20,6 +20,7 @@
                     <Transition name="fade" mode="out-in">
                         <div v-if="item.preview" class="bg-gray-200/80 dark:bg-gray-900 h-96 rounded-md p-2 mt-4">
                             <ElementsHeaders1 v-if="item.title === 'simple'" />
+                            <ElementsHeaders2 v-if="item.title === 'amazing'" />
                         </div>
                         <div v-else class="w-full max-w-full h-full rounded-lg prose scrollbar-hide">
                             <ContentQuery :path="item._path" find="one" v-slot="{ data }">
