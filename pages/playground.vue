@@ -2,88 +2,142 @@
   <div
     class="relative flex h-full min-h-dvh w-full items-center justify-center"
   >
-    <!-- Background Image (try a dark image) -->
-    <NuxtImg
-      class="absolute z-10 h-full w-full object-cover object-center"
-      src="https://images.unsplash.com/photo-1651352076676-58a34812f3d2?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      loading="lazy"
-      alt="my-hero-background"
-      :placeholder="[50, 25, 75, 5]"
-    />
-    <div class="relative z-10 w-11/12 md:w-10/12">
-      <div class="flex flex-col items-start justify-start">
-        <h1
-          class="mt-4 text-left text-5xl font-normal text-gray-100 sm:text-6xl md:text-7xl"
+    <header
+      class="fixed left-0 top-24 z-20 flex w-full items-center justify-between px-4 py-2"
+    >
+      <div class="size-8">
+        <NuxtImg
+          src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
+          class="size-full object-contain object-center"
+          loading="lazy"
+          alt="my-company-logo-description"
+          :placeholder="[50, 25, 75, 5]"
+        />
+      </div>
+      <div
+        class="hidden items-center justify-center rounded-full border border-gray-200/60 bg-gray-50/30 px-24 py-1 md:flex dark:border-gray-500/5 dark:bg-gray-900/90"
+      >
+        <nav class="flex w-full items-center justify-center gap-2">
+          <UButton
+            variant="ghost"
+            color="primary"
+            size="lg"
+            to="#"
+            class="rounded-full px-4"
+          >
+            Home
+          </UButton>
+          <UButton
+            variant="ghost"
+            color="primary"
+            size="lg"
+            to="#"
+            class="rounded-full px-4"
+          >
+            About
+          </UButton>
+
+          <UButton
+            variant="ghost"
+            color="primary"
+            size="lg"
+            to="#"
+            class="rounded-full px-4"
+          >
+            Pricing
+          </UButton>
+          <UButton
+            variant="ghost"
+            color="primary"
+            size="lg"
+            to="#"
+            class="rounded-full px-4"
+          >
+            Contact
+          </UButton>
+        </nav>
+      </div>
+      <div class="flex w-auto gap-4">
+        <UButton
+          icon="i-heroicons-user-solid"
+          class="hidden rounded-full md:flex"
+          size="lg"
         >
-          Unlock the Power of <br />
-          Cutting-Edge Innovation
-        </h1>
-        <div class="mt-8 flex gap-4">
+          Create Account
+        </UButton>
+        <UButton
+          class="flex md:hidden"
+          icon="i-heroicons-bars-3"
+          variant="link"
+          color="primary"
+          size="lg"
+          @click="isOpenResponsiveMenu = true"
+        />
+      </div>
+    </header>
+    <USlideover v-model="isOpenResponsiveMenu">
+      <div class="p-4">
+        <div class="flex items-center justify-end">
           <UButton
-            variant="solid"
-            color="gray"
-            to="#"
-            size="lg"
-            trailing
-            class="rounded-full px-8"
-          >
-            Get started
-          </UButton>
-          <UButton
+            icon="i-heroicons-x-mark"
             variant="link"
-            color="gray"
-            to="#"
+            color="primary"
             size="lg"
-            class="rounded-full px-8"
-          >
-            Request demo
-          </UButton>
+            @click="isOpenResponsiveMenu = false"
+          />
         </div>
+        <nav class="mt-12 flex w-full flex-col items-center justify-start">
+          <UButton
+            variant="ghost"
+            color="primary"
+            size="lg"
+            to="#"
+            class="rounded-full px-4"
+          >
+            Home
+          </UButton>
+          <UButton
+            variant="ghost"
+            color="primary"
+            size="lg"
+            to="#"
+            class="rounded-full px-4"
+          >
+            About
+          </UButton>
+
+          <UButton
+            variant="ghost"
+            color="primary"
+            size="lg"
+            to="#"
+            class="rounded-full px-4"
+          >
+            Pricing
+          </UButton>
+          <UButton
+            variant="ghost"
+            color="primary"
+            size="lg"
+            to="#"
+            class="rounded-full px-4"
+          >
+            Contact
+          </UButton>
+          <UButton
+            class="rounded-full px-4"
+            variant="ghost"
+            color="primary"
+            size="lg"
+          >
+            Create Account
+          </UButton>
+        </nav>
       </div>
-    </div>
-    <div class="absolute bottom-8 z-20 w-full">
-      <div class="flex w-full items-center justify-center gap-16">
-        <template v-for="icon in icons">
-          <div class="group size-auto items-center justify-center">
-            <UIcon
-              :name="icon"
-              class="size-8 text-gray-50/10 group-hover:text-gray-50/50"
-            />
-          </div>
-        </template>
-      </div>
-    </div>
+    </USlideover>
   </div>
 </template>
 
 <script setup lang="ts">
-const icons = [
-  "i-simple-icons-adobeillustrator",
-  "i-simple-icons-amazon",
-  "i-simple-icons-akaunting",
-  "i-simple-icons-alchemy",
-  "i-simple-icons-amp",
-  "i-simple-icons-google",
-  "i-simple-icons-facebook",
-  "i-simple-icons-vite",
-  "i-simple-icons-nike",
-  "i-simple-icons-apple",
-  "i-simple-icons-microsoft",
-  "i-simple-icons-twitter",
-  "i-simple-icons-linkedin",
-  "i-simple-icons-instagram",
-  "i-simple-icons-youtube",
-  "i-simple-icons-whatsapp",
-  "i-simple-icons-telegram",
-  "i-simple-icons-tiktok",
-  "i-simple-icons-snapchat",
-  "i-simple-icons-pinterest",
-  "i-simple-icons-twitch",
-  "i-simple-icons-discord",
-  "i-simple-icons-reddit",
-  "i-simple-icons-medium",
-  "i-simple-icons-spotify",
-  "i-simple-icons-netflix",
-  "i-simple-icons-hulu",
-];
+const isOpenResponsiveMenu = ref(false);
 </script>

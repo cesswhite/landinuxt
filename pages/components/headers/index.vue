@@ -73,6 +73,9 @@
               <ElementsHeaders3
                 v-if="item.title === ('indeed' as HeadersTemplates)"
               />
+              <ElementsHeaders4
+                v-if="item.title === ('float' as HeadersTemplates)"
+              />
             </div>
             <div
               v-else

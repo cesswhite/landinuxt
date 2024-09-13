@@ -1,0 +1,139 @@
+<template>
+  <header
+    class="relative z-20 flex w-full items-center justify-between px-4 py-2"
+  >
+    <div class="size-8">
+      <NuxtImg
+        src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
+        class="size-full object-contain object-center"
+        loading="lazy"
+        alt="my-company-logo-description"
+        :placeholder="[50, 25, 75, 5]"
+      />
+    </div>
+    <div
+      class="hidden items-center justify-center rounded-full border border-gray-200/60 bg-gray-50/30 px-24 py-1 backdrop-blur md:flex dark:border-gray-500/5 dark:bg-gray-900/90"
+    >
+      <nav class="flex w-full items-center justify-center gap-2">
+        <UButton
+          variant="ghost"
+          color="primary"
+          size="lg"
+          to="#"
+          class="rounded-full px-4"
+        >
+          Home
+        </UButton>
+        <UButton
+          variant="ghost"
+          color="primary"
+          size="lg"
+          to="#"
+          class="rounded-full px-4"
+        >
+          About
+        </UButton>
+
+        <UButton
+          variant="ghost"
+          color="primary"
+          size="lg"
+          to="#"
+          class="rounded-full px-4"
+        >
+          Pricing
+        </UButton>
+        <UButton
+          variant="ghost"
+          color="primary"
+          size="lg"
+          to="#"
+          class="rounded-full px-4"
+        >
+          Contact
+        </UButton>
+      </nav>
+    </div>
+    <div class="flex w-auto gap-4">
+      <UButton
+        icon="i-heroicons-user-solid"
+        class="hidden rounded-full md:flex"
+        size="lg"
+      >
+        Create Account
+      </UButton>
+      <UButton
+        class="flex md:hidden"
+        icon="i-heroicons-bars-3"
+        variant="link"
+        color="primary"
+        size="lg"
+        @click="isOpenResponsiveMenu = true"
+      />
+    </div>
+    <USlideover v-model="isOpenResponsiveMenu">
+      <div class="p-4">
+        <div class="flex items-center justify-end">
+          <UButton
+            icon="i-heroicons-x-mark"
+            variant="link"
+            color="primary"
+            size="lg"
+            @click="isOpenResponsiveMenu = false"
+          />
+        </div>
+        <nav class="mt-12 flex w-full flex-col items-center justify-start">
+          <UButton
+            variant="ghost"
+            color="primary"
+            size="lg"
+            to="#"
+            class="rounded-full px-4"
+          >
+            Home
+          </UButton>
+          <UButton
+            variant="ghost"
+            color="primary"
+            size="lg"
+            to="#"
+            class="rounded-full px-4"
+          >
+            About
+          </UButton>
+
+          <UButton
+            variant="ghost"
+            color="primary"
+            size="lg"
+            to="#"
+            class="rounded-full px-4"
+          >
+            Pricing
+          </UButton>
+          <UButton
+            variant="ghost"
+            color="primary"
+            size="lg"
+            to="#"
+            class="rounded-full px-4"
+          >
+            Contact
+          </UButton>
+          <UButton
+            class="rounded-full px-4"
+            variant="ghost"
+            color="primary"
+            size="lg"
+          >
+            Create Account
+          </UButton>
+        </nav>
+      </div>
+    </USlideover>
+  </header>
+</template>
+
+<script setup lang="ts">
+const isOpenResponsiveMenu = ref(false);
+</script>
