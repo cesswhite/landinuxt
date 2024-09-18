@@ -35,7 +35,10 @@ export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@nuxt/content", "@nuxt/image", "@pinia/nuxt", "nuxt-marquee", "@nuxt/fonts"],
   content: {
     highlight: {
-      theme: 'dracula-soft',
+      theme: {
+        default: 'vitesse-light',
+        dark: 'vitesse-dark',
+      }
     }
   }
   /* future: {
