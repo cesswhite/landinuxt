@@ -24,9 +24,15 @@ export default defineNuxtConfig({
       },
     },
   },
+  fonts: {
+    families: [
+      { name: "Inter", provider: "google" },
+      { name: "Lora", provider: "google" },
+    ],
+  },
   css: ["~/assets/css/global.css"],
   devtools: { enabled: true },
-  modules: ["@nuxt/ui", "@nuxt/content", "@nuxt/image", "@pinia/nuxt", "nuxt-marquee"],
+  modules: ["@nuxt/ui", "@nuxt/content", "@nuxt/image", "@pinia/nuxt", "nuxt-marquee", "@nuxt/fonts"],
   content: {
     highlight: {
       theme: 'dracula-soft',

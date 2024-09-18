@@ -12,6 +12,7 @@
   "devDependencies": {
     "@nuxt/content": "^2.13.2",
     "@nuxt/devtools": "latest",
+    "@nuxt/fonts": "^0.8.0",
     "@nuxt/image": "^1.8.0",
     "@nuxt/ui": "^2.18.4",
     "@pinia/nuxt": "^0.5.4",

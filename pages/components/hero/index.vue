@@ -77,6 +77,10 @@
               <ElementsHero5
                 v-if="item.title === ('only-dark' as HeroTemplates)"
               />
+
+              <ElementsHero6
+                v-if="item.title === ('desaturate' as HeroTemplates)"
+              />
             </div>
             <div
               v-else

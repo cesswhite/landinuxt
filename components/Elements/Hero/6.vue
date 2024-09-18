@@ -1,4 +1,22 @@
 <template>
+  <!-- To use the "Lora" font family, ensure you have installed the `@nuxt/fonts` module by running `npx nuxi module add fonts`. Then, in your `nuxt.config` file, add the following configuration:
+  ```ts
+  fonts: {
+    families: [
+      { name: "Lora", provider: "google" },
+    ],
+  },
+  ```
+  Additionally, in your `tailwind.config` file, extend the `fontFamily` theme to include "Lora":
+  ```ts
+  theme: {
+    extend: {
+      fontFamily: {
+        lora: ['"Lora"', ...defaultTheme.fontFamily.serif],
+      },
+    },
+  },
+  -->
   <div class="relative flex h-full min-h-dvh w-full items-end justify-center">
     <!-- Background Image (try a dark image to see the magic) -->
     <NuxtImg
@@ -41,9 +59,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-definePageMeta({
-  layout: "playground",
-});
-</script>
