@@ -64,7 +64,7 @@
           <Transition name="fade" mode="out-in">
             <div
               v-if="item.preview"
-              class="my-4 h-[840px] overflow-x-hidden overflow-y-scroll rounded-md bg-gray-200/80 p-2 dark:bg-gray-900"
+              class="my-4 h-auto min-h-[1024px] overflow-x-hidden overflow-y-scroll rounded-md bg-gray-200/80 p-2 dark:bg-gray-900"
             >
               <ElementsHero1
                 v-if="item.title === ('simple' as HeroTemplates)"
@@ -80,6 +80,10 @@
 
               <ElementsHero6
                 v-if="item.title === ('desaturate' as HeroTemplates)"
+              />
+              <ElementsHero7 v-if="item.title === ('big' as HeroTemplates)" />
+              <ElementsHero8
+                v-if="item.title === ('double-marquee' as HeroTemplates)"
               />
             </div>
             <div v-else class="scrollbar-hide w-full max-w-full">

@@ -28,6 +28,9 @@ export default defineNuxtConfig({
     families: [
       { name: "Inter", provider: "google" },
       { name: "Lora", provider: "google" },
+      { name: "Instrument Serif", provider: "google" },
+      { name: "Roboto", provider: "google" },
+
     ],
   },
   css: ["~/assets/css/global.css"],

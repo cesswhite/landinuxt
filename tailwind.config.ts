@@ -7,6 +7,8 @@ export default <Partial<Config>>{
           fontFamily: {
             inter: ['"Inter"', ...defaultTheme.fontFamily.sans],
             lora: ['"Lora"', ...defaultTheme.fontFamily.serif],
+            roboto: ['"Roboto"', ...defaultTheme.fontFamily.sans],
+            instrument: ['"Instrument Serif"', ...defaultTheme.fontFamily.serif],
           },
         },
       },
