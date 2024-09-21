@@ -88,6 +88,9 @@
               <ElementsHero9
                 v-if="item.title === ('double-image' as HeroTemplates)"
               />
+              <ElementsHero10
+                v-if="item.title === ('space' as HeroTemplates)"
+              />
             </div>
             <div v-else class="scrollbar-hide w-full max-w-full">
               <ContentQuery :path="item._path" find="one" v-slot="{ data }">
