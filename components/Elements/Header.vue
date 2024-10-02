@@ -2,7 +2,7 @@
   <div class="flex flex-col items-start justify-start px-2">
     <UTooltip text="Go to back">
       <UButton
-        @click="$router.back()"
+        @click="goToComponentsView()"
         icon="i-heroicons-arrow-left"
         variant="link"
         :padded="false"
@@ -24,4 +24,9 @@ const props = defineProps<{
   name: string;
   number: number;
 }>();
+const router = useRouter();
+
+function goToComponentsView() {
+  router.push({ path: "/components" });
+}
 </script>

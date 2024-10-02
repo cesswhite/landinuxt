@@ -76,6 +76,9 @@
               <ElementsHeaders4
                 v-if="item.title === ('float' as HeadersTemplates)"
               />
+              <ElementsHeaders5
+                v-if="item.title === ('multi' as HeadersTemplates)"
+              />
             </div>
             <div
               v-else
