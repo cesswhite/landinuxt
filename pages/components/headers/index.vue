@@ -79,7 +79,11 @@
               <ElementsHeaders5
                 v-if="item.title === ('multi' as HeadersTemplates)"
               />
+              <ElementsHeaders6
+                v-if="item.title === ('store' as HeadersTemplates)"
+              />
             </div>
+
             <div
               v-else
               class="prose scrollbar-hide h-full w-full max-w-full rounded-lg"
