@@ -12,7 +12,7 @@
           class="mt-2 text-base font-bold capitalize text-gray-950/90 dark:text-gray-50/90"
         >
           {{ _comp.name }}
-          <small class="dark:text-gray-500"
+          <small class="text-gray-400 dark:text-gray-500"
             >({{ _comp.total }} components)</small
           >
         </div>
@@ -32,6 +32,14 @@ const components = [
   {
     name: "headers",
     total: _headers.length,
+  },
+  {
+    name: "features",
+    total: 0,
+  },
+  {
+    name: "footer",
+    total: 0,
   },
 ];
 

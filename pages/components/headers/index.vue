@@ -1,7 +1,11 @@
 <template>
   <div class="relative w-full px-4 py-24">
     <div class="mb-6">
-      <ElementsHeader name="Headers" :number="_headers.length" />
+      <ElementsHeader
+        name="Headers"
+        :number="_headers.length"
+        description="Explore a variety of header sections designed to enhance your website. From simple and clean designs to feature-rich layouts, these sections are crafted to effectively communicate your brand and engage your audience."
+      />
     </div>
     <ContentList path="/headers" v-slot="{ list }">
       <template v-for="(item, index) in list" :key="item._path">

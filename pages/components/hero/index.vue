@@ -1,7 +1,11 @@
 <template>
   <div class="relative w-full px-4 py-24">
     <div class="mb-6">
-      <ElementsHeader name="Hero" :number="_hero.length" />
+      <ElementsHeader
+        name="Hero"
+        :number="_hero.length"
+        description="Discover a wide range of hero sections tailored to engage your audience. Clean and simple to feature-rich designs, these sections are designed to convey your message effectively and captivate users."
+      />
     </div>
     <ContentList path="/hero" v-slot="{ list }">
       <template v-for="(item, index) in list" :key="item._path">

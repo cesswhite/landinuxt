@@ -3,18 +3,23 @@
     <UTooltip text="Go to back">
       <UButton
         @click="goToComponentsView()"
-        icon="i-heroicons-arrow-left"
+        icon="i-heroicons-chevron-left"
         variant="link"
         :padded="false"
       />
     </UTooltip>
-    <div class="flex items-end gap-2">
-      <h1 class="mt-1 text-4xl font-bold capitalize">
+    <div class="flex flex-col items-start gap-y-4 mt-4">
+      <h1 class="mt-1 text-5xl font-bold capitalize text-gray-950">
         {{ props.name }} Sections
       </h1>
-      <small class="mb-1 font-bold text-gray-500/50">
-        ({{ props.number }})</small
+      <span class="font-semibold text-gray-950/60 inline-block">
+        {{ props.number }} Nuxt UI components</span
       >
+      <p>
+      <p class="text-lg font-normal text-gray-400 dark:text-gray-300 w-full lg:w-1/2">
+       {{ props.description }}
+      </p>
+      </p>
     </div>
   </div>
 </template>
@@ -23,6 +28,7 @@
 const props = defineProps<{
   name: string;
   number: number;
+  description: string
 }>();
 const router = useRouter();
 
