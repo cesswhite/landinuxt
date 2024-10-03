@@ -121,7 +121,7 @@
     >
       <div
         v-if="showMenu"
-        class="absolute top-0 left-0 z-10 hidden h-72 w-full rounded-xl bg-gray-100 pt-16 px-4 lg:flex dark:bg-gray-900"
+        class="absolute top-0 left-0 z-10 hidden h-72 w-full rounded-xl border bg-gray-100 pt-16 px-4 lg:flex dark:border-gray-950/50 dark:bg-gray-900"
       >
         <div class="flex w-3/5 items-center">
           <template v-for="(service, index) in services" :key="index">
@@ -147,7 +147,7 @@
         </div>
         <div class="w-2/5 pt-4">
           <div
-            class="h-full w-full overflow-hidden rounded-t-xl bg-gray-200 p-4 dark:bg-gray-800"
+            class="bg-primary-200 dark:bg-primary-700 h-full w-full overflow-hidden rounded-t-xl p-4"
           >
             <span class="text-base font-bold text-gray-950 dark:text-gray-50">
               Explore Our Services
