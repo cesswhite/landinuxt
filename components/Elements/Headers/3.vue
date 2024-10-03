@@ -37,46 +37,36 @@
         class="hidden w-auto rounded-full lg:flex" />
       <UButton block label="Register now" variant="solid" color="primary" size="lg"
         class="hidden w-auto rounded-full lg:flex" />
-      <UButton class="flex lg:hidden" icon="i-heroicons-bars-3" variant="link" color="primary" size="lg"
-        @click="isOpenResponsiveMenu = true" />
+      <USlideover title="Menu" close-icon="i-heroicons-x-mark">
+        <div class="inline-block md:hidden">
+          <UButton icon="i-heroicons-bars-3" variant="link" color="primary" size="lg" />
+        </div>
+        <template #body>
+          <nav class="flex w-full flex-col">
+            <UButton block variant="link" color="primary" size="lg" to="#">
+              Home
+            </UButton>
+            <UButton block variant="link" color="primary" size="lg" to="#">
+              About
+            </UButton>
+            <UButton block variant="link" color="primary" size="lg" to="#">
+              Services
+            </UButton>
+            <UButton block variant="link" color="primary" size="lg" to="#">
+              Contact
+            </UButton>
+            <UButton block variant="link" color="primary" size="lg" to="#">
+              Blog
+            </UButton>
+          </nav>
+        </template>
+      </USlideover>
     </div>
 
-    <USlideover v-model="isOpenResponsiveMenu">
-      <div class="p-4">
-        <div class="flex items-center justify-end">
-          <UButton icon="i-heroicons-x-mark" variant="link" color="primary" size="lg"
-            @click="isOpenResponsiveMenu = false" />
-        </div>
-        <nav class="mt-12 flex w-full flex-col items-center justify-start">
-          <UButton variant="ghost" color="gray" size="lg" to="#" class="rounded-full">
-            Home
-          </UButton>
-          <UButton variant="ghost" color="gray" size="lg" to="#" class="rounded-full">
-            About
-          </UButton>
-          <UButton variant="ghost" color="gray" size="lg" to="#" class="rounded-full">
-            Design UI/UX
-          </UButton>
-          <UButton variant="ghost" color="gray" size="lg" to="#" class="rounded-full">
-            Development
-          </UButton>
-          <UButton variant="ghost" color="gray" size="lg" to="#" class="rounded-full">
-            Mobile App
-          </UButton>
-          <UButton variant="ghost" color="gray" size="lg" to="#" class="rounded-full">
-            Pricing
-          </UButton>
-          <UButton variant="ghost" color="gray" size="lg" to="#" class="rounded-full">
-            Contact
-          </UButton>
-        </nav>
-      </div>
-    </USlideover>
   </header>
 </template>
 
 <script setup lang="ts">
-const isOpenResponsiveMenu = ref(false);
 const items = [
   [
     {

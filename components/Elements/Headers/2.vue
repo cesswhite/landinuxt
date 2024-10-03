@@ -1,15 +1,9 @@
 <template>
-  <header
-    class="relative flex w-full items-center justify-between bg-white px-4 py-2 dark:bg-gray-950"
-  >
+  <header class="relative flex w-full items-center justify-between bg-white px-4 py-2 dark:bg-gray-950">
     <div class="flex w-auto items-center justify-start md:w-full">
-      <NuxtImg
-        src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
-        class="size-auto object-contain object-center"
-        loading="lazy"
-        alt="my-company-logo-description"
-        :placeholder="[50, 25, 75, 5]"
-      />
+      <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
+        class="size-auto object-contain object-center" loading="lazy" alt="my-company-logo-description"
+        :placeholder="[50, 25, 75, 5]" />
     </div>
     <nav class="hidden w-full items-center justify-center lg:flex">
       <UButton variant="link" color="primary" size="lg" to="#"> Home </UButton>
@@ -25,50 +19,30 @@
     <div class="flex w-full items-center justify-end gap-4">
       <UButton label="Sign in" variant="ghost" color="primary" size="lg" />
       <UButton label="Sign up" variant="solid" color="primary" size="lg" />
-
-      <UButton
-        class="inline-block lg:hidden"
-        icon="i-heroicons-bars-3"
-        variant="link"
-        color="primary"
-        size="lg"
-        @click="isOpenResponsiveMenu = true"
-      />
-    </div>
-
-    <USlideover v-model="isOpenResponsiveMenu">
-      <div class="p-4">
-        <div class="flex items-center justify-end">
-          <UButton
-            icon="i-heroicons-x-mark"
-            variant="link"
-            color="primary"
-            size="lg"
-            @click="isOpenResponsiveMenu = false"
-          />
+      <USlideover title="Menu" close-icon="i-heroicons-x-mark">
+        <div class="inline-block md:hidden">
+          <UButton icon="i-heroicons-bars-3" variant="link" color="primary" size="lg" />
         </div>
-        <nav class="mt-12 flex w-full flex-col items-center justify-start">
-          <UButton block variant="link" color="primary" size="lg" to="#">
-            Home
-          </UButton>
-          <UButton block variant="link" color="primary" size="lg" to="#">
-            About
-          </UButton>
-          <UButton block variant="link" color="primary" size="lg" to="#">
-            Services
-          </UButton>
-          <UButton block variant="link" color="primary" size="lg" to="#">
-            Contact
-          </UButton>
-          <UButton block variant="link" color="primary" size="lg" to="#">
-            Blog
-          </UButton>
-        </nav>
-      </div>
-    </USlideover>
+        <template #body>
+          <nav class="flex w-full flex-col">
+            <UButton block variant="link" color="primary" size="lg" to="#">
+              Home
+            </UButton>
+            <UButton block variant="link" color="primary" size="lg" to="#">
+              About
+            </UButton>
+            <UButton block variant="link" color="primary" size="lg" to="#">
+              Services
+            </UButton>
+            <UButton block variant="link" color="primary" size="lg" to="#">
+              Contact
+            </UButton>
+            <UButton block variant="link" color="primary" size="lg" to="#">
+              Blog
+            </UButton>
+          </nav>
+        </template>
+      </USlideover>
+    </div>
   </header>
 </template>
-
-<script setup lang="ts">
-const isOpenResponsiveMenu = ref(false);
-</script>

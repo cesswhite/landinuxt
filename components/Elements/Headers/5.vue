@@ -1,7 +1,5 @@
 <template>
-  <header
-    class="relative flex w-full items-center justify-between bg-white px-4 py-2 dark:bg-gray-950"
-  >
+  <header class="relative flex w-full items-center justify-between bg-white px-4 py-2 dark:bg-gray-950">
     <div class="hidden items-center justify-start md:flex">
       <UButton variant="link" color="primary" size="lg" to="#"> Home </UButton>
       <UButton variant="link" color="primary" size="lg" to="#">
@@ -16,23 +14,11 @@
       <UButton variant="link" color="primary" size="lg" to="#"> Blog </UButton>
     </div>
     <div class="size-8">
-      <NuxtImg
-        src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
-        class="size-full object-contain object-center"
-        loading="lazy"
-        alt="my-company-logo-description"
-        :placeholder="[50, 25, 75, 5]"
-      />
+      <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
+        class="size-full object-contain object-center" loading="lazy" alt="my-company-logo-description"
+        :placeholder="[50, 25, 75, 5]" />
     </div>
-    <div class="inline-block md:hidden">
-      <UButton
-        icon="i-heroicons-bars-3"
-        variant="link"
-        color="primary"
-        size="lg"
-        @click="isOpenResponsiveMenu = true"
-      />
-    </div>
+
     <div class="hidden items-center justify-start md:flex">
       <UButton variant="link" color="primary" size="lg" to="#"> About </UButton>
       <UButton variant="link" color="primary" size="lg" to="#"> Team </UButton>
@@ -43,18 +29,12 @@
         Join us
       </UButton>
     </div>
-    <USlideover v-model="isOpenResponsiveMenu">
-      <div class="p-4">
-        <div class="flex items-center justify-end">
-          <UButton
-            icon="i-heroicons-x-mark"
-            variant="link"
-            color="primary"
-            size="lg"
-            @click="isOpenResponsiveMenu = false"
-          />
-        </div>
-        <nav class="mt-12 flex w-full flex-col items-center justify-start">
+    <USlideover title="Menu" close-icon="i-heroicons-x-mark">
+      <div class="inline-block md:hidden">
+        <UButton icon="i-heroicons-bars-3" variant="link" color="primary" size="lg" />
+      </div>
+      <template #body>
+        <nav class="flex w-full flex-col gap-2">
           <UButton variant="link" color="primary" size="lg" to="#">
             Home
           </UButton>
@@ -79,15 +59,11 @@
           <UButton variant="link" color="primary" size="lg" to="#">
             Contact
           </UButton>
-          <UButton variant="solid" color="primary" size="lg" class="px-6">
+          <UButton variant="solid" color="primary" size="lg" to="#" class="flex justify-center items-center">
             Join us
           </UButton>
         </nav>
-      </div>
+      </template>
     </USlideover>
   </header>
 </template>
-
-<script setup lang="ts">
-const isOpenResponsiveMenu = ref(false);
-</script>
