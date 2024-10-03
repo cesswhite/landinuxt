@@ -51,10 +51,6 @@ p {
   isolation: isolate;
   height: 100%;
 }
-/* p,
-img {
-  margin: 0 auto;
-} */
 
 .center-top {
   position: absolute;

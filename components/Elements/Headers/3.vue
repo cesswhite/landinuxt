@@ -1,181 +1,72 @@
 <template>
-  <header
-    class="relative flex w-full items-center justify-between bg-white px-4 py-4 dark:bg-gray-950"
-  >
+  <header class="relative flex w-full items-center justify-between bg-white px-4 py-4 dark:bg-gray-950">
     <div class="w-auto flex-1 items-center justify-start lg:flex-none">
-      <NuxtImg
-        src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Groupdark_ljxs2m.png"
-        class="h-auto object-contain object-center"
-        loading="lazy"
-        alt="my-company-logo-description"
-        :placeholder="[50, 25, 75, 5]"
-      />
+      <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Groupdark_ljxs2m.png"
+        class="h-auto object-contain object-center" loading="lazy" alt="my-company-logo-description"
+        :placeholder="[50, 25, 75, 5]" />
     </div>
     <nav class="hidden w-full flex-1 items-center justify-center gap-2 lg:flex">
-      <UButton
-        variant="ghost"
-        color="gray"
-        size="lg"
-        to="#"
-        class="rounded-full"
-      >
+      <UButton variant="ghost" color="gray" size="lg" to="#" class="rounded-full">
         Home
       </UButton>
-      <UButton
-        variant="ghost"
-        color="gray"
-        size="lg"
-        to="#"
-        class="rounded-full"
-      >
+      <UButton variant="ghost" color="gray" size="lg" to="#" class="rounded-full">
         About
       </UButton>
 
-      <UDropdown
-        :items="items"
-        mode="hover"
-        :ui="{ item: { disabled: 'cursor-text select-text' } }"
-        :popper="{ placement: 'bottom-start' }"
-      >
-        <UButton
-          variant="ghost"
-          color="gray"
-          size="lg"
-          label="Services"
-          class="rounded-full"
-        >
+      <UDropdownMenu :items="items" mode="hover" :ui="{ item: { disabled: 'cursor-text select-text' } }"
+        :popper="{ placement: 'bottom-start' }">
+        <UButton variant="ghost" color="gray" size="lg" label="Services" class="rounded-full">
           <template #trailing>
             <UIcon name="i-heroicons-chevron-down" />
           </template>
         </UButton>
         <template #item="{ item }">
           <span class="truncate text-sm font-medium">{{ item.label }}</span>
-          <UIcon
-            :name="item.icon"
-            class="ms-auto h-4 w-4 flex-shrink-0 text-gray-700 dark:text-gray-700"
-          />
+          <UIcon :name="item.icon" class="ms-auto h-4 w-4 flex-shrink-0 text-gray-700 dark:text-gray-700" />
         </template>
-      </UDropdown>
-      <UButton
-        variant="ghost"
-        color="gray"
-        size="lg"
-        to="#"
-        class="rounded-full"
-      >
+      </UDropdownMenu>
+      <UButton variant="ghost" color="gray" size="lg" to="#" class="rounded-full">
         Pricing
       </UButton>
-      <UButton
-        variant="ghost"
-        color="gray"
-        size="lg"
-        to="#"
-        class="rounded-full"
-      >
+      <UButton variant="ghost" color="gray" size="lg" to="#" class="rounded-full">
         Contact
       </UButton>
     </nav>
     <div class="flex flex-1 items-center justify-end gap-4 lg:flex-none">
-      <UButton
-        block
-        label="English"
-        variant="ghost"
-        color="primary"
-        size="lg"
-        icon="i-heroicons-globe-alt"
-        class="hidden w-auto rounded-full lg:flex"
-      />
-      <UButton
-        block
-        label="Register now"
-        variant="solid"
-        color="primary"
-        size="lg"
-        class="hidden w-auto rounded-full lg:flex"
-      />
-      <UButton
-        class="flex lg:hidden"
-        icon="i-heroicons-bars-3"
-        variant="link"
-        color="primary"
-        size="lg"
-        @click="isOpenResponsiveMenu = true"
-      />
+      <UButton block label="English" variant="ghost" color="primary" size="lg" icon="i-heroicons-globe-alt"
+        class="hidden w-auto rounded-full lg:flex" />
+      <UButton block label="Register now" variant="solid" color="primary" size="lg"
+        class="hidden w-auto rounded-full lg:flex" />
+      <UButton class="flex lg:hidden" icon="i-heroicons-bars-3" variant="link" color="primary" size="lg"
+        @click="isOpenResponsiveMenu = true" />
     </div>
 
     <USlideover v-model="isOpenResponsiveMenu">
       <div class="p-4">
         <div class="flex items-center justify-end">
-          <UButton
-            icon="i-heroicons-x-mark"
-            variant="link"
-            color="primary"
-            size="lg"
-            @click="isOpenResponsiveMenu = false"
-          />
+          <UButton icon="i-heroicons-x-mark" variant="link" color="primary" size="lg"
+            @click="isOpenResponsiveMenu = false" />
         </div>
         <nav class="mt-12 flex w-full flex-col items-center justify-start">
-          <UButton
-            variant="ghost"
-            color="gray"
-            size="lg"
-            to="#"
-            class="rounded-full"
-          >
+          <UButton variant="ghost" color="gray" size="lg" to="#" class="rounded-full">
             Home
           </UButton>
-          <UButton
-            variant="ghost"
-            color="gray"
-            size="lg"
-            to="#"
-            class="rounded-full"
-          >
+          <UButton variant="ghost" color="gray" size="lg" to="#" class="rounded-full">
             About
           </UButton>
-          <UButton
-            variant="ghost"
-            color="gray"
-            size="lg"
-            to="#"
-            class="rounded-full"
-          >
+          <UButton variant="ghost" color="gray" size="lg" to="#" class="rounded-full">
             Design UI/UX
           </UButton>
-          <UButton
-            variant="ghost"
-            color="gray"
-            size="lg"
-            to="#"
-            class="rounded-full"
-          >
+          <UButton variant="ghost" color="gray" size="lg" to="#" class="rounded-full">
             Development
           </UButton>
-          <UButton
-            variant="ghost"
-            color="gray"
-            size="lg"
-            to="#"
-            class="rounded-full"
-          >
+          <UButton variant="ghost" color="gray" size="lg" to="#" class="rounded-full">
             Mobile App
           </UButton>
-          <UButton
-            variant="ghost"
-            color="gray"
-            size="lg"
-            to="#"
-            class="rounded-full"
-          >
+          <UButton variant="ghost" color="gray" size="lg" to="#" class="rounded-full">
             Pricing
           </UButton>
-          <UButton
-            variant="ghost"
-            color="gray"
-            size="lg"
-            to="#"
-            class="rounded-full"
-          >
+          <UButton variant="ghost" color="gray" size="lg" to="#" class="rounded-full">
             Contact
           </UButton>
         </nav>

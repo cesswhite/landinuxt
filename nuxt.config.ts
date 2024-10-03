@@ -20,22 +20,22 @@ export default defineNuxtConfig({
         },
       ],
       htmlAttrs: {
-        lang: "es",
+        lang: "en",
       },
     },
   },
-  fonts: {
-    families: [
-      { name: "Inter", provider: "google" },
-      { name: "Lora", provider: "google" },
-      { name: "Instrument Serif", provider: "google" },
-      { name: "Roboto", provider: "google" },
-
-    ],
-  },
-  css: ["~/assets/css/global.css"],
+  /*   fonts: {
+      families: [
+        { name: "Inter", provider: "google" },
+        { name: "Lora", provider: "google" },
+        { name: "Instrument Serif", provider: "google" },
+        { name: "Roboto", provider: "google" },
+  
+      ],
+    }, */
+  css: ["~/assets/css/main.css"],
   devtools: { enabled: true },
-  modules: ["@nuxt/ui", "@nuxt/content", "@nuxt/image", "@pinia/nuxt", "nuxt-marquee", "@nuxt/fonts"],
+  modules: ["@nuxt/ui", "@nuxt/content", "@nuxt/image", "@pinia/nuxt", "nuxt-marquee"],
   content: {
     highlight: {
       theme: {
