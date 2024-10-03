@@ -16,15 +16,16 @@
           class="text-primary-950/60 dark:text-primary-50/50 mt-6 text-center text-lg leading-8 2xl:text-xl w-full md:w-1/2">
           Unlock the full potential of your landing pages with a powerful set of
           tools, including
-          <span clas="text-xs inline-block dark:!text-red-500 p-1">NuxtImg</span>, NuxtMarquee, NuxtFonts, and NuxtUI,
+          <span clas="text-xs inline-block dark:text-red-500 p-1">NuxtImg</span>, NuxtMotion, NuxtMarquee, NuxtFonts,
+          and NuxtUI,
           optimized for fast and
           efficient development.
         </p>
         <div class="mt-12 flex flex-col items-center justify-center gap-4 md:flex-row">
-          <UButton variant="solid" to="/components" size="lg">
+          <UButton variant="solid" to="/components" size="xl">
             Explore components
           </UButton>
-          <UButton variant="ghost" size="lg"> More info </UButton>
+          <UButton variant="ghost" size="xl"> More info </UButton>
         </div>
       </div>
     </div>

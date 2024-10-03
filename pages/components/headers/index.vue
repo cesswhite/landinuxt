@@ -1,6 +1,6 @@
 <template>
-  <div class="relative w-full px-4 py-24">
-    <div class="mb-6">
+  <div class="relative w-full py-24 px-4">
+    <div class="mb-32">
       <ElementsHeader
         name="Headers"
         :number="_headers.length"
@@ -85,6 +85,9 @@
               />
               <ElementsHeaders6
                 v-if="item.title === ('store' as HeadersTemplates)"
+              />
+              <ElementsHeaders7
+                v-if="item.title === ('agency' as HeadersTemplates)"
               />
             </div>
 

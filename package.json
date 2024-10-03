@@ -17,12 +17,15 @@
     "@pinia/nuxt": "^0.5.4",
     "nuxt": "^3.13.2",
     "nuxt-marquee": "^1.0.4",
-    "typescript": "^5.6.2",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
+    "typescript": "^5.6.2",
     "vue-tsc": "^2.1.6"
   },
   "overrides": {
     "vue": "latest"
+  },
+  "dependencies": {
+    "@vueuse/motion": "^2.2.5"
   }
 }

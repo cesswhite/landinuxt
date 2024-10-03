@@ -1,51 +1,30 @@
 <template>
   <!-- Install npx nuxi@latest module add marquee -->
   <div
-    class="relative flex h-full min-h-dvh w-full flex-col items-center justify-center bg-gray-50 pt-32 dark:bg-gray-950"
-  >
+    class="relative flex h-full min-h-dvh w-full flex-col items-center justify-center bg-gray-50 pt-32 dark:bg-gray-950">
     <div class="relative z-20 mb-24 w-11/12 md:w-10/12">
       <div class="flex flex-col items-center justify-center">
-        <UBadge
-          variant="soft"
-          color="white"
+        <UBadge variant="soft"
           class="rounded-full border border-gray-500/20 px-4 py-2 text-center font-normal text-gray-500 md:px-12"
-          size="lg"
-        >
+          size="lg">
           Explore our handcrafted components
         </UBadge>
-        <h1
-          class="mt-4 text-center text-5xl font-normal text-gray-800 sm:text-6xl md:text-7xl dark:text-gray-100"
-        >
+        <h1 class="mt-4 text-center text-5xl font-normal text-gray-800 sm:text-6xl md:text-7xl dark:text-gray-100">
           Unlock the Power of <br />
           Natural Beauty <br />
           Inside and Out
         </h1>
         <p
-          class="dark:text-primary-50/50 mt-4 w-full text-center text-lg font-light leading-8 text-gray-900/50 sm:w-1/2 2xl:w-1/3 2xl:text-xl"
-        >
+          class="dark:text-primary-50/50 mt-4 w-full text-center text-lg font-light leading-8 text-gray-900/50 sm:w-1/2 2xl:w-1/3 2xl:text-xl">
           Explore the limitless possibilities of your construction project with
           our all-encompassing array of tools and services
         </p>
         <div class="mt-8 flex flex-col gap-4">
-          <UButton
-            block
-            variant="solid"
-            to="#"
-            size="lg"
-            icon="i-heroicons-arrow-right"
-            trailing
-            class="rounded-full px-8 py-4"
-          >
+          <UButton block variant="solid" to="#" size="lg"
+            class="rounded-full px-8 py-4 text-center flex items-center justify-center">
             Get started
           </UButton>
-          <UButton
-            block
-            variant="ghost"
-            to="#"
-            size="lg"
-            class="rounded-full px-8 py-4"
-            disabled
-          >
+          <UButton block variant="ghost" to="#" size="lg" class="rounded-full px-8 py-4">
             Discover Your Dream Home Today
           </UButton>
         </div>
@@ -56,10 +35,7 @@
         <div class="flex w-full items-center justify-center gap-12">
           <template v-for="icon in icons">
             <div class="size-auto items-center justify-center p-2">
-              <UIcon
-                :name="icon"
-                class="size-16 text-gray-500/50 dark:text-gray-50/20"
-              />
+              <UIcon :name="icon" class="size-16 text-gray-500/50 dark:text-gray-50/20" />
             </div>
           </template>
         </div>

@@ -24,18 +24,11 @@ export default defineNuxtConfig({
       },
     },
   },
-  /*   fonts: {
-      families: [
-        { name: "Inter", provider: "google" },
-        { name: "Lora", provider: "google" },
-        { name: "Instrument Serif", provider: "google" },
-        { name: "Roboto", provider: "google" },
-  
-      ],
-    }, */
+
   css: ["~/assets/css/main.css"],
   devtools: { enabled: true },
-  modules: ["@nuxt/ui", "@nuxt/content", "@nuxt/image", "@pinia/nuxt", "nuxt-marquee"],
+  modules: ["@nuxt/ui", "@nuxt/content", "@nuxt/image", "@pinia/nuxt", "nuxt-marquee", '@vueuse/motion/nuxt'],
+
   content: {
     highlight: {
       theme: {
@@ -43,8 +36,7 @@ export default defineNuxtConfig({
         dark: 'vitesse-dark',
       }
     }
-  }
-  /* future: {
-    compatibilityVersion: 4,
-  }, */
+  },
+
+  compatibilityDate: "2024-10-03"
 })
