@@ -71,6 +71,9 @@
               <ElementsFeatures1
                 v-if="item.title === ('elegance' as FeaturesTemplates)"
               />
+              <ElementsFeatures2
+                v-if="item.title === ('puzzle' as FeaturesTemplates)"
+              />
             </div>
 
             <div
