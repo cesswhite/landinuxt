@@ -1,13 +1,25 @@
 <template>
   <div class="grid w-full grid-cols-12 gap-4">
     <template v-for="(_comp, index) in components" :key="index">
-      <div @click="goToComponentIndex(_comp.name)"
-        class="col-span-full h-auto cursor-pointer rounded-lg bg-gray-200/50 p-1 sm:col-span-6 md:col-span-4 2xl:col-span-3 dark:bg-gray-500/10 transform-gpu hover:rotate-2 odd:hover:-rotate-2 transition-transform will-change-transform duration-300 ease-in-out">
-        <div class="flex h-56 w-full items-center justify-center rounded-md bg-gray-200/60 dark:bg-gray-500/10"></div>
-        <div class="mt-2 text-base font-bold capitalize text-gray-950/90 dark:text-gray-50/90 p-1">
+      <div
+        @click="goToComponentIndex(_comp.name)"
+        class="col-span-full h-auto transform-gpu cursor-pointer rounded-lg bg-gray-200/50 p-1 transition-transform duration-300 ease-in-out will-change-transform hover:rotate-2 odd:hover:-rotate-2 sm:col-span-6 md:col-span-4 2xl:col-span-3 dark:bg-gray-500/10"
+      >
+        <div
+          class="flex h-56 w-full items-center justify-center rounded-md bg-gray-200/60 dark:bg-gray-500/10"
+        ></div>
+        <div
+          class="mt-2 p-1 text-base font-bold capitalize text-gray-950/90 dark:text-gray-50/90"
+        >
           {{ _comp.name }}
-          <small class="text-gray-400 dark:text-gray-500">({{ _comp.total === 0 ? 'Cooming soon' : `${_comp.total}
-            components` }})</small>
+          <small class="text-gray-400 dark:text-gray-500"
+            >({{
+              _comp.total === 0
+                ? "Cooming soon"
+                : `${_comp.total}
+            components`
+            }})</small
+          >
         </div>
       </div>
     </template>
@@ -17,6 +29,7 @@
 <script setup lang="ts">
 const _hero = await queryContent("hero").find();
 const _headers = await queryContent("headers").find();
+const _features = await queryContent("features").find();
 const components = [
   {
     name: "hero",
@@ -28,7 +41,7 @@ const components = [
   },
   {
     name: "features",
-    total: 12,
+    total: _features.length,
   },
   {
     name: "footers",
