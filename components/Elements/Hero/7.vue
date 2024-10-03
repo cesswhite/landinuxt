@@ -1,11 +1,11 @@
 <template>
   <div
-    class="relative flex h-full min-h-dvh w-full flex-col items-center justify-center bg-white pt-32 dark:bg-black"
+    class="relative flex h-full min-h-dvh w-full flex-col items-center justify-center bg-gray-50 pt-32 dark:bg-gray-950"
   >
     <div class="relative z-20 w-11/12 md:w-10/12">
       <div class="flex flex-col items-center justify-center">
         <h1
-          class="mt-4 text-center font-sans text-8xl font-bold text-gray-900 sm:text-6xl md:text-9xl dark:text-white"
+          class="mt-4 text-center font-sans text-8xl font-bold text-gray-900 sm:text-6xl md:text-9xl dark:text-gray-50"
         >
           Explore. <br />
           Amaze.
@@ -16,10 +16,10 @@
           Embark on an unforgettable adventure safari with our expert guides
         </p>
         <div class="mt-8 flex flex-col gap-4 md:flex-row">
-          <UButton variant="solid" color="black" to="#" size="lg" class="px-8">
+          <UButton variant="solid" color="gray" to="#" size="lg" class="px-8">
             Book a tour now
           </UButton>
-          <UButton variant="link" color="white" to="#" size="lg" class="px-8">
+          <UButton variant="link" color="gray" to="#" size="lg" class="px-8">
             Discover more
           </UButton>
         </div>
@@ -36,7 +36,7 @@
       </template>
     </div>
     <div
-      class="relative z-10 mx-auto mt-12 w-full p-4 md:p-2 xl:max-w-screen-2xl"
+      class="xl:max-w-screen-2xl relative z-10 mt-12 mx-auto w-full p-4 md:p-2"
     >
       <NuxtImg
         class="h-[520px] w-full object-cover object-center lg:h-[640px] 2xl:h-[720px]"

@@ -1,11 +1,11 @@
 <template>
   <div
-    class="relative flex h-full min-h-dvh w-full flex-col items-center justify-center bg-white pb-4 pt-32 xl:pt-24 dark:bg-black"
+    class="relative flex h-full min-h-dvh w-full flex-col items-center justify-center bg-gray-50 pt-32 pb-4 xl:pt-24 dark:bg-gray-950"
   >
     <div class="relative z-20 grid w-full grid-cols-12 gap-y-12 md:gap-y-24">
       <div class="col-span-full flex flex-col items-start justify-center px-4">
         <h1
-          class="mt-4 w-full text-left font-sans text-5xl font-light text-gray-900 md:text-7xl dark:text-white"
+          class="mt-4 w-full text-left font-sans text-5xl font-light text-gray-900 md:text-7xl dark:text-gray-50"
         >
           Share <span class="font-instrument inline-block italic">skills</span>
           <br />
@@ -14,16 +14,16 @@
           together
         </h1>
         <p
-          class="mt-4 w-full text-left text-lg leading-8 text-gray-900/60 2xl:text-xl dark:text-gray-50/80"
+          class="mt-4 w-full text-left text-lg leading-8 text-gray-900/60 2xl:text-xl dark:text-gray-50/60"
         >
           Swap your talents, learn new tricks, and level up—together we grow
           faster!
         </p>
         <div class="mt-4 flex w-auto items-start justify-start gap-2">
-          <UButton variant="solid" color="black" size="lg" class="rounded-full">
+          <UButton variant="solid" color="gray" size="lg" class="rounded-full">
             Get started
           </UButton>
-          <UButton variant="link" color="white" size="lg" class="rounded-full">
+          <UButton variant="link" color="gray" size="lg" class="rounded-full">
             Discover more
           </UButton>
         </div>

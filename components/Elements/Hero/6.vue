@@ -11,7 +11,7 @@
     <div class="relative bottom-24 z-20 w-11/12 md:w-10/12">
       <div class="flex flex-col items-center justify-center">
         <h1
-          class="mt-4 text-center font-lora text-5xl font-normal text-gray-50/80 sm:text-6xl md:text-7xl dark:text-white"
+          class="font-lora mt-4 text-center text-5xl font-normal text-gray-50/80 sm:text-6xl md:text-7xl dark:text-white"
         >
           Discover the Magic of <br />
           Luxurious Comfort
@@ -23,13 +23,13 @@
           luxurious bedding collections
         </p>
         <div class="mt-8 flex gap-4">
-          <UButton variant="solid" color="white" to="#" size="lg" class="px-8">
+          <UButton variant="solid" color="gray" to="#" size="lg" class="px-8">
             Shop now
           </UButton>
         </div>
       </div>
     </div>
-    <div class="absolute bottom-4 right-4 z-20">
+    <div class="absolute right-4 bottom-4 z-20">
       <UTooltip text="Questions? Contact Us">
         <UButton
           class="rounded-full"

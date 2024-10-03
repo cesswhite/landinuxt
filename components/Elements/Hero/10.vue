@@ -104,7 +104,7 @@
       <div class="flex flex-col items-center justify-center px-4">
         <!-- You can change the gradient color and direction easy in https://www.onamu.dev/ -->
         <h1
-          class="via-primary-900/90 to-primary-600/90 dark:via-primary-200/90 dark:to-primary-400/90 mt-4 bg-gradient-to-br from-gray-950/90 from-55% via-70% to-85% bg-clip-text text-center font-inter text-5xl font-bold text-transparent sm:text-6xl lg:text-7xl dark:from-gray-50/90"
+          class="via-primary-900/90 to-primary-600/90 dark:via-primary-200/90 dark:to-primary-400/90 font-inter mt-4 bg-gradient-to-br from-gray-950/90 from-55% via-70% to-85% bg-clip-text text-center text-5xl font-bold text-transparent sm:text-6xl lg:text-7xl dark:from-gray-50/90"
         >
           Embark on a Journey to <br />
           Space Exploration
@@ -118,7 +118,7 @@
         <div class="mt-4 flex gap-4">
           <UButton
             variant="solid"
-            color="black"
+            color="gray"
             to="#"
             size="lg"
             class="px-12"
