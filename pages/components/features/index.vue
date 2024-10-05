@@ -74,6 +74,9 @@
               <ElementsFeatures2
                 v-if="item.title === ('puzzle' as FeaturesTemplates)"
               />
+              <ElementsFeatures3
+                v-if="item.title === ('explore' as FeaturesTemplates)"
+              />
             </div>
 
             <div
