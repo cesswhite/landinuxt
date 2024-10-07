@@ -24,6 +24,9 @@
             <ElementsFeatures3
               v-if="item.title === ('explore' as FeaturesTemplates)"
             />
+            <ElementsFeatures4
+              v-if="item.title === ('central' as FeaturesTemplates)"
+            />
           </template>
         </ElementsWrapper>
       </template>

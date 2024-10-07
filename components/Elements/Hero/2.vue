@@ -14,7 +14,7 @@
           class="border-primary rounded-full border px-4 text-center md:px-12"
           size="lg"
         >
-          Beatifult hand-crafter components
+          Beautifully crafted components
         </UBadge>
         <h1
           class="mt-4 text-center text-5xl font-semibold text-gray-900 sm:text-6xl md:text-7xl dark:text-gray-100"

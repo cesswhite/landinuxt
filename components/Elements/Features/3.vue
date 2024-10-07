@@ -38,7 +38,7 @@
           class="flex flex-1 flex-col gap-2"
         >
           <div
-            class="bg-primary-50 dark:bg-primary-950 flex h-96 w-full items-center justify-center rounded-md p-1"
+            class="bg-primary-950/10 dark:bg-primary-50/10 flex h-96 w-full items-center justify-center rounded-md p-1"
           >
             <NuxtImg
               :src="image.src"
