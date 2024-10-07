@@ -61,7 +61,10 @@
       <Transition name="fade" mode="out-in">
         <div
           v-if="props.item.preview"
-          class="scrollbar-hide my-4 h-auto min-h-[1024px] overflow-x-hidden overflow-y-scroll rounded-md bg-gray-200/80 p-2 dark:bg-gray-900"
+          class="scrollbar-hide my-4 h-auto overflow-x-hidden overflow-y-scroll rounded-md bg-gray-200/80 p-2 dark:bg-gray-900"
+          :class="
+            props.item.parent !== 'headers' ? 'min-h-[1024px]' : 'min-h-[420px]'
+          "
         >
           <slot name="components" />
         </div>
