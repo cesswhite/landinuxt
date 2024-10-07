@@ -1,40 +1,57 @@
 <template>
   <div
-    class="flex h-auto w-full items-center justify-center bg-white p-4 py-24 dark:bg-black"
+    class="flex h-auto min-h-dvh w-full items-center justify-center bg-white p-4 py-24 dark:bg-black"
   >
-    <div class="flex h-auto w-full flex-col gap-12 p-4 md:gap-24 md:p-12">
-      <div class="flex flex-col items-center justify-center gap-y-4">
-        <h1 class="text-center text-4xl font-medium text-gray-50 lg:text-5xl">
-          Unlock Your Project's Full Potential <br />
-          with Expert Services
+    <div
+      class="grid h-auto w-full grid-cols-12 gap-y-24 xl:gap-x-24 xl:gap-y-0 xl:px-4"
+    >
+      <div
+        class="col-span-full flex flex-col items-start justify-center gap-y-8 xl:col-span-4"
+      >
+        <h1
+          class="mx-auto text-left text-3xl font-medium text-gray-950 md:w-11/12 md:text-center lg:text-4xl xl:w-full xl:text-left dark:text-gray-50"
+        >
+          Unlock Your Project's Full Potential with Expert Services
         </h1>
         <p
-          class="w-full text-center text-lg text-gray-50/70 lg:w-1/2 dark:text-gray-100/70"
+          class="mx-auto w-full text-left text-lg text-gray-950/50 md:w-10/12 md:text-center xl:w-full xl:text-left dark:text-gray-50/50"
         >
           Unlock your website's full user experience potential with our diverse
           range of feature sections, from minimalist to feature-packed designs,
-          all crafted to convey your brand's message and captivate your
-          audience.
+          all crafted to convey your brand.
         </p>
+        <div
+          class="flex w-full items-center justify-start md:justify-center xl:justify-start"
+        >
+          <UButton variant="subtle" color="primary" size="lg" to="#">
+            Learn more about features
+          </UButton>
+        </div>
       </div>
-      <div class="grid grid-cols-12 gap-y-12 md:gap-x-6">
+      <div
+        class="col-span-full grid w-full grid-cols-subgrid gap-y-12 md:gap-x-6 xl:col-span-8"
+      >
         <template v-for="(feat, index) in features" :key="index">
           <div
-            class="col-span-full flex h-auto flex-col items-start justify-between gap-x-4 gap-y-4 rounded-lg bg-gray-950/10 transition-all duration-300 ease-in-out hover:bg-gray-950/20 md:col-span-6 lg:col-span-4 xl:flex-row"
+            class="col-span-full flex h-auto flex-col justify-center gap-x-4 gap-y-4 rounded-lg transition-all duration-300 ease-in-out md:col-span-6 md:items-center xl:col-span-4"
           >
             <div
-              class="flex h-12 w-12 flex-auto items-center justify-center rounded-xl border border-gray-500/50 xl:w-36 dark:bg-gray-50/10"
+              class="border-primary-500/50 bg-primary-100/10 dark:bg-primary-50/10 flex h-12 w-12 flex-auto items-center justify-center rounded-full border p-3"
             >
-              <UIcon :name="feat.icon" class="? size-8 text-gray-50" />
+              <UIcon
+                :name="feat.icon"
+                class="? text-primary-600 dark:text-primary-400 size-8"
+              />
             </div>
-            <div class="flex w-auto flex-col gap-y-2">
-              <span class="text-xl font-semibold text-gray-50">{{
-                feat.title
-              }}</span>
-              <p class="text-base font-normal text-gray-50/60">
-                {{ feat.description }}
-              </p>
-            </div>
+            <span
+              class="text-xl font-semibold text-gray-950 dark:text-gray-50"
+              >{{ feat.title }}</span
+            >
+            <p
+              class="px-0 text-left text-base font-normal text-gray-950/50 md:px-4 md:px-12 md:text-center dark:text-gray-50/50"
+            >
+              {{ feat.description }}
+            </p>
           </div>
         </template>
       </div>
@@ -48,42 +65,28 @@ const features = [
     icon: "i-heroicons-command-line",
     title: "Development",
     description:
-      "Explore the limitless possibilities of your project with our comprehensive design services. From initial conceptualization to final deployment, we guarantee a smooth integration of the latest technologies to propel your business ahead.",
+      "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",
     link: "#",
   },
   {
     icon: "i-heroicons-swatch",
     title: "Design",
     description:
-      "Explore the limitless possibilities of your project with our comprehensive design services. From initial conceptualization to final deployment, we guarantee a smooth integration of the latest technologies to propel your business ahead.",
+      "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",
     link: "#",
   },
   {
     icon: "i-heroicons-device-phone-mobile",
     title: "Mobile Apps",
     description:
-      "Explore the limitless possibilities of your project with our comprehensive design services. From initial conceptualization to final deployment, we guarantee a smooth integration of the latest technologies to propel your business ahead.",
+      "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",
     link: "#",
   },
   {
     icon: "i-heroicons-cloud",
     title: "Imagene Data",
     description:
-      "Explore the limitless possibilities of your project with our comprehensive design services. From initial conceptualization to final deployment, we guarantee a smooth integration of the latest technologies to propel your business ahead.",
-    link: "#",
-  },
-  {
-    icon: "i-heroicons-cloud",
-    title: "Imagene AI",
-    description:
-      "Explore the limitless possibilities of your project with our comprehensive design services. From initial conceptualization to final deployment, we guarantee a smooth integration of the latest technologies to propel your business ahead.",
-    link: "#",
-  },
-  {
-    icon: "i-heroicons-cloud",
-    title: "Imagene Cloud",
-    description:
-      "Explore the limitless possibilities of your project with our comprehensive design services. From initial conceptualization to final deployment, we guarantee a smooth integration of the latest technologies to propel your business ahead.",
+      "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",
     link: "#",
   },
 ];

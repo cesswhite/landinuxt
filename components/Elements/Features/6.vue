@@ -25,7 +25,7 @@
           >
             <UIcon
               :name="feat.icon"
-              class="? size-8 text-gray-950 dark:text-gray-50"
+              class="size-8 text-gray-950 dark:text-gray-50"
             />
           </div>
           <div class="flex w-auto flex-col gap-y-2">

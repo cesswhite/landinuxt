@@ -33,6 +33,9 @@
             <ElementsFeatures6
               v-if="item.title === ('flex' as FeaturesTemplates)"
             />
+            <ElementsFeatures7
+              v-if="item.title === ('trebol' as FeaturesTemplates)"
+            />
           </template>
         </ElementsWrapper>
       </template>
