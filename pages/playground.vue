@@ -9,51 +9,42 @@
         <div
           class="mx-auto flex w-full flex-col items-center justify-center gap-2 md:w-1/2"
         >
-          <UBadge
-            variant="outline"
-            color="gray"
-            class="flex items-center justify-center gap-4 rounded-full px-4 md:px-12"
-            size="lg"
+          <span
+            class="text-center text-sm font-medium text-gray-950/50 md:text-base dark:text-gray-50/50"
           >
-            <UIcon name="i-heroicons-solid-sparkles" size="size-4" />
-            Beautifully crafted components
-          </UBadge>
+            New Features
+          </span>
           <h1
-            class="mt-4 text-center text-4xl font-semibold text-gray-900 sm:text-4xl md:text-5xl dark:text-gray-100"
+            class="mt-1 text-center text-4xl font-semibold text-gray-950 sm:text-4xl md:text-5xl dark:text-gray-50"
           >
-            Build your Dream Home
+            Unlock Your Fungal Potential
           </h1>
-          <p
-            class="text-primary-950/60 dark:text-primary-50/50 mt-4 w-full px-8 text-center text-lg leading-8 md:px-0 2xl:text-xl"
-          >
-            Unlock your construction project's full potential with our
-            comprehensive suite of tools and services
-          </p>
         </div>
       </div>
       <div
-        class="mt-24 flex flex-col items-start justify-between gap-x-0 gap-y-24 px-4 md:mt-12 md:gap-x-6 md:gap-y-12 lg:flex-row xl:px-24"
+        class="mt-12 flex flex-col items-start justify-between gap-x-0 gap-y-8 px-4 md:gap-x-6 md:gap-y-12 lg:flex-row"
       >
         <template v-for="image in images" :key="image.src">
-          <div class="flex flex-1 flex-col gap-y-6">
+          <div class="group relative w-full flex-1 overflow-hidden rounded-xl">
+            <div
+              class="absolute bottom-0 z-10 flex h-full w-full flex-col items-start justify-end gap-y-2 bg-gradient-to-t from-gray-950/60 p-8 group-hover:from-gray-950/30"
+            >
+              <span class="text-left text-4xl font-semibold text-gray-50">
+                {{ image.name }}
+              </span>
+              <p
+                class="mx-auto w-full text-left text-base font-normal text-gray-50/60"
+              >
+                {{ image.description }}
+              </p>
+            </div>
             <NuxtImg
               :src="image.src"
-              class="mx-auto h-72 w-full rounded-xl object-cover object-center md:w-96 2xl:w-full"
+              class="h-[420px] w-full object-cover object-center group-hover:saturate-150 md:h-[520px] lg:h-[620px]"
               loading="lazy"
               alt="my-company-logo-description"
               :placeholder="[50, 25, 75, 5]"
             />
-
-            <span
-              class="text-center text-2xl font-medium text-gray-950 dark:text-gray-50"
-            >
-              {{ image.name }}
-            </span>
-            <p
-              class="mx-auto w-full text-center text-base font-normal text-gray-950/60 md:w-1/2 lg:w-full dark:text-gray-50/60"
-            >
-              {{ image.description }}
-            </p>
           </div>
         </template>
       </div>
@@ -64,22 +55,22 @@
 <script setup lang="ts">
 const images = [
   {
-    src: "https://images.pexels.com/photos/16062771/pexels-photo-16062771/free-photo-of-ordenador-personal.jpeg",
-    name: "Digital Innovation",
+    src: "https://images.pexels.com/photos/20424275/pexels-photo-20424275/free-photo-of-naturaleza-azul-bosque-abstracto.jpeg",
+    name: "Mushroom Exploration",
     description:
-      "Unlock your agency's digital potential with cutting-edge solutions tailored to drive growth and innovation.",
+      "Embark on a journey to discover the hidden wonders of the fungal kingdom, unlocking the secrets of the forest floor.",
   },
   {
-    src: "https://images.pexels.com/photos/18338405/pexels-photo-18338405/free-photo-of-ordenador-placa-base-cpu-intel.jpeg",
-    name: "Data Analytics",
+    src: "https://images.pexels.com/photos/18290448/pexels-photo-18290448/free-photo-of-madera-naturaleza-arte-mano.jpeg",
+    name: "Fungal Network",
     description:
-      "Gain insights into your agency's performance with advanced data analytics tools, empowering data-driven decision-making.",
+      "Delve into the intricate networks of mycelium, understanding the symbiotic relationships that shape the ecosystem.",
   },
   {
-    src: "https://images.pexels.com/photos/8100067/pexels-photo-8100067.jpeg",
-    name: "Cybersecurity",
+    src: "https://images.pexels.com/photos/17651134/pexels-photo-17651134/free-photo-of-naturaleza-rojo-azul-verano.jpeg",
+    name: "Spore Dispersal",
     description:
-      "Protect your agency's digital assets with robust cybersecurity measures, ensuring the integrity of sensitive information.",
+      "Witness the fascinating process of spore dispersal, as mushrooms release their reproductive units into the air.",
   },
 ];
 </script>

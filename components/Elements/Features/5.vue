@@ -1,0 +1,72 @@
+<template>
+  <div
+    class="flex w-full flex-col bg-gray-50 bg-gray-100 py-12 dark:bg-gray-900"
+  >
+    <div class="flex w-full flex-col gap-4 md:flex-row md:gap-0">
+      <div
+        class="mx-auto flex w-full flex-col items-center justify-center gap-2 md:w-1/2"
+      >
+        <span
+          class="text-center text-sm font-medium text-gray-950/50 md:text-base dark:text-gray-50/50"
+        >
+          New Features
+        </span>
+        <h1
+          class="mt-1 text-center text-4xl font-semibold text-gray-950 sm:text-4xl md:text-5xl dark:text-gray-50"
+        >
+          Unlock Your Fungal Potential
+        </h1>
+      </div>
+    </div>
+    <div
+      class="mt-12 flex flex-col items-start justify-between gap-x-0 gap-y-8 px-4 md:gap-x-6 md:gap-y-12 lg:flex-row"
+    >
+      <template v-for="image in images" :key="image.src">
+        <div class="group relative w-full flex-1 overflow-hidden rounded-xl">
+          <div
+            class="absolute bottom-0 z-10 flex h-full w-full flex-col items-start justify-end gap-y-2 bg-gradient-to-t from-gray-950/60 p-8 group-hover:from-gray-950/30"
+          >
+            <span class="text-left text-4xl font-semibold text-gray-50">
+              {{ image.name }}
+            </span>
+            <p
+              class="mx-auto w-full text-left text-base font-normal text-gray-50/60"
+            >
+              {{ image.description }}
+            </p>
+          </div>
+          <NuxtImg
+            :src="image.src"
+            class="h-[420px] w-full object-cover object-center group-hover:saturate-150 md:h-[520px] lg:h-[620px]"
+            loading="lazy"
+            alt="my-company-logo-description"
+            :placeholder="[50, 25, 75, 5]"
+          />
+        </div>
+      </template>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+const images = [
+  {
+    src: "https://images.pexels.com/photos/20424275/pexels-photo-20424275/free-photo-of-naturaleza-azul-bosque-abstracto.jpeg",
+    name: "Mushroom Exploration",
+    description:
+      "Embark on a journey to discover the hidden wonders of the fungal kingdom, unlocking the secrets of the forest floor.",
+  },
+  {
+    src: "https://images.pexels.com/photos/18290448/pexels-photo-18290448/free-photo-of-madera-naturaleza-arte-mano.jpeg",
+    name: "Fungal Network",
+    description:
+      "Delve into the intricate networks of mycelium, understanding the symbiotic relationships that shape the ecosystem.",
+  },
+  {
+    src: "https://images.pexels.com/photos/17651134/pexels-photo-17651134/free-photo-of-naturaleza-rojo-azul-verano.jpeg",
+    name: "Spore Dispersal",
+    description:
+      "Witness the fascinating process of spore dispersal, as mushrooms release their reproductive units into the air.",
+  },
+];
+</script>

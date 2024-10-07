@@ -27,6 +27,9 @@
             <ElementsFeatures4
               v-if="item.title === ('central' as FeaturesTemplates)"
             />
+            <ElementsFeatures5
+              v-if="item.title === ('mush' as FeaturesTemplates)"
+            />
           </template>
         </ElementsWrapper>
       </template>
