@@ -30,6 +30,9 @@
             <ElementsFeatures5
               v-if="item.title === ('mush' as FeaturesTemplates)"
             />
+            <ElementsFeatures6
+              v-if="item.title === ('flex' as FeaturesTemplates)"
+            />
           </template>
         </ElementsWrapper>
       </template>
