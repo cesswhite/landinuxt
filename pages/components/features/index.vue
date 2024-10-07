@@ -97,7 +97,7 @@
 </template>
 <script setup lang="ts">
 import { useClipboard } from "@vueuse/core";
-import type { FeaturesTemplates } from "~/types/index";
+import type { FeaturesTemplates } from "~/types/templates";
 
 const _features = await queryContent("features").find();
 const current = ref<FeaturesTemplates | null>(null);
@@ -111,4 +111,8 @@ function copyCode(code: string, name: FeaturesTemplates) {
     current.value = null;
   }, 1500);
 }
+
+useSeoMeta({
+  title: "Features Section | LandiNuxt",
+});
 </script>

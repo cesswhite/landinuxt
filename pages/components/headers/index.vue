@@ -109,7 +109,7 @@
 </template>
 <script setup lang="ts">
 import { useClipboard } from "@vueuse/core";
-import type { HeadersTemplates } from "~/types/index";
+import type { HeadersTemplates } from "~/types/templates";
 
 const _headers = await queryContent("headers").find();
 const current = ref<HeadersTemplates | null>(null);
@@ -123,4 +123,8 @@ function copyCode(code: string, name: HeadersTemplates) {
     current.value = null;
   }, 1500);
 }
+
+useSeoMeta({
+  title: "Headers Section | LandiNuxt",
+});
 </script>

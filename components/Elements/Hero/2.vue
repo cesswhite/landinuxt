@@ -3,7 +3,12 @@
     class="relative flex h-full min-h-dvh w-full items-center justify-center bg-gray-50 dark:bg-gray-950"
   >
     <div class="relative z-20 w-11/12 md:w-10/12">
-      <div class="flex flex-col items-center justify-center">
+      <div
+        v-motion-fade
+        :delay="100"
+        :duration="1250"
+        class="flex flex-col items-center justify-center"
+      >
         <UBadge
           variant="soft"
           class="border-primary rounded-full border px-4 text-center md:px-12"
@@ -12,12 +17,7 @@
           Beatifult hand-crafter components
         </UBadge>
         <h1
-          v-motion
-          :initial="{ opacity: 0, filter: 'blur(10px)' }"
-          :enter="{ opacity: 1, filter: 'blur(0px)' }"
-          :delay="100"
-          :duration="1250"
-          class="mt-8 text-center text-5xl font-semibold text-gray-900 sm:text-6xl md:text-7xl dark:text-gray-100"
+          class="mt-4 text-center text-5xl font-semibold text-gray-900 sm:text-6xl md:text-7xl dark:text-gray-100"
         >
           Build your <br />
           Dream Home

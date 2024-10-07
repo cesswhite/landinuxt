@@ -31,11 +31,7 @@
         About
       </UButton>
 
-      <UDropdownMenu
-        :items="items"
-        mode="hover"
-        :popper="{ placement: 'bottom-start' }"
-      >
+      <UDropdownMenu :items="items">
         <UButton
           variant="ghost"
           color="gray"
