@@ -8,16 +8,16 @@
       <template v-for="(item, index) in list" :key="item._path">
         <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
           <template #components>
-            <ElementsFeatures1 v-if="item.title === ('elegance' as FeaturesTemplates)" />
-            <ElementsFeatures2 v-if="item.title === ('puzzle' as FeaturesTemplates)" />
-            <ElementsFeatures3 v-if="item.title === ('explore' as FeaturesTemplates)" />
-            <ElementsFeatures4 v-if="item.title === ('central' as FeaturesTemplates)" />
-            <ElementsFeatures5 v-if="item.title === ('mush' as FeaturesTemplates)" />
-            <ElementsFeatures6 v-if="item.title === ('flex' as FeaturesTemplates)" />
-            <ElementsFeatures7 v-if="item.title === ('trebol' as FeaturesTemplates)" />
-            <ElementsFeatures8 v-if="item.title === ('portrait' as FeaturesTemplates)" />
-            <ElementsFeatures9 v-if="item.title === ('classic' as FeaturesTemplates)" />
-            <ElementsFeatures10 v-if="item.title === ('ancient' as FeaturesTemplates)" />
+            <LazyElementsFeatures1 v-if="item.title === ('elegance' as FeaturesTemplates)" />
+            <LazyElementsFeatures2 v-if="item.title === ('puzzle' as FeaturesTemplates)" />
+            <LazyElementsFeatures3 v-if="item.title === ('explore' as FeaturesTemplates)" />
+            <LazyElementsFeatures4 v-if="item.title === ('central' as FeaturesTemplates)" />
+            <LazyElementsFeatures5 v-if="item.title === ('mush' as FeaturesTemplates)" />
+            <LazyElementsFeatures6 v-if="item.title === ('flex' as FeaturesTemplates)" />
+            <LazyElementsFeatures7 v-if="item.title === ('trebol' as FeaturesTemplates)" />
+            <LazyElementsFeatures8 v-if="item.title === ('portrait' as FeaturesTemplates)" />
+            <LazyElementsFeatures9 v-if="item.title === ('classic' as FeaturesTemplates)" />
+            <LazyElementsFeatures10 v-if="item.title === ('ancient' as FeaturesTemplates)" />
           </template>
         </ElementsWrapper>
       </template>

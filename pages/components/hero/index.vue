@@ -8,16 +8,16 @@
       <template v-for="(item, index) in list" :key="item._path">
         <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
           <template #components>
-            <ElementsHero1 v-if="item.title === ('simple' as HeroTemplates)" />
-            <ElementsHero2 v-if="item.title === ('main' as HeroTemplates)" />
-            <ElementsHero3 v-if="item.title === ('half' as HeroTemplates)" />
-            <ElementsHero4 v-if="item.title === ('marquee' as HeroTemplates)" />
-            <ElementsHero5 v-if="item.title === ('only-dark' as HeroTemplates)" />
-            <ElementsHero6 v-if="item.title === ('desaturate' as HeroTemplates)" />
-            <ElementsHero7 v-if="item.title === ('big' as HeroTemplates)" />
-            <ElementsHero8 v-if="item.title === ('double-marquee' as HeroTemplates)" />
-            <ElementsHero9 v-if="item.title === ('split' as HeroTemplates)" />
-            <ElementsHero10 v-if="item.title === ('space' as HeroTemplates)" />
+            <LazyElementsHero1 v-if="item.title === ('simple' as HeroTemplates)" />
+            <LazyElementsHero2 v-if="item.title === ('main' as HeroTemplates)" />
+            <LazyElementsHero3 v-if="item.title === ('half' as HeroTemplates)" />
+            <LazyElementsHero4 v-if="item.title === ('marquee' as HeroTemplates)" />
+            <LazyElementsHero5 v-if="item.title === ('only-dark' as HeroTemplates)" />
+            <LazyElementsHero6 v-if="item.title === ('desaturate' as HeroTemplates)" />
+            <LazyElementsHero7 v-if="item.title === ('big' as HeroTemplates)" />
+            <LazyElementsHero8 v-if="item.title === ('double-marquee' as HeroTemplates)" />
+            <LazyElementsHero9 v-if="item.title === ('split' as HeroTemplates)" />
+            <LazyElementsHero10 v-if="item.title === ('space' as HeroTemplates)" />
           </template>
         </ElementsWrapper>
       </template>

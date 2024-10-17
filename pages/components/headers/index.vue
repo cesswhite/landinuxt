@@ -8,13 +8,13 @@
       <template v-for="(item, index) in list" :key="item._path">
         <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
           <template #components>
-            <ElementsHeaders1 v-if="item.title === ('simple' as HeadersTemplates)" />
-            <ElementsHeaders2 v-if="item.title === ('saas' as HeadersTemplates)" />
-            <ElementsHeaders3 v-if="item.title === ('indeed' as HeadersTemplates)" />
-            <ElementsHeaders4 v-if="item.title === ('float' as HeadersTemplates)" />
-            <ElementsHeaders5 v-if="item.title === ('multi' as HeadersTemplates)" />
-            <ElementsHeaders6 v-if="item.title === ('store' as HeadersTemplates)" />
-            <ElementsHeaders7 v-if="item.title === ('agency' as HeadersTemplates)" />
+            <LazyElementsHeaders1 v-if="item.title === ('simple' as HeadersTemplates)" />
+            <LazyElementsHeaders2 v-if="item.title === ('saas' as HeadersTemplates)" />
+            <LazyElementsHeaders3 v-if="item.title === ('indeed' as HeadersTemplates)" />
+            <LazyElementsHeaders4 v-if="item.title === ('float' as HeadersTemplates)" />
+            <LazyElementsHeaders5 v-if="item.title === ('multi' as HeadersTemplates)" />
+            <LazyElementsHeaders6 v-if="item.title === ('store' as HeadersTemplates)" />
+            <LazyElementsHeaders7 v-if="item.title === ('agency' as HeadersTemplates)" />
           </template>
         </ElementsWrapper>
       </template>
