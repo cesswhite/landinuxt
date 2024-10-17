@@ -14,6 +14,7 @@ import type { Component } from "~/types/index";
 const _hero = await queryContent("hero").find();
 const _headers = await queryContent("headers").find();
 const _features = await queryContent("features").find();
+const _footers = await queryContent("footers").find();
 const _components = ref<Component[]>([
   {
     name: "hero",
@@ -29,7 +30,7 @@ const _components = ref<Component[]>([
   },
   {
     name: "footers",
-    total: 0,
+    total: _footers.length,
   },
   {
     name: "CTA",
