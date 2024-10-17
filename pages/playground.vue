@@ -1,33 +1,27 @@
 <template>
   <div class="flex h-auto min-h-dvh w-full items-center justify-center bg-white p-4 py-24 dark:bg-black">
-    <div class="flex flex-col gap-x-24 lg:flex-row justify-start items-start">
-      <div class="flex flex-col gap-y-24 w-full lg:w-1/2">
-        <div class="flex flex-col gap-y-2">
-          <span class="text-3xl font-bold text-gray-950 dark:text-gray-50 inline-block">Features</span>
-          <p class="text-lg font-normal text-gray-950/50 dark:text-gray-50/50">Explore the wide range of features our
-            website has to
-            offer. From user-friendly interfaces to seamless
-            navigation, we've got you covered. Check out our features and start your journey today!
-          </p>
-        </div>
-        <div class="grid grid-cols-4 w-full gap-24">
-          <template v-for="(feat, index) in features" :key="index">
-            <div class="col-span-full md:col-span-2 flex flex-col gap-y-2">
-              <div
-                class="flex size-8 items-center justify-center rounded-md border border-gray-950/20 bg-gray-200/20 p-1 dark:border-gray-700 dark:bg-gray-800">
-                <UIcon :name="feat.icon" class="text-gray-950" />
-              </div>
-              <span class="text-lg font-bold text-gray-950 dark:text-gray-50 inline-block">{{ feat.title }}</span>
-              <p class="text-base font-normal text-gray-950/50 dark:text-gray-50 inline-block">{{ feat.description }}
+    <div class="grid grid-cols-12 gap-y-24">
+      <div class="col-span-full lg:col-span-7">
+        <h1 class="text-7xl dark:text-gray-50 font-inter font-light">
+          Our features are changing the game in design and development
+        </h1>
+      </div>
+      <div class="col-span-full lg:col-span-5 flex flex-col gap-y-8 lg:border-l dark:border-gray-50/10 pb-0 lg:pl-16">
+        <template v-for="(feat, index) in features" :key="index">
+          <div class="col-span-full md:col-span-2 flex items-center border-b dark:border-gray-50/10 pb-8">
+            <div class="w-44 h-16">
+              <UIcon :name="feat.icon" class="text-gray-950 dark:text-gray-50/50 size-full" />
+            </div>
+            <div class="flex flex-col w-auto px-4 gap-y-2">
+              <span class="text-xl font-bold text-gray-950 dark:text-gray-50 inline-block">
+                {{ feat.title }}
+              </span>
+              <p class="text-base font-normal text-gray-950/50 dark:text-gray-50/50 inline-block">{{
+                feat.description }}
               </p>
             </div>
-          </template>
-        </div>
-      </div>
-      <div class="mt-24 relative w-full lg:w-1/2 h-full lg:mt-0 xl:h-[620px]">
-        <NuxtImg src="https://images.pexels.com/photos/12495614/pexels-photo-12495614.jpeg"
-          class="size-full rounded-sm object-cover object-center" loading="lazy" alt="my-company-logo-description"
-          width="640" height="640" :placeholder="[50, 25, 75, 5]" />
+          </div>
+        </template>
       </div>
     </div>
   </div>
@@ -36,28 +30,28 @@
 <script setup lang="ts">
 const features = [
   {
-    icon: "i-heroicons-command-line",
+    icon: "i-oui-app-logs",
     title: "Development",
     description:
       "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",
     link: "#",
   },
   {
-    icon: "i-heroicons-swatch",
+    icon: "i-oui-shard",
     title: "Design",
     description:
       "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",
     link: "#",
   },
   {
-    icon: "i-heroicons-device-phone-mobile",
+    icon: "i-oui-pause",
     title: "Mobile Apps",
     description:
       "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",
     link: "#",
   },
   {
-    icon: "i-heroicons-cloud",
+    icon: "i-oui-bolt",
     title: "Imagene Data",
     description:
       "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",

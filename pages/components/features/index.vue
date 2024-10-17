@@ -17,6 +17,7 @@
             <ElementsFeatures7 v-if="item.title === ('trebol' as FeaturesTemplates)" />
             <ElementsFeatures8 v-if="item.title === ('portrait' as FeaturesTemplates)" />
             <ElementsFeatures9 v-if="item.title === ('classic' as FeaturesTemplates)" />
+            <ElementsFeatures10 v-if="item.title === ('ancient' as FeaturesTemplates)" />
           </template>
         </ElementsWrapper>
       </template>

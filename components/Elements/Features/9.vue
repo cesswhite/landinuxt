@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col gap-x-24 lg:flex-row justify-start items-start">
+    <div class="flex flex-col gap-x-24 lg:flex-row justify-start items-center">
         <div class="flex flex-col gap-y-24 w-full lg:w-1/2">
             <div class="flex flex-col gap-y-2">
                 <span class="text-3xl font-bold text-gray-950 dark:text-gray-50 inline-block">Features</span>
@@ -15,7 +15,7 @@
                     <div class="col-span-full md:col-span-2 flex flex-col gap-y-2">
                         <div
                             class="flex size-8 items-center justify-center rounded-md border border-gray-950/20 bg-gray-200/20 p-1 dark:border-gray-700 dark:bg-gray-800">
-                            <UIcon :name="feat.icon" class="text-gray-950" />
+                            <UIcon :name="feat.icon" class="text-gray-950 dark:text-gray-50" />
                         </div>
                         <span class="text-lg font-bold text-gray-950 dark:text-gray-50 inline-block">{{ feat.title
                             }}</span>
