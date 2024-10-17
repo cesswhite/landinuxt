@@ -15,5 +15,7 @@
 </template>
 
 <script setup lang="ts">
-
+useSeoMeta({
+    title: "All Components Section | LandiNuxt",
+});
 </script>

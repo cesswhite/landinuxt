@@ -10,7 +10,6 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@inspira-ui/plugins": "^0.0.1",
     "@nuxt/content": "^2.13.2",
     "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.8.0",
@@ -20,6 +19,7 @@
     "nuxt-marquee": "^1.0.4",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.6.2",
     "vue-tsc": "^2.1.6"
   },
@@ -27,6 +27,7 @@
     "vue": "latest"
   },
   "dependencies": {
+    "@vueuse/core": "^11.1.0",
     "@vueuse/motion": "^2.2.5"
   }
 }
