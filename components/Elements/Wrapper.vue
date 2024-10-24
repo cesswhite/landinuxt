@@ -39,8 +39,7 @@
         <div v-else id="code" class="">
           <ContentQuery :path="item._path" find="one" v-slot="{ data }">
             <ContentRenderer>
-              <ContentRendererMarkdown :value="data"
-                class="max-w-full text-gray-50 prose prose-blue dark:prose-indigo" />
+              <ContentRendererMarkdown :value="data" class="max-w-full prose  dark:prose-invert" />
             </ContentRenderer>
           </ContentQuery>
         </div>
