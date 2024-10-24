@@ -1,11 +1,8 @@
-/* import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
-import { setupInspiraUI } from "@inspira-ui/plugins";
+/* import { setupInspiraUI } from "@inspira-ui/plugins"; */
 
 export default {
-    darkMode: "selector",
-    safelist: ["dark"],
-    prefix: "",
     content: [],
     theme: {
         extend: {
@@ -53,6 +50,5 @@ export default {
         },
     },
 
-    plugins: [animate, setupInspiraUI],
+    plugins: [animate, /* setupInspiraUI */],
 } satisfies Config;
- */

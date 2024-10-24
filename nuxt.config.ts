@@ -31,10 +31,19 @@ export default defineNuxtConfig({
 
   content: {
     highlight: {
+      langs: [
+        'json',
+        'js',
+        'javascript',
+        'ts',
+        'typescript',
+        'html',
+        'css',
+        'vue',
+      ],
       theme: {
-        default: 'github-dark',
-        dark: 'github-dark',
-        light: 'github-light'
+        dark: 'github-light',
+        light: 'github-dark'
       }
     }
   },
