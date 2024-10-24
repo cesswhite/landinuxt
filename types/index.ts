@@ -1,4 +1,6 @@
+export type Elements = 'hero' | 'headers' | 'features' | 'footers'
+
 export interface Component {
-    name: string;
+    name: Elements;
     total: number;
 }
