@@ -5,16 +5,8 @@
                 Get Started
             </h1>
         </div>
-        <div class="w-full px-4 md:w-screen-lg mx-auto text-gray-950 ?">
-            <!--       <ContentQuery path="/instructions" v-slot="{ data }">
-                {{ data }}
-                <ContentRenderer>
-                    <ContentRendererMarkdown :value="data" />
-                </ContentRenderer>
-            </ContentQuery>
- -->
-            <ContentDoc path="/instructions" class="prose" />
-
+        <div class="max-w-max mx-auto">
+            <ContentDoc path="/instructions" class="prose " />
         </div>
     </div>
 </template>

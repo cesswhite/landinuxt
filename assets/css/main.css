@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 @plugin "@tailwindcss/typography";
-/* @import "./global.css" layer(base); */
+@import "./global.css" layer(base);
 
 @source "../../content/**/*.md";
 

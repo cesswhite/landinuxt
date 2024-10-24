@@ -24,8 +24,8 @@
           <UButton @click="props.item.preview = false" icon="i-heroicons-code-bracket" label="Code"
             :variant="!props.item.preview ? 'solid' : 'link'" />
           <UButton @click="copyCode()" :icon="current === props.item.title
-              ? 'i-heroicons-clipboard-document-check'
-              : 'i-heroicons-clipboard-document-list'
+            ? 'i-heroicons-clipboard-document-check'
+            : 'i-heroicons-clipboard-document-list'
             " variant="ghost" />
         </div>
       </div>
@@ -36,10 +36,11 @@
             ">
           <slot name="components" />
         </div>
-        <div v-else class="scrollbar-hide w-full max-w-full">
+        <div v-else id="code" class="">
           <ContentQuery :path="item._path" find="one" v-slot="{ data }">
             <ContentRenderer>
-              <ContentRendererMarkdown :value="data" class="basis-prose" />
+              <ContentRendererMarkdown :value="data"
+                class="max-w-full text-gray-50 prose prose-blue dark:prose-indigo" />
             </ContentRenderer>
           </ContentQuery>
         </div>
