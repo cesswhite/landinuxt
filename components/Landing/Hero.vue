@@ -1,23 +1,25 @@
 <template>
   <UContainer>
-    <div class="flex h-full min-h-dvh font-sans w-full">
+    <div class="flex py-28 md:py-0 h-auto min-h-dvh font-sans w-full">
       <div class="mx-auto flex w-full flex-col items-center justify-center">
         <div
           class="text-primary-500 dark:text-primary-500 ring-primary-500/50 hover:ring-primary-600/90 dark:ring-primary-500/50 dark:hover:ring-primary-500/80 relative rounded-full px-2 py-1 text-center text-sm leading-6 ring-1 md:px-3">
           Hand-crafter components for landing pages
         </div>
-        <h1 class="mt-8 text-center text-5xl font-bold tracking-tight text-gray-950 md:text-7xl dark:text-gray-50">
+        <h1
+          class="mt-8 text-center text-4xl font-bold tracking-tight text-gray-950 md:text-5xl lg:text-6xl xl:text-7xl dark:text-gray-50">
           Build fast
           <br />
           Landing Pages with
           <br />Nuxt Ecosystem
         </h1>
         <p
-          class="text-primary-950/60 dark:text-primary-50/50 mt-6 text-center text-lg leading-8 2xl:text-xl w-full md:w-1/2">
+          class="text-primary-950/60 dark:text-primary-50/50 mt-6 text-center text-base md:text-lg leading-8 2xl:text-xl w-full md:w-1/2">
           Unlock the full potential of your landing pages with a powerful set of
           tools, including
-          <span clas="text-xs inline-block dark:text-red-500 p-1">NuxtImg</span>, NuxtMotion, NuxtMarquee, NuxtFonts,
-          and NuxtUI,
+          <UButton to="" target="_blank" size="" variant="link" :padded="false">NuxtImg</UButton>,
+          <UButton to="" target="_blank" size="" variant="link" :padded="false">NuxtFonts</UButton>,
+          and <UButton to="" target="_blank" size="" variant="link" :padded="false">NuxtUI</UButton>,
           optimized for fast and
           efficient development.
         </p>
@@ -25,7 +27,7 @@
           <UButton variant="solid" to="/components" size="xl">
             Explore components
           </UButton>
-          <UButton variant="ghost" size="xl"> More info </UButton>
+          <UButton to="/instructions" variant="ghost" size="xl"> Instructions </UButton>
         </div>
       </div>
     </div>

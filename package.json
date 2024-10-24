@@ -15,6 +15,7 @@
     "@nuxt/image": "^1.8.1",
     "@nuxt/ui": "3.0.0-alpha.5",
     "@pinia/nuxt": "^0.5.5",
+    "@tailwindcss/typography": "^0.5.15",
     "nuxt": "^3.13.2",
     "nuxt-marquee": "^1.0.4",
     "prettier": "^3.3.3",

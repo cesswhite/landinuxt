@@ -7,7 +7,7 @@
       <h1 class="mt-1 text-5xl font-bold capitalize text-gray-950 dark:text-gray-50">
         {{ props.name }} Sections
       </h1>
-      <span class="font-semibold text-gray-950/60 inline-block dark:text-gray-50/60">
+      <span v-if="props.number" class="font-semibold text-gray-950/60 inline-block dark:text-gray-50/60">
         {{ props.number }} Nuxt UI components</span>
       <p>
       <p class="text-lg font-normal text-gray-400 dark:text-gray-50/40 w-full lg:w-1/2">
