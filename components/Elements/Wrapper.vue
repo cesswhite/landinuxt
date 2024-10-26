@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full py-24 px-4">
+  <div class="relative w-full mt-24">
     <div class="mb-12 h-full overflow-hidden rounded-md border border-gray-500/10 p-2 lg:h-full">
       <div class="flex flex-col items-start justify-between">
         <div class="text-base">
@@ -31,8 +31,8 @@
       </div>
       <Transition name="fade" mode="out-in">
         <div v-if="props.item.preview"
-          class="scrollbar-hide my-4 h-auto overflow-x-hidden overflow-y-scroll rounded-md bg-gray-200/80 p-2 dark:bg-gray-900"
-          :class="props.item.parent !== 'headers' ? 'min-h-[1024px]' : 'min-h-[420px]'
+          class="scrollbar-hide mt-4 h-auto overflow-x-hidden  scrollbar-hide rounded-md bg-gray-200/80 p-2 dark:bg-gray-900"
+          :class="setHeightClass
             ">
           <slot name="components" />
         </div>
@@ -75,6 +75,22 @@ const props = defineProps<{
   | string
   | undefined;
 }>();
+
+
+const setHeightClass = computed(() => {
+  if (props.item.parent === 'headers') {
+    return 'min-h-[420px] '
+  }
+  if (props.item.parent === 'footers') {
+    return 'min-h-[420px] flex items-end justify-end'
+  }
+  if (props.item.parent == 'hero') {
+    return 'min-h-[1024px]'
+  }
+  if (props.item.parent == 'features') {
+    return 'min-h-[1024px]'
+  }
+})
 
 function copyCode() {
   const { copy, copied } = useClipboard();
