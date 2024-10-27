@@ -1,75 +1,88 @@
-# Nuxt UI Minimal Starter
+# LandiNuxt
 
-Look at [Nuxt docs](https://nuxt.com/docs/getting-started/introduction) and [Nuxt UI docs](https://ui.nuxt.com) to learn more.
+LandiNuxt offers pre-built, copy-paste components to help you create stunning landing pages in no time, fully integrated with the **Nuxt ecosystem**. Our components rely heavily on **Nuxt UI v3**, so make sure to install it for full functionality.
 
-## Setup
+## Table of Contents
 
-Make sure to install the dependencies:
+1. [Features](#features)
+2. [Requirements](#requirements)
+3. [Installation](#installation)
+4. [Nuxt UI v3 Configuration](#nuxt-ui-v3-configuration)
+5. [Additional Required Modules](#additional-required-modules)
+6. [Using the Components](#using-the-components)
+7. [Contributions](#contributions)
+8. [License](#license)
+
+## Features ✨
+
+- Ready-to-use components in the Nuxt ecosystem
+- Full compatibility with Nuxt UI v3, Nuxt Image, Nuxt Marquee, and Vue Use Motion
+- Dark mode adaptability, optimized typography, and pre-styled components
+- Expandable with future modules
+
+## Requirements
+
+To ensure optimal functionality, make sure to install:
+
+- **Nuxt UI v3**
+- **Nuxt Image**
+- **Nuxt Marquee**
+- **Vue Use Motion**
+
+> More modules and Nuxt libraries will be added in the future.
+
+## Installation
+
+To get started, clone this repository and navigate to the project folder:
 
 ```bash
-# npm
-npm install
+git clone https://github.com/cesswhite/landingnuxt.git
+cd landingnuxt
+```
 
-# pnpm
+Install the dependencies:
+
+```bash
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+### Installing Nuxt UI v3
 
-Start the development server on `http://localhost:3000`:
+LandiNuxt depends on Nuxt UI v3. Follow the setup instructions on the [Nuxt UI v3 official website](https://ui3.nuxt.dev/getting-started/installation).
 
-```bash
-# npm
-npm run dev
+## Nuxt UI v3 Configuration
 
-# pnpm
-pnpm run dev
+Nuxt UI v3 includes pre-configured settings for **Color Mode**, **Fonts**, and **TailwindCSS**. We recommend keeping these default configurations, as our components are optimized to work with them.
 
-# yarn
-yarn dev
+### Font Configuration
 
-# bun
-bun run dev
+Currently, our components use the following font families:
+
+```css
+--font-family-inter: "Inter", sans-serif;
+--font-family-lora: "Lora", serif;
+--font-family-instrument: "Instrument Serif", serif;
+--font-family-roboto: "Roboto", sans-serif;
 ```
 
-## Production
+For more details on theming, visit the [Nuxt UI Theme Guide](https://ui3.nuxt.dev/getting-started/theme).
 
-Build the application for production:
+## Additional Required Modules
 
-```bash
-# npm
-npm run build
+In addition to Nuxt UI v3, you’ll need the following modules for full component functionality:
 
-# pnpm
-pnpm run build
+- **Nuxt Image**: [Installation Instructions](https://image.nuxt.com/get-started/installation)
+- **Nuxt Marquee**: [Installation Instructions](https://hanzydev.github.io/nuxt-marquee/)
+- **Vue Use Motion**: [Setup Guide](https://motion.vueuse.org/getting-started/nuxt)
 
-# yarn
-yarn build
+## Using the Components
 
-# bun
-bun run build
-```
+Once everything is set up, you're ready to go! Just copy and paste the component code from LandiNuxt into your project, and you’re all set to create stunning landing pages with ease.
 
-Locally preview production build:
+## Contributions
 
-```bash
-# npm
-npm run preview
+Contributions are welcome! If you want to improve or add new features to LandiNuxt, feel free to open an issue or submit a pull request.
 
-# pnpm
-pnpm run preview
+## License
 
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

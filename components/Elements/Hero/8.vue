@@ -1,29 +1,24 @@
 <template>
   <div
-    class="relative flex h-full min-h-dvh w-full flex-col items-center justify-center bg-gray-50 pt-32 pb-4 xl:pt-24 dark:bg-gray-950"
-  >
+    class="relative flex h-full min-h-dvh w-full flex-col items-center justify-center bg-gray-50 pt-32 pb-4 xl:pt-24 dark:bg-gray-950">
     <div class="relative z-20 grid w-full grid-cols-12 gap-y-12 md:gap-y-24">
       <div class="col-span-full flex flex-col items-start justify-center px-4">
-        <h1
-          class="mt-4 w-full text-left font-sans text-5xl font-light text-gray-900 md:text-7xl dark:text-gray-50"
-        >
+        <h1 class="mt-4 w-full text-left font-sans text-5xl font-light text-gray-900 md:text-7xl dark:text-gray-50">
           Share <span class="font-instrument inline-block italic">skills</span>
           <br />
           &
           <span class="font-instrument inline-block italic">grow</span>
           together
         </h1>
-        <p
-          class="mt-4 w-full text-left text-lg leading-8 text-gray-900/60 2xl:text-xl dark:text-gray-50/60"
-        >
+        <p class="mt-4 w-full text-left text-lg leading-8 text-gray-900/60 2xl:text-xl dark:text-gray-50/60">
           Swap your talents, learn new tricks, and level up—together we grow
           faster!
         </p>
         <div class="mt-4 flex w-auto items-start justify-start gap-2">
-          <UButton variant="solid" color="gray" size="lg" class="rounded-full">
+          <UButton variant="solid" color="neutral" size="lg" class="rounded-full">
             Get started
           </UButton>
-          <UButton variant="link" color="gray" size="lg" class="rounded-full">
+          <UButton variant="link" color="neutral" size="lg" class="rounded-full">
             Discover more
           </UButton>
         </div>
@@ -31,32 +26,18 @@
       <div class="col-span-full">
         <div class="flex w-full flex-col gap-4">
           <NuxtMarquee :pauseOnHover="true" direction="right">
-            <div
-              class="flex w-full items-center justify-center gap-4 first:ml-0 xl:justify-between xl:first:ml-4"
-            >
+            <div class="flex w-full items-center justify-center gap-4 first:ml-0 xl:justify-between xl:first:ml-4">
               <template v-for="(f_image, index) in images" :key="index">
-                <NuxtImg
-                  class="size-48 object-cover object-center xl:size-52"
-                  :src="f_image"
-                  loading="lazy"
-                  alt="my-photo-work"
-                  :placeholder="[50, 25, 75, 5]"
-                />
+                <NuxtImg class="size-48 object-cover object-center xl:size-52" :src="f_image" loading="lazy"
+                  alt="my-photo-work" :placeholder="[50, 25, 75, 5]" />
               </template>
             </div>
           </NuxtMarquee>
           <NuxtMarquee :pauseOnHover="true" direction="left">
-            <div
-              class="flex w-full items-center justify-center gap-4 first:ml-4 xl:first:ml-4"
-            >
+            <div class="flex w-full items-center justify-center gap-4 first:ml-4 xl:first:ml-4">
               <template v-for="(f_image, index) in images" :key="index">
-                <NuxtImg
-                  class="size-48 object-cover object-center xl:size-52"
-                  :src="f_image"
-                  loading="lazy"
-                  alt="my-photo-work"
-                  :placeholder="[50, 25, 75, 5]"
-                />
+                <NuxtImg class="size-48 object-cover object-center xl:size-52" :src="f_image" loading="lazy"
+                  alt="my-photo-work" :placeholder="[50, 25, 75, 5]" />
               </template>
             </div>
           </NuxtMarquee>

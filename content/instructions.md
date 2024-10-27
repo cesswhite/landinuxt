@@ -1,8 +1,6 @@
-# Landinuxt: Build Landing Pages Effortlessly with Nuxt Components 🚀
+**LandiNuxt** provides pre-built, copy-paste components to help you create stunning landing pages in no time, fully integrated with the **Nuxt ecosystem**. Our components rely heavily on **Nuxt UI v3**, so it's crucial to install it for proper functionality.
 
-**Landinuxt** provides pre-built, copy-paste components to help you create stunning landing pages in no time, fully integrated with the **Nuxt ecosystem**. Our components rely heavily on **Nuxt UI v3**, so it's crucial to install it for proper functionality.
-
-## Requirements 📋
+## Requirements
 
 ### Key Technologies:
 
@@ -11,6 +9,8 @@
 - **Nuxt Marquee**
 - **Vue Use Motion**
 
+We will added more modules and Nuxt Libraries in the future
+
 ## Installing Nuxt UI v3 🔧
 
 To get started, you need to install Nuxt UI v3. Follow the official setup guide:
@@ -18,7 +18,7 @@ To get started, you need to install Nuxt UI v3. Follow the official setup guide:
 
 ## Built-in Configuration of Nuxt UI v3 ⚙️
 
-Nuxt UI v3 comes with pre-configured settings for **color mode**, **fonts**, and **TailwindCSS**. We highly recommend keeping the default setup, as our components are optimized to work with these settings. They seamlessly adapt to the color mode, and some components use Nuxt fonts.
+Nuxt UI v3 comes with pre-configured settings for **Color Mode**, **Fonts**, and **TailwindCSS**. We highly recommend keeping the default setup, as our components are optimized to work with these settings. They seamlessly adapt to the color mode, and some components use Nuxt fonts.
 
 - [Fonts Configuration](https://ui3.nuxt.dev/getting-started/fonts)
 - [Color Mode Configuration](https://ui3.nuxt.dev/getting-started/color-mode)

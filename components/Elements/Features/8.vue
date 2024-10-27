@@ -14,7 +14,7 @@
                         {{ feat.description }}
                     </p>
                     <div class="w-auto mt-12">
-                        <UButton :to="feat.link" icon="i-heroicons-arrow-long-right" variant="link" color="gray">
+                        <UButton :to="feat.link" icon="i-heroicons-arrow-long-right" variant="link" color="neutral">
                             Learn more about
                         </UButton>
                     </div>

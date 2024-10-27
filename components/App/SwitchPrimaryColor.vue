@@ -6,7 +6,7 @@
       <div class="relative z-40 grid w-full grid-cols-5 gap-2">
         <template v-for="(color, index) in primaryColors" :key="index">
           <div class="col-span-1 flex items-center justify-center">
-            <UButton color="gray" variant="link" square @click.stop.prevent="setPrimaryColor(color)">
+            <UButton color="neutral" variant="link" square @click.stop.prevent="setPrimaryColor(color)">
               <span class="inline-block size-6 rounded-full" :class="`bg-[--color-light] dark:bg-[--color-dark]`"
                 :style="{
                   '--color-light': `var(--color-${color}-500)`,
@@ -21,7 +21,7 @@
       <div class="relative z-40 grid w-full grid-cols-5 gap-2">
         <template v-for="(color, index) in grayColors" :key="index">
           <div class="col-span-1 flex items-center justify-center">
-            <UButton color="gray" variant="link" square @click.stop.prevent="setGrayColor(color)">
+            <UButton color="neutral" variant="link" square @click.stop.prevent="setGrayColor(color)">
               <span class="inline-block size-6 rounded-full" :class="`bg-[--color-light] dark:bg-[--color-dark]`"
                 :style="{
                   '--color-light': `var(--color-${color}-500)`,

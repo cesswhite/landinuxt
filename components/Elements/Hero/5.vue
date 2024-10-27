@@ -1,41 +1,20 @@
 <template>
-  <div
-    class="relative flex h-full min-h-dvh w-full items-center justify-center"
-  >
+  <div class="relative flex h-full min-h-dvh w-full items-center justify-center">
     <!-- Background Image (try a dark image) -->
-    <NuxtImg
-      class="absolute z-10 h-full w-full object-cover object-center"
+    <NuxtImg class="absolute z-10 h-full w-full object-cover object-center"
       src="https://images.unsplash.com/photo-1651352076676-58a34812f3d2?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      loading="lazy"
-      alt="my-hero-background"
-      :placeholder="[50, 25, 75, 5]"
-    />
+      loading="lazy" alt="my-hero-background" :placeholder="[50, 25, 75, 5]" />
     <div class="relative z-10 w-11/12 md:w-10/12">
       <div class="flex flex-col items-start justify-start">
-        <h1
-          class="mt-4 text-left text-5xl font-normal text-gray-100 sm:text-6xl md:text-7xl"
-        >
+        <h1 class="mt-4 text-left text-5xl font-normal text-gray-100 sm:text-6xl md:text-7xl">
           Unlock the Power of <br />
           Cutting-Edge Innovation
         </h1>
         <div class="mt-8 flex gap-4">
-          <UButton
-            variant="solid"
-            color="gray"
-            to="#"
-            size="lg"
-            trailing
-            class="rounded-full px-8"
-          >
+          <UButton variant="solid" color="neutral" to="#" size="lg" trailing class="rounded-full px-8">
             Get started
           </UButton>
-          <UButton
-            variant="link"
-            color="gray"
-            to="#"
-            size="lg"
-            class="rounded-full px-8"
-          >
+          <UButton variant="link" color="neutral" to="#" size="lg" class="rounded-full px-8">
             Request demo
           </UButton>
         </div>
@@ -45,10 +24,7 @@
       <div class="flex w-full items-center justify-center gap-16">
         <template v-for="icon in icons">
           <div class="group size-auto items-center justify-center">
-            <UIcon
-              :name="icon"
-              class="size-8 text-gray-50/10 group-hover:text-gray-50/50"
-            />
+            <UIcon :name="icon" class="size-8 text-gray-50/10 group-hover:text-gray-50/50" />
           </div>
         </template>
       </div>
