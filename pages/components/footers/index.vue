@@ -7,6 +7,7 @@
                 <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
                     <template #components>
                         <LazyElementsFooters1 v-if="item.title === ('simple' as FootersTemplates)" />
+                        <LazyElementsFooters2 v-if="item.title === ('space' as FootersTemplates)" />
                     </template>
                 </ElementsWrapper>
             </template>

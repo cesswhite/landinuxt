@@ -1,17 +1,16 @@
 <template>
   <div class="flex h-auto min-h-dvh w-full items-center justify-center bg-white p-4 py-24 dark:bg-black">
     <footer class="w-full relative py-2 border-t border-gray-950/10 dark:border-gray-50/50 py-12">
-      <div class="flex items-end justify-between">
-        <div class="flex flex-col gap-y-2">
-
-          <span class="text-sm inline-block text-gray-950/50 dark:text-gray-50/50">
-            ©2024 Spotlight All rights reserved
-          </span>
+      <div class="flex flex-col-reverse items-start md:items-end md:flex-row justify-between gap-y-12">
+        <div class="flex w-full md:w-1/2 flex-col">
           <span class="text-sm inline-block text-gray-950/50 dark:text-gray-50/50">
             (000) 000-0000
           </span>
+          <span class="text-sm inline-block text-gray-950/50 dark:text-gray-50/50">
+            ©2024 Spotlight All rights reserved
+          </span>
         </div>
-        <div class="flex items-start justify-end gap-x-24">
+        <div class="flex w-full md:w-1/2 items-start justify-start sm:justify-end gap-x-24">
           <div class="flex flex-col gap-y-2">
             <template v-for="(nav, index) in navigation" :key="index">
               <UButton :to="nav.link" target="_blank" variant="link" color="neutral" class="p-0">
@@ -40,8 +39,6 @@
 </template>
 
 <script setup lang="ts">
-
-
 const navigation = [
   {
     label: "Development",
@@ -94,7 +91,12 @@ const bottom_navigation = [
     label: "Services",
     link: "#",
   },
+  {
+    label: "Careers",
+    link: "#",
+  },
 ];
+
 const social_network_navigation = [
   {
     label: "X",
