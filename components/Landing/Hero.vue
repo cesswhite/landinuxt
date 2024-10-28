@@ -7,7 +7,7 @@
           Hand-crafter components for landing pages
         </div>
         <h1
-          class="mt-8 text-center text-4xl font-bold tracking-tight text-dark-500 md:text-5xl lg:text-6xl xl:text-7xl dark:text-neutral-50">
+          class="mt-8 text-center text-4xl font-bold tracking-tight text-dark-950 md:text-5xl lg:text-6xl xl:text-7xl dark:text-neutral-50">
           Build fast
           <br />
           Landing Pages with

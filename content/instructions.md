@@ -38,6 +38,48 @@ Below are the font families currently used in our components. Feel free to add t
 
 For more details on theming, visit the [Nuxt UI Theme Guide](https://ui3.nuxt.dev/getting-started/theme).
 
+## Integrate Custom CSS Variables 🎨
+
+Integrate these CSS custom variables to ensure the style design functions as intended
+
+```css
+--color-primary-50: var(--ui-color-primary-50);
+--color-primary-100: var(--ui-color-primary-100);
+--color-primary-200: var(--ui-color-primary-200);
+--color-primary-300: var(--ui-color-primary-300);
+--color-primary-400: var(--ui-color-primary-400);
+--color-primary-500: var(--ui-color-primary-500);
+--color-primary-600: var(--ui-color-primary-600);
+--color-primary-700: var(--ui-color-primary-700);
+--color-primary-800: var(--ui-color-primary-800);
+--color-primary-900: var(--ui-color-primary-900);
+--color-primary-950: var(--ui-color-primary-950);
+
+--color-dark-50: var(--ui-color-neutral-50);
+--color-dark-100: var(--ui-color-neutral-100);
+--color-dark-200: var(--ui-color-neutral-200);
+--color-dark-300: var(--ui-color-neutral-300);
+--color-dark-400: var(--ui-color-neutral-400);
+--color-dark-500: var(--ui-color-neutral-500);
+--color-dark-600: var(--ui-color-neutral-600);
+--color-dark-700: var(--ui-color-neutral-700);
+--color-dark-800: var(--ui-color-neutral-800);
+--color-dark-900: var(--ui-color-neutral-900);
+--color-dark-950: var(--ui-color-neutral-950);
+```
+
+This is designed to maintain a consistent design principle with classes: primary/dark. With this, we can use classes like this
+
+```html
+<h1 class="text-primary-400 dark:text-primary-500">Eco Development Studios</h1>
+or
+<h1 class="text-dark-950 dark:text-dark-50">Eco Development Studios</h1>
+```
+
+> **Important:** To avoid conflicts with default values, we do not use 'gray' or 'neutral' names.
+
+For more details on theming, visit the [Nuxt UI Theme Guide](https://ui3.nuxt.dev/getting-started/theme#colors).
+
 ## Additional Required Modules 📦
 
 In addition to Nuxt UI v3, you’ll need the following modules for full component functionality:
