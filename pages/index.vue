@@ -1,6 +1,5 @@
 <template>
   <NuxtLayout name="default">
-    <AppHeader />
     <LandingHero />
     <LandingFeatures />
   </NuxtLayout>
