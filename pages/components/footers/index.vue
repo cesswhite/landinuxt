@@ -11,6 +11,8 @@
                             <LazyElementsFooters2 v-if="item.title === ('space' as FootersTemplates)" />
                             <LazyElementsFooters3 v-if="item.title === ('full' as FootersTemplates)" />
                             <LazyElementsFooters4 v-if="item.title === ('big' as FootersTemplates)" />
+                            <LazyElementsFooters5 v-if="item.title === ('grid' as FootersTemplates)" />
+                            <LazyElementsFooters6 v-if="item.title === ('minimal' as FootersTemplates)" />
                         </template>
                     </ElementsWrapper>
                 </template>
