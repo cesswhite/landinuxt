@@ -1,5 +1,5 @@
 <template>
-  <header class="relative flex w-full items-center justify-between bg-white px-4 py-2 dark:bg-gray-950">
+  <header class="relative flex w-full items-center justify-between bg-white px-4 py-2 dark:bg-dark-950">
     <div class="flex w-auto items-center justify-start md:w-full">
       <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
         class="size-auto object-contain object-center" loading="lazy" alt="my-company-logo-description"

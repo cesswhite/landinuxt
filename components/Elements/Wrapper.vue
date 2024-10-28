@@ -4,17 +4,17 @@
       <div class="flex flex-col items-start justify-between">
         <div class="text-base">
           <div class="flex items-center gap-2">
-            <span class="inline-block text-base font-bold capitalize text-gray-900 dark:text-gray-50/90">
+            <span class="inline-block text-base font-bold capitalize text-dark-900 dark:text-dark-50/90">
               {{ props.item.title }}
             </span>
             <UTooltip v-if="props.item.dark" text="Component with color mode support">
-              <UIcon name="i-heroicons-moon-20-solid" class="mt-0.5 text-xs text-gray-950 dark:text-gray-50" />
+              <UIcon name="i-heroicons-moon-20-solid" class="mt-0.5 text-xs text-dark-950 dark:text-dark-50" />
             </UTooltip>
             <UTooltip v-if="props.item.animated" text="Component with animation">
-              <UIcon name="i-heroicons-sparkles-20-solid" class="mt-0.5 text-sm text-gray-950 dark:text-gray-50" />
+              <UIcon name="i-heroicons-sparkles-20-solid" class="mt-0.5 text-sm text-dark-950 dark:text-dark-50" />
             </UTooltip>
           </div>
-          <p class="text-sm font-normal text-gray-400 dark:text-gray-50/40">
+          <p class="text-sm font-normal text-dark-400 dark:text-dark-50/40">
             {{ props.item.description }}
           </p>
         </div>
@@ -31,7 +31,7 @@
       </div>
       <Transition name="fade" mode="out-in">
         <div v-if="props.item.preview"
-          class="scrollbar-hide mt-4 h-auto overflow-x-hidden  scrollbar-hide rounded-md bg-gray-200/80 p-2 dark:bg-gray-900"
+          class="scrollbar-hide mt-4 h-auto overflow-x-hidden  scrollbar-hide rounded-md bg-dark-200/80 p-2 dark:bg-dark-900"
           :class="setHeightClass
             ">
           <slot name="components" />

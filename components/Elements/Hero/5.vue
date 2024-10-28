@@ -6,7 +6,7 @@
       loading="lazy" alt="my-hero-background" :placeholder="[50, 25, 75, 5]" />
     <div class="relative z-10 w-11/12 md:w-10/12">
       <div class="flex flex-col items-start justify-start">
-        <h1 class="mt-4 text-left text-5xl font-normal text-gray-100 sm:text-6xl md:text-7xl">
+        <h1 class="mt-4 text-left text-5xl font-normal text-dark-100 sm:text-6xl md:text-7xl">
           Unlock the Power of <br />
           Cutting-Edge Innovation
         </h1>
@@ -24,7 +24,7 @@
       <div class="flex w-full items-center justify-center gap-16">
         <template v-for="icon in icons">
           <div class="group size-auto items-center justify-center">
-            <UIcon :name="icon" class="size-8 text-gray-50/10 group-hover:text-gray-50/50" />
+            <UIcon :name="icon" class="size-8 text-dark-50/10 group-hover:text-dark-50/50" />
           </div>
         </template>
       </div>

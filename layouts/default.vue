@@ -1,6 +1,5 @@
 <template>
-    <div class="relative w-full min-h-dvh h-auto bg-gray-50 dark:bg-gray-950 pb-12">
-        <AppHeader />
+    <div class="relative w-full min-h-dvh h-auto bg-dark-50 dark:bg-dark-950 pb-12">
         <slot />
     </div>
 </template>

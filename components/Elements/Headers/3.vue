@@ -1,5 +1,5 @@
 <template>
-  <header class="relative flex w-full items-center justify-between bg-white py-4 px-4 dark:bg-gray-950">
+  <header class="relative flex w-full items-center justify-between bg-white py-4 px-4 dark:bg-dark-950">
     <div class="w-auto flex-1 items-center justify-start lg:flex-none">
       <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Groupdark_ljxs2m.png"
         class="h-auto object-contain object-center" loading="lazy" alt="my-company-logo-description"
@@ -22,7 +22,7 @@
         <template #item="{ item }">
           <span class="truncate text-sm font-medium">{{ item.label }}</span>
           <UIcon v-if="item.icon" :name="item.icon"
-            class="flex-shrink-0 ms-auto h-4 w-4 text-gray-700 dark:text-gray-700" />
+            class="flex-shrink-0 ms-auto h-4 w-4 text-dark-700 dark:text-dark-700" />
         </template>
       </UDropdownMenu>
       <UButton variant="ghost" color="neutral" size="lg" to="#" class="rounded-full">

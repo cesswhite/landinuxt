@@ -2,10 +2,10 @@
     <footer class="w-full relative py-2 border-t border-gray-950/10 dark:border-gray-50/50 py-12">
         <div class="flex flex-col-reverse items-start md:items-end md:flex-row justify-between gap-y-12">
             <div class="flex w-full md:w-1/2 flex-col">
-                <span class="text-sm inline-block text-gray-950/50 dark:text-gray-50/50">
+                <span class="text-sm inline-block text-dark-950/50 dark:text-dark-50/50">
                     (000) 000-0000
                 </span>
-                <span class="text-sm inline-block text-gray-950/50 dark:text-gray-50/50">
+                <span class="text-sm inline-block text-dark-950/50 dark:text-dark-50/50">
                     ©2024 Spotlight All rights reserved
                 </span>
             </div>

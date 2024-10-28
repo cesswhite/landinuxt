@@ -1,15 +1,15 @@
 <template>
   <div
-    class="relative flex h-full min-h-dvh w-full flex-col items-center justify-center bg-gray-50 pt-32 dark:bg-gray-950">
+    class="relative flex h-full min-h-dvh w-full flex-col items-center justify-center bg-dark-50 pt-32 dark:bg-dark-950">
     <div class="relative z-20 w-11/12 md:w-10/12">
       <div class="flex flex-col items-center justify-center">
         <h1
-          class="mt-4 text-center font-sans text-8xl font-bold text-gray-900 sm:text-6xl md:text-9xl dark:text-gray-50">
+          class="mt-4 text-center font-sans text-8xl font-bold text-dark-900 sm:text-6xl md:text-9xl dark:text-dark-50">
           Explore. <br />
           Amaze.
         </h1>
         <p
-          class="mt-4 w-full text-center text-lg leading-8 text-gray-900/60 sm:w-1/2 2xl:w-1/3 2xl:text-xl dark:text-gray-50/60">
+          class="mt-4 w-full text-center text-lg leading-8 text-dark-900/60 sm:w-1/2 2xl:w-1/3 2xl:text-xl dark:text-dark-50/60">
           Embark on an unforgettable adventure safari with our expert guides
         </p>
         <div class="mt-8 flex flex-col gap-4 md:flex-row">
@@ -25,7 +25,7 @@
     <div class="mt-12 flex w-full flex-wrap items-center justify-center gap-4">
       <template v-for="icon in icons">
         <div class="flex size-auto items-center justify-center p-2">
-          <UIcon :name="icon" class="mx-auto size-10 text-gray-500/50 dark:text-gray-50/20" />
+          <UIcon :name="icon" class="mx-auto size-10 text-dark-500/50 dark:text-dark-50/20" />
         </div>
       </template>
     </div>

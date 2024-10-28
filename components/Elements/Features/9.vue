@@ -2,8 +2,8 @@
     <div class="flex flex-col gap-x-24 lg:flex-row justify-start items-center">
         <div class="flex flex-col gap-y-24 w-full lg:w-1/2">
             <div class="flex flex-col gap-y-2">
-                <span class="text-3xl font-bold text-gray-950 dark:text-gray-50 inline-block">Features</span>
-                <p class="text-lg font-normal text-gray-950/50 dark:text-gray-50/50">Explore the wide range of features
+                <span class="text-3xl font-bold text-dark-950 dark:text-dark-50 inline-block">Features</span>
+                <p class="text-lg font-normal text-dark-950/50 dark:text-dark-50/50">Explore the wide range of features
                     our
                     website has to
                     offer. From user-friendly interfaces to seamless
@@ -14,12 +14,12 @@
                 <template v-for="(feat, index) in features" :key="index">
                     <div class="col-span-full md:col-span-2 flex flex-col gap-y-2">
                         <div
-                            class="flex size-8 items-center justify-center rounded-md border border-gray-950/20 bg-gray-200/20 p-1 dark:border-gray-700 dark:bg-gray-800">
-                            <UIcon :name="feat.icon" class="text-gray-950 dark:text-gray-50" />
+                            class="flex size-8 items-center justify-center rounded-md border border-gray-950/20 bg-dark-200/20 p-1 dark:border-gray-700 dark:bg-dark-800">
+                            <UIcon :name="feat.icon" class="text-dark-950 dark:text-dark-50" />
                         </div>
-                        <span class="text-lg font-bold text-gray-950 dark:text-gray-50 inline-block">{{ feat.title
+                        <span class="text-lg font-bold text-dark-950 dark:text-dark-50 inline-block">{{ feat.title
                             }}</span>
-                        <p class="text-base font-normal text-gray-950/50 dark:text-gray-50 inline-block">{{
+                        <p class="text-base font-normal text-dark-950/50 dark:text-dark-50 inline-block">{{
                             feat.description }}
                         </p>
                     </div>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex w-full flex-col gap-12 rounded-xl border bg-gray-50 bg-gray-100 p-4 md:gap-24 dark:bg-gray-900"
+    class="flex w-full flex-col gap-12 rounded-xl border bg-dark-50  p-4 md:gap-24 dark:bg-dark-900"
   >
     <div
       v-motion
@@ -13,13 +13,13 @@
         <div class="text-primary-600 dark:text-primary-500 text-sm">
           Embark on a Wild Adventure
         </div>
-        <h1 class="text-7xl font-normal text-gray-950 dark:text-gray-50">
+        <h1 class="text-7xl font-normal text-dark-950 dark:text-dark-50">
           Safari Tour Experience
         </h1>
       </div>
       <div class="flex w-full items-center justify-start md:w-1/2">
         <p
-          class="font-base w-full text-gray-950/60 md:w-1/2 dark:text-gray-50/80"
+          class="font-base w-full text-dark-950/60 md:w-1/2 dark:text-dark-50/80"
         >
           Join us on an unforgettable safari tour, where you'll explore the
           untamed wilderness and get up close with incredible wildlife.
@@ -50,12 +50,12 @@
           </div>
 
           <span
-            class="text-2xl font-medium text-gray-950 md:text-4xl dark:text-gray-50"
+            class="text-2xl font-medium text-dark-950 md:text-4xl dark:text-dark-50"
           >
             {{ image.label }}
           </span>
           <p
-            class="w-full text-base font-normal text-gray-950/60 dark:text-gray-50/60"
+            class="w-full text-base font-normal text-dark-950/60 dark:text-dark-50/60"
           >
             {{ image.description }}
           </p>

@@ -1,5 +1,5 @@
 <template>
-  <div class="relative flex h-dvh w-full items-center justify-center overflow-hidden bg-gray-50 dark:bg-gray-950">
+  <div class="relative flex h-dvh w-full items-center justify-center overflow-hidden bg-dark-50 dark:bg-dark-950">
     <!-- SVG Container -->
     <div
       class="absolute z-10 h-dvh w-[820px] pt-24 opacity-70 saturate-200 md:w-[1080px] lg:w-full lg:pt-[400px] xl:pt-0 dark:opacity-90">

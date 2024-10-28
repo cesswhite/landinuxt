@@ -7,7 +7,7 @@
           Hand-crafter components for landing pages
         </div>
         <h1
-          class="mt-8 text-center text-4xl font-bold tracking-tight text-gray-950 md:text-5xl lg:text-6xl xl:text-7xl dark:text-gray-50">
+          class="mt-8 text-center text-4xl font-bold tracking-tight text-dark-500 md:text-5xl lg:text-6xl xl:text-7xl dark:text-neutral-50">
           Build fast
           <br />
           Landing Pages with
@@ -24,10 +24,10 @@
           efficient development.
         </p>
         <div class="mt-12 flex flex-col items-center justify-center gap-4 md:flex-row">
+          <UButton to="/instructions" variant="ghost" size="xl"> Instructions </UButton>
           <UButton variant="solid" to="/components" size="xl">
             Explore components
           </UButton>
-          <UButton to="/instructions" variant="ghost" size="xl"> Instructions </UButton>
         </div>
       </div>
     </div>

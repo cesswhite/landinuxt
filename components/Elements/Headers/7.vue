@@ -1,7 +1,7 @@
 <template>
   <div class="relative w-full">
     <header
-      class="relative z-20 flex h-16 w-full items-center justify-between gap-4 rounded-xl bg-gray-50 px-4 lg:justify-start dark:bg-gray-950">
+      class="relative z-20 flex h-16 w-full items-center justify-between gap-4 rounded-xl bg-dark-50 px-4 lg:justify-start dark:bg-dark-950">
       <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Groupdark_ljxs2m.png"
         class="relative z-10 h-7 w-auto object-contain object-center" loading="lazy" alt="my-company-logo-description"
         :placeholder="[50, 25, 75, 5]" />
@@ -66,18 +66,18 @@
       enter-to-class="opacity-100" leave-active-class="transition-all duration-500" leave-from-class="opacity-100 "
       leave-to-class="opacity-0 -translate-y-2" mode="out-in">
       <div v-if="showMenu"
-        class="absolute top-0 left-0 z-10 hidden h-72 w-full rounded-xl border bg-gray-100 pt-16 px-4 lg:flex dark:border-gray-950/50 dark:bg-gray-900">
+        class="absolute top-0 left-0 z-10 hidden h-72 w-full rounded-xl border bg-dark-100 pt-16 px-4 lg:flex dark:border-gray-950/50 dark:bg-dark-900">
         <div class="flex w-3/5 items-center">
           <template v-for="(service, index) in services" :key="index">
             <div class="flex flex-col gap-y-2">
               <div
-                class="flex size-8 items-center justify-center rounded-md border border-gray-950/20 bg-gray-200/20 p-1 dark:border-gray-700 dark:bg-gray-800">
-                <UIcon :name="service.icon" class="size-full text-gray-950 dark:text-gray-50" />
+                class="flex size-8 items-center justify-center rounded-md border border-gray-950/20 bg-dark-200/20 p-1 dark:border-gray-700 dark:bg-dark-800">
+                <UIcon :name="service.icon" class="size-full text-dark-950 dark:text-dark-50" />
               </div>
-              <span class="text-base font-bold text-gray-950 dark:text-gray-50">
+              <span class="text-base font-bold text-dark-950 dark:text-dark-50">
                 {{ service.name }}
               </span>
-              <p class="w-4/5 text-sm font-normal text-gray-950/60 dark:text-gray-50/60">
+              <p class="w-4/5 text-sm font-normal text-dark-950/60 dark:text-dark-50/60">
                 {{ service.description }}
               </p>
             </div>
@@ -85,10 +85,10 @@
         </div>
         <div class="w-2/5 pt-4">
           <div class="bg-primary-200 dark:bg-primary-700 h-full w-full overflow-hidden rounded-t-xl p-4">
-            <span class="text-base font-bold text-gray-950 dark:text-gray-50">
+            <span class="text-base font-bold text-dark-950 dark:text-dark-50">
               Explore Our Services
             </span>
-            <p class="w-4/5 text-sm font-normal text-gray-950/60 dark:text-gray-50/60">
+            <p class="w-4/5 text-sm font-normal text-dark-950/60 dark:text-dark-50/60">
               Discover how our services can help you achieve your business
               goals.
             </p>

@@ -12,7 +12,7 @@
       />
     </div>
     <div
-      class="hidden items-center justify-center rounded-full border border-gray-200/60 bg-gray-50/30 py-1 px-24 backdrop-blur md:flex dark:border-gray-500/5 dark:bg-gray-900/90"
+      class="hidden items-center justify-center rounded-full border border-gray-200/60 bg-dark-50/30 py-1 px-24 backdrop-blur md:flex dark:border-gray-500/5 dark:bg-dark-900/90"
     >
       <nav class="flex w-full items-center justify-center gap-2">
         <UButton

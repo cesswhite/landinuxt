@@ -6,12 +6,12 @@
       class="col-span-full flex flex-col items-start justify-center gap-y-8 xl:col-span-4"
     >
       <h1
-        class="mx-auto text-left text-3xl font-medium text-gray-950 md:w-11/12 md:text-center lg:text-4xl xl:w-full xl:text-left dark:text-gray-50"
+        class="mx-auto text-left text-3xl font-medium text-dark-950 md:w-11/12 md:text-center lg:text-4xl xl:w-full xl:text-left dark:text-dark-50"
       >
         Unlock Your Project's Full Potential with Expert Services
       </h1>
       <p
-        class="mx-auto w-full text-left text-lg text-gray-950/50 md:w-10/12 md:text-center xl:w-full xl:text-left dark:text-gray-50/50"
+        class="mx-auto w-full text-left text-lg text-dark-950/50 md:w-10/12 md:text-center xl:w-full xl:text-left dark:text-dark-50/50"
       >
         Unlock your website's full user experience potential with our diverse
         range of feature sections, from minimalist to feature-packed designs,
@@ -40,11 +40,11 @@
               class="? text-primary-600 dark:text-primary-400 size-8"
             />
           </div>
-          <span class="text-xl font-semibold text-gray-950 dark:text-gray-50">{{
+          <span class="text-xl font-semibold text-dark-950 dark:text-dark-50">{{
             feat.title
           }}</span>
           <p
-            class="px-0 text-left text-base font-normal text-gray-950/50 md:px-4 md:px-12 md:text-center dark:text-gray-50/50"
+            class="px-0 text-left text-base font-normal text-dark-950/50 md:px-4 md:px-12 md:text-center dark:text-dark-50/50"
           >
             {{ feat.description }}
           </p>

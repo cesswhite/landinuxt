@@ -7,10 +7,10 @@
                         alt="my-company-logo-description" width="640" height="640" :placeholder="[50, 25, 75, 5]" />
                 </div>
                 <div class="w-full md:w-1/2 flex flex-col gap-y-2 p-0 md:px-8 items-start">
-                    <span class="text-gray-950 dark:text-gray-50 text-4xl lg:text-6xl font-instrument">
+                    <span class="text-dark-950 dark:text-dark-50 text-4xl lg:text-6xl font-instrument">
                         {{ feat.title }}
                     </span>
-                    <p class="text-gray-950/50 dark:text-gray-50/50 text-xl lg:text-2xl font-instrument">
+                    <p class="text-dark-950/50 dark:text-dark-50/50 text-xl lg:text-2xl font-instrument">
                         {{ feat.description }}
                     </p>
                     <div class="w-auto mt-12">

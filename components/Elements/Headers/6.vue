@@ -1,6 +1,6 @@
 <template>
   <header
-    class="relative flex w-full items-center justify-between bg-white py-2 px-4 dark:bg-gray-950"
+    class="relative flex w-full items-center justify-between bg-white py-2 px-4 dark:bg-dark-950"
   >
     <div class="flex items-center gap-2">
       <USlideover side="left" title="Menu" close-icon="i-heroicons-x-mark">

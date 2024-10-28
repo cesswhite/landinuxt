@@ -1,6 +1,6 @@
 <template>
-  <div class="fixed left-0 top-0 z-50 w-full bg-gray-50/70 dark:bg-gray-950/70 backdrop-blur-md">
-    <div class="flex items-center justify-between px-4 py-2">
+  <header class="fixed left-0 top-0 z-50 w-full bg-dark-50/70 dark:bg-dark-950/70 backdrop-blur-md">
+    <div class="flex items-center justify-between px-4 py-2 relative z-10 ?">
       <div class="flex size-8 items-center justify-center">
         <NuxtLink to="/">
           <AppLogo />
@@ -11,7 +11,7 @@
         <AppSwitchMode />
       </nav>
     </div>
-  </div>
+  </header>
 </template>
 
 <script setup lang="ts">

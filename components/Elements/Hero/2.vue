@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative flex h-full min-h-dvh w-full items-center justify-center bg-gray-50 dark:bg-gray-950"
+    class="relative flex h-full min-h-dvh w-full items-center justify-center bg-dark-50 dark:bg-dark-950"
   >
     <div class="relative z-20 w-11/12 md:w-10/12">
       <div
@@ -17,7 +17,7 @@
           Beautifully crafted components
         </UBadge>
         <h1
-          class="mt-4 text-center text-5xl font-semibold text-gray-900 sm:text-6xl md:text-7xl dark:text-gray-100"
+          class="mt-4 text-center text-5xl font-semibold text-dark-900 sm:text-6xl md:text-7xl dark:text-dark-100"
         >
           Build your <br />
           Dream Home

@@ -8,12 +8,12 @@
     <div class="relative bottom-24 z-20 w-11/12 md:w-10/12">
       <div class="flex flex-col items-center justify-center">
         <h1
-          class="font-lora mt-4 text-center text-5xl font-normal text-gray-50/80 sm:text-6xl md:text-7xl dark:text-white">
+          class="font-lora mt-4 text-center text-5xl font-normal text-dark-50/80 sm:text-6xl md:text-7xl dark:text-white">
           Discover the Magic of <br />
           Luxurious Comfort
         </h1>
         <p
-          class="mt-4 w-full text-center text-lg leading-8 text-gray-50/60 sm:w-1/2 2xl:w-1/3 2xl:text-xl dark:text-gray-50/80">
+          class="mt-4 w-full text-center text-lg leading-8 text-dark-50/60 sm:w-1/2 2xl:w-1/3 2xl:text-xl dark:text-dark-50/80">
           Indulge in the ultimate sleep experience with our wide range of
           luxurious bedding collections
         </p>

@@ -1,12 +1,12 @@
 <template>
-  <div class="relative h-auto w-full bg-gray-50 dark:bg-gray-950">
+  <div class="relative h-auto w-full bg-dark-50 dark:bg-dark-950">
     <div
       class="mx-auto grid h-full min-h-dvh w-full grid-cols-2 items-center justify-center gap-4 px-4 2xl:max-w-screen-2xl"
     >
       <div class="relative col-span-full mt-28 lg:col-span-1">
         <div class="flex flex-col items-center justify-center lg:items-start">
           <h1
-            class="w-full text-center font-sans text-4xl font-bold leading-10 text-gray-900 sm:text-5xl md:w-10/12 lg:w-full lg:text-left lg:text-6xl dark:text-gray-100"
+            class="w-full text-center font-sans text-4xl font-bold leading-10 text-dark-900 sm:text-5xl md:w-10/12 lg:w-full lg:text-left lg:text-6xl dark:text-dark-100"
           >
             Welcome to the future of construction
           </h1>
@@ -29,18 +29,18 @@
           <div
             class="mt-8 flex w-full items-center justify-center gap-12 lg:items-start lg:justify-start"
           >
-            <UIcon name="i-simple-icons-nike" class="text-4xl text-gray-400" />
+            <UIcon name="i-simple-icons-nike" class="text-4xl text-dark-400" />
             <UIcon
               name="i-simple-icons-google"
-              class="text-4xl text-gray-400"
+              class="text-4xl text-dark-400"
             />
             <UIcon
               name="i-simple-icons-adidas"
-              class="text-4xl text-gray-400"
+              class="text-4xl text-dark-400"
             />
             <UIcon
               name="i-simple-icons-doubanread"
-              class="text-4xl text-gray-400"
+              class="text-4xl text-dark-400"
             />
           </div>
         </div>
