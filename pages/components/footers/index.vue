@@ -10,6 +10,7 @@
                             <LazyElementsFooters1 v-if="item.title === ('simple' as FootersTemplates)" />
                             <LazyElementsFooters2 v-if="item.title === ('space' as FootersTemplates)" />
                             <LazyElementsFooters3 v-if="item.title === ('full' as FootersTemplates)" />
+                            <LazyElementsFooters4 v-if="item.title === ('big' as FootersTemplates)" />
                         </template>
                     </ElementsWrapper>
                 </template>
