@@ -29,21 +29,21 @@
             " variant="ghost" />
         </div>
       </div>
-      <Transition name="fade" mode="out-in">
-        <div v-if="props.item.preview"
-          class="scrollbar-hide mt-4 h-auto overflow-x-hidden  scrollbar-hide rounded-md bg-dark-200/80 p-2 dark:bg-dark-900"
-          :class="setHeightClass
-            ">
-          <slot name="components" />
-        </div>
-        <div v-else id="code" class="">
-          <ContentQuery :path="item._path" find="one" v-slot="{ data }">
-            <ContentRenderer>
-              <ContentRendererMarkdown :value="data" class="max-w-full prose  dark:prose-invert" />
-            </ContentRenderer>
-          </ContentQuery>
-        </div>
-      </Transition>
+
+      <div v-if="props.item.preview"
+        class="scrollbar-hide mt-4 h-auto overflow-x-hidden  scrollbar-hide rounded-md bg-dark-200/80 p-2 dark:bg-dark-900"
+        :class="setHeightClass
+          ">
+        <slot name="components" />
+      </div>
+      <div v-else id="code" class="mt-2 min-h-96">
+        <ContentQuery :path="item._path" find="one" v-slot="{ data }">
+          <ContentRenderer>
+            <ContentRendererMarkdown :value="data" class="max-w-full prose" />
+          </ContentRenderer>
+        </ContentQuery>
+      </div>
+
     </div>
   </div>
 </template>

@@ -42,9 +42,7 @@ export default defineNuxtConfig({
         'vue',
       ],
       theme: {
-        dark: 'github-light',
-        light: 'github-dark',
-        default: 'github-light'
+        default: 'github-dark'
       }
     }
   },

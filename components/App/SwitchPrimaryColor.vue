@@ -22,7 +22,6 @@
         <template v-for="(color, index) in neutralColors" :key="index">
           <div class="col-span-1 flex items-center justify-center">
             <UButton variant="link" square @click.stop.prevent="setNeutralColor(color)">
-              {{ color }}
               <span class="inline-block size-8 rounded-full"
                 :class="`bg-[var(--color-light)] dark:bg-[var(--color-dark)]`" :style="{
                   '--color-light': `var(--color-${color}-400)`,

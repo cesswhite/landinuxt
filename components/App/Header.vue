@@ -7,6 +7,8 @@
         </NuxtLink>
       </div>
       <nav class="flex items-center justify-center">
+        <UButton to="https://github.com/cesswhite/landingnuxt" target="_blank" icon="i-mdi-github" variant="link"
+          color="primary" size="lg" />
         <AppSwitchPrimaryColor />
         <AppSwitchMode />
       </nav>

@@ -91,3 +91,43 @@ In addition to Nuxt UI v3, you’ll need the following modules for full componen
 ## Using Our Components 🎉
 
 Once everything is set up, you're ready to go! Just copy and paste the component code from Landinuxt into your project, and you’re all set to create stunning landing pages with ease.
+
+## How to Contribute 🤝
+
+We welcome contributions from the community! Here’s how you can help:
+
+1. **Fork the Repository**: Start by forking the LandiNuxt repository to your own GitHub account.
+
+2. **Clone Your Fork**: Clone your forked repository to your local machine:
+
+   ```bash
+   git clone https://github.com/your-username/landinuxt.git
+   ```
+
+3. **Create a Branch**: Create a new branch for your feature or bug fix:
+
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+4. **Make Changes**: Implement your changes and ensure they align with our coding standards and best practices.
+
+5. **Commit Your Changes**: Commit your changes with a clear and descriptive message:
+
+   ```bash
+   git commit -m "Add a feature that does XYZ"
+   ```
+
+6. **Push to Your Fork**: Push your changes back to your forked repository:
+
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+7. **Open a Pull Request**: Go to the original LandiNuxt repository and open a pull request. Provide a detailed description of your changes and why they should be merged.
+
+8. **Engage with Feedback**: Be open to feedback and make any necessary adjustments to your pull request.
+
+For detailed instructions on how to contribute to LandiNuxt, please visit our [Contribution Guide](../contribution).
+
+Thank you for considering contributing to LandiNuxt! Your help is greatly appreciated.
