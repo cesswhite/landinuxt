@@ -18,17 +18,7 @@ export default defineNuxtConfig({
         {
           charset: "utf-8",
         },
-      ],
-      link: [
-        {
-          rel: "icon",
-          type: "image/svg+xml",
-          href: "/favicon.svg",
-        },
-      ],
-      htmlAttrs: {
-        lang: "en",
-      },
+      ]
     },
   },
 
