@@ -2,6 +2,13 @@
 export default defineNuxtConfig({
   app: {
     head: {
+      script: [
+        {
+          src: 'https://api.stage.codewithbeto.dev/script.js',
+          defer: true,
+          'data-website-id': process.env.UMAMI_KEY
+        }
+      ],
       meta: [
         {
           name: "viewport",
