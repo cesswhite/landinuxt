@@ -83,6 +83,14 @@ Once everything is set up, you're ready to go! Just copy and paste the component
 
 Contributions are welcome! If you want to improve or add new features to LandiNuxt, feel free to open an issue or submit a pull request.
 
+## Acknowledgments
+
+A big thank you to the [Nuxt](https://nuxt.com) team and contributors for building such a powerful framework that inspired _LandiNuxt_.
+
+Special thanks to [Beto from Code with Beto](https://www.youtube.com/@codewithbeto/videos) for his invaluable support, testing and tips.
+
+Thank you all for your contributions and support!
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
