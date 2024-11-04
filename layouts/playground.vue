@@ -1,5 +1,6 @@
 <template>
-  <div class="relative h-auto min-h-dvh w-full bg-dark-50 dark:bg-dark-950">
+  <div
+    class="relative flex h-auto min-h-dvh w-full items-center justify-center bg-[#ffffff] p-4 py-24 dark:bg-[#000000]">
     <div class="fixed right-0 top-2 z-100 w-auto">
       <AppSwitchPrimaryColor />
       <AppSwitchMode />
@@ -7,5 +8,3 @@
     <slot />
   </div>
 </template>
-
-<script setup lang="ts"></script>

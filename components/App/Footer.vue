@@ -1,8 +1,8 @@
 <template>
-    <footer class="relative flex h-auto w-full flex-col gap-8 overflow-hidden px-4 py-4">
+    <footer class="relative flex h-auto w-full flex-col gap-8 overflow-hidden px-4 py-4 mt-56 md:mt-96">
         <div class="flex flex-col items-center justify-center gap-4 md:flex-row">
-            <template v-for="(nav, index) in other_navigation" :key="index">
-                <UButton :to="nav.link" target="_blank" variant="link" color="neutral" class="p-0" size="xs">
+            <template v-for="(nav, index) in navigation" :key="index">
+                <UButton :to="nav.link" variant="link" color="neutral" class="p-0" size="xs">
                     {{ nav.label }}
                 </UButton>
             </template>
@@ -24,20 +24,20 @@
 </template>
 
 <script setup lang="ts">
-const other_navigation = [
+const navigation = [
     {
         label: "Home",
         link: "/",
-    },
-    {
-        label: "Contribution",
-        link: "/contribution",
     },
     {
         label: "Instructions",
         link: "/instructions",
     },
 
+    {
+        label: "Contribution",
+        link: "/contribution",
+    },
     {
         label: "Components",
         link: "/components",

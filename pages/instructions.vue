@@ -7,7 +7,7 @@
                 </h1>
             </div>
             <div class="">
-                <ContentDoc path="/instructions" class="prose" />
+                <ContentDoc path="/instructions" class="prose dark:prose-invert" />
             </div>
         </div>
     </NuxtLayout>
