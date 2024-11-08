@@ -15,6 +15,7 @@ const _hero = await queryContent("hero").find();
 const _headers = await queryContent("headers").find();
 const _features = await queryContent("features").find();
 const _footers = await queryContent("footers").find();
+const _cta = await queryContent("cta").find();
 const _components = ref<Component[]>([
   {
     name: "hero",
@@ -33,8 +34,8 @@ const _components = ref<Component[]>([
     total: _footers.length,
   },
   {
-    name: "CTA",
-    total: 0,
+    name: "cta",
+    total: _cta.length,
   },
   {
     name: "testimonials",
