@@ -1,6 +1,6 @@
 <template>
   <div class="relative w-full mt-24">
-    <div class="mb-12 h-full overflow-hidden rounded-md border border-gray-500/10 p-2 lg:h-full">
+    <div class="mb-12 h-full overflow-hidden rounded-md border border-dark-500/10 p-2 lg:h-full">
       <div class="flex flex-col items-start justify-between">
         <div class="text-base">
           <div class="flex items-center gap-2">

@@ -1,6 +1,6 @@
 <template>
     <div class="w-full h-full p-4 flex items-center justify-center will-change-auto">
-        <svg class="fill-gray-800 dark:fill-gray-50" viewBox="0 0 1080 670" fill="none"
+        <svg class="fill-dark-800 dark:fill-dark-50" viewBox="0 0 1080 670" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path d="M2 53L1078 52.9999" stroke-width="4" />
             <path d="M2 133L1078 133" stroke-width="4" />

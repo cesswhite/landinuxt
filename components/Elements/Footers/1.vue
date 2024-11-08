@@ -2,7 +2,7 @@
     <footer class="w-full relative">
         <div class="flex flex-col">
             <div
-                class="border-b border-gray-950/10 dark:border-gray-50/10 flex items-center justify-between pb-12 px-4 pt-4">
+                class="border-b border-dark-950/10 dark:border-dark-50/10 flex items-center justify-between pb-12 px-4 pt-4">
                 <div class="flex flex-col items-start  gap-y-8">
                     <div class="h-10 w-auto">
                         <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683150145/Group_26_tooxf6.svg"

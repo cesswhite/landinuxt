@@ -14,7 +14,7 @@
                 <template v-for="(feat, index) in features" :key="index">
                     <div class="col-span-full md:col-span-2 flex flex-col gap-y-2">
                         <div
-                            class="flex size-8 items-center justify-center rounded-md border border-gray-950/20 bg-dark-200/20 p-1 dark:border-gray-700 dark:bg-dark-800">
+                            class="flex size-8 items-center justify-center rounded-md border border-dark-950/20 bg-dark-200/20 p-1 dark:border-dark-700 dark:bg-dark-800">
                             <UIcon :name="feat.icon" class="text-dark-950 dark:text-dark-50" />
                         </div>
                         <span class="text-lg font-bold text-dark-950 dark:text-dark-50 inline-block">{{ feat.title

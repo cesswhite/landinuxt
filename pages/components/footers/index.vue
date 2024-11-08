@@ -14,6 +14,7 @@
                             <LazyElementsFooters5 v-if="item.title === ('grid' as FootersTemplates)" />
                             <LazyElementsFooters6 v-if="item.title === ('minimal' as FootersTemplates)" />
                             <LazyElementsFooters7 v-if="item.title === ('openai' as FootersTemplates)" />
+                            <LazyElementsFooters8 v-if="item.title === ('gradient' as FootersTemplates)" />
                         </template>
                     </ElementsWrapper>
                 </template>

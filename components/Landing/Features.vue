@@ -22,7 +22,7 @@
                 <div class="flex flex-col items-start justify-between gap-x-4 gap-y-8 md:flex-row">
                     <div class="flex flex-1 flex-col gap-2">
                         <div
-                            class="flex size-10 items-center justify-center rounded-md border border-gray-950/20 bg-dark-200/20 p-1 dark:border-gray-700 dark:bg-dark-800">
+                            class="flex size-10 items-center justify-center rounded-md border border-dark-950/20 bg-dark-200/20 p-1 dark:border-dark-700 dark:bg-dark-800">
                             <UIcon name="i-icon-park-twotone-components"
                                 class="size-full text-dark-950 dark:text-dark-50" />
                         </div>
@@ -38,7 +38,7 @@
                     </div>
                     <div class="flex flex-1 flex-col gap-2">
                         <div
-                            class="flex size-10 items-center justify-center rounded-md border border-gray-950/20 bg-dark-200/20 p-1 dark:border-gray-700 dark:bg-dark-800">
+                            class="flex size-10 items-center justify-center rounded-md border border-dark-950/20 bg-dark-200/20 p-1 dark:border-dark-700 dark:bg-dark-800">
                             <UIcon name="i-icon-park-twotone-color-filter"
                                 class="size-full text-dark-950 dark:text-dark-50" />
                         </div>
@@ -54,7 +54,7 @@
                     </div>
                     <div class="flex flex-1 flex-col gap-2">
                         <div
-                            class="flex size-10 items-center justify-center rounded-md border border-gray-950/20 bg-dark-200/20 p-1 dark:border-gray-700 dark:bg-dark-800">
+                            class="flex size-10 items-center justify-center rounded-md border border-dark-950/20 bg-dark-200/20 p-1 dark:border-dark-700 dark:bg-dark-800">
                             <UIcon name="i-icon-park-twotone-refresh-one"
                                 class="size-full text-dark-950 dark:text-dark-50" />
                         </div>

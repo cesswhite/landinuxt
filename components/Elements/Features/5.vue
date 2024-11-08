@@ -15,7 +15,7 @@
       <template v-for="image in images" :key="image.src">
         <div class="group relative w-full flex-1 overflow-hidden rounded-xl">
           <div
-            class="absolute bottom-0 z-10 flex h-full w-full flex-col items-start justify-end gap-y-2 bg-gradient-to-t from-gray-950/60 p-8 group-hover:from-gray-950/30">
+            class="absolute bottom-0 z-10 flex h-full w-full flex-col items-start justify-end gap-y-2 bg-gradient-to-t from-dark-950/60 p-8 group-hover:from-dark-950/30">
             <span class="text-left text-4xl font-semibold text-dark-50">
               {{ image.name }}
             </span>
