@@ -1,108 +1,82 @@
 <template>
-    <footer class="w-full h-auto relative py-4 gap-8 flex flex-col px-4 overflow-hidden bg-dark-50 dark:bg-dark-950">
-        <div class="grid grid-cols-12">
-            <div class="col-span-full md:col-span-8 mb-12 md:mb-0 ">
-                <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
-                    class="object-contain object-center h-10" loading="lazy" alt="my-company-logo-description"
-                    :placeholder="[50, 25, 75, 5]" />
+    <footer
+        class="w-full h-auto relative p-2 flex flex-col overflow-hidden bg-dark-50 dark:bg-dark-950 overflow-hidden">
+        <div class="grid grid-cols-12 w-full gap-y-4 lg:gap-y-0 relative z-10">
+            <div class="col-span-full lg:col-span-4 xl:col-span-8 flex flex-col gap-y-6 items-start justify-start">
+                <span
+                    class="text-dark-950 dark:text-dark-50/50 text-lg w-full md:w-1/2 font-inter font-medium inline-block">
+                    LandiNuxt
+                </span>
+                <p class="text-dark-950/50 dark:text-dark-50/50 text-sm w-full md:w-1/2 font-inter inline-block">
+                    Lorem ipsum dolor sit amet <br> consectetur adipisicing elit.
+                </p>
+                <div class="flex items-center justify-start gap-x-4 text-dark-950/50 dark:text-dark-50/50">
+                    <UButton icon="i-simple-icons-facebook" variant="link" color="neutral" to="#" target="_blank" />
+                    <UButton icon="i-simple-icons-instagram" variant="link" color="neutral" to="#" target="_blank" />
+                    <UButton icon="i-simple-icons-x" variant="link" color="neutral" to="#" target="_blank" />
+                    <UButton icon="i-simple-icons-github" variant="link" color="neutral" to="#" target="_blank" />
+                </div>
             </div>
-            <div class="col-span-6 md:col-span-1">
-                <ul class="col-span-full sm:col-span-4 lg:col-span-2 flex flex-col pb-4">
-                    <template v-for="(nav, index) in navigation" :key="index">
-                        <li class="text-dark-950 dark:text-dark-50 text-sm font-inter capitalize mb-1">
-                            {{ nav.label }}
-                        </li>
-                        <li v-for="(inner_link, _index) in nav.links" :key="_index">
-                            <UButton :to="inner_link.link" target="_blank" variant="link" color="neutral" size="sm"
-                                class="p-0">
-                                {{ inner_link.label }}
-                            </UButton>
-                        </li>
-                    </template>
-                </ul>
-            </div>
-            <div class="col-span-6 md:col-span-1">
-                <ul class="col-span-full sm:col-span-4 lg:col-span-2 flex flex-col pb-4">
-                    <template v-for="(nav, index) in api_navigation" :key="index">
-                        <li class="text-dark-950 dark:text-dark-50 text-sm font-inter capitalize mb-1">
-                            {{ nav.label }}
-                        </li>
-                        <li v-for="(inner_link, _index) in nav.links" :key="_index">
-                            <UButton :to="inner_link.link" target="_blank" variant="link" color="neutral" size="sm"
-                                class="p-0">
-                                {{ inner_link.label }}
-                            </UButton>
-                        </li>
-                    </template>
-                </ul>
-            </div>
-            <div class="col-span-6 md:col-span-1">
-                <ul class="col-span-full sm:col-span-4 lg:col-span-2 flex flex-col pb-4">
-                    <template v-for="(nav, index) in navigation" :key="index">
-                        <li class="text-dark-950 dark:text-dark-50 text-sm font-inter capitalize mb-1">
-                            {{ nav.label }}
-                        </li>
-                        <li v-for="(inner_link, _index) in nav.links" :key="_index">
-                            <UButton :to="inner_link.link" target="_blank" variant="link" color="neutral" size="sm"
-                                class="p-0">
-                                {{ inner_link.label }}
-                            </UButton>
-                        </li>
-                    </template>
-                </ul>
-            </div>
-            <div class="col-span-6 md:col-span-1">
-                <ul class="col-span-full sm:col-span-4 lg:col-span-2 flex flex-col pb-4">
-                    <template v-for="(nav, index) in other_navigation" :key="index">
-                        <li class="text-dark-950 dark:text-dark-50 text-sm font-inter capitalize mb-1">
-                            {{ nav.label }}
-                        </li>
-                        <li v-for="(inner_link, _index) in nav.links" :key="_index">
-                            <UButton :to="inner_link.link" target="_blank" variant="link" color="neutral" size="sm"
-                                class="p-0">
-                                {{ inner_link.label }}
-                            </UButton>
-                        </li>
-                    </template>
-                </ul>
+            <ul class="col-span-full md:col-span-6 lg:col-span-2 xl:col-span-1 flex flex-col gap-y-2 w-full">
+                <template v-for="(nav, index) in navigation" :key="index">
+                    <li class="text-dark-950 dark:text-dark-50 text-base font-medium font-inter capitalize mb-3">
+                        {{ nav.label }}
+                    </li>
+                    <li v-for="(inner_link, _index) in nav.links" :key="_index">
+                        <UButton :to="inner_link.link" target="_blank" variant="link" color="neutral" size="lg"
+                            class="p-0">
+                            {{ inner_link.label }}
+                        </UButton>
+                    </li>
+                </template>
+            </ul>
+            <ul class="col-span-full md:col-span-6 lg:col-span-2 xl:col-span-1 flex flex-col gap-y-2 w-full">
+                <template v-for="(nav, index) in product_navigation" :key="index">
+                    <li class="text-dark-950 dark:text-dark-50 text-base font-medium font-inter capitalize mb-3">
+                        {{ nav.label }}
+                    </li>
+                    <li v-for="(inner_link, _index) in nav.links" :key="_index">
+                        <UButton :to="inner_link.link" target="_blank" variant="link" color="neutral" size="lg"
+                            class="p-0 hover:underline">
+                            {{ inner_link.label }}
+                        </UButton>
+                    </li>
+                </template>
+            </ul>
+            <ul class="col-span-full md:col-span-6 lg:col-span-2 xl:col-span-1 flex flex-col gap-y-2 w-full">
+                <template v-for="(nav, index) in other_navigation" :key="index">
+                    <li class="text-dark-950 dark:text-dark-50 text-base font-medium font-inter capitalize mb-3">
+                        {{ nav.label }}
+                    </li>
+                    <li v-for="(inner_link, _index) in nav.links" :key="_index">
+                        <UButton :to="inner_link.link" target="_blank" variant="link" color="neutral" size="lg"
+                            class="p-0 hover:underline">
+                            {{ inner_link.label }}
+                        </UButton>
+                    </li>
+                </template>
+            </ul>
+            <ul class="col-span-full md:col-span-6 lg:col-span-2 xl:col-span-1 flex flex-col gap-y-2 w-full">
+                <template v-for="(nav, index) in resources_navigation" :key="index">
+                    <li class="text-dark-950 dark:text-dark-50 text-base font-medium font-inter capitalize mb-3">
+                        {{ nav.label }}
+                    </li>
+                    <li v-for="(inner_link, _index) in nav.links" :key="_index">
+                        <UButton :to="inner_link.link" target="_blank" variant="link" color="neutral" size="lg"
+                            class="p-0 hover:underline">
+                            {{ inner_link.label }}
+                        </UButton>
+                    </li>
+                </template>
+            </ul>
+            <div
+                class="border-t border-dark-950/10 dark:border-dark-50/10 col-span-full flex items-center justify-center mt-4 pt-4 mb-2 text-sm text-dark-950/50 dark:text-dark-50/50">
+                ©LandiNuxt is a Open Source Project by Eco Development Studios
             </div>
         </div>
-        <div class="grid grid-cols-12 border-t border-dark-950/10 dark:border-dark-50/10 pt-2 mb-12">
-            <div class="col-span-6 md:col-span-8 flex flex-col">
-                <span class="inline-block text-sm font-bold">Spotlight ©2020-2024</span>
-                <template v-for="(nav, index) in bottom_navigation" :key="index">
-                    <UButton :to="nav.link" target="_blank" variant="link" color="neutral" size="sm" class="p-0">
-                        {{ nav.label }}
-                    </UButton>
-                </template>
-            </div>
-            <div class="col-span-6 md:col-span-4 flex flex-col gap-x-4">
-                <template v-for="(nav, index) in social_media_navigation" :key="index">
-                    <UButton :to="nav.link" target="_blank" variant="link" color="neutral" size="sm" class="p-0">
-                        {{ nav.label }}
-                    </UButton>
-                </template>
-            </div>
-        </div>
-        <div class="w-full overflow-hidden h-full">
-            <svg viewBox="0 0 1920 1080" class="fill-dark-950 dark:fill-dark-50 h-full"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0H1920V1H0V0Z" />
-                <path d="M0 11H1920V15.18H0V11Z" />
-                <path d="M0 25.1802H1920V33.3602H0V25.1802Z" />
-                <path d="M0 43.3599H1920V55.5399H0V43.3599Z" />
-                <path d="M0 65.54H1920V81.72H0V65.54Z" />
-                <path d="M0 91.7202H1920V111.9H0V91.7202Z" />
-                <path d="M0 121.9H1920V146.08H0V121.9Z" />
-                <path d="M0 156.08H1920V184.26H0V156.08Z" />
-                <path d="M0 194.26H1920V226.44H0V194.26Z" />
-                <path d="M0 236.44H1920V272.62H0V236.44Z" />
-                <path d="M0 282.62H1920V322.8H0V282.62Z" />
-                <path d="M0 332.8H1920V376.98H0V332.8Z" />
-                <path d="M0 386.98H1920V435.16H0V386.98Z" />
-                <path d="M0 445.16H1920V674H0V445.16Z" />
-                <path d="M0 684H1920V1080H0V684Z" />
-            </svg>
+        <div class="absolute -bottom-96 left-1/2 -translate-x-1/2">
+            <div
+                class="rounded-full size-[620px] bg-gradient-to-br from-primary-100 to-primary-300 opacity-50 dark:from-primary-500/30 dark:to-primary-300/30 blur-3xl" />
         </div>
     </footer>
 </template>
@@ -132,6 +106,7 @@ const navigation = [
     },
 
 ];
+
 const other_navigation = [
     {
         label: 'Company',
@@ -165,70 +140,62 @@ const other_navigation = [
                 link: "#",
             },
         ]
-    },
-
+    }
 ];
-const api_navigation = [
+
+const product_navigation = [
     {
-        label: 'API',
+        label: 'Product',
+        links: [
+            {
+                label: "Overview",
+                link: "#",
+            },
+            {
+                label: "Features",
+                link: "#",
+            },
+            {
+                label: "Pricing",
+                link: "#",
+            },
+            {
+                label: "FAQs",
+                link: "#",
+            },
+            {
+                label: "Updates",
+                link: "#",
+            },
+        ]
+    }
+];
+
+const resources_navigation = [
+    {
+        label: 'Resources',
         links: [
             {
                 label: "Documentation",
                 link: "#",
             },
             {
-                label: "API Keys",
-                link: "#",
-            },
-            {
-                label: "Rate Limits",
+                label: "Tutorials",
                 link: "#",
             },
             {
                 label: "Support",
                 link: "#",
             },
+            {
+                label: "Webinars",
+                link: "#",
+            },
+            {
+                label: "Case Studies",
+                link: "#",
+            },
         ]
     }
-]
-const social_media_navigation = [
-    {
-        label: "X",
-        link: "https://x.com/",
-    },
-    {
-        label: "Instagram",
-        link: "https://instagram.com/",
-    },
-    {
-        label: "Facebook",
-        link: "https://facebook.com/",
-    },
-    {
-        label: "LinkedIn",
-        link: "https://linkedin.com/",
-    },
-    {
-        label: "YouTube",
-        link: "https://youtube.com/",
-    },
-    {
-        label: "GitHub",
-        link: "https://github.com/",
-    },
-];
-const bottom_navigation = [
-    {
-        label: "Privacy policy",
-        link: "#",
-    },
-    {
-        label: "Terms & policies",
-        link: "#",
-    },
-    {
-        label: "Brand",
-        link: "#",
-    },
 ];
 </script>
