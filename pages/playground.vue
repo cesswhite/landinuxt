@@ -1,202 +1,41 @@
 <template>
   <NuxtLayout name="playground">
-
-    <footer
-      class="w-full h-auto relative p-2 flex flex-col overflow-hidden bg-dark-50 dark:bg-dark-950 overflow-hidden">
-      <div class="grid grid-cols-12 w-full gap-y-4 lg:gap-y-0 relative z-10">
-        <div class="col-span-full lg:col-span-4 xl:col-span-8 flex flex-col gap-y-6 items-start justify-start">
-          <span class="text-dark-950 dark:text-dark-50/50 text-lg w-full md:w-1/2 font-inter font-medium inline-block">
-            LandiNuxt
-          </span>
-          <p class="text-dark-950/50 dark:text-dark-50/50 text-sm w-full md:w-1/2 font-inter inline-block">
-            Lorem ipsum dolor sit amet <br> consectetur adipisicing elit.
+    <div
+      class="relative flex flex-col h-full min-h-dvh w-full items-center justify-center bg-dark-50 dark:bg-dark-950 py-24">
+      <div class="relative z-20 w-11/12 md:w-10/12">
+        <div v-motion-fade :delay="100" :duration="1250" class="flex flex-col items-center justify-center">
+          <h1 class="mt-4 text-center text-5xl font-semibold text-dark-900 sm:text-6xl md:text-7xl dark:text-dark-100">
+            Manage your <span
+              class="bg-gradient-to-b bg-clip-text text-transparent font-bold from-primary-500 from-0% via-primary-400 via-60% to-primary-300 to-100%">
+              content effortlessly</span> with our powerful CMS
+          </h1>
+          <p
+            class="text-primary-950/60 dark:text-primary-50/50 mt-4 text-center text-lg leading-8 2xl:text-xl w-full md:w-1/2">
+            Streamline your content creation, editing, and publishing with our intuitive CMS. Collaborate easily, keep
+            your site up-to-date, and enhance your digital presence.
           </p>
-          <div class="flex items-center justify-start gap-x-4 text-dark-950/50 dark:text-dark-50/50">
-            <UButton icon="i-simple-icons-facebook" variant="link" color="neutral" to="#" target="_blank" />
-            <UButton icon="i-simple-icons-instagram" variant="link" color="neutral" to="#" target="_blank" />
-            <UButton icon="i-simple-icons-x" variant="link" color="neutral" to="#" target="_blank" />
-            <UButton icon="i-simple-icons-github" variant="link" color="neutral" to="#" target="_blank" />
+          <div class="my-8">
+            <UButton variant="solid" to="#" size="xl">
+              Learn more about
+            </UButton>
           </div>
         </div>
-        <ul class="col-span-full md:col-span-6 lg:col-span-2 xl:col-span-1 flex flex-col gap-y-2 w-full">
-          <template v-for="(nav, index) in navigation" :key="index">
-            <li class="text-dark-950 dark:text-dark-50 text-base font-medium font-inter capitalize mb-3">
-              {{ nav.label }}
-            </li>
-            <li v-for="(inner_link, _index) in nav.links" :key="_index">
-              <UButton :to="inner_link.link" target="_blank" variant="link" color="neutral" size="lg" class="p-0">
-                {{ inner_link.label }}
-              </UButton>
-            </li>
-          </template>
-        </ul>
-        <ul class="col-span-full md:col-span-6 lg:col-span-2 xl:col-span-1 flex flex-col gap-y-2 w-full">
-          <template v-for="(nav, index) in product_navigation" :key="index">
-            <li class="text-dark-950 dark:text-dark-50 text-base font-medium font-inter capitalize mb-3">
-              {{ nav.label }}
-            </li>
-            <li v-for="(inner_link, _index) in nav.links" :key="_index">
-              <UButton :to="inner_link.link" target="_blank" variant="link" color="neutral" size="lg"
-                class="p-0 hover:underline">
-                {{ inner_link.label }}
-              </UButton>
-            </li>
-          </template>
-        </ul>
-        <ul class="col-span-full md:col-span-6 lg:col-span-2 xl:col-span-1 flex flex-col gap-y-2 w-full">
-          <template v-for="(nav, index) in other_navigation" :key="index">
-            <li class="text-dark-950 dark:text-dark-50 text-base font-medium font-inter capitalize mb-3">
-              {{ nav.label }}
-            </li>
-            <li v-for="(inner_link, _index) in nav.links" :key="_index">
-              <UButton :to="inner_link.link" target="_blank" variant="link" color="neutral" size="lg"
-                class="p-0 hover:underline">
-                {{ inner_link.label }}
-              </UButton>
-            </li>
-          </template>
-        </ul>
-        <ul class="col-span-full md:col-span-6 lg:col-span-2 xl:col-span-1 flex flex-col gap-y-2 w-full">
-          <template v-for="(nav, index) in resources_navigation" :key="index">
-            <li class="text-dark-950 dark:text-dark-50 text-base font-medium font-inter capitalize mb-3">
-              {{ nav.label }}
-            </li>
-            <li v-for="(inner_link, _index) in nav.links" :key="_index">
-              <UButton :to="inner_link.link" target="_blank" variant="link" color="neutral" size="lg"
-                class="p-0 hover:underline">
-                {{ inner_link.label }}
-              </UButton>
-            </li>
-          </template>
-        </ul>
-        <div
-          class="border-t border-dark-950/10 dark:border-dark-50/10 col-span-full flex items-center justify-center mt-4 pt-4 mb-2 text-sm text-dark-950/50 dark:text-dark-50/50">
-          ©LandiNuxt is a Open Source Project by Eco Development Studios
+
+      </div>
+      <div class="grid grid-cols-12 gap-x-4 items-center w-[1200px] xl:w-[1800px] 2xl:w-[2500px]">
+        <div class="col-span-3 p-2 bg-primary-500/10 dark:bg-primary-600/10">
+          <NuxtImg class="h-[580px] w-full object-center object-cover"
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1715&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        </div>
+        <div class="col-span-6 p-2 bg-primary-500/10 dark:bg-primary-600/10">
+          <NuxtImg class="h-[600px] w-full object-center object-cover"
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        </div>
+        <div class="col-span-3 p-2 bg-primary-500/10 dark:bg-primary-600/10">
+          <NuxtImg class="h-[580px] w-full object-center object-cover"
+            src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
         </div>
       </div>
-      <div class="absolute -bottom-96 left-1/2 -translate-x-1/2">
-        <div
-          class="rounded-full size-[620px] bg-gradient-to-br from-primary-100 to-primary-300 opacity-50 dark:from-primary-500/30 dark:to-primary-300/30 blur-3xl" />
-      </div>
-    </footer>
+    </div>
   </NuxtLayout>
 </template>
-
-
-<script setup lang="ts">
-const navigation = [
-  {
-    label: "Services",
-    links: [
-      {
-        label: 'Development',
-        link: '#'
-      },
-      {
-        label: "Design",
-        link: "#",
-      },
-      {
-        label: "Mobile Apps",
-        link: "#",
-      },
-      {
-        label: "Imagene Data",
-        link: "#",
-      },]
-  },
-
-];
-
-const other_navigation = [
-  {
-    label: 'Company',
-    links: [
-      {
-        label: "About",
-        link: "#",
-      },
-      {
-        label: "Website",
-        link: "#",
-      },
-      {
-        label: "Brand",
-        link: "#",
-      },
-      {
-        label: "Gallery",
-        link: "#",
-      },
-      {
-        label: "Blog",
-        link: "#",
-      },
-      {
-        label: "Services",
-        link: "#",
-      },
-      {
-        label: "Careers",
-        link: "#",
-      },
-    ]
-  }
-];
-
-const product_navigation = [
-  {
-    label: 'Product',
-    links: [
-      {
-        label: "Overview",
-        link: "#",
-      },
-      {
-        label: "Features",
-        link: "#",
-      },
-      {
-        label: "Pricing",
-        link: "#",
-      },
-      {
-        label: "FAQs",
-        link: "#",
-      },
-      {
-        label: "Updates",
-        link: "#",
-      },
-    ]
-  }
-];
-
-const resources_navigation = [
-  {
-    label: 'Resources',
-    links: [
-      {
-        label: "Documentation",
-        link: "#",
-      },
-      {
-        label: "Tutorials",
-        link: "#",
-      },
-      {
-        label: "Support",
-        link: "#",
-      },
-      {
-        label: "Webinars",
-        link: "#",
-      },
-      {
-        label: "Case Studies",
-        link: "#",
-      },
-    ]
-  }
-];
-</script>

@@ -17,6 +17,7 @@
               <LazyElementsHero8 v-if="item.title === ('double-marquee' as HeroTemplates)" />
               <LazyElementsHero9 v-if="item.title === ('split' as HeroTemplates)" />
               <LazyElementsHero10 v-if="item.title === ('space' as HeroTemplates)" />
+              <LazyElementsHero11 v-if="item.title === ('management' as HeroTemplates)" />
             </template>
           </ElementsWrapper>
         </template>
