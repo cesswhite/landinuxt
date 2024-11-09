@@ -5,7 +5,7 @@
                 Where Design <br> Meets Technology
             </h1>
             <UButton variant="solid" to="#" size="xl" icon="i-heroicons-chevron-right"
-                class="bg-dark-50 text-primary-600 dark:bg-dark-950 dark:text-primary-500" />
+                class="bg-dark-50/90 hover:bg-dark-50 text-primary-600 dark:bg-dark-950/90 hover:dark:bg-dark-950 dark:text-primary-500" />
         </div>
     </div>
 </template>

@@ -12,6 +12,7 @@
               <LazyElementsCTA3 v-if="item.title === ('serif' as CTATemplates)" />
               <LazyElementsCTA4 v-if="item.title === ('art' as CTATemplates)" />
               <LazyElementsCTA5 v-if="item.title === ('solid' as CTATemplates)" />
+              <LazyElementsCTA6 v-if="item.title === ('gradient' as CTATemplates)" />
             </template>
           </ElementsWrapper>
         </template>
