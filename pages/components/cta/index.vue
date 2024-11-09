@@ -14,6 +14,7 @@
               <LazyElementsCTA5 v-if="item.title === ('solid' as CTATemplates)" />
               <LazyElementsCTA6 v-if="item.title === ('gradient' as CTATemplates)" />
               <LazyElementsCTA7 v-if="item.title === ('app' as CTATemplates)" />
+              <LazyElementsCTA8 v-if="item.title === ('connect' as CTATemplates)" />
             </template>
           </ElementsWrapper>
         </template>
