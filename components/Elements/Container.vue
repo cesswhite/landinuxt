@@ -45,5 +45,9 @@ const _components = ref<Component[]>([
     name: "contact",
     total: 0,
   },
+  {
+    name: 'logos',
+    total: 0,
+  },
 ]);
 </script>
