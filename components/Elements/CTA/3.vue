@@ -13,9 +13,8 @@
                 Engineered in Hidalgo, Mexico, this product blends pure, subtle sweetness with a streamlined, minimal
                 finish.
             </h1>
-            <UButton variant="link" to="#" color="primary" size="xs"
-                class="font-lora mx-auto inline-block text-center underline">
-                Precision Meets Aesthetic
+            <UButton variant="link" to="#" color="primary" size="xl" class="font-lora mx-auto inline-block text-center">
+                Where precision meets aesthetic, learn more
             </UButton>
         </div>
     </div>

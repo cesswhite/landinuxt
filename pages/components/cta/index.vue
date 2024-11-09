@@ -11,6 +11,7 @@
               <LazyElementsCTA2 v-if="item.title === ('social' as CTATemplates)" />
               <LazyElementsCTA3 v-if="item.title === ('serif' as CTATemplates)" />
               <LazyElementsCTA4 v-if="item.title === ('art' as CTATemplates)" />
+              <LazyElementsCTA5 v-if="item.title === ('solid' as CTATemplates)" />
             </template>
           </ElementsWrapper>
         </template>
