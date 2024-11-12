@@ -1,33 +1,17 @@
 <template>
   <div class="relative mt-24 w-full">
-    <div
-      class="border-dark-500/10 mb-12 h-full overflow-hidden rounded-md border p-2 lg:h-full"
-    >
+    <div class="border-dark-500/10 mb-12 h-full overflow-hidden rounded-md border p-2 lg:h-full">
       <div class="flex flex-col items-start justify-between">
         <div class="text-base">
           <div class="flex items-center gap-2">
-            <span
-              class="text-dark-900 dark:text-dark-50/90 inline-block text-base font-bold capitalize"
-            >
+            <span class="text-dark-900 dark:text-dark-50/90 inline-block text-base font-bold capitalize">
               {{ props.item.title }}
             </span>
-            <UTooltip
-              v-if="props.item.dark"
-              text="Component with color mode support"
-            >
-              <UIcon
-                name="i-heroicons-moon-20-solid"
-                class="text-dark-950 dark:text-dark-50 mt-0.5 text-xs"
-              />
+            <UTooltip v-if="props.item.dark" text="Component with color mode support">
+              <UIcon name="i-heroicons-moon-20-solid" class="text-dark-950 dark:text-dark-50 mt-0.5 text-xs" />
             </UTooltip>
-            <UTooltip
-              v-if="props.item.animated"
-              text="Component with animation"
-            >
-              <UIcon
-                name="i-heroicons-sparkles-20-solid"
-                class="text-dark-950 dark:text-dark-50 mt-0.5 text-sm"
-              />
+            <UTooltip v-if="props.item.animated" text="Component with animation">
+              <UIcon name="i-heroicons-sparkles-20-solid" class="text-dark-950 dark:text-dark-50 mt-0.5 text-sm" />
             </UTooltip>
           </div>
           <p class="text-dark-400 dark:text-dark-50/40 text-sm font-normal">
@@ -35,35 +19,20 @@
           </p>
         </div>
         <div class="mt-4 flex w-full items-center justify-end gap-2">
-          <UButton
-            @click="props.item.preview = true"
-            icon="i-heroicons-eye"
-            label="Preview"
-            :variant="props.item.preview ? 'solid' : 'link'"
-          />
-          <UButton
-            @click="props.item.preview = false"
-            icon="i-heroicons-code-bracket"
-            label="Code"
-            :variant="!props.item.preview ? 'solid' : 'link'"
-          />
-          <UButton
-            @click="copyCode()"
-            :icon="
-              current === props.item.title
-                ? 'i-heroicons-clipboard-document-check'
-                : 'i-heroicons-clipboard-document-list'
-            "
-            variant="ghost"
-          />
+          <UButton @click="props.item.preview = true" icon="i-heroicons-eye" label="Preview"
+            :variant="props.item.preview ? 'solid' : 'link'" />
+          <UButton @click="props.item.preview = false" icon="i-heroicons-code-bracket" label="Code"
+            :variant="!props.item.preview ? 'solid' : 'link'" />
+          <UButton @click="copyCode()" :icon="current === props.item.title
+              ? 'i-heroicons-clipboard-document-check'
+              : 'i-heroicons-clipboard-document-list'
+            " variant="ghost" />
         </div>
       </div>
 
-      <div
-        v-if="props.item.preview"
+      <div v-if="props.item.preview"
         class="scrollbar-hide scrollbar-hide bg-dark-200/80 dark:bg-dark-900 mt-4 h-auto overflow-x-hidden rounded-md p-2"
-        :class="setHeightClass"
-      >
+        :class="setHeightClass">
         <slot name="components" />
       </div>
       <div v-else id="code" class="mt-2 min-h-96">
@@ -102,13 +71,13 @@ const props = defineProps<{
   item: any;
   code: string;
   title:
-    | HeroTemplates
-    | FeaturesTemplates
-    | HeadersTemplates
-    | FootersTemplates
-    | CTATemplates
-    | string
-    | undefined;
+  | HeroTemplates
+  | FeaturesTemplates
+  | HeadersTemplates
+  | FootersTemplates
+  | CTATemplates
+  | string
+  | undefined;
 }>();
 
 const setHeightClass = computed(() => {

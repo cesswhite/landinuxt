@@ -1,7 +1,23 @@
 <template>
   <UContainer>
-    <div class="flex py-28 md:py-0 h-auto min-h-dvh font-sans w-full">
+    <div class="flex py-28 md:py-0 h-auto min-h-dvh font-sans w-full relative">
       <div class="mx-auto flex w-full flex-col items-center justify-center">
+        <div class="mb-8">
+          <NuxtLink class="hidden dark:inline-block h-12" href="https://www.uneed.best/tool/landinuxt" target="_blank">
+            <NuxtImg src="https://www.uneed.best/EMBED1.png" alt="Uneed Embed Badge"
+              class="size-full object-cover object-center" />
+          </NuxtLink>
+
+          <NuxtLink class="dark:hidden inline-block h-12" href="https://www.uneed.best/tool/landinuxt" target="_blank">
+            <NuxtImg src="https://www.uneed.best/EMBED1B.png" alt="Uneed Embed Badge"
+              class="size-full object-cover object-center" />
+          </NuxtLink>
+
+          <!--  <a href="https://www.uneed.best/tool/landinuxt">
+    <img src="https://www.uneed.best/EMBED1B.png" alt="Uneed Embed Badge" />
+    </a> -->
+
+        </div>
         <div
           class="text-primary-500 dark:text-primary-500 ring-primary-500/50 hover:ring-primary-600/90 dark:ring-primary-500/50 dark:hover:ring-primary-500/80 relative rounded-full px-2 py-1 text-center text-sm leading-6 ring-1 md:px-3">
           Hand-crafter components for landing pages
