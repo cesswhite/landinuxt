@@ -2,21 +2,34 @@
   <UContainer>
     <div class="flex py-28 md:py-0 h-auto min-h-dvh font-sans w-full relative">
       <div class="mx-auto flex w-full flex-col items-center justify-center">
-        <div class="mb-8">
-          <NuxtLink class="hidden dark:inline-block h-12" href="https://www.uneed.best/tool/landinuxt" target="_blank">
+        <div class="mb-8 flex items-center justify-between h-auto gap-x-8">
+          <NuxtLink class="hidden dark:inline-block h-[41px]" href="https://www.uneed.best/tool/landinuxt"
+            target="_blank">
             <NuxtImg src="https://www.uneed.best/EMBED1.png" alt="Uneed Embed Badge"
               class="size-full object-cover object-center" />
           </NuxtLink>
 
-          <NuxtLink class="dark:hidden inline-block h-12" href="https://www.uneed.best/tool/landinuxt" target="_blank">
+          <NuxtLink class="dark:hidden inline-block h-[41px] mb-1" href="https://www.uneed.best/tool/landinuxt"
+            target="_blank">
             <NuxtImg src="https://www.uneed.best/EMBED1B.png" alt="Uneed Embed Badge"
               class="size-full object-cover object-center" />
           </NuxtLink>
 
-          <!--  <a href="https://www.uneed.best/tool/landinuxt">
-    <img src="https://www.uneed.best/EMBED1B.png" alt="Uneed Embed Badge" />
-    </a> -->
+          <NuxtLink class="hidden dark:inline-block h-[36px]"
+            href="https://www.producthunt.com/posts/landinuxt?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-landinuxt"
+            target="_blank">
+            <NuxtImg src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=605396&theme=light"
+              alt="LandiNuxt - Effortless&#0032;landing&#0032;page&#0032;creation | Product Hunt"
+              class="size-full object-cover object-center" />
+          </NuxtLink>
 
+          <NuxtLink class="dark:hidden inline-block h-[36px] mb-1"
+            href="https://www.producthunt.com/posts/landinuxt?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-landinuxt"
+            target="_blank">
+            <NuxtImg src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=605396&theme=dark"
+              alt="LandiNuxt - Effortless&#0032;landing&#0032;page&#0032;creation | Product Hunt"
+              class="size-full object-cover object-center" />
+          </NuxtLink>
         </div>
         <div
           class="text-primary-500 dark:text-primary-500 ring-primary-500/50 hover:ring-primary-600/90 dark:ring-primary-500/50 dark:hover:ring-primary-500/80 relative rounded-full px-2 py-1 text-center text-sm leading-6 ring-1 md:px-3">
