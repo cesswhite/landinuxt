@@ -22,10 +22,10 @@
           </UButton>
         </template>
       </UDropdownMenu>
-      <UButton variant="ghost" color="neutral" size="lg" to="#" class="rounded-full">
+      <UButton variant="ghost" color="neutral" size="lg" to="/instructions" class="rounded-full">
         Instructions
       </UButton>
-      <UButton variant="ghost" color="neutral" size="lg" to="#" class="rounded-full">
+      <UButton variant="ghost" color="neutral" size="lg" to="/contribution" class="rounded-full">
         Contribution
       </UButton>
     </nav>
