@@ -1,36 +1,92 @@
 <template>
   <NuxtLayout name="playground">
-    <div class="relative w-full h-auto grid grid-cols-12 bg-dark-50 dark:bg-dark-950 gap-y-12 lg:gap-y-0 py-2">
-      <div class="relative col-span-full right-12 lg:col-span-4 overflow-hidden group">
-        <NuxtImg class="h-64 w-full object-center object-cover rounded-r-2xl group-hover:saturate-150" loading="lazy"
-          height="200" width="200" alt="my-work"
-          src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    <div class="relative w-full h-auto">
+      <div class="flex flex-col items-center justify-center gap-y-2">
+        <UBadge variant="soft" class="bg-transparent px-4 text-center md:px-12" size="lg">
+          Trusted by Thousands Worldwide
+        </UBadge>
+        <h1 class="text-center text-4xl font-semibold text-dark-900 sm:text-4xl md:text-4xl dark:text-dark-100">
+          See What Our Clients Have to Say
+        </h1>
       </div>
-      <div class="w-full col-span-full lg:col-span-4 lg:py-12">
-        <div class="w-full relative flex flex-col gap-y-4 z-10">
-          <div class="mx-auto">
-            <UIcon name="i-heroicons-sparkles-solid" class="size-12 text-dark-950 animate-pulse dark:text-dark-50" />
-          </div>
-          <h1 class="text-dark-950/90 dark:text-dark-50/90 text-4xl md:text-5xl font-serif text-center">
-            Turning <span class="font-instrument italic text-dark-950 dark:text-dark-50">ideas</span> <br>
-            into <span class="font-instrument italic text-dark-950 dark:text-dark-50">reality</span>.
-          </h1>
-          <p class="text-center font-serif text-dark-950/60 dark:text-dark-50/60 px-2 md:w-1/2 mx-auto lg:w-full">
-            Discover a seamless blend of creativity and innovation. We bring your vision to life with precision,
-            expertise, and a commitment to excellence in every project.
-          </p>
-          <div class="mx-auto">
-            <UButton block to="#" color="primary" variant="solid" class="px-6" size="lg">
-              Explore Our Services
-            </UButton>
-          </div>
+      <UContainer>
+        <div class="grid grid-cols-12 gap-4 mt-24 p-4 font-inter">
+          <template v-for="(col, index) in testimonials" :key="index">
+            <div class="h-full col-span-full md:col-span-4 flex flex-col gap-4 even:mt-4">
+              <template v-for="(testimonial, _index) in col" :key="_index">
+                <div
+                  class="rounded-2xl border border-dark-200 p-4 bg-dark-100/30 hover:bg-dark-100/80 dark:bg-dark-800/50 dark:border-dark-800 dark:hover:bg-dark-800/70 transition-all duration-300 ease-in-out">
+                  <p class="font-normal text-base text-dark-950/80 dark:text-dark-50/60">
+                    {{ testimonial.text }}
+                  </p>
+                  <div class="mt-20">
+                    <span class="inline-block w-full font-bold text-sm text-dark-950 dark:text-dark-50">{{
+                      testimonial.name }}</span>
+                    <span class="inline-block w-full font-normal text-sm text-dark-950/60 dark:text-dark-50/60">{{
+                      testimonial.username
+                    }}</span>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </template>
         </div>
-      </div>
-      <div class="relative col-span-full left-12 lg:col-span-4 overflow-hidden lg:pt-44 group">
-        <NuxtImg class="h-64 w-full object-center object-cover rounded-l-2xl group-hover:saturate-150" loading="lazy"
-          height="200" width="200" alt="my-work"
-          src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-      </div>
+      </UContainer>
     </div>
   </NuxtLayout>
 </template>
+
+<script setup lang="ts">const testimonials = shallowRef([
+  [
+    {
+      "name": "Emily Johnson",
+      "username": "@emilyj",
+      "text": "This service transformed my business. The tools provided are easy to use and incredibly effective. Highly recommend!"
+    },
+    {
+      "name": "Ana Rodríguez",
+      "username": "@anarod",
+      "text": "Este servicio ha transformado mi negocio. Las herramientas son fáciles de usar y extremadamente efectivas. ¡Lo recomiendo mucho!"
+    },
+    {
+      "name": "Michael Lee",
+      "username": "@michaellee",
+      "text": "Amazing experience! The platform is intuitive and helped me save a lot of time on my projects."
+    },
+  ],
+  [
+    {
+      "name": "Laura Fernández",
+      "username": "@laurafern",
+      "text": "La mejor herramienta que he usado para crear landing pages. Es rápida, confiable, y el equipo de soporte es muy útil."
+    },
+    {
+      "name": "John Davis",
+      "username": "@johndavis",
+      "text": "I was able to launch my site in just a few hours thanks to the incredible components provided. A game changer!"
+    },
+    {
+      "name": "Luis Pérez",
+      "username": "@luisp",
+      "text": "Pude lanzar mi sitio en solo unas horas gracias a los increíbles componentes que ofrecen. ¡Un cambio total!"
+    },
+  ],
+  [
+    {
+      "name": "David Wilson",
+      "username": "@davidw",
+      "text": "Exceeded all my expectations! The UI is beautiful and the features are exactly what I needed for my project."
+    },
+    {
+      "name": "Ricardo Sánchez",
+      "username": "@ricardos",
+      "text": "¡Superó todas mis expectativas! La interfaz es hermosa y las características son justo lo que necesitaba para mi proyecto."
+    },
+    {
+      "name": "Olivia Martinez",
+      "username": "@oliviam",
+      "text": "As a designer, I found it very easy to customize and integrate with my existing projects. Absolutely love it!"
+    },
+  ]
+]);
+</script>

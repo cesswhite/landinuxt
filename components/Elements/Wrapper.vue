@@ -96,6 +96,10 @@ const setHeightClass = computed(() => {
   if (props.item.parent == "cta") {
     return "min-h-[540px] flex items-center justify-center";
   }
+
+  if (props.item.parent == "testimonials") {
+    return "min-h-[1024px] flex items-center justify-center";
+  }
 });
 
 function copyCode() {
