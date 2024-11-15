@@ -37,4 +37,4 @@ export type FootersTemplates =
   | "minimal"
   | "openai"
   | "gradient";
-export type CTATemplates = "simple" | 'social' | 'serif' | 'art' | 'solid' | 'gradient' | 'app' | 'connect' | 'saturate';
+export type CTATemplates = "simple" | 'social' | 'serif' | 'art' | 'solid' | 'gradient' | 'app' | 'connect' | 'saturate' | 'overflow';

@@ -24,8 +24,8 @@
           <UButton @click="props.item.preview = false" icon="i-heroicons-code-bracket" label="Code"
             :variant="!props.item.preview ? 'solid' : 'link'" />
           <UButton @click="copyCode()" :icon="current === props.item.title
-              ? 'i-heroicons-clipboard-document-check'
-              : 'i-heroicons-clipboard-document-list'
+            ? 'i-heroicons-clipboard-document-check'
+            : 'i-heroicons-clipboard-document-list'
             " variant="ghost" />
         </div>
       </div>
@@ -92,6 +92,9 @@ const setHeightClass = computed(() => {
   }
   if (props.item.parent == "features") {
     return "min-h-[1024px]";
+  }
+  if (props.item.parent == "cta") {
+    return "min-h-[540px] flex items-center justify-center";
   }
 });
 
