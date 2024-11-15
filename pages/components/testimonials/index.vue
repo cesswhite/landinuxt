@@ -8,6 +8,7 @@
                     <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
                         <template #components>
                             <LazyElementsTestimonials1 v-if="item.title === ('masonry' as TestimonialsTemplates)" />
+                            <LazyElementsTestimonials2 v-if="item.title === ('pastelide' as TestimonialsTemplates)" />
                         </template>
                     </ElementsWrapper>
                 </template>
