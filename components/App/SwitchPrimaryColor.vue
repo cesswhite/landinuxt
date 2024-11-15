@@ -1,12 +1,12 @@
 <template>
   <UDropdownMenu :items="items">
     <UButton aria-label="button to switch theme dark to light" variant="link" color="primary" size="lg"
-      icon="i-clarity-color-palette-solid" />
+      icon="i-clarity-color-palette-solid" class="cursor-pointer" />
     <template #colors>
       <div class="relative z-40 grid w-full grid-cols-5 gap-2">
         <template v-for="(color, index) in primaryColors" :key="index">
           <div class="col-span-1 flex items-center justify-center">
-            <UButton variant="link" @click.stop.prevent="setPrimaryColor(color)">
+            <UButton variant="link" @click.stop.prevent="setPrimaryColor(color)" class="cursor-pointer">
               <span class="inline-block size-8 rounded-full"
                 :class="`bg-[var(--color-light)] dark:bg-[var(--color-dark)]`" :style="{
                   '--color-light': `var(--color-${color}-400)`,
@@ -21,7 +21,7 @@
       <div class="relative z-40 grid w-full grid-cols-5 gap-2">
         <template v-for="(color, index) in neutralColors" :key="index">
           <div class="col-span-1 flex items-center justify-center">
-            <UButton variant="link" square @click.stop.prevent="setNeutralColor(color)">
+            <UButton variant="link" square @click.stop.prevent="setNeutralColor(color)" class="cursor-pointer">
               <span class="inline-block size-8 rounded-full"
                 :class="`bg-[var(--color-light)] dark:bg-[var(--color-dark)]`" :style="{
                   '--color-light': `var(--color-${color}-400)`,

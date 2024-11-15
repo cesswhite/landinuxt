@@ -29,7 +29,7 @@
         Contribution
       </UButton>
     </nav>
-    <div class="flex flex-1 items-center justify-end gap-4 lg:flex-none">
+    <div class="flex flex-1 items-center justify-end gap-1 lg:flex-none">
       <UButton to="https://github.com/cesswhite/landingnuxt" target="_blank" icon="i-mdi-github" variant="link"
         color="primary" size="lg" />
       <AppSwitchPrimaryColor />

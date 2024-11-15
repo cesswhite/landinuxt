@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-start justify-start">
     <UTooltip text="Go to back">
-      <UButton @click="goToComponentsView()" size="sm" icon="i-heroicons-chevron-left" variant="link" class="p-0" />
+      <UButton to="/components" size="sm" icon="i-heroicons-chevron-left" variant="soft" />
     </UTooltip>
     <div class="flex flex-col items-start gap-y-4 mt-4">
       <h1 class="mt-1 text-5xl font-bold capitalize text-dark-950 dark:text-dark-50">
@@ -24,9 +24,5 @@ const props = defineProps<{
   number: number;
   description: string
 }>();
-const router = useRouter();
 
-function goToComponentsView() {
-  router.push({ path: "/components" });
-}
 </script>

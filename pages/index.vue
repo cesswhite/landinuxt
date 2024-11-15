@@ -2,6 +2,7 @@
   <NuxtLayout name="default">
     <LandingHero />
     <LandingFeatures />
+    <LandingCTA />
   </NuxtLayout>
 </template>
 
