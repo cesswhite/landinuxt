@@ -2,7 +2,7 @@
   <UContainer>
     <div class="flex py-28 md:py-0 h-auto min-h-dvh font-sans w-full relative">
       <div class="mx-auto flex w-full flex-col items-center justify-center">
-        <div class="mb-8 flex items-center justify-between h-auto gap-x-8">
+        <div class="mb-8 flex flex-col lg:flex-row items-center justify-between h-auto gap-x-8">
           <NuxtLink class="hidden dark:inline-block h-[41px]" href="https://www.uneed.best/tool/landinuxt"
             target="_blank">
             <NuxtImg src="https://www.uneed.best/EMBED1.png" alt="Uneed Embed Badge"
