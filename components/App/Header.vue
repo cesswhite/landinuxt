@@ -86,6 +86,10 @@ const items = [
       label: "CTA Section",
       to: '/components/cta'
     },
+    {
+      label: "Testimonials Section",
+      to: '/components/testimonials'
+    },
   ],
 ];
 </script>
