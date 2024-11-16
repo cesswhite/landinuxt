@@ -7,7 +7,7 @@
                         <div class="text-primary-600 dark:text-primary-500 text-sm">
                             Build Faster, Create Better
                         </div>
-                        <h1 class="text-7xl font-normal text-dark-950 dark:text-dark-50">
+                        <h1 class="text-7xl font-bold text-dark-950 dark:text-dark-50">
                             Powerful Components. <br> Instant Pages
                         </h1>
                     </div>
