@@ -38,4 +38,4 @@ export type FootersTemplates =
   | "openai"
   | "gradient";
 export type CTATemplates = "simple" | 'social' | 'serif' | 'art' | 'solid' | 'gradient' | 'app' | 'connect' | 'saturate' | 'overflow' | 'sparkles';
-export type TestimonialsTemplates = 'masonry' | 'pastelide'
+export type TestimonialsTemplates = 'masonry' | 'pastelide' | 'tiles'

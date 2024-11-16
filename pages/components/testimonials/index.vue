@@ -9,6 +9,7 @@
                         <template #components>
                             <LazyElementsTestimonials1 v-if="item.title === ('masonry' as TestimonialsTemplates)" />
                             <LazyElementsTestimonials2 v-if="item.title === ('pastelide' as TestimonialsTemplates)" />
+                            <LazyElementsTestimonials3 v-if="item.title === ('tiles' as TestimonialsTemplates)" />
                         </template>
                     </ElementsWrapper>
                 </template>
