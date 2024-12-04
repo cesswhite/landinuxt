@@ -8,6 +8,7 @@
       <LazyElementsFootersCover v-if="props.data.name === 'footers'" />
       <LazyElementsCTACover v-if="props.data.name === 'cta'" />
       <LazyElementsTestimonialsCover v-if="props.data.name === 'testimonials'" />
+      <LazyElementsContactCover v-if="props.data.name === 'contact'" />
     </div>
     <div class="text-dark-950/90 dark:text-dark-50/90 mt-2 p-1 text-base font-bold capitalize">
       {{ props.data.name }}
