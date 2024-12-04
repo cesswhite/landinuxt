@@ -1,6 +1,6 @@
 <template>
   <header
-    class="flex w-full items-center justify-between fixed left-0 top-0 z-50 px-4 w-full bg-dark-50/70 dark:bg-dark-950/70 backdrop-blur-md py-4">
+    class="flex items-center justify-between fixed left-0 top-0 z-50 px-4 w-full bg-dark-50/70 dark:bg-dark-950/70 backdrop-blur-md py-4">
     <div class="flex size-8 items-center justify-center">
       <NuxtLink to="/">
         <AppLogo />
@@ -89,6 +89,10 @@ const items = [
     {
       label: "Testimonials Section",
       to: '/components/testimonials'
+    },
+    {
+      label: "Contact Section",
+      to: '/components/contact'
     },
   ],
 ];
