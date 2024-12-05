@@ -8,6 +8,7 @@
                     <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
                         <template #components>
                             <LazyElementsLogos1 v-if="item.title === ('simple' as LogosTemplates)" />
+                            <LazyElementsLogos2 v-if="item.title === ('animated' as LogosTemplates)" />
                         </template>
                     </ElementsWrapper>
                 </template>
