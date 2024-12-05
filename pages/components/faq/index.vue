@@ -9,6 +9,7 @@
                         <template #components>
                             <LazyElementsFAQ1 v-if="item.title === ('simple' as FAQTemplates)" />
                             <LazyElementsFAQ2 v-if="item.title === ('border' as FAQTemplates)" />
+                            <LazyElementsFAQ3 v-if="item.title === ('grid' as FAQTemplates)" />
                         </template>
                     </ElementsWrapper>
                 </template>
