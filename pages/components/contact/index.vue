@@ -10,6 +10,7 @@
                             <LazyElementsContact1 v-if="item.title === ('simple' as ContactTemplates)" />
                             <LazyElementsContact2 v-if="item.title === ('single' as ContactTemplates)" />
                             <LazyElementsContact3 v-if="item.title === ('enterprise' as ContactTemplates)" />
+                            <LazyElementsContact4 v-if="item.title === ('map' as ContactTemplates)" />
                         </template>
                     </ElementsWrapper>
                 </template>
