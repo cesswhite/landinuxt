@@ -2,7 +2,7 @@
     <div class="bg-dark-50 dark:bg-dark-950 relative w-full py-12 px-4">
         <UContainer>
             <div class="flex flex-col">
-                <h1 class="mt-2 text-4xl font-semibold text-dark-900 dark:text-dark-100">
+                <h1 class="text-4xl font-semibold text-dark-900 dark:text-dark-100">
                     Frequently Asked Questions
                 </h1>
             </div>
