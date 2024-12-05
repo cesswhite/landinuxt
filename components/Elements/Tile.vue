@@ -1,7 +1,7 @@
 <template>
   <div @click="goToComponentIndex(props.data.name)"
-    class="bg-dark-200/50 dark:bg-dark-500/10 col-span-full h-auto transform-gpu cursor-pointer rounded-lg p-1 transition-transform duration-300 ease-in-out will-change-transform hover:rotate-2 odd:hover:-rotate-2 sm:col-span-6 md:col-span-4 2xl:col-span-3">
-    <div class="bg-dark-200/60 dark:bg-dark-500/10 flex h-56 w-full items-center justify-center rounded-md">
+    class="bg-primary-400/5 dark:bg-primary-500/10 col-span-full h-auto transform-gpu cursor-pointer rounded-lg p-1 transition-transform duration-300 ease-in-out will-change-transform hover:rotate-2 odd:hover:-rotate-2 sm:col-span-6 md:col-span-4 2xl:col-span-3">
+    <div class="bg-primary-950/5 dark:bg-primary-800/10 flex h-56 w-full items-center justify-center rounded-md">
       <LazyElementsHeroCover v-if="props.data.name === 'hero'" />
       <LazyElementsHeadersCover v-if="props.data.name === 'headers'" />
       <LazyElementsFeaturesCover v-if="props.data.name === 'features'" />
@@ -12,7 +12,7 @@
       <LazyElementsLogosCover v-if="props.data.name === 'logos'" />
     </div>
     <div class="text-dark-950/90 dark:text-dark-50/90 mt-2 p-1 text-base font-bold capitalize">
-      {{ props.data.name }}
+      {{ props.data.name === 'cta' ? 'CTA' : props.data.name === 'faq' ? 'FAQ' : props.data.name }}
       <small class="text-dark-400 dark:text-dark-500">({{
         props.data.total === 0
           ? "Cooming soon"
