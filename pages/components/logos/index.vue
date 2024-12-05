@@ -11,7 +11,7 @@
                             <LazyElementsLogos2 v-if="item.title === ('animated' as LogosTemplates)" />
                             <LazyElementsLogos3 v-if="item.title === ('multi' as LogosTemplates)" />
                             <LazyElementsLogos4 v-if="item.title === ('mini' as LogosTemplates)" />
-
+                            <LazyElementsLogos5 v-if="item.title === ('double' as LogosTemplates)" />
                         </template>
                     </ElementsWrapper>
                 </template>
