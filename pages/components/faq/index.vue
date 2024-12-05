@@ -8,6 +8,7 @@
                     <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
                         <template #components>
                             <LazyElementsFAQ1 v-if="item.title === ('simple' as FAQTemplates)" />
+                            <LazyElementsFAQ2 v-if="item.title === ('border' as FAQTemplates)" />
                         </template>
                     </ElementsWrapper>
                 </template>

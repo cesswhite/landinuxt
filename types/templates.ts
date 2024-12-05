@@ -41,4 +41,4 @@ export type CTATemplates = "simple" | 'social' | 'serif' | 'art' | 'solid' | 'gr
 export type TestimonialsTemplates = 'masonry' | 'pastelide' | 'tiles' | 'stars'
 export type ContactTemplates = 'simple' | 'single' | 'enterprise' | 'map' | 'multi'
 export type LogosTemplates = 'simple' | 'animated' | 'multi' | 'mini' | 'double'
-export type FAQTemplates = 'simple'
+export type FAQTemplates = 'simple' | 'border'
