@@ -9,6 +9,7 @@
                         <template #components>
                             <LazyElementsLogos1 v-if="item.title === ('simple' as LogosTemplates)" />
                             <LazyElementsLogos2 v-if="item.title === ('animated' as LogosTemplates)" />
+                            <LazyElementsLogos3 v-if="item.title === ('multi' as LogosTemplates)" />
                         </template>
                     </ElementsWrapper>
                 </template>
