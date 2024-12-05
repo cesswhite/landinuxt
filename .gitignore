@@ -24,3 +24,4 @@ logs
 .env.*
 !.env.example
 pages/playground.vue
+

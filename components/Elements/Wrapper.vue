@@ -18,15 +18,15 @@
             {{ props.item.description }}
           </p>
         </div>
-        <div class="mt-4 flex w-full items-center justify-end gap-2">
+        <div class="mt-4 flex w-full items-center justify-end">
           <UButton @click="props.item.preview = true" icon="i-heroicons-eye" label="Preview"
-            :variant="props.item.preview ? 'solid' : 'link'" />
+            :variant="props.item.preview ? 'solid' : 'link'" class="cursor-pointer" />
           <UButton @click="props.item.preview = false" icon="i-heroicons-code-bracket" label="Code"
-            :variant="!props.item.preview ? 'solid' : 'link'" />
+            :variant="!props.item.preview ? 'solid' : 'link'" class="cursor-pointer" />
           <UButton @click="copyCode()" :icon="current === props.item.title
             ? 'i-heroicons-clipboard-document-check'
             : 'i-heroicons-clipboard-document-list'
-            " variant="ghost" />
+            " variant="ghost" class="cursor-pointer" />
         </div>
       </div>
 
