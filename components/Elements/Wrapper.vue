@@ -53,6 +53,9 @@ import type {
   HeadersTemplates,
   FootersTemplates,
   CTATemplates,
+  TestimonialsTemplates,
+  ContactTemplates,
+  LogosTemplates
 } from "~/types/templates";
 import { useClipboard } from "@vueuse/core";
 
@@ -62,6 +65,9 @@ const current = ref<
   | HeadersTemplates
   | FootersTemplates
   | CTATemplates
+  | TestimonialsTemplates
+  | ContactTemplates
+  | LogosTemplates
   | undefined
   | null
   | string
@@ -76,6 +82,9 @@ const props = defineProps<{
   | HeadersTemplates
   | FootersTemplates
   | CTATemplates
+  | TestimonialsTemplates
+  | ContactTemplates
+  | LogosTemplates
   | string
   | undefined;
 }>();

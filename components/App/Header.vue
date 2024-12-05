@@ -7,11 +7,11 @@
       </NuxtLink>
     </div>
     <nav class="hidden w-full flex-1 items-center justify-center gap-2 lg:flex">
-      <UButton variant="ghost" color="neutral" size="lg" to="/" class="rounded-full">
+      <UButton variant="ghost" color="neutral" size="lg" to="/">
         Home
       </UButton>
       <UDropdownMenu :items="items">
-        <UButton variant="ghost" color="neutral" size="lg" label="Components" class="rounded-full cursor-pointer">
+        <UButton variant="ghost" color="neutral" size="lg" label="Components" class="cursor-pointer">
           <template #trailing>
             <UIcon name="i-heroicons-chevron-down" />
           </template>
@@ -22,10 +22,10 @@
           </UButton>
         </template>
       </UDropdownMenu>
-      <UButton variant="ghost" color="neutral" size="lg" to="/instructions" class="rounded-full">
+      <UButton variant="ghost" color="neutral" size="lg" to="/instructions">
         Instructions
       </UButton>
-      <UButton variant="ghost" color="neutral" size="lg" to="/contribution" class="rounded-full">
+      <UButton variant="ghost" color="neutral" size="lg" to="/contribution">
         Contribution
       </UButton>
     </nav>
@@ -93,6 +93,10 @@ const items = [
     {
       label: "Contact Section",
       to: '/components/contact'
+    },
+    {
+      label: "Logos Section",
+      to: '/components/logos'
     },
   ],
 ];
