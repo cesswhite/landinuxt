@@ -8,6 +8,7 @@
                     <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
                         <template #components>
                             <LazyElementsContact1 v-if="item.title === ('simple' as ContactTemplates)" />
+                            <LazyElementsContact2 v-if="item.title === ('single' as ContactTemplates)" />
                         </template>
                     </ElementsWrapper>
                 </template>

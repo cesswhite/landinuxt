@@ -39,4 +39,4 @@ export type FootersTemplates =
   | "gradient";
 export type CTATemplates = "simple" | 'social' | 'serif' | 'art' | 'solid' | 'gradient' | 'app' | 'connect' | 'saturate' | 'overflow' | 'sparkles';
 export type TestimonialsTemplates = 'masonry' | 'pastelide' | 'tiles' | 'stars'
-export type ContactTemplates = 'simple'
+export type ContactTemplates = 'simple' | 'single'
