@@ -98,6 +98,10 @@ const items = [
       label: "Logos Section",
       to: '/components/logos'
     },
+    {
+      label: "FAQ Section",
+      to: '/components/faq'
+    },
   ],
 ];
 </script>
