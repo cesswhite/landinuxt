@@ -6,7 +6,7 @@
         <AppLogo />
       </NuxtLink>
     </div>
-    <nav class="hidden w-full flex-1 items-center justify-center gap-2 lg:flex">
+    <nav class="hidden center-center w-full flex-1 items-center justify-center gap-2 lg:flex">
       <UButton variant="ghost" color="neutral" size="lg" to="/">
         Home
       </UButton>

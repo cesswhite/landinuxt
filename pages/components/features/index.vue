@@ -30,6 +30,6 @@ import type { FeaturesTemplates } from "~/types/templates";
 const _features = await queryContent("features").find();
 
 useSeoMeta({
-  title: "Featuress Section | LandiNuxt",
+  title: "Features Section | LandiNuxt",
 });
 </script>

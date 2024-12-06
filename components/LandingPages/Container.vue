@@ -20,5 +20,13 @@ const _components = ref<Landing[]>([
         name: "showcase",
         image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/landing_2.png'
     },
+    {
+        name: "saas",
+        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/landing_3.png'
+    },
+    {
+        name: "agency",
+        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/landing_4.png'
+    },
 ]);
 </script>

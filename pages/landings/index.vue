@@ -6,7 +6,7 @@
                     Discover Our Diverse <br>
                     Collection of Landing Pages
                 </h2>
-                <p class="mt-2 text-lg leading-8 text-primary-950/60 dark:text-primary-50/50 w-full md:w-1/2 mx-auto">
+                <p class="mt-2 text-lg leading-8 text-dark-950/60 dark:text-dark-50/50 w-full md:w-1/2 mx-auto">
                     Explore a variety of beautifully designed landing pages tailored to enhance your projects.
                     Learn how to effectively utilize these UI components to create stunning and functional user
                     experiences.

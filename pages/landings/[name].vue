@@ -4,6 +4,8 @@
             <template #component>
                 <LazyLandingPages1 v-if="name === 'simple'" />
                 <LazyLandingPages2 v-if="name === 'showcase'" />
+                <LazyLandingPages3 v-if="name === 'saas'" />
+                <LazyLandingPages4 v-if="name === 'agency'" />
             </template>
         </LandingPagesWrapper>
     </NuxtLayout>
