@@ -42,10 +42,13 @@
         <p
           class="text-primary-950/60 dark:text-primary-50/50 mt-6 text-center text-base md:text-lg leading-8 2xl:text-xl w-full md:w-1/2">
           Unlock the full potential of your landing pages with a powerful set of
-          tools, including
-          <UButton to="" target="_blank" variant="link" class="p-0">NuxtImg</UButton>,
-          <UButton to="" target="_blank" variant="link" class="p-0">NuxtFonts</UButton>,
-          and <UButton to="" target="_blank" variant="link" class="p-0">NuxtUI</UButton>,
+          sections & tools, including
+          <UButton size="xl" to="https://image.nuxt.com/" target="_blank" variant="link" class="p-0">NuxtImg</UButton>,
+          <UButton size="xl" to="https://fonts.nuxt.com/" target="_blank" variant="link" class="p-0">NuxtFonts</UButton>
+          ,
+          and <UButton size="xl" to="https://ui3.nuxt.dev/getting-started" target="_blank" variant="link" class="p-0">
+            NuxtUI
+          </UButton>,
           optimized for fast and
           efficient development.
         </p>

@@ -11,7 +11,7 @@
         Home
       </UButton>
       <UDropdownMenu :items="items">
-        <UButton variant="ghost" color="neutral" size="lg" label="Components" class="cursor-pointer">
+        <UButton variant="ghost" color="neutral" size="lg" label="Sections" class="cursor-pointer">
           <template #trailing>
             <UIcon name="i-heroicons-chevron-down" />
           </template>
@@ -22,12 +22,17 @@
           </UButton>
         </template>
       </UDropdownMenu>
+
+      <UButton variant="ghost" color="neutral" size="lg" to="/landings">
+        Landing Pages
+      </UButton>
       <UButton variant="ghost" color="neutral" size="lg" to="/instructions">
         Instructions
       </UButton>
       <UButton variant="ghost" color="neutral" size="lg" to="/contribution">
         Contribution
       </UButton>
+
     </nav>
     <div class="flex flex-1 items-center justify-end gap-1 lg:flex-none">
       <UButton to="https://github.com/cesswhite/landingnuxt" target="_blank" icon="i-mdi-github" variant="link"
