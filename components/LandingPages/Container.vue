@@ -9,12 +9,16 @@
 </template>
 
 <script setup lang="ts">
-import type { Landing, LandingPages } from "~/types/index";
+import type { Landing } from "~/types/index";
 
 const _components = ref<Landing[]>([
     {
         name: "simple",
-        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/v1733495459/landinuxt/landing_1.png'
+        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/landing_1.png'
+    },
+    {
+        name: "showcase",
+        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/landing_2.png'
     },
 ]);
 </script>
