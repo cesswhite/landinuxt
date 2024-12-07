@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="mt-24 relative w-full lg:w-1/2 h-full lg:mt-0 xl:h-[620px]">
-            <NuxtImg src="https://images.pexels.com/photos/12495614/pexels-photo-12495614.jpeg"
+            <NuxtImg src="https://images.pexels.com/photos/12495614/pexels-photo-12495614.jpeg" format="webp"
                 class="size-full rounded-sm object-cover object-center" loading="lazy" alt="my-company-logo-description"
                 width="640" height="640" :placeholder="[50, 25, 75, 5]" />
         </div>

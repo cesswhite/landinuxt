@@ -22,7 +22,8 @@
         <div
             class="relative lg:absolute bottom-0 lg:right-12 w-full lg:w-[520px] h-[420px] rounded-3xl lg:rounded-t-3xl lg:rounded-b-none overflow-hidden">
             <NuxtImg class="h-full w-full object-center object-cover"
-                src="https://images.unsplash.com/photo-1570675894641-8860d49afece?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                src="https://images.unsplash.com/photo-1570675894641-8860d49afece?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                format="webp" />
         </div>
     </div>
 </template>

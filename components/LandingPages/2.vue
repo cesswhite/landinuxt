@@ -5,7 +5,7 @@
       <div class="flex w-auto items-center justify-start md:w-full">
         <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
           class="size-auto object-contain object-center" loading="lazy" alt="my-company-logo-description"
-          :placeholder="[50, 25, 75, 5]" />
+          :placeholder="[50, 25, 75, 5]" format="webp" />
       </div>
       <nav class="hidden w-full items-center justify-center lg:flex">
         <UButton variant="link" color="primary" size="lg" to="#"> Home </UButton>
@@ -52,7 +52,7 @@
       <!-- Background Image -->
       <NuxtImg class="absolute h-full w-full object-cover object-[right_-14rem_top_0rem] md:object-center"
         src="https://images.unsplash.com/photo-1708503927905-fc029481566d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        loading="lazy" alt="my-hero-background" :placeholder="[50, 25, 75, 5]" />
+        loading="lazy" alt="my-hero-background" :placeholder="[50, 25, 75, 5]" format="webp" />
       <!-- Overlay -->
       <div class="absolute top-0 left-0 h-full w-4/5 bg-gradient-to-r from-dark-950/70" />
       <div class="relative z-20 w-10/12">
@@ -162,7 +162,7 @@
                   {{ image.description }}
                 </p>
               </div>
-              <NuxtImg :src="image.src"
+              <NuxtImg :src="image.src" format="webp"
                 class="h-[420px] w-full object-cover object-center group-hover:saturate-150 md:h-[520px] lg:h-[620px]"
                 loading="lazy" alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" />
             </div>
@@ -188,7 +188,8 @@
           <template v-for="(testimonial, index) in testimonials">
             <div class="col-span-full grid grid-cols-2 gap-4 lg:col-span-6">
               <div class="col-span-full h-auto lg:col-span-1">
-                <NuxtImg :src="testimonial.img" class="h-96 w-full rounded-2xl object-cover object-center" />
+                <NuxtImg :src="testimonial.img" format="webp"
+                  class="h-96 w-full rounded-2xl object-cover object-center" />
               </div>
               <div
                 class="bg-dark-100 dark:bg-dark-900/80 col-span-full flex flex-col items-start rounded-2xl p-4 lg:col-span-1 lg:items-center lg:justify-between">
@@ -308,7 +309,7 @@
           <div class="relative col-span-full md:col-span-6">
             <NuxtImg class="h-96 w-full rounded-md object-cover object-center md:h-full"
               src="https://images.unsplash.com/photo-1707051703895-ea022c66c428?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              loading="lazy" alt="my-enterprise-image" />
+              loading="lazy" alt="my-enterprise-image" format="webp" />
           </div>
         </div>
       </UContainer>

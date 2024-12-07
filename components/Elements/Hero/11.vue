@@ -26,15 +26,18 @@
         <div class="grid grid-cols-12 gap-x-4 items-center w-[1200px] xl:w-[1800px] 2xl:w-[2500px]">
             <div class="col-span-3 p-2 bg-primary-500/10 dark:bg-primary-600/10">
                 <NuxtImg class="h-[580px] w-full object-center object-cover"
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1715&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1715&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    format="webp" />
             </div>
             <div class="col-span-6 p-2 bg-primary-500/10 dark:bg-primary-600/10">
                 <NuxtImg class="h-[600px] w-full object-center object-cover"
-                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    format="webp" />
             </div>
             <div class="col-span-3 p-2 bg-primary-500/10 dark:bg-primary-600/10">
                 <NuxtImg class="h-[580px] w-full object-center object-cover"
-                    src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                    src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    format="webp" />
             </div>
         </div>
     </div>

@@ -4,7 +4,7 @@
             <div class="col-span-full md:col-span-8 mb-12 md:mb-0 ">
                 <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
                     class="object-contain object-center h-10" loading="lazy" alt="my-company-logo-description"
-                    :placeholder="[50, 25, 75, 5]" />
+                    :placeholder="[50, 25, 75, 5]" format="webp" />
             </div>
             <div class="col-span-6 md:col-span-1">
                 <ul class="col-span-full sm:col-span-4 lg:col-span-2 flex flex-col pb-4">

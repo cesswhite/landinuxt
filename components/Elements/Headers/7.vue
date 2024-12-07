@@ -4,7 +4,7 @@
       class="relative z-20 flex h-16 w-full items-center justify-between gap-4 rounded-xl bg-dark-50 px-4 lg:justify-start dark:bg-dark-950">
       <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Groupdark_ljxs2m.png"
         class="relative z-10 h-7 w-auto object-contain object-center" loading="lazy" alt="my-company-logo-description"
-        :placeholder="[50, 25, 75, 5]" />
+        :placeholder="[50, 25, 75, 5]" format="webp" />
       <nav class="relative z-10 hidden items-center justify-start gap-2 lg:flex">
         <UButton variant="link" color="neutral" size="lg" to="#"> Home </UButton>
         <UButton @click="showMenu = !showMenu" variant="link" color="neutral" size="lg" to="#">
@@ -97,7 +97,7 @@
                 <div
                   class="flex-1 rotate-4 transform-gpu overflow-hidden rounded-xl transition-all duration-300 ease-in-out hover:-translate-y-4 hover:rotate-0">
                   <NuxtImg :src="image" class="h-full w-full object-cover object-center" loading="lazy"
-                    alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" />
+                    alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" format="webp" />
                 </div>
               </template>
             </div>

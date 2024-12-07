@@ -1,14 +1,7 @@
 <template>
-  <div
-    class="flex w-full flex-col gap-12 rounded-xl border bg-dark-50  p-4 md:gap-24 dark:bg-dark-900"
-  >
-    <div
-      v-motion
-      :initial="{ opacity: 0, filter: 'blur(10px)' }"
-      :enter="{ opacity: 1, filter: 'blur(0px)' }"
-      :duration="1200"
-      class="flex w-full flex-col gap-4 md:flex-row md:gap-0"
-    >
+  <div class="flex w-full flex-col gap-12 rounded-xl border bg-dark-50  p-4 md:gap-24 dark:bg-dark-900">
+    <div v-motion :initial="{ opacity: 0, filter: 'blur(10px)' }" :enter="{ opacity: 1, filter: 'blur(0px)' }"
+      :duration="1200" class="flex w-full flex-col gap-4 md:flex-row md:gap-0">
       <div class="flex w-full flex-col gap-2 md:w-1/2">
         <div class="text-primary-600 dark:text-primary-500 text-sm">
           Embark on a Wild Adventure
@@ -18,45 +11,26 @@
         </h1>
       </div>
       <div class="flex w-full items-center justify-start md:w-1/2">
-        <p
-          class="font-base w-full text-dark-950/60 md:w-1/2 dark:text-dark-50/80"
-        >
+        <p class="font-base w-full text-dark-950/60 md:w-1/2 dark:text-dark-50/80">
           Join us on an unforgettable safari tour, where you'll explore the
           untamed wilderness and get up close with incredible wildlife.
         </p>
       </div>
     </div>
-    <div
-      class="flex flex-col items-start justify-between gap-x-16 gap-y-8 md:flex-row"
-    >
+    <div class="flex flex-col items-start justify-between gap-x-16 gap-y-8 md:flex-row">
       <template v-for="image in images" :key="image.src">
-        <div
-          v-motion
-          :initial="{ opacity: 0, filter: 'blur(10px)' }"
-          :enter="{ opacity: 1, filter: 'blur(0px)' }"
-          :duration="1200"
-          class="flex flex-1 flex-col gap-2"
-        >
+        <div v-motion :initial="{ opacity: 0, filter: 'blur(10px)' }" :enter="{ opacity: 1, filter: 'blur(0px)' }"
+          :duration="1200" class="flex flex-1 flex-col gap-2">
           <div
-            class="bg-primary-950/10 dark:bg-primary-50/10 flex h-96 w-full items-center justify-center rounded-md p-1"
-          >
-            <NuxtImg
-              :src="image.src"
-              class="size-full rounded-sm object-cover object-center"
-              loading="lazy"
-              alt="my-company-logo-description"
-              :placeholder="[50, 25, 75, 5]"
-            />
+            class="bg-primary-950/10 dark:bg-primary-50/10 flex h-96 w-full items-center justify-center rounded-md p-1">
+            <NuxtImg :src="image.src" class="size-full rounded-sm object-cover object-center" loading="lazy"
+              alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" format="webp" />
           </div>
 
-          <span
-            class="text-2xl font-medium text-dark-950 md:text-4xl dark:text-dark-50"
-          >
+          <span class="text-2xl font-medium text-dark-950 md:text-4xl dark:text-dark-50">
             {{ image.label }}
           </span>
-          <p
-            class="w-full text-base font-normal text-dark-950/60 dark:text-dark-50/60"
-          >
+          <p class="w-full text-base font-normal text-dark-950/60 dark:text-dark-50/60">
             {{ image.description }}
           </p>
         </div>

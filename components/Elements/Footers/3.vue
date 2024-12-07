@@ -4,7 +4,7 @@
             <div class="col-span-6 lg:col-span-6 flex items-start justify-start">
                 <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683150145/Group_26_tooxf6.svg"
                     class="object-contain object-center h-6 md:h-10" loading="lazy" alt="my-company-logo-description"
-                    :placeholder="[50, 25, 75, 5]" />
+                    :placeholder="[50, 25, 75, 5]" format="webp" />
             </div>
             <ul class="col-span-6 lg:col-span-2 flex flex-col gap-y-2 w-full">
                 <template v-for="(nav, index) in navigation" :key="index">

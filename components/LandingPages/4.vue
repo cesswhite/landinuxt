@@ -6,7 +6,7 @@
                 class="relative z-20 flex h-16 w-full items-center justify-between gap-4 rounded-xl bg-dark-50/90 px-4 lg:justify-start dark:bg-dark-950/90">
                 <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Groupdark_ljxs2m.png"
                     class="relative z-10 h-7 w-auto object-contain object-center" loading="lazy"
-                    alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" />
+                    alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" format="webp" />
                 <nav class="relative z-10 hidden items-center justify-start gap-2 lg:flex">
                     <UButton variant="link" color="neutral" size="lg" to="#"> Home </UButton>
                     <UButton @click="showMenu = !showMenu" variant="link" color="neutral" size="lg" to="#">
@@ -100,7 +100,7 @@
                                         class="flex-1 rotate-4 transform-gpu overflow-hidden rounded-xl transition-all duration-300 ease-in-out hover:-translate-y-4 hover:rotate-0">
                                         <NuxtImg :src="image" class="h-full w-full object-cover object-center"
                                             loading="lazy" alt="my-company-logo-description"
-                                            :placeholder="[50, 25, 75, 5]" />
+                                            :placeholder="[50, 25, 75, 5]" format="webp" />
                                     </div>
                                 </template>
                             </div>
@@ -112,7 +112,7 @@
         <!-- HERO -->
         <div class="relative flex h-full min-h-dvh w-full items-end justify-center">
             <!-- Background Image (try a dark image to see the magic) -->
-            <NuxtImg
+            <NuxtImg format="webp"
                 class="absolute z-10 h-full w-full object-cover object-center transition-all duration-300 ease-in-out dark:saturate-0"
                 src="https://images.unsplash.com/photo-1552858725-2758b5fb1286?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 loading="lazy" alt="my-hero-background" :placeholder="[50, 25, 75, 5]" />
@@ -279,7 +279,8 @@
                             </div>
                             <NuxtImg :src="image.src"
                                 class="h-[420px] w-full object-cover object-center group-hover:saturate-150 md:h-[520px] lg:h-[620px]"
-                                loading="lazy" alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" />
+                                loading="lazy" alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]"
+                                format="webp" />
                         </div>
                     </template>
                 </div>
@@ -291,7 +292,8 @@
             <div class="group relative right-12 col-span-full overflow-hidden lg:col-span-4">
                 <NuxtImg class="h-64 w-full rounded-r-2xl object-cover object-center group-hover:saturate-150"
                     loading="lazy" height="200" width="200" alt="my-work"
-                    src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                    src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    format="webp" />
             </div>
             <div class="col-span-full w-full lg:col-span-4 lg:py-12">
                 <div class="relative z-10 flex w-full flex-col gap-y-4">
@@ -322,7 +324,8 @@
             <div class="group relative left-12 col-span-full overflow-hidden lg:col-span-4 lg:pt-44">
                 <NuxtImg class="h-64 w-full rounded-l-2xl object-cover object-center group-hover:saturate-150"
                     loading="lazy" height="200" width="200" alt="my-work"
-                    src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                    src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    format="webp" />
             </div>
         </div>
         <!-- FAQ -->
@@ -439,7 +442,7 @@
                 <footer class="relative flex h-auto w-full flex-col overflow-hidden px-4 py-2">
                     <div class="grid w-full grid-cols-12">
                         <div class="col-span-full flex flex-col items-start justify-start gap-y-6 lg:col-span-6">
-                            <NuxtImg
+                            <NuxtImg format="webp"
                                 src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
                                 class="h-6 object-contain object-center md:h-10" loading="lazy"
                                 alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" />
@@ -505,7 +508,7 @@
                         <div class="from-dark-50 dark:from-dark-950 absolute size-full bg-gradient-to-t from-25%" />
                         <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683150145/Group_26_tooxf6.svg"
                             class="size-full object-contain object-center" loading="lazy"
-                            alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" />
+                            alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" format="webp" />
                     </div>
                 </footer>
             </UContainer>

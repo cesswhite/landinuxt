@@ -4,7 +4,7 @@
     <NuxtImg
       class="absolute z-10 h-full w-full object-cover object-center transition-all duration-300 ease-in-out dark:saturate-0"
       src="https://images.unsplash.com/photo-1552858725-2758b5fb1286?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      loading="lazy" alt="my-hero-background" :placeholder="[50, 25, 75, 5]" />
+      format="webp" loading="lazy" alt="my-hero-background" :placeholder="[50, 25, 75, 5]" />
     <div class="relative bottom-24 z-20 w-11/12 md:w-10/12">
       <div class="flex flex-col items-center justify-center">
         <h1

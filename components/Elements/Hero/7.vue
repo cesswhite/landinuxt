@@ -32,7 +32,7 @@
     <div class="xl:max-w-screen-2xl relative z-10 mt-12 mx-auto w-full p-4 md:p-2">
       <NuxtImg class="h-[520px] w-full object-cover object-center lg:h-[640px] 2xl:h-[720px]"
         src="https://images.unsplash.com/photo-1580145575237-75fec2a0320b?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        loading="lazy" alt="my-hero-background" :placeholder="[50, 25, 75, 5]" />
+        loading="lazy" alt="my-hero-background" :placeholder="[50, 25, 75, 5]" format="webp" />
     </div>
   </div>
 </template>

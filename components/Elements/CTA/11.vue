@@ -4,7 +4,8 @@
         <div class="relative col-span-full right-12 lg:col-span-4 overflow-hidden group">
             <NuxtImg class="h-64 w-full object-center object-cover rounded-r-2xl group-hover:saturate-150"
                 loading="lazy" height="200" width="200" alt="my-work"
-                src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                format="webp" />
         </div>
         <div class="w-full col-span-full lg:col-span-4 lg:py-12">
             <div class="w-full relative flex flex-col gap-y-4 z-10">
@@ -30,7 +31,8 @@
         <div class="relative col-span-full left-12 lg:col-span-4 overflow-hidden lg:pt-44 group">
             <NuxtImg class="h-64 w-full object-center object-cover rounded-l-2xl group-hover:saturate-150"
                 loading="lazy" height="200" width="200" alt="my-work"
-                src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                format="webp" />
         </div>
     </div>
 </template>

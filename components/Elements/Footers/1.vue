@@ -6,7 +6,7 @@
                 <div class="flex flex-col items-start  gap-y-8">
                     <div class="h-10 w-auto">
                         <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683150145/Group_26_tooxf6.svg"
-                            class="size-full object-contain object-center" loading="lazy"
+                            class="size-full object-contain object-center" loading="lazy" format="webp"
                             alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" />
                     </div>
                     <div class="flex gap-x-4">

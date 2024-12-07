@@ -6,7 +6,7 @@
                 <div class="h-10 mx-auto md:mx-0">
                     <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683150145/Group_26_tooxf6.svg"
                         class="object-contain object-center size-full" loading="lazy" alt="my-company-logo-description"
-                        :placeholder="[50, 25, 75, 5]" />
+                        :placeholder="[50, 25, 75, 5]" format="webp" />
                 </div>
                 <p class="text-dark-950/70 dark:text-dark-50/70 w-full md:pr-44">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim qui vero nihil laudantium? Nemo

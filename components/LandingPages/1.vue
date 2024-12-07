@@ -6,7 +6,7 @@
             <div class="size-8">
                 <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
                     class="size-full object-contain object-center" loading="lazy" alt="my-company-logo-description"
-                    :placeholder="[50, 25, 75, 5]" />
+                    :placeholder="[50, 25, 75, 5]" format="webp" />
             </div>
             <nav class="hidden items-center justify-start md:flex">
                 <UButton variant="link" color="neutral" size="lg" to="#"> Home </UButton>
@@ -78,7 +78,7 @@
             <div class="xl:max-w-7xl relative z-10 mt-12 mx-auto w-full p-4 md:p-2">
                 <NuxtImg class="h-[520px] w-full object-cover object-center lg:h-[640px] 2xl:h-[720px]"
                     src="https://images.unsplash.com/photo-1580145575237-75fec2a0320b?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    loading="lazy" alt="my-hero-background" :placeholder="[50, 25, 75, 5]" />
+                    loading="lazy" alt="my-hero-background" :placeholder="[50, 25, 75, 5]" format="webp" />
             </div>
         </div>
         <!-- LOGOS -->
@@ -147,7 +147,8 @@
                             <div
                                 class="flex h-96 w-full items-center justify-center rounded-md bg-dark-200/20 p-1 dark:bg-dark-800">
                                 <NuxtImg :src="image.src" class="size-full rounded-sm object-cover object-center"
-                                    loading="lazy" alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" />
+                                    loading="lazy" alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]"
+                                    format="webp" />
                             </div>
                             <span class="text-2xl font-medium text-dark-950 md:text-4xl dark:text-dark-50">
                                 {{ image.label }}
@@ -311,7 +312,7 @@
                                 <NuxtImg
                                     src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683150145/Group_26_tooxf6.svg"
                                     class="size-full object-contain object-center" loading="lazy"
-                                    alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" />
+                                    alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" format="webp" />
                             </div>
                             <div class="flex gap-x-4">
                                 <template v-for="(nav, index) in navigation" :key="index">

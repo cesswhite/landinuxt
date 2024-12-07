@@ -17,7 +17,7 @@
                 <template v-for="(testimonial, index) in testimonials">
                     <div class="col-span-full lg:col-span-6 grid grid-cols-2 gap-4">
                         <div class="col-span-full lg:col-span-1 h-auto">
-                            <NuxtImg :src="testimonial.img"
+                            <NuxtImg :src="testimonial.img" format="webp"
                                 class="w-full h-96 object-center object-cover rounded-2xl" />
                         </div>
                         <div

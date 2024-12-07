@@ -25,7 +25,7 @@
           </div>
           <NuxtImg :src="image.src"
             class="h-[420px] w-full object-cover object-center group-hover:saturate-150 md:h-[520px] lg:h-[620px]"
-            loading="lazy" alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" />
+            loading="lazy" alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" format="webp" />
         </div>
       </template>
     </div>

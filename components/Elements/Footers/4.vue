@@ -4,7 +4,7 @@
             <div class="col-span-full lg:col-span-6 flex flex-col gap-y-6 items-start justify-start">
                 <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
                     class="h-6 md:h-10 object-contain object-center" loading="lazy" alt="my-company-logo-description"
-                    :placeholder="[50, 25, 75, 5]" />
+                    :placeholder="[50, 25, 75, 5]" format="webp" />
                 <p class="text-dark-950/50 dark:text-dark-50/50 text-sm w-full md:w-1/2 font-inter inline-block">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam beatae labore accusamus perspiciatis
                     quasi
@@ -66,7 +66,7 @@
             <div class="absolute size-full bg-gradient-to-t from-dark-50 from-25% dark:from-dark-950" />
             <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683150145/Group_26_tooxf6.svg"
                 class="object-contain object-center size-full" loading="lazy" alt="my-company-logo-description"
-                :placeholder="[50, 25, 75, 5]" />
+                :placeholder="[50, 25, 75, 5]" format="webp" />
         </div>
     </footer>
 </template>

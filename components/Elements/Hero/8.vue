@@ -29,7 +29,7 @@
             <div class="flex w-full items-center justify-center gap-4 first:ml-0 xl:justify-between xl:first:ml-4">
               <template v-for="(f_image, index) in images" :key="index">
                 <NuxtImg class="size-48 object-cover object-center xl:size-52" :src="f_image" loading="lazy"
-                  alt="my-photo-work" :placeholder="[50, 25, 75, 5]" />
+                  alt="my-photo-work" :placeholder="[50, 25, 75, 5]" format="webp" />
               </template>
             </div>
           </NuxtMarquee>
@@ -37,7 +37,7 @@
             <div class="flex w-full items-center justify-center gap-4 first:ml-4 xl:first:ml-4">
               <template v-for="(f_image, index) in images" :key="index">
                 <NuxtImg class="size-48 object-cover object-center xl:size-52" :src="f_image" loading="lazy"
-                  alt="my-photo-work" :placeholder="[50, 25, 75, 5]" />
+                  alt="my-photo-work" :placeholder="[50, 25, 75, 5]" format="webp" />
               </template>
             </div>
           </NuxtMarquee>

@@ -22,7 +22,7 @@
       <template v-for="image in images" :key="image.src">
         <div class="flex flex-1 flex-col gap-y-6">
           <NuxtImg :src="image.src" class="mx-auto h-72 w-full rounded-xl object-cover object-center md:w-96 2xl:w-full"
-            loading="lazy" alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" />
+            loading="lazy" alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" format="webp" />
 
           <span class="text-center text-2xl font-medium text-dark-950 dark:text-dark-50">
             {{ image.name }}

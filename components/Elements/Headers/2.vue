@@ -3,7 +3,7 @@
     <div class="flex w-auto items-center justify-start md:w-full">
       <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
         class="size-auto object-contain object-center" loading="lazy" alt="my-company-logo-description"
-        :placeholder="[50, 25, 75, 5]" />
+        :placeholder="[50, 25, 75, 5]" format="webp" />
     </div>
     <nav class="hidden w-full items-center justify-center lg:flex">
       <UButton variant="link" color="primary" size="lg" to="#"> Home </UButton>

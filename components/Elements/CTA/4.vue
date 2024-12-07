@@ -20,7 +20,8 @@
         </div>
         <div class="col-span-full md:col-span-5 h-auto lg:h-96">
             <NuxtImg class="size-full object-center object-cover" alt="my-product-cta"
-                src="https://images.unsplash.com/photo-1579541814924-49fef17c5be5?q=80&w=1870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                src="https://images.unsplash.com/photo-1579541814924-49fef17c5be5?q=80&w=1870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                format="webp" />
         </div>
     </div>
 </template>

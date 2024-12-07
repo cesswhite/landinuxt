@@ -5,7 +5,7 @@
             <div class="size-8">
                 <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
                     class="size-full object-contain object-center" loading="lazy" alt="my-company-logo-description"
-                    :placeholder="[50, 25, 75, 5]" />
+                    :placeholder="[50, 25, 75, 5]" format="webp" />
             </div>
             <div
                 class="hidden items-center justify-center center-center rounded-full border border-dark-200/60 bg-dark-50/30 py-1 px-24 backdrop-blur md:flex dark:border-dark-500/5 dark:bg-dark-900/90">
@@ -213,7 +213,7 @@
                     class="mt-24 flex flex-col items-start justify-between gap-x-0 gap-y-24 px-4 md:mt-12 md:gap-x-6 md:gap-y-12 lg:flex-row xl:px-24">
                     <template v-for="image in images" :key="image.src">
                         <div class="flex flex-1 flex-col">
-                            <NuxtImg :src="image.src"
+                            <NuxtImg :src="image.src" format="webp"
                                 class="mx-auto h-72 w-full rounded-xl object-cover object-center md:w-96 2xl:w-full"
                                 loading="lazy" alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" />
                             <span

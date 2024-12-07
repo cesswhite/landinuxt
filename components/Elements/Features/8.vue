@@ -4,7 +4,8 @@
             <div class="flex flex-col-reverse md:flex-row md:even:flex-row-reverse  w-full items-end justify-start">
                 <div class="w-full mt-12 md:w-1/2 h-[320px] lg:h-[640px]">
                     <NuxtImg :src="feat.image" class="size-full rounded-sm object-cover object-center" loading="lazy"
-                        alt="my-company-logo-description" width="640" height="640" :placeholder="[50, 25, 75, 5]" />
+                        alt="my-company-logo-description" width="640" height="640" :placeholder="[50, 25, 75, 5]"
+                        format="webp" />
                 </div>
                 <div class="w-full md:w-1/2 flex flex-col gap-y-2 p-0 md:px-8 items-start">
                     <span class="text-dark-950 dark:text-dark-50 text-4xl lg:text-6xl font-instrument">

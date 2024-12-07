@@ -26,7 +26,9 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   devtools: { enabled: true },
   modules: ["@nuxt/ui", "@nuxt/content", "@nuxt/image", "@pinia/nuxt", "nuxt-marquee", '@vueuse/motion/nuxt'],
-
+  image: {
+    format: ['webp']
+  },
   content: {
     highlight: {
       langs: [

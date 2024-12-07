@@ -16,7 +16,7 @@
     <div class="size-8">
       <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
         class="size-full object-contain object-center" loading="lazy" alt="my-company-logo-description"
-        :placeholder="[50, 25, 75, 5]" />
+        :placeholder="[50, 25, 75, 5]" format="webp" />
     </div>
 
     <div class="hidden items-center justify-start md:flex">
