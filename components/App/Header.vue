@@ -23,9 +23,11 @@
         </template>
       </UDropdownMenu>
 
-      <UButton variant="ghost" color="neutral" size="lg" to="/landings">
-        Landing Pages
-      </UButton>
+      <UChip :ui="{ base: 'p-2' }" text="New">
+        <UButton variant="ghost" color="neutral" size="lg" to="/landings">
+          Landing Pages
+        </UButton>
+      </UChip>
       <UButton variant="ghost" color="neutral" size="lg" to="/instructions">
         Instructions
       </UButton>

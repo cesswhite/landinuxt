@@ -33,5 +33,7 @@ const props = defineProps<{
 
 function goToComponentIndex(name: string) {
   navigateTo(`/components/${name}`);
+  const umami = window.umami
+  umami.track(`click-to-${name}`)
 }
 </script>

@@ -10,3 +10,11 @@ export interface Landing {
   name: LandingPages;
   image: string
 }
+
+declare global {
+  interface Window {
+    umami: {
+      track: (event: string) => void;
+    }
+  }
+}
