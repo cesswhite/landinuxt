@@ -9,7 +9,8 @@ export type HeroTemplates =
   | "double-marquee"
   | "split"
   | "space"
-  | "management";
+  | "management"
+  | "care";
 export type HeadersTemplates =
   | "simple"
   | "saas"
