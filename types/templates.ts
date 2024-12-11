@@ -10,7 +10,8 @@ export type HeroTemplates =
   | "split"
   | "space"
   | "management"
-  | "care";
+  | "care"
+  | "ivvi";
 export type HeadersTemplates =
   | "simple"
   | "saas"
