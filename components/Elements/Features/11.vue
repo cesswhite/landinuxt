@@ -1,0 +1,58 @@
+<template>
+    <div class="w-full h-auto relative bg-dark-50 dark:bg-dark-950 py-32">
+        <UContainer>
+            <div class="w-full">
+                <div class="grid grid-cols-12 gap-8 md:gap-4">
+                    <h1 class="text-5xl col-span-full md:col-span-6 text-dark-950 dark:text-dark-50 font-medium">
+                        Experience the Pinnacle <br>
+                        of Luxury Living
+                    </h1>
+                    <p class="md:col-span-6 col-span-full text-pretty text-dark-950/60 dark:text-dark-50/60">
+                        Indulge in an exquisite collection of world-class luxury hotels. Each destination offers
+                        unparalleled
+                        elegance, exceptional service, and unforgettable experiences tailored to your every desire.
+                    </p>
+                </div>
+            </div>
+        </UContainer>
+        <div class="grid grid-cols-12 mt-24">
+            <template v-for="(img, index) in images" :key="index">
+                <div class="col-span-full md:col-span-6 lg:col-span-4 h-96 relative">
+                    <NuxtImg :src="img.url" class="size-full object-center object-cover" />
+                    <div class="absolute bottom-6 left-6 flex flex-col">
+                        <span class="inline-block text-dark-50 text-sm">
+                            {{ img.title }}
+                        </span>
+                        <span class="inline-block text-dark-50/60 truncate w-56 text-sm">
+                            {{ img.short_description }}
+                        </span>
+                    </div>
+                    <div class="absolute bottom-6 right-6 flex items-center justify-center">
+                        <UButton :to="img.url" target="_blank" icon="i-lucide-arrow-up-right" variant="link"
+                            color="neutral" />
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>
+
+<script setup lang="ts">
+const images = ref([
+    {
+        title: 'Sunset over the Mountains',
+        url: 'https://images.unsplash.com/photo-1531973819741-e27a5ae2cc7b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        short_description: 'A breathtaking view of the sun setting behind majestic mountains.'
+    },
+    {
+        title: 'Calm Lake Reflection',
+        url: 'https://images.unsplash.com/photo-1531973968078-9bb02785f13d?q=80&w=1985&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        short_description: 'A serene lake mirroring the clear sky and lush surroundings.'
+    },
+    {
+        title: 'Foggy Forest Path',
+        url: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        short_description: 'A mysterious path surrounded by tall trees and dense fog.'
+    }
+]);
+</script>

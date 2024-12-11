@@ -31,7 +31,8 @@ export type FeaturesTemplates =
   | "trebol"
   | "portrait"
   | "classic"
-  | "ancient";
+  | "ancient"
+  | "luxury";
 export type FootersTemplates =
   | "simple"
   | "space"
