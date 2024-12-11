@@ -20,6 +20,7 @@
               <LazyElementsHero11 v-if="item.title === ('management' as HeroTemplates)" />
               <LazyElementsHero12 v-if="item.title === ('care' as HeroTemplates)" />
               <LazyElementsHero13 v-if="item.title === ('ivvi' as HeroTemplates)" />
+              <LazyElementsHero14 v-if="item.title === ('luxury' as HeroTemplates)" />
             </template>
           </ElementsWrapper>
         </template>

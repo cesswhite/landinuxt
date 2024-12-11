@@ -11,7 +11,8 @@ export type HeroTemplates =
   | "space"
   | "management"
   | "care"
-  | "ivvi";
+  | "ivvi"
+  | "luxury";
 export type HeadersTemplates =
   | "simple"
   | "saas"
