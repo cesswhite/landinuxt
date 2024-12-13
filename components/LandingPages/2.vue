@@ -171,7 +171,7 @@
       </UContainer>
     </div>
     <!-- TESTIMONIALS -->
-    <div class="bg-dark-50 relative h-auto w-full py-24 dark:bg-gray-950">
+    <div class="bg-dark-50 relative h-auto w-full py-24 dark:bg-dark-950">
       <div class="flex flex-col items-center justify-center gap-y-2">
         <UBadge color="primary" variant="soft"> Join the Movement </UBadge>
         <h1 class="text-dark-950 dark:text-dark-50 text-center text-4xl font-medium lg:text-5xl">

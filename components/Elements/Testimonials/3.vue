@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w-full h-auto bg-dark-50 dark:bg-gray-950 py-24">
+    <div class="relative w-full h-auto bg-dark-50 dark:bg-dark-950 py-24">
         <div class="flex flex-col items-center justify-center gap-y-2">
             <UBadge color="primary" variant="soft">
                 Join the Movement
