@@ -55,7 +55,7 @@
         <div class="mt-12 flex flex-col items-center justify-center gap-4 md:flex-row">
           <UButton to="/instructions" variant="ghost" size="xl"> Instructions </UButton>
           <UButton variant="solid" to="/components" size="xl">
-            Discover 50+ Components
+            Explore 50+ Free Components Now
           </UButton>
         </div>
       </div>
