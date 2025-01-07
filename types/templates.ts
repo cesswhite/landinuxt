@@ -13,7 +13,8 @@ export type HeroTemplates =
   | "care"
   | "ivvi"
   | "luxury"
-  | 'earth';
+  | 'earth'
+  | 'next';
 export type HeadersTemplates =
   | "simple"
   | "saas"
