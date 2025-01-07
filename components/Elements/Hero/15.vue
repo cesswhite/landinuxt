@@ -1,0 +1,63 @@
+<template>
+    <div class="w-full h-dvh relative flex items-center justify-center font-mono group">
+        <NuxtImg class="size-full object-cover object-center xl:object-left absolute saturate-120"
+            src="https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/earth.webp" />
+        <div class="relative z-20 text-dark-50/90 mx-auto font-bold text-sm">
+            [START EXPLORING]
+        </div>
+        <div class="absolute bottom-0 z-20 left-0 w-full py-12 px-4 xl:px-24">
+            <div class="grid grid-cols-12 gap-8 relative z-20">
+                <div class="flex flex-col gap-y-2 lg:col-span-6 col-span-full text-xs">
+                    <span class="uppercase text-dark-50 font-bold">
+                        [Mission to Mars]
+                    </span>
+                    <p class="hidden xl:flex uppercase text-dark-50/60 text-justify w-8/12">
+                        Exploring the Red Planet is one of humanity's greatest scientific challenges. NASA's
+                        perseverance and
+                        innovation
+                        push the boundaries of space exploration every day.
+                    </p>
+                    <div class="flex items-center">
+                        <UButton icon="i-lucide-rocket" variant="link" color="neutral" size="xs" />
+                        <UButton icon="i-lucide-facebook" variant="link" color="neutral" size="xs" />
+                        <UButton icon="i-lucide-globe" variant="link" color="neutral" size="xs" />
+                        <UButton icon="i-lucide-link" to="https://x.com/berlickfold" target="_blank" variant="link"
+                            color="neutral" size="xs" />
+                    </div>
+                </div>
+                <div class="flex flex-col gap-y-2 lg:col-span-2 col-span-4 text-xs">
+                    <span class="uppercase text-dark-50 font-bold">
+                        [Lunar Gateway]
+                    </span>
+                    <p class="hidden xl:flex uppercase text-dark-50/60 text-pretty 2xl:text-justify">
+                        The Gateway will be a vital outpost orbiting the Moon, supporting sustainable exploration and
+                        science.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-y-2 lg:col-span-2 col-span-4 text-xs">
+                    <span class="uppercase text-dark-50 font-bold">
+                        [Hubble Legacy]
+                    </span>
+                    <p class="hidden xl:flex uppercase text-dark-50/60 text-pretty 2xl:text-justify">
+                        Since 1990, the Hubble Space Telescope has transformed our understanding of the cosmos with
+                        breathtaking
+                        images.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-y-2 lg:col-span-2 col-span-4 text-xs">
+                    <span class="uppercase text-dark-50 font-bold">
+                        [Artemis Program]
+                    </span>
+                    <p class="hidden xl:flex uppercase text-dark-50/60 text-pretty 2xl:text-justify">
+                        NASA's Artemis program aims to return astronauts to the Moon and prepare for human missions to
+                        Mars.
+                    </p>
+                </div>
+            </div>
+            <div class="absolute bottom-0 z-10 left-0 w-full py-32 bg-gradient-to-t from-dark-950" />
+            <div class="absolute bottom-0 z-5 left-0 w-full py-32 backdrop-blur-[0.08rem]" />
+            <div>
+            </div>
+        </div>
+    </div>
+</template>
