@@ -33,7 +33,7 @@
                             <span class="text-6xl text-dark-50 font-bold">
                                 95%
                             </span>
-                            <p class="text-xl text-dark-50/70">of our customers love our coffee and service.</p>
+                            <p class="text-xl text-dark-50/70">Of our customers ❤️ our ☕</p>
                         </div>
                     </div>
                     <template v-for="(testimonial, index) in testimonials" :key="index">
