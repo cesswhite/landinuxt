@@ -19,7 +19,7 @@
             <template v-for="(img, index) in images" :key="index">
                 <div class="col-span-full md:col-span-6 lg:col-span-4 h-96 relative">
                     <NuxtImg :src="img.url" class="size-full object-center object-cover" />
-                    <div class="absolute bottom-6 left-6 flex flex-col">
+                    <div class="absolute bottom-6 left-6 flex flex-col z-20">
                         <span class="inline-block text-dark-50 text-sm">
                             {{ img.title }}
                         </span>
@@ -27,10 +27,11 @@
                             {{ img.short_description }}
                         </span>
                     </div>
-                    <div class="absolute bottom-6 right-6 flex items-center justify-center">
+                    <div class="absolute bottom-6 right-6 flex items-center justify-center z-20">
                         <UButton :to="img.url" target="_blank" icon="i-lucide-arrow-up-right" variant="link"
                             color="neutral" />
                     </div>
+                    <div class="absolute left-o top-0 size-full z-10 bg-gradient-to-t from-dark-950/80" />
                 </div>
             </template>
         </div>

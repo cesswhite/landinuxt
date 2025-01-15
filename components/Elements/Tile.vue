@@ -1,7 +1,7 @@
 <template>
   <div @click="goToComponentIndex(props.data.name)"
-    class="bg-primary-400/5 dark:bg-primary-500/10 col-span-full h-auto transform-gpu cursor-pointer rounded-lg p-1 transition-transform duration-300 ease-in-out will-change-transform hover:rotate-2 odd:hover:-rotate-2 sm:col-span-6 md:col-span-4 2xl:col-span-3">
-    <div class="bg-primary-950/5 dark:bg-primary-800/10 flex h-56 w-full items-center justify-center rounded-md">
+    class="bg-dark-400/5 dark:bg-dark-500/10 col-span-full h-auto transform-gpu cursor-pointer rounded-lg p-1 transition-transform duration-300 ease-in-out will-change-transform hover:rotate-2 odd:hover:-rotate-2 sm:col-span-6 md:col-span-4 2xl:col-span-3">
+    <div class="bg-dark-950/5 dark:bg-dark-800/10 flex h-56 w-full items-center justify-center rounded-md">
       <LazyElementsHeroCover v-if="props.data.name === 'hero'" />
       <LazyElementsHeadersCover v-if="props.data.name === 'headers'" />
       <LazyElementsFeaturesCover v-if="props.data.name === 'features'" />
