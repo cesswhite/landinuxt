@@ -18,6 +18,7 @@
               <LazyElementsFeatures9 v-if="item.title === ('classic' as FeaturesTemplates)" />
               <LazyElementsFeatures10 v-if="item.title === ('ancient' as FeaturesTemplates)" />
               <LazyElementsFeatures11 v-if="item.title === ('luxury' as FeaturesTemplates)" />
+              <LazyElementsFeatures12 v-if="item.title === ('bento' as FeaturesTemplates)" />
             </template>
           </ElementsWrapper>
         </template>

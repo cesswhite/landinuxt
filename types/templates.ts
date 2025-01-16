@@ -34,6 +34,7 @@ export type FeaturesTemplates =
   | "portrait"
   | "classic"
   | "ancient"
+  | "bento"
   | "luxury";
 export type FootersTemplates =
   | "simple"
