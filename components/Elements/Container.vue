@@ -22,20 +22,20 @@ const _logos = await queryContent('logos').find()
 const _faq = await queryContent('faq').find()
 const _components = ref<Component[]>([
   {
-    name: "hero",
-    total: _hero.length,
-  },
-  {
     name: "headers",
     total: _headers.length,
   },
   {
-    name: "features",
-    total: _features.length,
+    name: "hero",
+    total: _hero.length,
   },
   {
-    name: "footers",
-    total: _footers.length,
+    name: 'logos',
+    total: _logos.length
+  },
+  {
+    name: "features",
+    total: _features.length,
   },
   {
     name: "cta",
@@ -50,12 +50,12 @@ const _components = ref<Component[]>([
     total: _contact.length,
   },
   {
-    name: 'logos',
-    total: _logos.length
-  },
-  {
     name: 'faq',
     total: _faq.length
+  },
+  {
+    name: "footers",
+    total: _footers.length,
   },
 ]);
 </script>

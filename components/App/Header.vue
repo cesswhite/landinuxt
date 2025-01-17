@@ -28,6 +28,12 @@
           Landing Pages
         </UButton>
       </UChip>
+
+      <UChip :ui="{ base: 'p-2' }" text="New" color="secondary">
+        <UButton variant="ghost" color="neutral" size="lg" to="/repositories">
+          Repositories
+        </UButton>
+      </UChip>
       <UButton variant="ghost" color="neutral" size="lg" to="/instructions">
         Instructions
       </UButton>
