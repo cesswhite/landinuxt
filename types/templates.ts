@@ -14,7 +14,8 @@ export type HeroTemplates =
   | "ivvi"
   | "luxury"
   | 'earth'
-  | 'next';
+  | 'next'
+  | 'coffee';
 export type HeadersTemplates =
   | "simple"
   | "saas"

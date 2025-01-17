@@ -23,6 +23,7 @@
               <LazyElementsHero14 v-if="item.title === ('luxury' as HeroTemplates)" />
               <LazyElementsHero15 v-if="item.title === ('earth' as HeroTemplates)" />
               <LazyElementsHero16 v-if="item.title === ('next' as HeroTemplates)" />
+              <LazyElementsHero17 v-if="item.title === ('coffee' as HeroTemplates)" />
             </template>
           </ElementsWrapper>
         </template>

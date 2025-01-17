@@ -9,10 +9,8 @@
       </h1>
       <span v-if="props.number" class="font-semibold text-dark-950/60 inline-block dark:text-dark-50/60">
         {{ props.number }} Nuxt UI components</span>
-      <p>
       <p class="text-lg font-normal text-dark-400 dark:text-dark-50/40 w-full lg:w-1/2">
         {{ props.description }}
-      </p>
       </p>
     </div>
   </div>
