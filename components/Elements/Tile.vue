@@ -11,6 +11,7 @@
       <LazyElementsContactCover v-if="props.data.name === 'contact'" />
       <LazyElementsLogosCover v-if="props.data.name === 'logos'" />
       <LazyElementsFAQCover v-if="props.data.name === 'faq'" />
+      <LazyElementsAuthCover v-if="props.data.name === 'auth'" />
     </div>
     <div class="text-dark-950/90 dark:text-dark-50/90 mt-2 p-1 text-base font-bold capitalize">
       {{ props.data.name === 'cta' ? 'CTA' : props.data.name === 'faq' ? 'FAQ' : props.data.name }}

@@ -115,6 +115,10 @@ const items = [
       label: "FAQ Section",
       to: '/components/faq'
     },
+    {
+      label: "Auth Section",
+      to: '/components/auth'
+    },
   ],
 ];
 </script>

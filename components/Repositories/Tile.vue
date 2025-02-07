@@ -6,14 +6,14 @@
         </div>
         <div class="p-1 flex flex-col gap-y-2 mt-2">
             <div class="flex items-center justify-between">
-                <span class="inline-block font-semibold text-lg capitalize text-dark-950">
+                <span class="inline-block font-semibold text-lg capitalize text-dark-950 dark:text-dark-50">
                     {{ props.data.name }}
                 </span>
                 <UButton size="xs" variant="link" color="neutral" class="cursor-pointer" icon="i-lucide-external-link"
                     :to="props.data.url" target="_blank" />
             </div>
-            <p class="w-full font-normal text-sm text-dark-950/60 text-pretty">
-                {{ currentDescription }}
+            <p class="w-full font-normal text-sm dark:text-dark-50/60 text-dark-950/60 text-pretty">
+                {{ props.data.description }}
             </p>
         </div>
     </div>

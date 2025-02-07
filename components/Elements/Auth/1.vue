@@ -1,0 +1,52 @@
+<template>
+    <div class="h-auto min-h-dvh w-full dark:bg-dark-950 flex flex-col items-center justify-center">
+        <div class="w-full md:w-96 rounded-md bg-dark-50 dark:bg-dark-900 px-4 py-12">
+            <h1 class="w-full text-left font-bold text-lg text-dark-950 dark:text-dark-50">Welcome back, login to your
+                account</h1>
+            <div class="mt-4">
+                <UForm :validate="validate" :state="state" class="grid grid-cols-12 gap-4" @submit="onSubmit">
+                    <div class="col-span-full">
+                        <UFormField label="Email" name="email" size="lg">
+                            <UInput v-model="state.email" type="email" class="w-full" />
+                        </UFormField>
+                    </div>
+                    <div class="col-span-full">
+                        <UFormField label="Password" name="password" size="lg">
+                            <UInput v-model="state.password" type="password" class="w-full" />
+                        </UFormField>
+                    </div>
+                    <div class="col-span-full mt-4">
+                        <UButton block type="submit" size="lg" class="cursor-pointer">
+                            Send message
+                        </UButton>
+                        <small class="text-dark-950/50 dark:text-dark-50/50 text-xs">
+                            Don't have an account? <NuxtLink to="#" class="text-primary-500 dark:text-primary-400">Sign
+                                up</NuxtLink>
+                        </small>
+                    </div>
+                </UForm>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup lang="ts">
+import type { FormError, FormSubmitEvent } from '#ui/types'
+
+const state = reactive({
+    email: undefined,
+    password: undefined
+})
+
+const validate = (state: any): FormError[] => {
+    const errors = []
+    if (!state.email) errors.push({ name: 'email', message: 'Field required' })
+    if (!state.password) errors.push({ name: 'password', message: 'Field required' })
+    return errors
+}
+
+async function onSubmit(event: FormSubmitEvent<any>) {
+    state.email = undefined
+    state.password = undefined
+}
+</script>

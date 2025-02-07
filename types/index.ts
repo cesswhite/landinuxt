@@ -1,4 +1,4 @@
-export type Elements = "hero" | "headers" | "features" | "footers" | "cta" | 'testimonials' | 'contact' | 'logos' | 'faq';
+export type Elements = "hero" | "headers" | "features" | "footers" | "cta" | 'testimonials' | 'contact' | 'logos' | 'faq' | 'auth';
 export type LandingPages = 'simple' | 'showcase' | 'saas' | 'agency'
 /* export type Repositories = 'v4.20' | 'nuxoki' | 'nuxt-clerk' | 'hato' | 'lotus' */
 
@@ -16,6 +16,7 @@ export interface Landing {
 export interface Repository {
   name: string
   url: string
+  description: string
 }
 
 /* export interface Repository {
