@@ -8,6 +8,7 @@
                     <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
                         <template #components>
                             <LazyElementsAuth1 v-if="item.title === ('simple' as AuthTemplates)" />
+                            <LazyElementsAuth2 v-if="item.title === ('logo' as AuthTemplates)" />
                         </template>
                     </ElementsWrapper>
                 </template>
