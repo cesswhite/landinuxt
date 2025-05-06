@@ -10,6 +10,7 @@
                             <LazyElementsAuth1 v-if="item.title === ('simple' as AuthTemplates)" />
                             <LazyElementsAuth2 v-if="item.title === ('logo' as AuthTemplates)" />
                             <LazyElementsAuth3 v-if="item.title === ('big' as AuthTemplates)" />
+                            <LazyElementsAuth4 v-if="item.title === ('create' as AuthTemplates)" />
                         </template>
                     </ElementsWrapper>
                 </template>
