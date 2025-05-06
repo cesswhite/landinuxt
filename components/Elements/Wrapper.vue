@@ -124,6 +124,9 @@ function copyCode() {
     current.value = props.title;
   }
 
+
+  window.umami.track(`component-copied-${props.item.parent.toLowerCase()}-${props.title?.toLowerCase()}`);
+
   setTimeout(() => {
     current.value = null;
   }, 1500);

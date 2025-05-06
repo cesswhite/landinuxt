@@ -2,7 +2,7 @@
     <NuxtLayout name="default">
         <div class="relative w-full px-4 py-24">
             <ElementsHeader name="Auth" :number="_auth.length"
-                description="Enhance your website's user experience with our advanced authentication components. Each component is designed for seamless interaction and to facilitate essential tasks such as login, signup, password recovery, and token management, covering all aspects of the authentication flow." />
+                description="Enhance your website's user experience with our advanced authentication components. Each component is designed for seamless interaction and to facilitate essential tasks such as signin, signup, password recovery, and token management, covering all aspects of the authentication flow." />
             <ContentList path="/auth" v-slot="{ list }">
                 <template v-for="(item, index) in list" :key="item._path">
                     <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
@@ -11,6 +11,7 @@
                             <LazyElementsAuth2 v-if="item.title === ('logo' as AuthTemplates)" />
                             <LazyElementsAuth3 v-if="item.title === ('big' as AuthTemplates)" />
                             <LazyElementsAuth4 v-if="item.title === ('create' as AuthTemplates)" />
+                            <LazyElementsAuth5 v-if="item.title === ('reset' as AuthTemplates)" />
                         </template>
                     </ElementsWrapper>
                 </template>
