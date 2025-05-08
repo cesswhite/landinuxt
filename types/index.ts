@@ -17,6 +17,8 @@ export interface Repository {
   name: string
   url: string
   description: string
+  image: string
+  isPremium: boolean
 }
 
 /* export interface Repository {

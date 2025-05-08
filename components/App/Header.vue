@@ -23,12 +23,9 @@
         </template>
       </UDropdownMenu>
 
-      <UChip :ui="{ base: 'p-2' }" text="New">
-        <UButton variant="ghost" color="neutral" size="lg" to="/landings">
-          Landing Pages
-        </UButton>
-      </UChip>
-
+      <UButton variant="ghost" color="neutral" size="lg" to="/landings">
+        Landing Pages
+      </UButton>
       <UChip :ui="{ base: 'p-2' }" text="New" color="secondary">
         <UButton variant="ghost" color="neutral" size="lg" to="/repositories">
           Repositories
