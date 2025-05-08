@@ -42,7 +42,7 @@
           Nuxt-powered componentes and sections to ship faster, no hassle, just clean UI
           with instant results
         </p>
-        <div class="mt-8 flex flex-col-reverse items-center justify-center gap-4 lg:flex-row">
+        <div class="mt-8 flex flex-col-reverse items-center justify-center gap-4">
           <UButton to="/instructions" variant="ghost" size="xl"> Instructions </UButton>
           <UButton variant="solid" to="/components" size="xl">
             Explore 50+ Free Components Now

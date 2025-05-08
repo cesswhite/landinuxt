@@ -7,7 +7,7 @@
         <template v-for="(color, index) in primaryColors" :key="index">
           <div class="col-span-1 flex items-center justify-center">
             <UButton variant="link" @click.stop.prevent="setPrimaryColor(color)" class="cursor-pointer">
-              <span class="inline-block size-8 rounded-full"
+              <span class="inline-block size-6 rounded-full"
                 :class="`bg-[var(--color-light)] dark:bg-[var(--color-dark)]`" :style="{
                   '--color-light': `var(--color-${color}-400)`,
                   '--color-dark': `var(--color-${color}-500)`
@@ -22,7 +22,7 @@
         <template v-for="(color, index) in neutralColors" :key="index">
           <div class="col-span-1 flex items-center justify-center">
             <UButton variant="link" square @click.stop.prevent="setNeutralColor(color)" class="cursor-pointer">
-              <span class="inline-block size-8 rounded-full"
+              <span class="inline-block size-6 rounded-full"
                 :class="`bg-[var(--color-light)] dark:bg-[var(--color-dark)]`" :style="{
                   '--color-light': `var(--color-${color}-400)`,
                   '--color-dark': `var(--color-${color}-500)`
