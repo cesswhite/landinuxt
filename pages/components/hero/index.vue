@@ -24,6 +24,7 @@
               <LazyElementsHero15 v-if="item.title === ('earth' as HeroTemplates)" />
               <LazyElementsHero16 v-if="item.title === ('next' as HeroTemplates)" />
               <LazyElementsHero17 v-if="item.title === ('coffee' as HeroTemplates)" />
+              <LazyElementsHero18 v-if="item.title === ('high-converting' as HeroTemplates)" />
             </template>
           </ElementsWrapper>
         </template>
