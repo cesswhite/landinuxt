@@ -12,6 +12,7 @@
                             <LazyElementsLogos3 v-if="item.title === ('multi' as LogosTemplates)" />
                             <LazyElementsLogos4 v-if="item.title === ('mini' as LogosTemplates)" />
                             <LazyElementsLogos5 v-if="item.title === ('double' as LogosTemplates)" />
+                            <LazyElementsLogos6 v-if="item.title === ('credibility' as LogosTemplates)" />
                         </template>
                     </ElementsWrapper>
                 </template>

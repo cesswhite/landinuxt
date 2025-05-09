@@ -24,7 +24,8 @@ export type HeadersTemplates =
   | "float"
   | "multi"
   | "store"
-  | "agency";
+  | "agency"
+  | "credibility";
 export type FeaturesTemplates =
   | "elegance"
   | "puzzle"
