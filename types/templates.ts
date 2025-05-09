@@ -25,7 +25,6 @@ export type HeadersTemplates =
   | "multi"
   | "store"
   | "agency"
-  | "credibility";
 export type FeaturesTemplates =
   | "elegance"
   | "puzzle"
@@ -38,7 +37,8 @@ export type FeaturesTemplates =
   | "classic"
   | "ancient"
   | "bento"
-  | "luxury";
+  | "luxury"
+  | "high-converting";
 export type FootersTemplates =
   | "simple"
   | "space"
@@ -50,6 +50,6 @@ export type FootersTemplates =
 export type CTATemplates = "simple" | 'social' | 'serif' | 'art' | 'solid' | 'gradient' | 'app' | 'connect' | 'saturate' | 'overflow' | 'sparkles';
 export type TestimonialsTemplates = 'masonry' | 'pastelide' | 'tiles' | 'stars' | 'bento'
 export type ContactTemplates = 'simple' | 'single' | 'enterprise' | 'map' | 'multi'
-export type LogosTemplates = 'simple' | 'animated' | 'multi' | 'mini' | 'double'
+export type LogosTemplates = 'simple' | 'animated' | 'multi' | 'mini' | 'double' | 'high-converting'
 export type FAQTemplates = 'simple' | 'border' | 'grid'
 export type AuthTemplates = 'simple' | 'logo' | 'big' | 'create' | 'reset'
