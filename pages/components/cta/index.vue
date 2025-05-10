@@ -19,6 +19,7 @@
               <LazyElementsCTA10 v-if="item.title === ('overflow' as CTATemplates)" />
               <LazyElementsCTA11 v-if="item.title === ('sparkles' as CTATemplates)" />
               <LazyElementsCTA12 v-if="item.title === ('high-converting' as CTATemplates)" />
+              <LazyElementsCTA13 v-if="item.title === ('heading' as CTATemplates)" />
             </template>
           </ElementsWrapper>
         </template>
