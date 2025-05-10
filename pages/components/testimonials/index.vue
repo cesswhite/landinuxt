@@ -12,6 +12,8 @@
                             <LazyElementsTestimonials3 v-if="item.title === ('tiles' as TestimonialsTemplates)" />
                             <LazyElementsTestimonials4 v-if="item.title === ('stars' as TestimonialsTemplates)" />
                             <LazyElementsTestimonials5 v-if="item.title === ('bento' as TestimonialsTemplates)" />
+                            <LazyElementsTestimonials6
+                                v-if="item.title === ('high-converting' as TestimonialsTemplates)" />
                         </template>
                     </ElementsWrapper>
                 </template>

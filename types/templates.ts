@@ -48,7 +48,7 @@ export type FootersTemplates =
   | "openai"
   | "gradient";
 export type CTATemplates = "simple" | 'social' | 'serif' | 'art' | 'solid' | 'gradient' | 'app' | 'connect' | 'saturate' | 'overflow' | 'sparkles' | 'high-converting';
-export type TestimonialsTemplates = 'masonry' | 'pastelide' | 'tiles' | 'stars' | 'bento'
+export type TestimonialsTemplates = 'masonry' | 'pastelide' | 'tiles' | 'stars' | 'bento' | 'high-converting'
 export type ContactTemplates = 'simple' | 'single' | 'enterprise' | 'map' | 'multi'
 export type LogosTemplates = 'simple' | 'animated' | 'multi' | 'mini' | 'double' | 'high-converting'
 export type FAQTemplates = 'simple' | 'border' | 'grid'
