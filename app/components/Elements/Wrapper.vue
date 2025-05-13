@@ -19,18 +19,17 @@
           </p>
         </div>
         <div class="mt-4 flex w-full items-center justify-end">
-          <UButton @click="props.item.preview = true" icon="i-heroicons-eye" label="Preview"
-            :variant="props.item.preview ? 'solid' : 'link'" class="cursor-pointer" />
-          <UButton @click="props.item.preview = false" icon="i-heroicons-code-bracket" label="Code"
-            :variant="!props.item.preview ? 'solid' : 'link'" class="cursor-pointer" />
+          <UButton @click="previewCode = true" icon="i-heroicons-eye" label="Preview"
+            :variant="previewCode ? 'solid' : 'link'" class="cursor-pointer" />
+          <UButton @click="previewCode = false" icon="i-heroicons-code-bracket" label="Code"
+            :variant="!previewCode ? 'solid' : 'link'" class="cursor-pointer" />
           <UButton @click="copyCode()" :icon="current === props.item.title
             ? 'i-heroicons-clipboard-document-check'
             : 'i-heroicons-clipboard-document-list'
             " variant="ghost" class="cursor-pointer" />
         </div>
       </div>
-
-      <div v-if="props.item.preview"
+      <div v-if="previewCode"
         class="scrollbar-hide scrollbar-hide bg-dark-200/80 dark:bg-dark-900 mt-4 h-auto overflow-x-hidden rounded-md p-2"
         :class="setHeightClass">
         <slot name="components" />
@@ -58,7 +57,7 @@ import type {
   LogosTemplates,
   AuthTemplates,
   FAQTemplates,
-} from "~/types/templates";
+} from "../../../types/templates";
 import { useClipboard } from "@vueuse/core";
 
 const current = ref<
@@ -95,6 +94,8 @@ const props = defineProps<{
   | undefined;
 }>();
 
+
+const previewCode = ref(props.item.preview);
 const setHeightClass = computed(() => {
   if (props.item.parent === "headers") {
     return "min-h-[420px] ";

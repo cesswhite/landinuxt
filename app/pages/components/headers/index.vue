@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import type { HeadersTemplates } from "~/types/templates";
+import type { HeadersTemplates } from "../../../../types/templates";
 const _headers = await queryContent("headers").find();
 
 useSeoMeta({

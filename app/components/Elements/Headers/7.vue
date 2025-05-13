@@ -7,7 +7,7 @@
         :placeholder="[50, 25, 75, 5]" format="webp" />
       <nav class="relative z-10 hidden items-center justify-start gap-2 lg:flex">
         <UButton variant="link" color="neutral" size="lg" to="#"> Home </UButton>
-        <UButton @click="showMenu = !showMenu" variant="link" color="neutral" size="lg" to="#">
+        <UButton @click="showMenu = !showMenu" variant="link" color="neutral" size="lg">
           <template #trailing>
             <UIcon v-if="showMenu" name="i-heroicons-chevron-up" class="size-4" />
             <UIcon v-else name="i-heroicons-chevron-down" class="size-4" />
@@ -21,14 +21,13 @@
       </nav>
       <USlideover title="Menu" close-icon="i-heroicons-x-mark">
         <UButton color="neutral" icon="i-heroicons-bars-3" variant="link" size="xl" class="inline-block lg:hidden" />
-
         <template #body>
           <nav class="relative z-10 flex flex-col items-center justify-start gap-2">
             <UButton variant="link" color="neutral" size="lg" to="#">
               Home
             </UButton>
             <UCollapsible class="w-auto">
-              <UButton variant="link" color="neutral" size="lg" to="#">
+              <UButton variant="soft" color="neutral" size="lg">
                 Services
                 <template #trailing>
                   <UIcon v-if="showMenu" name="i-heroicons-chevron-up" class="size-4" />

@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Component } from "~/types/index";
+import type { Component } from "../../../types/index";
 
 const _hero = await queryContent("hero").find();
 const _headers = await queryContent("headers").find();
