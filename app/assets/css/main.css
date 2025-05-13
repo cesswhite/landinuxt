@@ -1,8 +1,8 @@
-@import "tailwindcss";
+@import "tailwindcss" theme(static);
 @import "@nuxt/ui";
+@import "./global.css" layer(utilities);
 @plugin "@tailwindcss/typography";
 @source "../../content/**/*.md";
-@import "./global.css" layer(utilities);
 
 @theme {
   --font-family-inter: "Inter", sans-serif;
