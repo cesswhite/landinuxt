@@ -5,7 +5,7 @@
                 ecodevcontact@gmail.com
             </UBadge>
             <h1
-                class="text-center font-inter text-5xl font-bold text-dark-950 dark:text-dark-50 sm:text-6xl lg:text-7xl 2xl:w-10/12 mx-auto">
+                class="text-center font-family-inter text-5xl font-bold text-dark-950 dark:text-dark-50 sm:text-6xl lg:text-7xl 2xl:w-10/12 mx-auto">
                 <span class="
                bg-gradient-to-br from-primary-950 via-primary-500 to-primary-950  bg-clip-text text-center  text-transparent dark:from-dark-50
                dark:via-primary-500 dark:to-dark-50">

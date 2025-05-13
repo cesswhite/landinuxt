@@ -5,7 +5,7 @@
             <h1 class="text-dark-950 dark:text-dark-50 text-3xl font-bold text-center uppercase">
                 Manage your tasks
             </h1>
-            <p class="text-dark-950/70 dark:text-dark-50/70 text-base font-light font-lora  text-center xl:w-1/2">
+            <p class="text-dark-950/70 dark:text-dark-50/70 text-base font-light font-family-lora  text-center xl:w-1/2">
                 Unlock your productivity by joining a community of over 250,000 users with Minima
             </p>
             <NuxtLink to="#" target="_blank">

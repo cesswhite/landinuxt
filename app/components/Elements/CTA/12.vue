@@ -3,7 +3,7 @@
         <UContainer>
             <div class="flex flex-col gap-4 col-span-full md:col-span-6 items-center justify-center">
                 <h2 class="text-4xl font-bold tracking-tight text-dark-950 dark:text-dark-50">
-                    Why <span class="text-primary-500 dark:text-primary-400 italic font-semibold font-instrument">Mesh
+                    Why <span class="text-primary-500 dark:text-primary-400 italic font-semibold font-family-instrument">Mesh
                         Gradients</span> is the Best App
                     for Your Business
                 </h2>

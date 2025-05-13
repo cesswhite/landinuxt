@@ -9,7 +9,7 @@
                 </UBadge>
                 <h1 class="text-dark-50/80 dark:text-dark-50 text-4xl md:text-5xl font-serif">
                     Elevate Your Vision<br>
-                    with <span class="font-instrument italic text-dark-50"> Innovative Home </span> <br>
+                    with <span class="font-family-instrument italic text-dark-50"> Innovative Home </span> <br>
                     Building Solutions
                 </h1>
                 <div class="flex flex-col w-full sm:w-1/3 2xl:w-1/5 mt-4">

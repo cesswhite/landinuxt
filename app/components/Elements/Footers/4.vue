@@ -5,7 +5,7 @@
                 <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
                     class="h-6 md:h-10 object-contain object-center" loading="lazy" alt="my-company-logo-description"
                     :placeholder="[50, 25, 75, 5]" format="webp" />
-                <p class="text-dark-950/50 dark:text-dark-50/50 text-sm w-full md:w-1/2 font-inter inline-block">
+                <p class="text-dark-950/50 dark:text-dark-50/50 text-sm w-full md:w-1/2 font-family-inter inline-block">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam beatae labore accusamus perspiciatis
                     quasi
                     aperiam amet voluptatibus vero quidem consectetur architecto dolore quaerat, ad id facilis eligendi
@@ -23,7 +23,7 @@
             </div>
             <ul class="col-span-full lg:col-span-2 flex flex-col gap-y-2 w-full mt-6">
                 <template v-for="(nav, index) in navigation" :key="index">
-                    <li class="text-dark-950 dark:text-dark-50 text-base font-inter capitalize mb-3">
+                    <li class="text-dark-950 dark:text-dark-50 text-base font-family-inter capitalize mb-3">
                         {{ nav.label }}
                     </li>
                     <li v-for="(inner_link, _index) in nav.links" :key="_index">
@@ -36,7 +36,7 @@
             </ul>
             <ul class="col-span-full lg:col-span-2 flex flex-col gap-y-2 w-full mt-6">
                 <template v-for="(nav, index) in social_media_navigation" :key="index">
-                    <li class="text-dark-950 dark:text-dark-50 text-base font-inter capitalize mb-3">
+                    <li class="text-dark-950 dark:text-dark-50 text-base font-family-inter capitalize mb-3">
                         {{ nav.label }}
                     </li>
                     <li v-for="(inner_link, _index) in nav.links" :key="_index">
@@ -49,7 +49,7 @@
             </ul>
             <ul class="col-span-full lg:col-span-2 flex flex-col gap-y-2 w-full mt-6">
                 <template v-for="(nav, index) in other_navigation" :key="index">
-                    <li class="text-dark-950 dark:text-dark-50 text-base font-inter capitalize mb-3">
+                    <li class="text-dark-950 dark:text-dark-50 text-base font-family-inter capitalize mb-3">
                         {{ nav.label }}
                     </li>
                     <li v-for="(inner_link, _index) in nav.links" :key="_index">

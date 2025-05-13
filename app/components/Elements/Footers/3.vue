@@ -8,7 +8,7 @@
             </div>
             <ul class="col-span-6 lg:col-span-2 flex flex-col gap-y-2 w-full">
                 <template v-for="(nav, index) in navigation" :key="index">
-                    <li class="text-dark-950 dark:text-dark-50 text-xl md:text-2xl font-inter uppercase">
+                    <li class="text-dark-950 dark:text-dark-50 text-xl md:text-2xl font-family-inter uppercase">
                         {{ nav.label }}
                     </li>
                     <li v-for="(inner_link, _index) in nav.links" :key="_index">
@@ -21,7 +21,7 @@
             </ul>
             <ul class="col-span-6 lg:col-span-2 flex flex-col gap-y-2 w-full">
                 <template v-for="(nav, index) in social_media_navigation" :key="index">
-                    <li class="text-dark-950 dark:text-dark-50 text-xl md:text-2xl font-inter uppercase">
+                    <li class="text-dark-950 dark:text-dark-50 text-xl md:text-2xl font-family-inter uppercase">
                         {{ nav.label }}
                     </li>
                     <li v-for="(inner_link, _index) in nav.links" :key="_index">
@@ -34,7 +34,7 @@
             </ul>
             <ul class="col-span-6 lg:col-span-2 flex flex-col gap-y-2 w-full">
                 <template v-for="(nav, index) in other_navigation" :key="index">
-                    <li class="text-dark-950 dark:text-dark-50 text-xl md:text-2xl font-inter uppercase">
+                    <li class="text-dark-950 dark:text-dark-50 text-xl md:text-2xl font-family-inter uppercase">
                         {{ nav.label }}
                     </li>
                     <li v-for="(inner_link, _index) in nav.links" :key="_index">
@@ -52,16 +52,16 @@
             </div>
             <template v-for="(nav, index) in address_company" :key="index">
                 <div class="flex flex-col gap-y-2 w-full col-span-6 lg:col-span-2">
-                    <span class="text-dark-950 dark:text-dark-50 text-2xl font-inter uppercase inline-block">
+                    <span class="text-dark-950 dark:text-dark-50 text-2xl font-family-inter uppercase inline-block">
                         {{ nav.label }}
                     </span>
-                    <p class="text-dark-950/60 dark:text-dark-50/60 text-sm font-inter inline-block">
+                    <p class="text-dark-950/60 dark:text-dark-50/60 text-sm font-family-inter inline-block">
                         {{ nav.address }}
                     </p>
-                    <span class="text-dark-950/60 dark:text-dark-50/60 text-sm font-inter inline-block">
+                    <span class="text-dark-950/60 dark:text-dark-50/60 text-sm font-family-inter inline-block">
                         {{ nav.email }}
                     </span>
-                    <span class="text-dark-950/60 dark:text-dark-50/60 text-sm font-inter inline-block">
+                    <span class="text-dark-950/60 dark:text-dark-50/60 text-sm font-family-inter inline-block">
                         {{ nav.phone }}
                     </span>
                 </div>

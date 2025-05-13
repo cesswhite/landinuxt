@@ -8,7 +8,7 @@
     <div class="relative bottom-24 z-20 w-11/12 md:w-10/12">
       <div class="flex flex-col items-center justify-center">
         <h1
-          class="font-lora mt-4 text-center text-5xl font-normal text-dark-50/80 sm:text-6xl md:text-7xl dark:text-white">
+          class="font-family-lora mt-4 text-center text-5xl font-normal text-dark-50/80 sm:text-6xl md:text-7xl dark:text-white">
           Discover the Magic of <br />
           Luxurious Comfort
         </h1>

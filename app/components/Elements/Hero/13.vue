@@ -21,7 +21,7 @@
                 <div class="size-full">
                     <div class="flex flex-col gap-y-4 md:w-10/12">
                         <h1
-                            class="text-5xl lg:text-6xl text-primary-950 dark:text-primary-50 font-semibold font-inter tracking-tighter text-pretty">
+                            class="text-5xl lg:text-6xl text-primary-950 dark:text-primary-50 font-semibold font-family-inter tracking-tighter text-pretty">
                             Create stunning digital invitations <br>
                             for your special moments
                         </h1>

@@ -9,7 +9,7 @@
             </h1>
         </div>
         <UContainer>
-            <div class="grid grid-cols-12 gap-4 mt-8 md:mt-24 p-4 font-inter">
+            <div class="grid grid-cols-12 gap-4 mt-8 md:mt-24 p-4 font-family-inter">
                 <template v-for="(col, index) in testimonials" :key="index">
                     <div class="h-full col-span-full md:col-span-4 flex flex-col gap-4 even:mt-4">
                         <template v-for="(testimonial, _index) in col" :key="_index">

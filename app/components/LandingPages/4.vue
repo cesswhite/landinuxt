@@ -119,7 +119,7 @@
             <div class="relative bottom-24 z-20 w-11/12 md:w-10/12">
                 <div class="flex flex-col items-center justify-center">
                     <h1
-                        class="font-lora mt-4 text-center text-5xl font-normal text-dark-50/80 sm:text-6xl md:text-7xl dark:text-white">
+                        class="font-family-lora mt-4 text-center text-5xl font-normal text-dark-50/80 sm:text-6xl md:text-7xl dark:text-white">
                         Discover the Magic of <br />
                         Luxurious Comfort
                     </h1>
@@ -303,10 +303,10 @@
                     </div>
                     <h1 class="text-dark-950/90 dark:text-dark-50/90 text-center font-serif text-4xl md:text-5xl">
                         Turning
-                        <span class="font-instrument text-dark-950 dark:text-dark-50 italic">ideas</span>
+                        <span class="font-family-instrument text-dark-950 dark:text-dark-50 italic">ideas</span>
                         <br />
                         into
-                        <span class="font-instrument text-dark-950 dark:text-dark-50 italic">reality</span>.
+                        <span class="font-family-instrument text-dark-950 dark:text-dark-50 italic">reality</span>.
                     </h1>
                     <p
                         class="text-dark-950/60 dark:text-dark-50/60 mx-auto px-2 text-center font-serif md:w-1/2 lg:w-full">
@@ -447,7 +447,7 @@
                                 class="h-6 object-contain object-center md:h-10" loading="lazy"
                                 alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" />
                             <p
-                                class="text-dark-950/50 dark:text-dark-50/50 font-inter inline-block w-full text-sm md:w-1/2">
+                                class="text-dark-950/50 dark:text-dark-50/50 font-family-inter inline-block w-full text-sm md:w-1/2">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam beatae
                                 labore accusamus perspiciatis quasi aperiam amet voluptatibus vero
                                 quidem consectetur architecto dolore quaerat, ad id facilis eligendi
@@ -465,7 +465,7 @@
                         </div>
                         <ul class="col-span-full mt-6 flex w-full flex-col gap-y-2 lg:col-span-2">
                             <template v-for="(nav, index) in navigation" :key="index">
-                                <li class="text-dark-950 dark:text-dark-50 font-inter mb-3 text-base capitalize">
+                                <li class="text-dark-950 dark:text-dark-50 font-family-inter mb-3 text-base capitalize">
                                     {{ nav.label }}
                                 </li>
                                 <li v-for="(inner_link, _index) in nav.links" :key="_index">
@@ -478,7 +478,7 @@
                         </ul>
                         <ul class="col-span-full mt-6 flex w-full flex-col gap-y-2 lg:col-span-2">
                             <template v-for="(nav, index) in social_media_navigation" :key="index">
-                                <li class="text-dark-950 dark:text-dark-50 font-inter mb-3 text-base capitalize">
+                                <li class="text-dark-950 dark:text-dark-50 font-family-inter mb-3 text-base capitalize">
                                     {{ nav.label }}
                                 </li>
                                 <li v-for="(inner_link, _index) in nav.links" :key="_index">
@@ -491,7 +491,7 @@
                         </ul>
                         <ul class="col-span-full mt-6 flex w-full flex-col gap-y-2 lg:col-span-2">
                             <template v-for="(nav, index) in other_navigation" :key="index">
-                                <li class="text-dark-950 dark:text-dark-50 font-inter mb-3 text-base capitalize">
+                                <li class="text-dark-950 dark:text-dark-50 font-family-inter mb-3 text-base capitalize">
                                     {{ nav.label }}
                                 </li>
                                 <li v-for="(inner_link, _index) in nav.links" :key="_index">

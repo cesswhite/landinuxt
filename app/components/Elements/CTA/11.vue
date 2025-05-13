@@ -14,8 +14,8 @@
                         class="size-12 text-dark-950 animate-pulse dark:text-dark-50" />
                 </div>
                 <h1 class="text-dark-950/90 dark:text-dark-50/90 text-4xl md:text-5xl font-serif text-center">
-                    Turning <span class="font-instrument italic text-dark-950 dark:text-dark-50">ideas</span> <br>
-                    into <span class="font-instrument italic text-dark-950 dark:text-dark-50">reality</span>.
+                    Turning <span class="font-family-instrument italic text-dark-950 dark:text-dark-50">ideas</span> <br>
+                    into <span class="font-family-instrument italic text-dark-950 dark:text-dark-50">reality</span>.
                 </h1>
                 <p class="text-center font-serif text-dark-950/60 dark:text-dark-50/60 px-2 md:w-1/2 mx-auto lg:w-full">
                     Discover a seamless blend of creativity and innovation. We bring your vision to life with precision,

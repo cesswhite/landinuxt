@@ -9,7 +9,7 @@
             <div class="col-span-6 md:col-span-1">
                 <ul class="col-span-full sm:col-span-4 lg:col-span-2 flex flex-col pb-4">
                     <template v-for="(nav, index) in navigation" :key="index">
-                        <li class="text-dark-950 dark:text-dark-50 text-sm font-inter capitalize mb-1">
+                        <li class="text-dark-950 dark:text-dark-50 text-sm font-family-inter capitalize mb-1">
                             {{ nav.label }}
                         </li>
                         <li v-for="(inner_link, _index) in nav.links" :key="_index">
@@ -24,7 +24,7 @@
             <div class="col-span-6 md:col-span-1">
                 <ul class="col-span-full sm:col-span-4 lg:col-span-2 flex flex-col pb-4">
                     <template v-for="(nav, index) in api_navigation" :key="index">
-                        <li class="text-dark-950 dark:text-dark-50 text-sm font-inter capitalize mb-1">
+                        <li class="text-dark-950 dark:text-dark-50 text-sm font-family-inter capitalize mb-1">
                             {{ nav.label }}
                         </li>
                         <li v-for="(inner_link, _index) in nav.links" :key="_index">
@@ -39,7 +39,7 @@
             <div class="col-span-6 md:col-span-1">
                 <ul class="col-span-full sm:col-span-4 lg:col-span-2 flex flex-col pb-4">
                     <template v-for="(nav, index) in navigation" :key="index">
-                        <li class="text-dark-950 dark:text-dark-50 text-sm font-inter capitalize mb-1">
+                        <li class="text-dark-950 dark:text-dark-50 text-sm font-family-inter capitalize mb-1">
                             {{ nav.label }}
                         </li>
                         <li v-for="(inner_link, _index) in nav.links" :key="_index">
@@ -54,7 +54,7 @@
             <div class="col-span-6 md:col-span-1">
                 <ul class="col-span-full sm:col-span-4 lg:col-span-2 flex flex-col pb-4">
                     <template v-for="(nav, index) in other_navigation" :key="index">
-                        <li class="text-dark-950 dark:text-dark-50 text-sm font-inter capitalize mb-1">
+                        <li class="text-dark-950 dark:text-dark-50 text-sm font-family-inter capitalize mb-1">
                             {{ nav.label }}
                         </li>
                         <li v-for="(inner_link, _index) in nav.links" :key="_index">

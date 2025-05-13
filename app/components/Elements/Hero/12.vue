@@ -7,7 +7,7 @@
                 <div class="absolute bottom-48 lg:bottom-32">
                     <h1 class="text-5xl md:text-8xl text-dark-50 font-medium">
                         SKIN CARE <br>
-                        <span class="text-primary-600 italic font-instrument tracking-widest">NOURISHMENT</span>
+                        <span class="text-primary-600 italic font-family-instrument tracking-widest">NOURISHMENT</span>
                         <br>
                         SOLUTION
                     </h1>

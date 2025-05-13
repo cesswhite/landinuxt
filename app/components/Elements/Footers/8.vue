@@ -4,10 +4,10 @@
         <div class="grid grid-cols-12 w-full gap-y-4 lg:gap-y-0 relative z-10">
             <div class="col-span-full lg:col-span-4 xl:col-span-8 flex flex-col gap-y-6 items-start justify-start">
                 <span
-                    class="text-dark-950 dark:text-dark-50/50 text-lg w-full md:w-1/2 font-inter font-medium inline-block">
+                    class="text-dark-950 dark:text-dark-50/50 text-lg w-full md:w-1/2 font-family-inter font-medium inline-block">
                     LandiNuxt
                 </span>
-                <p class="text-dark-950/50 dark:text-dark-50/50 text-sm w-full md:w-1/2 font-inter inline-block">
+                <p class="text-dark-950/50 dark:text-dark-50/50 text-sm w-full md:w-1/2 font-family-inter inline-block">
                     Lorem ipsum dolor sit amet <br> consectetur adipisicing elit.
                 </p>
                 <div class="flex items-center justify-start gap-x-4 text-dark-950/50 dark:text-dark-50/50">
@@ -19,7 +19,7 @@
             </div>
             <ul class="col-span-full md:col-span-6 lg:col-span-2 xl:col-span-1 flex flex-col gap-y-2 w-full">
                 <template v-for="(nav, index) in navigation" :key="index">
-                    <li class="text-dark-950 dark:text-dark-50 text-base font-medium font-inter capitalize mb-3">
+                    <li class="text-dark-950 dark:text-dark-50 text-base font-medium font-family-inter capitalize mb-3">
                         {{ nav.label }}
                     </li>
                     <li v-for="(inner_link, _index) in nav.links" :key="_index">
@@ -32,7 +32,7 @@
             </ul>
             <ul class="col-span-full md:col-span-6 lg:col-span-2 xl:col-span-1 flex flex-col gap-y-2 w-full">
                 <template v-for="(nav, index) in product_navigation" :key="index">
-                    <li class="text-dark-950 dark:text-dark-50 text-base font-medium font-inter capitalize mb-3">
+                    <li class="text-dark-950 dark:text-dark-50 text-base font-medium font-family-inter capitalize mb-3">
                         {{ nav.label }}
                     </li>
                     <li v-for="(inner_link, _index) in nav.links" :key="_index">
@@ -45,7 +45,7 @@
             </ul>
             <ul class="col-span-full md:col-span-6 lg:col-span-2 xl:col-span-1 flex flex-col gap-y-2 w-full">
                 <template v-for="(nav, index) in other_navigation" :key="index">
-                    <li class="text-dark-950 dark:text-dark-50 text-base font-medium font-inter capitalize mb-3">
+                    <li class="text-dark-950 dark:text-dark-50 text-base font-medium font-family-inter capitalize mb-3">
                         {{ nav.label }}
                     </li>
                     <li v-for="(inner_link, _index) in nav.links" :key="_index">
@@ -58,7 +58,7 @@
             </ul>
             <ul class="col-span-full md:col-span-6 lg:col-span-2 xl:col-span-1 flex flex-col gap-y-2 w-full">
                 <template v-for="(nav, index) in resources_navigation" :key="index">
-                    <li class="text-dark-950 dark:text-dark-50 text-base font-medium font-inter capitalize mb-3">
+                    <li class="text-dark-950 dark:text-dark-50 text-base font-medium font-family-inter capitalize mb-3">
                         {{ nav.label }}
                     </li>
                     <li v-for="(inner_link, _index) in nav.links" :key="_index">

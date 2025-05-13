@@ -28,7 +28,8 @@
               class="size-full object-contain object-center" format="webp" />
           </NuxtLink>
         </div>
-        <div class="text-primary-500/60 dark:text-primary-400/60 relative text-center text-base italic font-instrument">
+        <div
+          class="text-primary-500/60 dark:text-primary-400/60 relative text-center text-base italic font-family-instrument">
           Build less. Convert more.
         </div>
         <h1

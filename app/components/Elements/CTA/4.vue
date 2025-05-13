@@ -8,7 +8,7 @@
             <h1 class="text-dark-950 dark:text-dark-50 text-4xl font-light mt-14">
                 Designed and developed in Hidalgo
             </h1>
-            <p class="text-dark-950/60 dark:text-dark-50/60 text-base font-light font-lora w-full md:w-8/12">
+            <p class="text-dark-950/60 dark:text-dark-50/60 text-base font-light font-family-lora w-full md:w-8/12">
                 Our product merges clean aesthetics with the precision of modern digital
                 craftsmanship.
                 This creation showcases the essence of minimalism with a focus on seamless

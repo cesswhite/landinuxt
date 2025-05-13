@@ -12,7 +12,7 @@
                         <h1
                             class="text-pretty text-5xl/10 font-bold tracking-tight text-dark-950 dark:text-dark-50 md:text-6xl lg:text-7xl md:leading-[3.3rem] lg:leading-[3.6rem]">
                             The only way to make your app look
-                            <span class="font-instrument italic">unique</span>
+                            <span class="font-family-instrument italic">unique</span>
                         </h1>
                         <p
                             class="text-pretty text-lg font-medium text-dark-950/60 dark:text-dark-50/60 md:text-xl 2xl:text-xl">

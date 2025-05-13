@@ -19,7 +19,7 @@
                 class="col-span-full sm:col-span-4 lg:col-span-2 flex flex-col gap-y-4 pb-4 sm:border-r border-dark-950 dark:border-dark-50">
                 <template v-for="(nav, index) in navigation" :key="index">
                     <li
-                        class="text-dark-950 dark:text-dark-50 text-base font-inter capitalize p-4 border-b border-dark-950 dark:border-dark-50  uppercase">
+                        class="text-dark-950 dark:text-dark-50 text-base font-family-inter capitalize p-4 border-b border-dark-950 dark:border-dark-50  uppercase">
                         {{ nav.label }}
                     </li>
                     <li v-for="(inner_link, _index) in nav.links" :key="_index" class="px-4 ">
@@ -34,7 +34,7 @@
                 class="col-span-full sm:col-span-4 lg:col-span-2 flex flex-col gap-y-4  pb-4 border-t sm:border-t-0 sm:border-r border-dark-950 dark:border-dark-50 dark:border-dark-50">
                 <template v-for="(nav, index) in social_media_navigation" :key="index">
                     <li
-                        class="text-dark-950 dark:text-dark-50 text-base font-inter capitalize p-4 border-b border-dark-950 dark:border-dark-50 uppercase">
+                        class="text-dark-950 dark:text-dark-50 text-base font-family-inter capitalize p-4 border-b border-dark-950 dark:border-dark-50 uppercase">
                         {{ nav.label }}
                     </li>
                     <li v-for="(inner_link, _index) in nav.links" :key="_index" class="px-4 ">
@@ -48,7 +48,7 @@
             <ul class="col-span-full sm:col-span-4 lg:col-span-2 flex flex-col gap-y-4 pb-4 border-t sm:border-t-0">
                 <template v-for="(nav, index) in other_navigation" :key="index">
                     <li
-                        class="text-dark-950 dark:text-dark-50 text-base font-inter capitalize p-4 border-b border-dark-950 dark:border-dark-50 uppercase">
+                        class="text-dark-950 dark:text-dark-50 text-base font-family-inter capitalize p-4 border-b border-dark-950 dark:border-dark-50 uppercase">
                         {{ nav.label }}
                     </li>
                     <li v-for="(inner_link, _index) in nav.links" :key="_index" class="px-4">

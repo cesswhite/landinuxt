@@ -4,10 +4,10 @@
     <div class="relative z-20 grid w-full grid-cols-12 gap-y-12 md:gap-y-24">
       <div class="col-span-full flex flex-col items-start justify-center px-4">
         <h1 class="mt-4 w-full text-left font-sans text-5xl font-light text-dark-900 md:text-7xl dark:text-dark-50">
-          Share <span class="font-instrument inline-block italic">skills</span>
+          Share <span class="font-family-instrument inline-block italic">skills</span>
           <br />
           &
-          <span class="font-instrument inline-block italic">grow</span>
+          <span class="font-family-instrument inline-block italic">grow</span>
           together
         </h1>
         <p class="mt-4 w-full text-left text-lg leading-8 text-dark-900/60 2xl:text-xl dark:text-dark-50/60">

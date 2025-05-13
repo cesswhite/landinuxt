@@ -7,14 +7,14 @@
         </div>
         <div class="col-span-full md:col-span-7 flex flex-col gap-y-4 justify-center items-center p-8 min-h-96">
             <span
-                class="inline-block text-center mx-auto font-instrument tracking-wide text-primary-600 dark:text-primary-500">
+                class="inline-block text-center mx-auto font-family-instrument tracking-wide text-primary-600 dark:text-primary-500">
                 Minimal by Design
             </span>
-            <h1 class="text-dark-950 dark:text-dark-50 text-2xl md:text-3xl font-light font-lora text-center w-full">
+            <h1 class="text-dark-950 dark:text-dark-50 text-2xl md:text-3xl font-light font-family-lora text-center w-full">
                 Engineered in Hidalgo, Mexico, this product blends pure, subtle sweetness with a streamlined, minimal
                 finish.
             </h1>
-            <UButton variant="link" to="#" color="primary" size="xl" class="font-lora mx-auto inline-block text-center">
+            <UButton variant="link" to="#" color="primary" size="xl" class="font-family-lora mx-auto inline-block text-center">
                 Where precision meets aesthetic, learn more
             </UButton>
         </div>

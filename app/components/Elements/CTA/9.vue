@@ -13,7 +13,7 @@
                     Perfect Living Space
                 </h1>
                 <p
-                    class="text-dark-950/80 dark:text-dark-50/70 text-lg md:text-xl font-normal font-inter text-left w-full mt-4">
+                    class="text-dark-950/80 dark:text-dark-50/70 text-lg md:text-xl font-normal font-family-inter text-left w-full mt-4">
                     Transform your home with our powerful design tool, trusted by over 250,000 users to visualize,
                     customize,
                     and
