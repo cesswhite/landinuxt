@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Repository } from "~/types/index";
+import type { Repository } from "../../../types/index";
 
 const _repositories = ref<Repository[]>([
     {
@@ -45,6 +45,13 @@ const _repositories = ref<Repository[]>([
         url: 'https://github.com/cesswhite/hato-minimal-template',
         description: 'A minimal and elegant template, created with the purpose of serving as a landing page or one-page template',
         image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/hato_slb8jj.webp',
+        isPremium: false
+    },
+    {
+        name: 'Portfolio | Minimal Template',
+        url: 'https://github.com/cesswhite/portfolio',
+        description: 'A simple and just-enough portfolio template, perfecto for minimal developers',
+        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/portfolio.webp',
         isPremium: false
     },
 
