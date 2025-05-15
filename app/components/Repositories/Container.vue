@@ -50,7 +50,7 @@ const _repositories = ref<Repository[]>([
     {
         name: 'Portfolio | Minimal Template',
         url: 'https://github.com/cesswhite/portfolio',
-        description: 'A simple and just-enough portfolio template, perfecto for minimal developers',
+        description: 'A simple and just-enough portfolio template, perfect for minimal developers',
         image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/portfolio.webp',
         isPremium: false
     },
