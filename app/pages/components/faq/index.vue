@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import type { FAQTemplates } from "~/types/templates";
+import type { FAQTemplates } from "../../../../types/templates";
 const _faq = await queryContent("faq").find();
 
 useSeoMeta({

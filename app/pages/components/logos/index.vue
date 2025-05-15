@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-import type { LogosTemplates } from "~/types/templates";
+import type { LogosTemplates } from "../../../../types/templates";
 const _logos = await queryContent("logos").find();
 
 useSeoMeta({

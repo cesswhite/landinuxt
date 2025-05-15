@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import type { AuthTemplates } from "~/types/templates";
+import type { AuthTemplates } from "../../../../types/templates";
 const _auth = await queryContent("auth").find();
 
 useSeoMeta({

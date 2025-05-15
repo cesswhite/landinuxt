@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Landing } from "~/types/index";
+import type { Landing } from "../../../types/index";
 
 const _components = ref<Landing[]>([
     {

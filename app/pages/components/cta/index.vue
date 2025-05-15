@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import type { CTATemplates } from "~/types/templates";
+import type { CTATemplates } from "../../../../types/templates";
 const _cta = await queryContent("cta").find();
 
 useSeoMeta({

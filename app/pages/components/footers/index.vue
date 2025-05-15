@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import type { FootersTemplates } from "~/types/templates";
+import type { FootersTemplates } from "../../../../types/templates";
 const _footers = await queryContent("footers").find();
 
 useSeoMeta({

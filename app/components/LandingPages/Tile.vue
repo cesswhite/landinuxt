@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Landing } from "~/types/index";
+import type { Landing } from "../../../types/index";
 
 const props = defineProps<{
     data: Landing;

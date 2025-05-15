@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import type { TestimonialsTemplates } from "~/types/templates";
+import type { TestimonialsTemplates } from "../../../../types/templates";
 const _testimonials = await queryContent("testimonials").find();
 
 useSeoMeta({

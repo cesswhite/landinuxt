@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import type { ContactTemplates } from "~/types/templates";
+import type { ContactTemplates } from "../../../../types/templates";
 const _contact = await queryContent("contact").find();
 
 useSeoMeta({

@@ -34,7 +34,7 @@
 </template>
 
 <script setup lang="ts">
-import type { HeroTemplates } from "~/types/templates";
+import type { HeroTemplates } from "../../../../types/templates";
 const _hero = await queryContent("hero").find();
 
 useSeoMeta({

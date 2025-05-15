@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import type { FeaturesTemplates } from "~/types/templates";
+import type { FeaturesTemplates } from "../../../../types/templates";
 const _features = await queryContent("features").find();
 
 useSeoMeta({
