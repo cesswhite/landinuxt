@@ -1,0 +1,42 @@
+@import "tailwindcss" theme(static);
+@import "@nuxt/ui";
+@import "./global.css" layer(utilities);
+@plugin "@tailwindcss/typography";
+@source "../../content/**/*.md";
+
+@theme {
+  --font-family-inter: "Inter", sans-serif;
+  --font-family-lora: "Lora", serif;
+  --font-family-instrument: "Instrument Serif", serif;
+  --font-family-roboto: "Roboto", sans-serif;
+
+  /* See config: https://ui3.nuxt.dev/getting-started/theme#colors */
+
+  --color-primary-50: var(--ui-color-primary-50);
+  --color-primary-100: var(--ui-color-primary-100);
+  --color-primary-200: var(--ui-color-primary-200);
+  --color-primary-300: var(--ui-color-primary-300);
+  --color-primary-400: var(--ui-color-primary-400);
+  --color-primary-500: var(--ui-color-primary-500);
+  --color-primary-600: var(--ui-color-primary-600);
+  --color-primary-700: var(--ui-color-primary-700);
+  --color-primary-800: var(--ui-color-primary-800);
+  --color-primary-900: var(--ui-color-primary-900);
+  --color-primary-950: var(--ui-color-primary-950);
+
+  --color-dark-50: var(--ui-color-neutral-50);
+  --color-dark-100: var(--ui-color-neutral-100);
+  --color-dark-200: var(--ui-color-neutral-200);
+  --color-dark-300: var(--ui-color-neutral-300);
+  --color-dark-400: var(--ui-color-neutral-400);
+  --color-dark-500: var(--ui-color-neutral-500);
+  --color-dark-600: var(--ui-color-neutral-600);
+  --color-dark-700: var(--ui-color-neutral-700);
+  --color-dark-800: var(--ui-color-neutral-800);
+  --color-dark-900: var(--ui-color-neutral-900);
+  --color-dark-950: var(--ui-color-neutral-950);
+}
+/* For Testing purposes */
+.\? {
+  outline: 1px solid red;
+}

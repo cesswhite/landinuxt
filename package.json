@@ -13,10 +13,10 @@
     "@nuxt/content": "^2.13.4",
     "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.8.1",
-    "@nuxt/ui": "3.0.0-alpha.8",
+    "@nuxt/ui": "3.1.1",
     "@pinia/nuxt": "^0.5.5",
     "@tailwindcss/typography": "^0.5.15",
-    "nuxt": "^3.14.159",
+    "nuxt": "^3.17.3",
     "nuxt-marquee": "^1.0.4",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",
@@ -30,7 +30,6 @@
   "dependencies": {
     "@vueuse/core": "^11.2.0",
     "@vueuse/motion": "^2.2.6",
-    "node-html-parser": "^7.0.1",
-    "tailwindcss": "4.0.0-alpha.30"
+    "node-html-parser": "^7.0.1"
   }
 }
