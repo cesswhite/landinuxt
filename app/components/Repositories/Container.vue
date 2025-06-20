@@ -27,6 +27,20 @@ const _repositories = ref<Repository[]>([
         isPremium: false
     },
     {
+        name: 'Portfolio | Minimal Template',
+        url: 'https://github.com/cesswhite/portfolio',
+        description: 'A simple and just-enough portfolio template, perfect for minimal developers',
+        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/portfolio.webp',
+        isPremium: false
+    },
+    {
+        name: 'Pausa | Auth Template',
+        url: 'https://github.com/cesswhite/pausa',
+        description: 'A minimal auth flow template with Nuxt 3, Supabase, and Nuxt UI',
+        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/pausa_jwdd5x.webp',
+        isPremium: false
+    },
+    {
         name: 'Lotus | QR Management',
         url: 'https://github.com/cesswhite/lotus-qr-management',
         description: 'Local QR code management made simple with Nuxt 3, UQR, and Nuxt UI: an intuitive and efficient solution for all your QR code needs',
@@ -47,13 +61,7 @@ const _repositories = ref<Repository[]>([
         image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/hato_slb8jj.webp',
         isPremium: false
     },
-    {
-        name: 'Portfolio | Minimal Template',
-        url: 'https://github.com/cesswhite/portfolio',
-        description: 'A simple and just-enough portfolio template, perfect for minimal developers',
-        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/portfolio.webp',
-        isPremium: false
-    },
+
 
 ])
 
