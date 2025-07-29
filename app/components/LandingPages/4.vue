@@ -4,7 +4,8 @@
         <div class="fixed top-12 z-50 px-4 w-full">
             <header
                 class="relative z-20 flex h-16 w-full items-center justify-between gap-4 rounded-xl bg-dark-50/90 px-4 lg:justify-start dark:bg-dark-950/90">
-                <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Groupdark_ljxs2m.png"
+
+                <NuxtImg src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/icon-neutral_hxtgng.webp"
                     class="relative z-10 h-7 w-auto object-contain object-center" loading="lazy"
                     alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" format="webp" />
                 <nav class="relative z-10 hidden items-center justify-start gap-2 lg:flex">
@@ -443,7 +444,7 @@
                     <div class="grid w-full grid-cols-12">
                         <div class="col-span-full flex flex-col items-start justify-start gap-y-6 lg:col-span-6">
                             <NuxtImg format="webp"
-                                src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
+                                src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/logo-neutral_q3bdxv.webp"
                                 class="h-6 object-contain object-center md:h-10" loading="lazy"
                                 alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" />
                             <p
@@ -506,7 +507,8 @@
 
                     <div class="relative -bottom-4 mt-44 w-full">
                         <div class="from-dark-50 dark:from-dark-950 absolute size-full bg-gradient-to-t from-25%" />
-                        <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683150145/Group_26_tooxf6.svg"
+                        <NuxtImg
+                            src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/logo-neutral_q3bdxv.webp"
                             class="size-full object-contain object-center" loading="lazy"
                             alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" format="webp" />
                     </div>

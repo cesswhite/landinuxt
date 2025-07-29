@@ -16,7 +16,7 @@
                     </div>
                     <div class="col-span-full md:col-span-6">
                         <NuxtImg
-                            src="https://res.cloudinary.com/dpvsklksg/image/upload/iPhoneSingleSoftRotateZoom_keeklh.webp"
+                            src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/iPhoneSingleSoftRotateZoom_faq7kt.webp"
                             class="w-full h-96 object-contain" />
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                     </div>
                     <div class="col-span-full md:col-span-6">
                         <NuxtImg
-                            src="https://res.cloudinary.com/dpvsklksg/image/upload/iPhoneSingleSoftRotateZoom3_xvtwe0.webp"
+                            src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/iPhoneSingleSoftRotateZoom3_wvy3rj.webp"
                             class="w-full h-96 object-contain" />
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                     <div class="col-span-full md:col-span-6">
 
                         <NuxtImg
-                            src="https://res.cloudinary.com/dpvsklksg/image/upload/iPhoneSingleSoftRotateZoom2_c2apl0.webp"
+                            src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/iPhoneSingleSoftRotateZoom2_cwpqdi.webp"
                             class="w-full h-96 object-contain" />
                     </div>
                 </div>

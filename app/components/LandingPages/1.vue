@@ -4,7 +4,7 @@
         <header
             class="relative top-0 z-50 flex w-full items-center justify-between bg-dark-50/10 backdrop-blur-sm py-4 px-4 dark:bg-dark-950/10">
             <div class="size-8">
-                <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
+                <NuxtImg src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/icon-neutral_hxtgng.webp"
                     class="size-full object-contain object-center" loading="lazy" alt="my-company-logo-description"
                     :placeholder="[50, 25, 75, 5]" format="webp" />
             </div>
@@ -310,7 +310,7 @@
                         <div class="flex flex-col items-start gap-y-8">
                             <div class="h-10 w-auto">
                                 <NuxtImg
-                                    src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683150145/Group_26_tooxf6.svg"
+                                    src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/icon-neutral_hxtgng.webp"
                                     class="size-full object-contain object-center" loading="lazy"
                                     alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" format="webp" />
                             </div>

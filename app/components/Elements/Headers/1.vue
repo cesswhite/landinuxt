@@ -1,7 +1,7 @@
 <template>
   <header class="relative flex w-full items-center justify-between bg-dark-50 py-2 px-4 dark:bg-dark-950">
     <div class="size-8">
-      <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
+      <NuxtImg src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/icon-neutral_hxtgng.webp"
         class="size-full object-contain object-center" loading="lazy" alt="my-company-logo-description"
         :placeholder="[50, 25, 75, 5]" format="webp" />
     </div>

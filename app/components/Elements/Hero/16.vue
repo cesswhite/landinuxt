@@ -3,7 +3,7 @@
         <div class="size-full p-4">
             <NuxtImg
                 class="size-full object-cover object-center xl:object-left saturate-120 dark:saturate-0 rounded-2xl"
-                src="https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/mountain_sphm6f.webp" />
+                src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/space-2_unxqb6.webp" />
             <div
                 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center justify-center gap-y-2 w-full px-6">
                 <UBadge class="text-dark-50/70 bg-transparent text-xs text-center md:text-base xl:text-xl">

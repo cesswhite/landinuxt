@@ -2,9 +2,11 @@
   <div class="relative w-full">
     <header
       class="relative z-20 flex h-16 w-full items-center justify-between gap-4 rounded-xl bg-dark-50 px-4 lg:justify-start dark:bg-dark-950">
-      <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Groupdark_ljxs2m.png"
-        class="relative z-10 h-7 w-auto object-contain object-center" loading="lazy" alt="my-company-logo-description"
-        :placeholder="[50, 25, 75, 5]" format="webp" />
+      <div class="size-8 min-w-8">
+        <NuxtImg src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/icon-neutral_hxtgng.webp"
+          class="size-full object-contain object-center" loading="lazy" alt="my-company-logo-description"
+          :placeholder="[50, 25, 75, 5]" format="webp" />
+      </div>
       <nav class="relative z-10 hidden items-center justify-start gap-2 lg:flex">
         <UButton variant="link" color="neutral" size="lg" to="#"> Home </UButton>
         <UButton @click="showMenu = !showMenu" variant="link" color="neutral" size="lg">

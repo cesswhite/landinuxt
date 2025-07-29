@@ -1,6 +1,6 @@
 <template>
     <NuxtLayout name="landings">
-        <LandingPagesWrapper :name="name.toString()" :code="_landings.body?.children[0].props?.code">
+        <LandingPagesWrapper :name="name?.toString() || ''" :code="_landings?.body?.children?.[0]?.props?.code || ''">
             <template #component>
                 <LazyLandingPages1 v-if="name === 'simple'" />
                 <LazyLandingPages2 v-if="name === 'showcase'" />

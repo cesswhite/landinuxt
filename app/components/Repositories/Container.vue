@@ -15,50 +15,50 @@ const _repositories = ref<Repository[]>([
     {
         name: 'Kalibra',
         url: 'https://buy.polar.sh/polar_cl_sgamgcxuNdvD8nI8jv1krHrblvaZtDk6pkB411CUsy5',
-        description: 'Clean, modern, and fully functional Nuxt template designed for building AI-powered image generation',
-        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/kalibra.webp',
+        description: 'Nuxt template for AI image generation',
+        image: 'https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/kalibra_ad3nig.webp',
         isPremium: true
     },
     {
         name: 'v4.20',
         url: 'https://github.com/cesswhite/v4.20',
-        description: 'Minimal, blazing fast, and designed with developers in mind, v4.20 is your go-to starting point for modern web projects with Nuxt',
-        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/v4.20.webp',
+        description: 'Minimal, fast Nuxt starter for developers',
+        image: 'https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/v4.20_qxnmfj.webp',
         isPremium: false
     },
     {
         name: 'Portfolio | Minimal Template',
         url: 'https://github.com/cesswhite/portfolio',
-        description: 'A simple and just-enough portfolio template, perfect for minimal developers',
-        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/portfolio.webp',
+        description: 'Simple portfolio template for minimalists',
+        image: 'https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/portfolio_bjpfwp.webp',
         isPremium: false
     },
     {
         name: 'Pausa | Auth Template',
         url: 'https://github.com/cesswhite/pausa',
-        description: 'A minimal auth flow template with Nuxt 3, Supabase, and Nuxt UI',
-        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/pausa_jwdd5x.webp',
+        description: 'Auth template with Supabase',
+        image: 'https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/pausa_jwdd5x_vvkje3.webp',
         isPremium: false
     },
     {
         name: 'Lotus | QR Management',
         url: 'https://github.com/cesswhite/lotus-qr-management',
-        description: 'Local QR code management made simple with Nuxt 3, UQR, and Nuxt UI: an intuitive and efficient solution for all your QR code needs',
-        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/lotus.webp',
+        description: 'Simple QR Code Management',
+        image: 'https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/lotus_cufka0.webp',
         isPremium: false
     },
     {
         name: 'Nuxoki',
         url: 'https://github.com/cesswhite/nuxoki',
-        description: 'Elevate your projects with this minimalistic Nuxt 3 template, designed to seamlessly integrate the Flexoxi color palette',
-        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/nuxoki.webp',
+        description: 'Template with Flexoxi color palette',
+        image: 'https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/nuxoki_heuhuk.webp',
         isPremium: false
     },
     {
         name: 'Hato | Minimal Template',
         url: 'https://github.com/cesswhite/hato-minimal-template',
-        description: 'A minimal and elegant template, created with the purpose of serving as a landing page or one-page template',
-        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/hato_slb8jj.webp',
+        description: 'Minimal landing or one-page template',
+        image: 'https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/hato_k9q4rw.webp',
         isPremium: false
     },
 

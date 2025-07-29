@@ -1,7 +1,7 @@
 <template>
     <div class="w-full h-dvh relative flex items-center justify-center font-mono group">
         <NuxtImg class="size-full object-cover object-center xl:object-left absolute saturate-120"
-            src="https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/earth.webp" />
+            src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/space_tzvubk.webp" />
         <div class="relative z-20 text-dark-50/90 mx-auto font-bold text-sm">
             [START EXPLORING]
         </div>

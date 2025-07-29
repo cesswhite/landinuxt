@@ -2,7 +2,7 @@
     <footer class="w-full h-auto relative py-4 gap-8 flex flex-col px-4 overflow-hidden bg-dark-50 dark:bg-dark-950">
         <div class="grid grid-cols-12">
             <div class="col-span-full md:col-span-8 mb-12 md:mb-0 ">
-                <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
+                <NuxtImg src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/icon-neutral_hxtgng.webp"
                     class="object-contain object-center h-10" loading="lazy" alt="my-company-logo-description"
                     :placeholder="[50, 25, 75, 5]" format="webp" />
             </div>

@@ -5,12 +5,12 @@
                 <div
                     class="col-span-full md:col-span-2 h-24 rounded-lg relative bg-dark-100 dark:bg-dark-900/90 p-4 flex items-center justify-center">
                     <NuxtImg class="h-12 object-contain object-center mx-auto"
-                        src="https://res.cloudinary.com/dpvsklksg/image/upload/Group_25dark_tw9vkh.svg" />
+                        src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/icon-neutral_hxtgng.webp" />
                 </div>
                 <div
                     class="col-span-full md:col-span-10 h-24 rounded-lg relative bg-dark-100 dark:bg-dark-900/90 p-4 flex items-center justify-center">
                     <NuxtImg class="h-12 object-contain object-center mx-auto"
-                        src="https://res.cloudinary.com/dpvsklksg/image/upload/Groupdark_mm5xei.svg" />
+                        src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/logo-neutral_q3bdxv.webp" />
                 </div>
                 <div
                     class="col-span-full md:col-span-6 lg:col-span-4 h-72 rounded-lg relative bg-dark-100 dark:bg-dark-900/90 p-4 flex items-center justify-center">

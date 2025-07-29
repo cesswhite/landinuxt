@@ -2,9 +2,9 @@
   <div id="landing-two" class="relative h-auto w-full">
     <!-- HEADER -->
     <header class="relative flex w-full items-center justify-between bg-dark-50 py-2 px-4 dark:bg-dark-950">
-      <div class="flex w-auto items-center justify-start md:w-full">
-        <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
-          class="size-auto object-contain object-center" loading="lazy" alt="my-company-logo-description"
+      <div class="flex items-center justify-start md:w-full">
+        <NuxtImg src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/logo-neutral_q3bdxv.webp"
+          class="object-contain object-center h-6" loading="lazy" alt="my-company-logo-description"
           :placeholder="[50, 25, 75, 5]" format="webp" />
       </div>
       <nav class="hidden w-full items-center justify-center lg:flex">

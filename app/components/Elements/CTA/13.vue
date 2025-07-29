@@ -19,12 +19,14 @@
             </div>
             <div class="col-span-full lg:col-span-6 gap-4 grid grid-cols-subgrid">
                 <div class="col-span-full lg:col-span-3">
-                    <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/single-2_jqyqd8.webp"
+                    <NuxtImg
+                        src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/single-2_jqyqd8_bmrdlq.webp"
                         alt="mesh-gradient"
                         class="w-full md:h-96 lg:h-auto object-cover md:object-contain object-bottom rounded-md" />
                 </div>
                 <div class="col-span-full lg:col-span-3">
-                    <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/single-1_jcfqxi.webp"
+                    <NuxtImg
+                        src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/single-1_jcfqxi_v7ciwm.webp"
                         alt="mesh-gradient"
                         class="w-full md:h-96 lg:h-auto object-cover md:object-contain object-center rounded-md" />
                 </div>

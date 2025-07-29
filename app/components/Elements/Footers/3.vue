@@ -1,9 +1,9 @@
 <template>
     <footer class="w-full max-h-dvh h-auto relative p-4 flex flex-col gap-y-56">
         <div class="grid grid-cols-12 w-full gap-6">
-            <div class="col-span-6 lg:col-span-6 flex items-start justify-start">
-                <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683150145/Group_26_tooxf6.svg"
-                    class="object-contain object-center h-6 md:h-10" loading="lazy" alt="my-company-logo-description"
+            <div class="col-span-6 lg:col-span-6 flex items-start justify-start ">
+                <NuxtImg src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/icon-neutral_hxtgng.webp"
+                    class="object-contain object-center h-10" loading="lazy" alt="my-company-logo-description"
                     :placeholder="[50, 25, 75, 5]" format="webp" />
             </div>
             <ul class="col-span-6 lg:col-span-2 flex flex-col gap-y-2 w-full">

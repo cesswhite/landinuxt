@@ -21,7 +21,7 @@
                 <div class="flex flex-col items-center justify-center">
                     <div class="size-8 mb-4">
                         <NuxtImg
-                            src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
+                            src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/icon-neutral_hxtgng.webp"
                             class="size-full object-contain object-center" loading="lazy"
                             alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" format="webp" />
                     </div>

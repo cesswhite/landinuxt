@@ -2,8 +2,8 @@
     <footer class="w-full h-auto relative py-2 flex flex-col px-4 overflow-hidden bg-dark-50 dark:bg-dark-950">
         <div class="grid grid-cols-12 w-full">
             <div class="col-span-full lg:col-span-6 flex flex-col gap-y-6 items-start justify-start">
-                <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
-                    class="h-6 md:h-10 object-contain object-center" loading="lazy" alt="my-company-logo-description"
+                <NuxtImg src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/icon-neutral_hxtgng.webp"
+                    class="object-contain object-center h-6 md:h-10" loading="lazy" alt="my-company-logo-description"
                     :placeholder="[50, 25, 75, 5]" format="webp" />
                 <p class="text-dark-950/50 dark:text-dark-50/50 text-sm w-full md:w-1/2 font-family-inter inline-block">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam beatae labore accusamus perspiciatis
@@ -64,7 +64,7 @@
 
         <div class="w-full mt-44 relative -bottom-4">
             <div class="absolute size-full bg-gradient-to-t from-dark-50 from-25% dark:from-dark-950" />
-            <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683150145/Group_26_tooxf6.svg"
+            <NuxtImg src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/logo-neutral_q3bdxv.webp"
                 class="object-contain object-center size-full" loading="lazy" alt="my-company-logo-description"
                 :placeholder="[50, 25, 75, 5]" format="webp" />
         </div>

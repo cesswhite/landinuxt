@@ -14,19 +14,19 @@ import type { Landing } from "../../../types/index";
 const _components = ref<Landing[]>([
     {
         name: "simple",
-        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/landing_1.webp'
+        image: 'https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/landing_1.webp'
     },
     {
         name: "showcase",
-        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/landing_2.webp'
+        image: 'https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/landing_2.webp'
     },
     {
         name: "saas",
-        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/landing_3.webp'
+        image: 'https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/landing_3.webp'
     },
     {
         name: "agency",
-        image: 'https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/landing_4.webp'
+        image: 'https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/landing_4.webp'
     },
 ]);
 </script>

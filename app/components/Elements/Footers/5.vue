@@ -4,7 +4,7 @@
             <div
                 class="col-span-full lg:col-span-6 flex flex-col gap-y-4 items-start justify-start p-8 border-b lg:border-b-0 lg:border-r border-dark-950 dark:border-dark-50">
                 <div class="h-10 mx-auto md:mx-0">
-                    <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683150145/Group_26_tooxf6.svg"
+                    <NuxtImg src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/icon-neutral_hxtgng.webp"
                         class="object-contain object-center size-full" loading="lazy" alt="my-company-logo-description"
                         :placeholder="[50, 25, 75, 5]" format="webp" />
                 </div>

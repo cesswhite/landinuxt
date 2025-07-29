@@ -42,7 +42,7 @@
                 <div class="col-span-full md:col-span-6">
                     <NuxtImg loading="lazy" alt="mesh-gradient" format="webp"
                         class="w-full h-full object-cover object-center rounded-md"
-                        src="https://res.cloudinary.com/dpvsklksg/image/upload/landinuxt/hero-1-demo_c9ywjy.webp" />
+                        src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/hero-1-demo_c9ywjy_hhruic.webp" />
                 </div>
             </div>
         </div>

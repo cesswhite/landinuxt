@@ -1,8 +1,8 @@
 <template>
   <header class="relative flex w-full items-center justify-between bg-white py-4 px-4 dark:bg-dark-950">
-    <div class="w-auto flex-1 items-center justify-start lg:flex-none">
-      <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Groupdark_ljxs2m.png"
-        class="h-auto object-contain object-center" loading="lazy" alt="my-company-logo-description"
+    <div class="size-8 min-w-8 flex-1 items-center justify-start lg:flex-none">
+      <NuxtImg src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/icon-neutral_hxtgng.webp"
+        class="size-full object-contain object-center" loading="lazy" alt="my-company-logo-description"
         :placeholder="[50, 25, 75, 5]" format="webp" />
     </div>
     <nav class="hidden w-full flex-1 items-center justify-center gap-2 lg:flex">
