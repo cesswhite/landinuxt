@@ -7,7 +7,7 @@ LandiNuxt offers pre-built, copy-paste components to help you create stunning la
 1. [Features](#features)
 2. [Requirements](#requirements)
 3. [Installation](#installation)
-4. [Nuxt UI v3 Configuration](#nuxt-ui-v3-configuration)
+4. [Nuxt UI v4 Configuration](#nuxt-ui-v4-configuration)
 5. [Additional Required Modules](#additional-required-modules)
 6. [Using the Components](#using-the-components)
 7. [Contributions](#contributions)
@@ -16,7 +16,7 @@ LandiNuxt offers pre-built, copy-paste components to help you create stunning la
 ## Features ✨
 
 - Ready-to-use components in the Nuxt ecosystem
-- Full compatibility with Nuxt UI v3, Nuxt Image, Nuxt Marquee, and Vue Use Motion
+- Full compatibility with Nuxt UI v4, Nuxt Image, Nuxt Marquee, and Vue Use Motion
 - Dark mode adaptability, optimized typography, and pre-styled components
 - Expandable with future modules
 
@@ -24,7 +24,7 @@ LandiNuxt offers pre-built, copy-paste components to help you create stunning la
 
 To ensure optimal functionality, make sure to install:
 
-- **Nuxt UI v3**
+- **Nuxt UI v4**
 - **Nuxt Image**
 - **Nuxt Marquee**
 - **Vue Use Motion**
@@ -46,13 +46,13 @@ Install the dependencies:
 pnpm install
 ```
 
-### Installing Nuxt UI v3
+### Installing Nuxt UI
 
-LandiNuxt depends on Nuxt UI v3. Follow the setup instructions on the [Nuxt UI v3 official website](https://ui3.nuxt.dev/getting-started/installation).
+LandiNuxt depends on Nuxt UI. Follow the setup instructions on the [Nuxt UI official website](https://ui.nuxt.com/).
 
-## Nuxt UI v3 Configuration
+## Nuxt UI Configuration
 
-Nuxt UI v3 includes pre-configured settings for **Color Mode**, **Fonts**, and **TailwindCSS**. We recommend keeping these default configurations, as our components are optimized to work with them.
+Nuxt UI includes pre-configured settings for **Color Mode**, **Fonts**, and **TailwindCSS**. We recommend keeping these default configurations, as our components are optimized to work with them.
 
 ### Font Configuration
 
@@ -69,7 +69,7 @@ For more details on theming, visit the [Nuxt UI Theme Guide](https://ui3.nuxt.de
 
 ## Additional Required Modules
 
-In addition to Nuxt UI v3, you’ll need the following modules for full component functionality:
+In addition to Nuxt UI, you’ll need the following modules for full component functionality:
 
 - **Nuxt Image**: [Installation Instructions](https://image.nuxt.com/get-started/installation)
 - **Nuxt Marquee**: [Installation Instructions](https://hanzydev.github.io/nuxt-marquee/)
