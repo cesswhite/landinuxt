@@ -117,6 +117,10 @@ const items = [
       label: "Auth Section",
       to: '/components/auth'
     },
+    {
+      label: "Gallery Section",
+      to: '/components/gallery'
+    },
   ],
 ];
 </script>

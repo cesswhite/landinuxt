@@ -57,6 +57,7 @@ import type {
   LogosTemplates,
   AuthTemplates,
   FAQTemplates,
+  GalleryTemplates,
 } from "../../../types/templates";
 import { useClipboard } from "@vueuse/core";
 
@@ -71,6 +72,7 @@ const current = ref<
   | LogosTemplates
   | AuthTemplates
   | FAQTemplates
+  | GalleryTemplates
   | undefined
   | null
   | string
@@ -90,6 +92,7 @@ const props = defineProps<{
   | LogosTemplates
   | AuthTemplates
   | FAQTemplates
+  | GalleryTemplates
   | string
   | undefined;
 }>();
@@ -114,6 +117,9 @@ const setHeightClass = computed(() => {
   }
 
   if (props.item.parent == "testimonials") {
+    return "min-h-[1024px] flex items-center justify-center";
+  }
+  if (props.item.parent == "gallery") {
     return "min-h-[1024px] flex items-center justify-center";
   }
 });

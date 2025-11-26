@@ -17,6 +17,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   background-color: inherit;
+  transition: background-color 0.3s ease;
 }
 img,
 picture,

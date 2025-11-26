@@ -21,6 +21,7 @@ const _contact = await queryContent("contact").find();
 const _logos = await queryContent('logos').find()
 const _faq = await queryContent('faq').find()
 const _auth = await queryContent('auth').find()
+const _gallery = await queryContent('gallery').find()
 const _components = ref<Component[]>([
   {
     name: "headers",
@@ -61,6 +62,10 @@ const _components = ref<Component[]>([
   {
     name: "auth",
     total: _auth.length,
+  },
+  {
+    name: "gallery",
+    total: _gallery.length,
   },
 ]);
 </script>
