@@ -29,11 +29,6 @@
       <UButton variant="ghost" color="neutral" size="lg" to="/repositories">
         Repositories
       </UButton>
-      <UChip :ui="{ base: 'p-2' }" text="New" color="primary">
-        <UButton variant="ghost" color="neutral" size="lg" to="/atoms">
-          Atoms
-        </UButton>
-      </UChip>
       <UButton variant="ghost" color="neutral" size="lg" to="/instructions">
         Instructions
       </UButton>
