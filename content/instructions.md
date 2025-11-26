@@ -6,7 +6,6 @@
 
 - **Nuxt UI**
 - **Nuxt Image**
-- **Nuxt Marquee**
 - **Vue Use Motion**
 
 We will added more modules and Nuxt Libraries in the future
@@ -82,10 +81,9 @@ For more details on theming, visit the [Nuxt UI Theme Guide](https://ui.nuxt.com
 
 ## Additional Required Modules 📦
 
-In addition to Nuxt UI, you’ll need the following modules for full component functionality:
+In addition to Nuxt UI, you'll need the following modules for full component functionality:
 
 - **Nuxt Image**: [Installation Instructions](https://image.nuxt.com/get-started/installation)
-- **Nuxt Marquee**: [Installation Instructions](https://hanzydev.github.io/nuxt-marquee/)
 - **Vue Use Motion**: [Setup Guide](https://motion.vueuse.org/getting-started/nuxt)
 
 ## Using Our Components 🎉

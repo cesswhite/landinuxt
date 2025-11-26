@@ -8,8 +8,7 @@
                     </h2>
                 </div>
                 <div class="w-full md:w-1/2">
-                    <NuxtMarquee :pauseOnHover="true" direction="right" gradient
-                        :gradientColor="$colorMode.value === 'dark' ? 'var(--color-dark-950)' : 'var(--color-dark-50)'">
+                    <UMarquee pause-on-hover>
                         <div class="flex items-center gap-x-8">
                             <div class="flex h-24 w-full items-center justify-center">
                                 <UIcon name="i-logos-nuxt" class="text-3xl" />
@@ -36,7 +35,7 @@
                                 <UIcon name="i-logos-cloudflare" class="text-3xl" />
                             </div>
                         </div>
-                    </NuxtMarquee>
+                    </UMarquee>
                 </div>
             </div>
         </UContainer>

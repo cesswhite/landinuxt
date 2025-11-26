@@ -16,7 +16,7 @@ LandiNuxt offers pre-built, copy-paste components to help you create stunning la
 ## Features ✨
 
 - Ready-to-use components in the Nuxt ecosystem
-- Full compatibility with Nuxt UI v4, Nuxt Image, Nuxt Marquee, and Vue Use Motion
+- Full compatibility with Nuxt UI v4, Nuxt Image, and Vue Use Motion
 - Dark mode adaptability, optimized typography, and pre-styled components
 - Expandable with future modules
 
@@ -26,7 +26,6 @@ To ensure optimal functionality, make sure to install:
 
 - **Nuxt UI v4**
 - **Nuxt Image**
-- **Nuxt Marquee**
 - **Vue Use Motion**
 
 > More modules and Nuxt libraries will be added in the future.
@@ -69,10 +68,9 @@ For more details on theming, visit the [Nuxt UI Theme Guide](https://ui3.nuxt.de
 
 ## Additional Required Modules
 
-In addition to Nuxt UI, you’ll need the following modules for full component functionality:
+In addition to Nuxt UI, you'll need the following modules for full component functionality:
 
 - **Nuxt Image**: [Installation Instructions](https://image.nuxt.com/get-started/installation)
-- **Nuxt Marquee**: [Installation Instructions](https://hanzydev.github.io/nuxt-marquee/)
 - **Vue Use Motion**: [Setup Guide](https://motion.vueuse.org/getting-started/nuxt)
 
 ## Using the Components

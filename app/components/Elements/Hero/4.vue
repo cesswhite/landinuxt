@@ -48,7 +48,7 @@
       </div>
     </div>
     <div class="relative z-20 w-full py-2">
-      <NuxtMarquee :pauseOnHover="true">
+      <UMarquee pause-on-hover>
         <div class="flex w-full items-center justify-center gap-12">
           <template v-for="icon in icons">
             <div class="size-auto items-center justify-center p-2">
@@ -59,7 +59,7 @@
             </div>
           </template>
         </div>
-      </NuxtMarquee>
+      </UMarquee>
     </div>
   </div>
 </template>

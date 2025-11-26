@@ -8,7 +8,7 @@
                 Explore the possibilities with us, trusted by over +5,000 companies
             </p>
             <div class="mt-12">
-                <NuxtMarquee :pauseOnHover="true" direction="right" gradient gradientColor="var(--color-dark-50)">
+                <UMarquee pause-on-hover>
                     <div class="flex items-center gap-x-8">
                         <div class="w-full flex h-24 items-center justify-center">
                             <UIcon name="i-logos-nuxt" class="text-3xl" />
@@ -35,10 +35,10 @@
                             <UIcon name="i-logos-cloudflare" class="text-3xl" />
                         </div>
                     </div>
-                </NuxtMarquee>
+                </UMarquee>
             </div>
             <div class="mt-4">
-                <NuxtMarquee :pauseOnHover="true" direction="left" gradient gradientColor="var(--color-dark-50)">
+                <UMarquee pause-on-hover reverse>
                     <div class="flex items-center gap-x-8">
                         <div class="w-full flex h-24 items-center justify-center">
                             <UIcon name="i-logos-nuxt" class="text-3xl" />
@@ -65,7 +65,7 @@
                             <UIcon name="i-logos-cloudflare" class="text-3xl" />
                         </div>
                     </div>
-                </NuxtMarquee>
+                </UMarquee>
             </div>
         </UContainer>
     </div>
