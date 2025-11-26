@@ -8,6 +8,7 @@
           <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
             <template #components>
               <LazyElementsGallery1 v-if="item.title === ('grid' as GalleryTemplates)" />
+              <LazyElementsGallery2 v-if="item.title === ('windows' as GalleryTemplates)" />
             </template>
           </ElementsWrapper>
         </template>

@@ -1,0 +1,81 @@
+<template>
+    <div
+        class="bg-dark-50 dark:bg-dark-950 relative w-full px-4 py-44 lg:py-0 h-auto min-h-dvh flex items-center justify-center">
+        <UContainer>
+            <div class="grid grid-cols-12">
+                <template v-for="(image, index) in images" :key="index">
+                    <div class="col-span-full md:col-span-3 group relative overflow-hidden cursor-pointer"
+                        @click="openLightbox(index)">
+                        <NuxtImg :src="image.src" :alt="image.alt"
+                            class="h-96 w-full object-cover saturate-0 group-hover:saturate-100 transition-all duration-300"
+                            loading="lazy" :placeholder="[50, 25, 75, 5]" format="webp" />
+
+                    </div>
+                </template>
+            </div>
+        </UContainer>
+        <UModal v-model:open="isLightboxOpen" fullscreen :ui="{
+            body: 'p-0 bg-transparent flex items-center justify-center',
+
+        }">
+            <template #content>
+                <div class="relative w-full h-dvh flex items-center justify-center bg-dark-950/90 backdrop-blur-sm">
+                    <UButton @click="isLightboxOpen = false" icon="i-heroicons-x-mark" variant="ghost" color="neutral"
+                        class="absolute right-2 top-2 z-10" />
+                    <NuxtImg v-if="currentImage" :src="currentImage.src" :alt="currentImage.alt"
+                        class="w-full h-10/12 object-contain" format="webp" />
+                </div>
+            </template>
+        </UModal>
+    </div>
+</template>
+
+<script setup lang="ts">
+
+const images = [
+    {
+        src: "https://images.unsplash.com/photo-1610296669228-602fa827fc1f?q=80&w=1075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        alt: "Desert landscape with sand dunes",
+    },
+    {
+        src: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        alt: "Cacti in desert",
+    },
+    {
+        src: "https://images.unsplash.com/photo-1566345984367-fa2ba5cedc17?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        alt: "Desert sunset",
+    },
+    {
+        src: "https://images.unsplash.com/photo-1504192010706-dd7f569ee2be?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        alt: "Mountain landscape",
+    },
+    {
+        src: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        alt: "Ocean view",
+    },
+    {
+        src: "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        alt: "Forest path",
+    },
+    {
+        src: "https://images.unsplash.com/photo-1534996858221-380b92700493?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        alt: "Ocean view",
+    },
+    {
+        src: "https://images.unsplash.com/photo-1529788295308-1eace6f67388?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        alt: "Forest path",
+    },
+];
+
+const isLightboxOpen = ref(false);
+const currentIndex = ref(0);
+
+const currentImage = computed(() => {
+    return images[currentIndex.value];
+});
+
+function openLightbox(index: number) {
+    currentIndex.value = index;
+    isLightboxOpen.value = true;
+}
+</script>

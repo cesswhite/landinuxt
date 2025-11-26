@@ -1,104 +1,83 @@
 <template>
   <NuxtLayout name="playground">
-    <div class="h-auto min-h-dvh w-full grid grid-cols-12 items-center justify-center p-2 bg-white dark:bg-black gap-2">
-      <div class="col-span-full hidden md:block md:col-span-6 h-full">
-        <div
-          class="w-full h-full flex flex-col items-end justify-end bg-gradient-to-bl from-primary-500 to-primary-700 dark:from-primary-400 dark:to-primary-600 rounded-lg pb-12">
-          <div class="w-full px-4 2xl:px-12 flex flex-col gap-y-2">
-            <h1 class="text-dark-50 text-3xl font-bold text-center">
-              Digital & Independent Studio
-            </h1>
-            <p class="text-dark-50/60 text-base/6 font-normal text-center mx-auto">
-              Please enter your email and password to access your account. Your dashboard and all your saved preferences
-              are waiting for you.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        class="col-span-full md:col-span-6 bg-dark-100 dark:bg-dark-900 rounded-lg h-full flex items-center justify-center">
-        <div class="relative">
-          <div class="flex flex-col items-center justify-center">
-            <div class="size-8 mb-4">
-              <NuxtImg src="https://res.cloudinary.com/dpvsklksg/image/upload/v1683149739/Group_25dark_yrfac5.png"
-                class="size-full object-contain object-center" loading="lazy" alt="my-company-logo-description"
+    <div
+      class="bg-dark-50 dark:bg-dark-950 relative w-full px-4 py-44 lg:py-0 h-auto min-h-dvh flex items-center justify-center">
+      <UContainer>
+        <div class="grid grid-cols-12">
+          <template v-for="(image, index) in images" :key="index">
+            <div class="col-span-full md:col-span-3 group relative overflow-hidden cursor-pointer"
+              @click="openLightbox(index)">
+              <NuxtImg :src="image.src" :alt="image.alt"
+                class="h-96 w-full object-cover saturate-0 group-hover:saturate-100" loading="lazy"
                 :placeholder="[50, 25, 75, 5]" format="webp" />
+
             </div>
-            <h1 class="w-full text-center font-bold text-lg text-dark-950 dark:text-dark-50">Welcome back</h1>
-            <p class="text-sm text-center text-dark-950/60 dark:text-dark-50/60">
-              Please enter your email and password to access your account.
-            </p>
-            <div class="flex flex-col gap-y-2 w-full mt-8">
-              <UButton block type="submit" size="lg"
-                class="cursor-pointer bg-dark-50 text-dark-900 border border-dark-200 hover:bg-dark-100 hover:text-dark-950 dark:bg-dark-950 dark:border-dark-300/10 dark:text-dark-50/80 dark:hover:bg-dark-900 dark:hover:text-dark-50"
-                label="Sign in with Google">
-                <template #leading>
-                  <UIcon name="i-simple-icons-google" class="size-3" />
-                </template>
-              </UButton>
-              <UButton block type="submit" size="lg" class="cursor-pointer" color="neutral" label="Sign in with GitHub">
-                <template #leading>
-                  <UIcon name="i-simple-icons-github" class="size-3" />
-                </template>
-              </UButton>
-            </div>
-            <div class="my-4 w-full">
-              <USeparator label="Or" />
-            </div>
-          </div>
-          <div class="w-full relative">
-            <UForm :validate="validate" :state="state" class="grid grid-cols-12 gap-4" @submit="onSubmit">
-              <div class="col-span-full">
-                <UFormField label="Email" name="email" size="lg">
-                  <UInput v-model="state.email" type="email" class="w-full" />
-                </UFormField>
-              </div>
-              <div class="col-span-full">
-                <UFormField label="Password" name="password" size="lg">
-                  <UInput v-model="state.password" type="password" class="w-full" />
-                </UFormField>
-              </div>
-              <div class="col-span-full">
-                <div class="flex items-center justify-end mb-4">
-                  <UButton to="#" size="sm" variant="link" color="primary" class="cursor-pointer">
-                    Forgot password?
-                  </UButton>
-                </div>
-                <UButton block type="submit" size="lg" class="cursor-pointer" color="primary">
-                  Sign In
-                </UButton>
-                <div class="mt-4">
-                  <small class="text-dark-950/50 dark:text-dark-50/50 text-xs text-center inline-block w-full">
-                    Don't have an account? <NuxtLink to="#" class="text-primary-500 dark:text-primary-400">Sign up
-                    </NuxtLink>
-                  </small>
-                </div>
-              </div>
-            </UForm>
-          </div>
+          </template>
         </div>
-      </div>
+      </UContainer>
+      <UModal v-model:open="isLightboxOpen" fullscreen :ui="{
+        body: 'p-0 bg-transparent flex items-center justify-center',
+
+      }">
+        <template #content>
+          <div class="relative w-full h-dvh flex items-center justify-center bg-dark-950/90 backdrop-blur-sm">
+            <UButton @click="isLightboxOpen = false" icon="i-heroicons-x-mark" variant="ghost" color="neutral"
+              class="absolute right-2 top-2 z-10" />
+            <NuxtImg v-if="currentImage" :src="currentImage.src" :alt="currentImage.alt"
+              class="w-full h-10/12 object-contain" format="webp" />
+          </div>
+        </template>
+      </UModal>
     </div>
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-import type { FormError, FormSubmitEvent } from '#ui/types'
 
-const state = reactive({
-  email: undefined,
-  password: undefined
-})
+const images = [
+  {
+    src: "https://images.unsplash.com/photo-1610296669228-602fa827fc1f?q=80&w=1075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Desert landscape with sand dunes",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Cacti in desert",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1566345984367-fa2ba5cedc17?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Desert sunset",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1504192010706-dd7f569ee2be?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Mountain landscape",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Ocean view",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Forest path",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1534996858221-380b92700493?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Ocean view",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1529788295308-1eace6f67388?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Forest path",
+  },
+];
 
-const validate = (state: any): FormError[] => {
-  const errors = []
-  if (!state.email) errors.push({ name: 'email', message: 'Field required' })
-  if (!state.password) errors.push({ name: 'password', message: 'Field required' })
-  return errors
-}
+const isLightboxOpen = ref(false);
+const currentIndex = ref(0);
 
-async function onSubmit(event: FormSubmitEvent<any>) {
-  state.email = undefined
-  state.password = undefined
+const currentImage = computed(() => {
+  return images[currentIndex.value];
+});
+
+function openLightbox(index: number) {
+  currentIndex.value = index;
+  isLightboxOpen.value = true;
 }
 </script>
