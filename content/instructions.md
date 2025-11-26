@@ -1,27 +1,27 @@
-**LandiNuxt** provides pre-built, copy-paste components to help you create stunning landing pages in no time, fully integrated with the **Nuxt ecosystem**. Our components rely heavily on **Nuxt UI v3**, so it's crucial to install it for proper functionality.
+**LandiNuxt** provides pre-built, copy-paste components to help you create stunning landing pages in no time, fully integrated with the **Nuxt ecosystem**. Our components rely heavily on **Nuxt UI**, so it's crucial to install it for proper functionality.
 
 ## Requirements
 
 ### Key Technologies:
 
-- **Nuxt UI v3**
+- **Nuxt UI**
 - **Nuxt Image**
 - **Nuxt Marquee**
 - **Vue Use Motion**
 
 We will added more modules and Nuxt Libraries in the future
 
-## Installing Nuxt UI v3 🔧
+## Installing Nuxt UI 🔧
 
-To get started, you need to install Nuxt UI v3. Follow the official setup guide:
-[Nuxt UI v3 Installation Guide](https://ui3.nuxt.dev/getting-started/installation)
+To get started, you need to install Nuxt UI. Follow the official setup guide:
+[Nuxt UI Installation Guide](https://ui.nuxt.com/docs/getting-started/installation/nuxt)
 
-## Built-in Configuration of Nuxt UI v3 ⚙️
+## Built-in Configuration of Nuxt UI ⚙️
 
-Nuxt UI v3 comes with pre-configured settings for **Color Mode**, **Fonts**, and **TailwindCSS**. We highly recommend keeping the default setup, as our components are optimized to work with these settings. They seamlessly adapt to the color mode, and some components use Nuxt fonts.
+Nuxt UI comes with pre-configured settings for **Color Mode**, **Fonts**, and **TailwindCSS**. We highly recommend keeping the default setup, as our components are optimized to work with these settings. They seamlessly adapt to the color mode, and some components use Nuxt fonts.
 
-- [Fonts Configuration](https://ui3.nuxt.dev/getting-started/fonts)
-- [Color Mode Configuration](https://ui3.nuxt.dev/getting-started/color-mode)
+- [Fonts Configuration](https://ui.nuxt.com/docs/getting-started/integrations/fonts)
+- [Color Mode Configuration](https://ui.nuxt.com/docs/getting-started/integrations/color-mode/nuxt)
 
 > **Important:** If you disable any of these modules in your configuration, you might encounter compatibility issues with some components.
 
@@ -78,11 +78,11 @@ or
 
 > **Important:** To avoid conflicts with default values, we do not use 'gray' or 'neutral' names.
 
-For more details on theming, visit the [Nuxt UI Theme Guide](https://ui3.nuxt.dev/getting-started/theme#colors).
+For more details on theming, visit the [Nuxt UI Theme Guide](https://ui.nuxt.com/docs/getting-started/theme/design-systems).
 
 ## Additional Required Modules 📦
 
-In addition to Nuxt UI v3, you’ll need the following modules for full component functionality:
+In addition to Nuxt UI, you’ll need the following modules for full component functionality:
 
 - **Nuxt Image**: [Installation Instructions](https://image.nuxt.com/get-started/installation)
 - **Nuxt Marquee**: [Installation Instructions](https://hanzydev.github.io/nuxt-marquee/)

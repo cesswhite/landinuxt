@@ -1,69 +1,72 @@
 <template>
-  <header
-    class="flex items-center justify-between fixed left-0 top-0 z-50 px-4 w-full bg-dark-50/70 dark:bg-dark-950/70 backdrop-blur-md py-4">
-    <div class="flex size-8 items-center justify-center">
-      <NuxtLink to="/">
-        <AppLogo />
-      </NuxtLink>
-    </div>
-    <nav class="hidden center-center w-full flex-1 items-center justify-center gap-2 lg:flex">
-      <UButton variant="ghost" color="neutral" size="lg" to="/">
-        Home
-      </UButton>
-      <UDropdownMenu :items="items">
-        <UButton variant="ghost" color="neutral" size="lg" label="Sections" class="cursor-pointer">
-          <template #trailing>
-            <UIcon name="i-heroicons-chevron-down" />
-          </template>
-        </UButton>
-        <template #item="{ item }">
-          <UButton block variant="link" :to="item.to" color="neutral" size="lg">
-            {{ item.label }}
-          </UButton>
-        </template>
-      </UDropdownMenu>
-
-      <UButton variant="ghost" color="neutral" size="lg" to="/landings">
-        Landing Pages
-      </UButton>
-      <UButton variant="ghost" color="neutral" size="lg" to="/repositories">
-        Repositories
-      </UButton>
-      <UButton variant="ghost" color="neutral" size="lg" to="/instructions">
-        Instructions
-      </UButton>
-      <UButton variant="ghost" color="neutral" size="lg" to="/contribution">
-        Contribution
-      </UButton>
-
-    </nav>
-    <div class="flex flex-1 items-center justify-end gap-1 lg:flex-none">
-      <UButton to="https://github.com/cesswhite/landingnuxt" target="_blank" icon="i-mdi-github" variant="link"
-        color="primary" size="lg" />
-      <AppSwitchPrimaryColor />
-      <AppSwitchMode />
-      <USlideover title="Menu" close-icon="i-heroicons-x-mark">
-        <div class="inline-block md:hidden">
-          <UButton icon="i-heroicons-bars-3" variant="link" color="primary" size="lg" />
+  <header class="fixed left-0 top-0 z-50 w-full bg-dark-50/70 dark:bg-dark-950/70 backdrop-blur-md py-4">
+    <AppLayout>
+      <div class="flex items-center justify-between">
+        <div class="flex size-8 items-center justify-center">
+          <NuxtLink to="/">
+            <AppLogo />
+          </NuxtLink>
         </div>
-        <template #body>
-          <nav class="flex w-full flex-col">
-            <UButton block variant="link" color="primary" size="lg" to="#">
-              Home
+        <nav class="hidden center-center w-full flex-1 items-center justify-center gap-2 lg:flex">
+          <UButton variant="ghost" color="neutral" size="lg" to="/">
+            Home
+          </UButton>
+          <UDropdownMenu :items="items">
+            <UButton variant="ghost" color="neutral" size="lg" label="Sections" class="cursor-pointer">
+              <template #trailing>
+                <UIcon name="i-heroicons-chevron-down" />
+              </template>
             </UButton>
-            <UButton block variant="link" color="primary" size="lg" to="#">
-              About
-            </UButton>
-            <UButton block variant="link" color="primary" size="lg" to="#">
-              Instructions
-            </UButton>
-            <UButton block variant="link" color="primary" size="lg" to="#">
-              Contribution
-            </UButton>
-          </nav>
-        </template>
-      </USlideover>
-    </div>
+            <template #item="{ item }">
+              <UButton block variant="link" :to="item.to" color="neutral" size="lg">
+                {{ item.label }}
+              </UButton>
+            </template>
+          </UDropdownMenu>
+
+          <UButton variant="ghost" color="neutral" size="lg" to="/landings">
+            Landing Pages
+          </UButton>
+          <UButton variant="ghost" color="neutral" size="lg" to="/repositories">
+            Repositories
+          </UButton>
+          <UButton variant="ghost" color="neutral" size="lg" to="/instructions">
+            Instructions
+          </UButton>
+          <UButton variant="ghost" color="neutral" size="lg" to="/contribution">
+            Contribution
+          </UButton>
+
+        </nav>
+        <div class="flex flex-1 items-center justify-end gap-1 lg:flex-none">
+          <UButton to="https://github.com/cesswhite/landingnuxt" target="_blank" icon="i-mdi-github" variant="link"
+            color="primary" size="lg" />
+          <AppSwitchPrimaryColor />
+          <AppSwitchMode />
+          <USlideover title="Menu" close-icon="i-heroicons-x-mark">
+            <div class="inline-block md:hidden">
+              <UButton icon="i-heroicons-bars-3" variant="link" color="primary" size="lg" />
+            </div>
+            <template #body>
+              <nav class="flex w-full flex-col">
+                <UButton block variant="link" color="primary" size="lg" to="#">
+                  Home
+                </UButton>
+                <UButton block variant="link" color="primary" size="lg" to="#">
+                  About
+                </UButton>
+                <UButton block variant="link" color="primary" size="lg" to="#">
+                  Instructions
+                </UButton>
+                <UButton block variant="link" color="primary" size="lg" to="#">
+                  Contribution
+                </UButton>
+              </nav>
+            </template>
+          </USlideover>
+        </div>
+      </div>
+    </AppLayout>
   </header>
 </template>
 

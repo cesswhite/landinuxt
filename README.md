@@ -1,6 +1,6 @@
 # LandiNuxt
 
-LandiNuxt offers pre-built, copy-paste components to help you create stunning landing pages in no time, fully integrated with the **Nuxt ecosystem**. Our components rely heavily on **Nuxt UI v3**, so make sure to install it for full functionality.
+LandiNuxt offers pre-built, copy-paste components to help you create stunning landing pages in no time, fully integrated with the **Nuxt ecosystem**. Our components rely heavily on **Nuxt UI v4**, so make sure to install it for full functionality.
 
 ## Table of Contents
 
