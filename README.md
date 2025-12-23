@@ -64,7 +64,7 @@ Currently, our components use the following font families:
 --font-family-roboto: "Roboto", sans-serif;
 ```
 
-For more details on theming, visit the [Nuxt UI Theme Guide](https://ui3.nuxt.dev/getting-started/theme).
+For more details on theming, visit the [Nuxt UI Theme Guide](https://ui.nuxt.com/docs/getting-started/theme/design-system).
 
 ## Additional Required Modules
 
