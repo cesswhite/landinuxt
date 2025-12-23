@@ -35,15 +35,15 @@ const route = useRoute()
 const _features = await queryContent("features").find();
 
 useSeoMeta({
-  title: "Feature Components | LandiNuxt",
-  description: "Discover a diverse range of feature sections tailored to elevate your website's user experience. Spanning from minimalist to feature-packed designs, these sections are meticulously crafted to convey your brand's message and captivate your target audience.",
-  ogTitle: "Feature Components | LandiNuxt",
-  ogDescription: "Discover a diverse range of feature sections tailored to elevate your website's user experience. Spanning from minimalist to feature-packed designs, these sections are meticulously crafted to convey your brand's message and captivate your target audience.",
+  title: "Nuxt Feature Components: 13+ Pre-built Feature Sections for Landing Pages | LandiNuxt",
+  description: "Discover 13+ pre-built Nuxt feature sections to showcase your product benefits. From minimalist to feature-packed designs with icons, images, and descriptions. Copy-paste ready, fully compatible with Nuxt UI v4.",
+  ogTitle: "Nuxt Feature Components: 13+ Pre-built Feature Sections | LandiNuxt",
+  ogDescription: "Discover 13+ pre-built Nuxt feature sections. Copy-paste ready feature components with icons, images, and descriptions. Fully compatible with Nuxt UI v4.",
   ogImage: "/og-landinuxt.jpg",
   ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
   twitterCard: "summary_large_image",
-  twitterTitle: "Feature Components | LandiNuxt",
-  twitterDescription: "Discover a diverse range of feature sections tailored to elevate your website's user experience. Spanning from minimalist to feature-packed designs, these sections are meticulously crafted to convey your brand's message and captivate your target audience.",
+  twitterTitle: "Nuxt Feature Components: 13+ Pre-built Feature Sections | LandiNuxt",
+  twitterDescription: "Discover 13+ pre-built Nuxt feature sections. Copy-paste ready for Nuxt UI v4.",
   twitterImage: "/og-landinuxt.jpg",
   ogImageWidth: 1200,
   ogImageHeight: 630,

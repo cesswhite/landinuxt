@@ -35,7 +35,7 @@ Below are the font families currently used in our components. Feel free to add t
 --font-family-roboto: "Roboto", sans-serif;
 ```
 
-For more details on theming, visit the [Nuxt UI Theme Guide](https://ui3.nuxt.dev/getting-started/theme).
+For more details on theming, visit the [Nuxt UI Theme Guide](https://ui.nuxt.com/docs/getting-started/theme/design-system).
 
 ## Integrate Custom CSS Variables 🎨
 
@@ -77,7 +77,7 @@ or
 
 > **Important:** To avoid conflicts with default values, we do not use 'gray' or 'neutral' names.
 
-For more details on theming, visit the [Nuxt UI Theme Guide](https://ui.nuxt.com/docs/getting-started/theme/design-systems).
+For more details on theming, visit the [Nuxt UI Theme Guide](https://ui.nuxt.com/docs/getting-started/theme/design-system).
 
 ## Additional Required Modules 📦
 

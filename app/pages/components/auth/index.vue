@@ -27,23 +27,58 @@ const route = useRoute()
 const _auth = await queryContent("auth").find();
 
 useSeoMeta({
-  title: "Authentication Components | LandiNuxt",
-  description: "Enhance your website's user experience with our advanced authentication components. Each component is designed for seamless interaction and to facilitate essential tasks such as signin, signup, password recovery, and token management, covering all aspects of the authentication flow.",
-  ogTitle: "Authentication Components | LandiNuxt",
-  ogDescription: "Enhance your website's user experience with our advanced authentication components. Each component is designed for seamless interaction and to facilitate essential tasks such as signin, signup, password recovery, and token management, covering all aspects of the authentication flow.",
-  ogImage: "/og-landinuxt.jpg",
-  ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
-  twitterCard: "summary_large_image",
-  twitterTitle: "Authentication Components | LandiNuxt",
-  twitterDescription: "Enhance your website's user experience with our advanced authentication components. Each component is designed for seamless interaction and to facilitate essential tasks such as signin, signup, password recovery, and token management, covering all aspects of the authentication flow.",
-  twitterImage: "/og-landinuxt.jpg",
-  ogImageWidth: 1200,
-  ogImageHeight: 630,
+    title: "Nuxt Authentication Components: Pre-built Sign-in, Sign-up & Password Recovery | LandiNuxt",
+    description: "Build secure authentication flows faster with 5+ pre-built Nuxt components. Copy-paste sign-in, sign-up, password recovery, and token management components. Fully compatible with Nuxt UI v4, SSR ready, and accessible.",
+    ogTitle: "Nuxt Authentication Components | LandiNuxt",
+    ogDescription: "Build secure authentication flows faster with pre-built Nuxt components. Sign-in, sign-up, password recovery, and token management. Copy-paste ready for Nuxt UI v4.",
+    ogImage: "/og-landinuxt.jpg",
+    ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
+    twitterCard: "summary_large_image",
+    twitterTitle: "Nuxt Authentication Components | LandiNuxt",
+    twitterDescription: "Build secure authentication flows faster with pre-built Nuxt components. Copy-paste ready for Nuxt UI v4.",
+    twitterImage: "/og-landinuxt.jpg",
+    ogImageWidth: 1200,
+    ogImageHeight: 630,
 })
 
+const { generateBreadcrumbs } = useBreadcrumbs()
+const { generateBreadcrumbList, generateFAQPage, addStructuredData } = useStructuredData()
+
+// Breadcrumbs
+const breadcrumbs = generateBreadcrumbs()
+
+// FAQ for auth components
+const faqItems = [
+    {
+        question: 'How do I implement authentication with these Nuxt components?',
+        answer: 'These components provide the UI for authentication flows. You\'ll need to integrate them with your authentication backend (like Supabase, Auth0, or a custom API) to handle the actual authentication logic.',
+    },
+    {
+        question: 'Are these authentication components secure?',
+        answer: 'These components provide the UI layer. Security depends on your backend implementation. Always use HTTPS, validate inputs server-side, and follow OWASP security best practices.',
+    },
+    {
+        question: 'Do these components work with Nuxt Auth?',
+        answer: 'Yes, these components are UI-only and can be integrated with any authentication library or service, including Nuxt Auth, Supabase Auth, or custom solutions.',
+    },
+]
+
+// Structured Data
+const breadcrumbData = generateBreadcrumbList(breadcrumbs)
+addStructuredData(breadcrumbData)
+
+const faqData = generateFAQPage(faqItems)
+addStructuredData(faqData)
+
 useHead({
-  htmlAttrs: {
-    lang: 'en'
-  }
+    htmlAttrs: {
+        lang: 'en'
+    },
+    link: [
+        {
+            rel: 'canonical',
+            href: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
+        }
+    ]
 })
 </script>

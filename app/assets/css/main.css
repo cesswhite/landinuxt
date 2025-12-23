@@ -10,7 +10,7 @@
   --font-family-instrument: "Instrument Serif", serif;
   --font-family-roboto: "Roboto", sans-serif;
 
-  /* See config: https://ui3.nuxt.dev/getting-started/theme#colors */
+  /* See config: https://ui.nuxt.com/docs/getting-started/theme/css-variables */
 
   --color-primary-50: var(--ui-color-primary-50);
   --color-primary-100: var(--ui-color-primary-100);

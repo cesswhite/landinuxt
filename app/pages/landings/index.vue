@@ -23,15 +23,15 @@ const config = useRuntimeConfig()
 const route = useRoute()
 
 useSeoMeta({
-  title: "Landing Pages | LandiNuxt",
-  description: "Explore a variety of beautifully pre-built landing pages so you can launch your project today — not someday. Instant pages for instant results.",
-  ogTitle: "Landing Pages | LandiNuxt",
-  ogDescription: "Explore a variety of beautifully pre-built landing pages so you can launch your project today — not someday. Instant pages for instant results.",
+  title: "Nuxt Landing Page Templates: Pre-built Complete Landing Pages | LandiNuxt",
+  description: "Explore complete pre-built Nuxt landing page templates: Simple, Showcase, SaaS, and Agency designs. Ready-to-launch templates with Hero, Features, Pricing, FAQ, and CTA sections. Copy-paste ready for Nuxt UI v4.",
+  ogTitle: "Nuxt Landing Page Templates: Pre-built Complete Landing Pages | LandiNuxt",
+  ogDescription: "Explore complete pre-built Nuxt landing page templates. Ready-to-launch templates with all sections included. Copy-paste ready for Nuxt UI v4.",
   ogImage: "/og-landinuxt.jpg",
   ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
   twitterCard: "summary_large_image",
-  twitterTitle: "Landing Pages | LandiNuxt",
-  twitterDescription: "Explore a variety of beautifully pre-built landing pages so you can launch your project today — not someday. Instant pages for instant results.",
+  twitterTitle: "Nuxt Landing Page Templates: Pre-built Complete Landing Pages | LandiNuxt",
+  twitterDescription: "Explore complete pre-built Nuxt landing page templates. Ready-to-launch for Nuxt UI v4.",
   twitterImage: "/og-landinuxt.jpg",
   ogImageWidth: 1200,
   ogImageHeight: 630,

@@ -22,15 +22,15 @@ const config = useRuntimeConfig()
 const route = useRoute()
 
 useSeoMeta({
-  title: "All Components | LandiNuxt",
-  description: "Browse our complete collection of pre-built UI components. Beautiful, responsive UI blocks ready to drop into any Nuxt project. Headers, heroes, features, footers, and more.",
-  ogTitle: "All Components | LandiNuxt",
-  ogDescription: "Browse our complete collection of pre-built UI components. Beautiful, responsive UI blocks ready to drop into any Nuxt project. Headers, heroes, features, footers, and more.",
+  title: "All Nuxt Landing Components | Hero, Features, Pricing, FAQ, CTA, Headers, Footers | LandiNuxt",
+  description: "Browse 100+ pre-built Nuxt landing page components. Hero sections, features, pricing tables, FAQ sections, CTAs, headers, footers, testimonials, contact forms, and more. Copy-paste ready, fully compatible with Nuxt UI v4.",
+  ogTitle: "All Nuxt Landing Components | LandiNuxt",
+  ogDescription: "Browse 100+ pre-built Nuxt landing page components. Hero, features, pricing, FAQ, CTA, headers, footers, and more. Copy-paste ready for Nuxt UI v4.",
   ogImage: "/og-landinuxt.jpg",
   ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
   twitterCard: "summary_large_image",
-  twitterTitle: "All Components | LandiNuxt",
-  twitterDescription: "Browse our complete collection of pre-built UI components. Beautiful, responsive UI blocks ready to drop into any Nuxt project. Headers, heroes, features, footers, and more.",
+  twitterTitle: "All Nuxt Landing Components | LandiNuxt",
+  twitterDescription: "Browse 100+ pre-built Nuxt landing page components. Copy-paste ready for Nuxt UI v4.",
   twitterImage: "/og-landinuxt.jpg",
   ogImageWidth: 1200,
   ogImageHeight: 630,
