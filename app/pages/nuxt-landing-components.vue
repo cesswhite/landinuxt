@@ -2,7 +2,7 @@
     <NuxtLayout name="default">
         <UContainer>
             <!-- Breadcrumbs -->
-            <div class="pt-8 pb-4">
+            <div class="pt-32 pb-4">
                 <UBreadcrumb :items="breadcrumbs" />
             </div>
 
@@ -23,27 +23,11 @@
                 <h2 class="text-2xl font-bold mb-8 text-dark-950 dark:text-dark-50">
                     Pre-built Component Sections
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <UCard v-for="component in componentCategories" :key="component.name"
-                        :to="`/components/${component.name}`" class="hover:shadow-lg transition-shadow cursor-pointer">
-                        <div class="flex items-start gap-4">
-                            <div class="p-2 rounded-lg bg-primary-100 dark:bg-primary-900">
-                                <Icon :name="component.icon" class="w-6 h-6 text-primary-600 dark:text-primary-400" />
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="font-semibold text-lg mb-1 text-dark-950 dark:text-dark-50">
-                                    {{ component.label }}
-                                </h3>
-                                <p class="text-sm text-dark-950/60 dark:text-dark-50/60 mb-2">
-                                    {{ component.description }}
-                                </p>
-                                <p class="text-xs text-primary-600 dark:text-primary-400 font-medium">
-                                    {{ component.count }} components available
-                                </p>
-                            </div>
-                        </div>
-                    </UCard>
-                </div>
+                <p class="text-lg text-dark-950/60 dark:text-dark-50/60 mb-8">
+                    Browse our complete collection of pre-built Nuxt landing page components. Each category includes
+                    multiple ready-to-use components that you can copy and paste directly into your project.
+                </p>
+                <ElementsContainer />
             </div>
 
             <!-- Complete Landing Pages -->
@@ -70,22 +54,43 @@
 
             <!-- Key Features -->
             <div class="py-12 border-t border-dark-200 dark:border-dark-800">
-                <h2 class="text-2xl font-bold mb-8 text-dark-950 dark:text-dark-50">
-                    Why Choose Nuxt Landing Components?
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div v-for="feature in features" :key="feature.title">
-                        <div class="p-3 rounded-lg bg-primary-100 dark:bg-primary-900 w-fit mb-3">
-                            <Icon :name="feature.icon" class="w-5 h-5 text-primary-600 dark:text-primary-400" />
+                <AppLayout>
+                    <div class="flex w-full flex-col gap-12 rounded-xl md:gap-24">
+                        <div class="flex w-full flex-col gap-4 md:flex-row md:gap-0">
+                            <div class="flex w-full flex-col gap-2 md:w-1/2">
+                                <div
+                                    class="text-primary-500 dark:text-primary-400 relative rounded-full text-left text-sm">
+                                    Why Choose LandiNuxt
+                                </div>
+                                <h2 class="text-5xl font-bold text-dark-950 dark:text-dark-50">
+                                    Everything You Need. <br> Ready to Use
+                                </h2>
+                            </div>
+                            <div class="flex w-full items-center justify-end">
+                                <p class="font-base w-full text-dark-950/60 md:w-1/2 dark:text-dark-50/80">
+                                    Pre-built components designed for Nuxt developers. <br>
+                                    Copy, paste, and customize to build landing pages that convert.
+                                </p>
+                            </div>
                         </div>
-                        <h3 class="font-semibold mb-2 text-dark-950 dark:text-dark-50">
-                            {{ feature.title }}
-                        </h3>
-                        <p class="text-sm text-dark-950/60 dark:text-dark-50/60">
-                            {{ feature.description }}
-                        </p>
+                        <div class="grid grid-cols-12 gap-x-4 gap-y-8 md:gap-y-12">
+                            <div v-for="feature in features" :key="feature.title"
+                                class="col-span-full md:col-span-4 flex flex-1 flex-col gap-2">
+                                <div
+                                    class="flex size-10 items-center justify-center rounded-md border border-dark-950/20 bg-dark-200/20 p-2 dark:border-dark-700 dark:bg-dark-800">
+                                    <UIcon :name="feature.icon" class="size-full text-dark-950 dark:text-dark-50" />
+                                </div>
+                                <span class="text-xl font-bold text-dark-950 dark:text-dark-50">
+                                    {{ feature.title }}
+                                </span>
+                                <p
+                                    class="w-full text-base font-normal text-dark-950/60 lg:w-10/12 dark:text-dark-50/60">
+                                    {{ feature.description }}
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </AppLayout>
             </div>
 
             <!-- FAQ Section -->
@@ -137,118 +142,26 @@ const breadcrumbs = generateBreadcrumbs([
     { label: 'Nuxt Landing Components', icon: 'i-lucide-layers' },
 ])
 
-// Component categories
-const _hero = await queryContent('hero').find()
-const _headers = await queryContent('headers').find()
-const _features = await queryContent('features').find()
-const _footers = await queryContent('footers').find()
-const _cta = await queryContent('cta').find()
-const _testimonials = await queryContent('testimonials').find()
-const _contact = await queryContent('contact').find()
-const _logos = await queryContent('logos').find()
-const _faq = await queryContent('faq').find()
-const _auth = await queryContent('auth').find()
-const _gallery = await queryContent('gallery').find()
-
-const componentCategories = [
-    {
-        name: 'hero',
-        label: 'Hero Sections',
-        description: 'Eye-catching hero sections with CTAs, images, and animations',
-        count: _hero.length,
-        icon: 'i-lucide-sparkles',
-    },
-    {
-        name: 'headers',
-        label: 'Headers & Navigation',
-        description: 'Responsive navigation bars and headers',
-        count: _headers.length,
-        icon: 'i-lucide-menu',
-    },
-    {
-        name: 'features',
-        label: 'Features',
-        description: 'Showcase product features and benefits',
-        count: _features.length,
-        icon: 'i-lucide-star',
-    },
-    {
-        name: 'cta',
-        label: 'Call-to-Action',
-        description: 'High-converting CTA sections',
-        count: _cta.length,
-        icon: 'i-lucide-megaphone',
-    },
-    {
-        name: 'testimonials',
-        label: 'Testimonials',
-        description: 'Social proof and customer testimonials',
-        count: _testimonials.length,
-        icon: 'i-lucide-message-square',
-    },
-    {
-        name: 'faq',
-        label: 'FAQ Sections',
-        description: 'Frequently asked questions and answers',
-        count: _faq.length,
-        icon: 'i-lucide-help-circle',
-    },
-    {
-        name: 'contact',
-        label: 'Contact Forms',
-        description: 'Contact and inquiry forms',
-        count: _contact.length,
-        icon: 'i-lucide-mail',
-    },
-    {
-        name: 'footers',
-        label: 'Footers',
-        description: 'Complete footer sections with links',
-        count: _footers.length,
-        icon: 'i-lucide-layout',
-    },
-    {
-        name: 'logos',
-        label: 'Logo Sections',
-        description: 'Client logos and brand showcases',
-        count: _logos.length,
-        icon: 'i-lucide-image',
-    },
-    {
-        name: 'auth',
-        label: 'Authentication',
-        description: 'Sign-in, sign-up, and password recovery',
-        count: _auth.length,
-        icon: 'i-lucide-lock',
-    },
-    {
-        name: 'gallery',
-        label: 'Galleries',
-        description: 'Image galleries and portfolios',
-        count: _gallery.length,
-        icon: 'i-lucide-images',
-    },
-]
 
 const features = [
     {
         title: 'Nuxt UI v4 Integration',
-        description: 'Fully compatible with Nuxt UI v4, the official UI library for Nuxt',
+        description: 'Fully compatible with Nuxt UI v4, the official UI library for Nuxt. Access a library of essential elements for landing page creation, optimized for any project.',
         icon: 'i-lucide-package',
     },
     {
         title: 'SSR/ISR Ready',
-        description: 'Optimized for server-side rendering and incremental static regeneration',
+        description: 'Optimized for server-side rendering and incremental static regeneration. Get the best performance with Core Web Vitals optimization built-in.',
         icon: 'i-lucide-server',
     },
     {
-        title: 'Dark Mode',
-        description: 'All components support dark mode out of the box',
+        title: 'Dark Mode Support',
+        description: 'All components support dark mode out of the box. Easily tailor each component to your style with built-in theme support.',
         icon: 'i-lucide-moon',
     },
     {
-        title: 'Accessible',
-        description: 'Built with accessibility best practices in mind',
+        title: 'Accessible by Design',
+        description: 'Built with accessibility best practices in mind. Every component follows WCAG guidelines for inclusive web experiences.',
         icon: 'i-lucide-accessibility',
     },
 ]
