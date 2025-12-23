@@ -30,9 +30,28 @@
 
 <script setup lang="ts">
 import type { CTATemplates } from "../../../../types/templates";
+const config = useRuntimeConfig()
+const route = useRoute()
 const _cta = await queryContent("cta").find();
 
 useSeoMeta({
-  title: "CTA Section | LandiNuxt",
-});
+  title: "CTA Components | LandiNuxt",
+  description: "Transform your website's conversion rates with our premium Call-to-Action components. Each component is optimized for maximum engagement and designed to turn visitors into customers.",
+  ogTitle: "CTA Components | LandiNuxt",
+  ogDescription: "Transform your website's conversion rates with our premium Call-to-Action components. Each component is optimized for maximum engagement and designed to turn visitors into customers.",
+  ogImage: "/og-landinuxt.jpg",
+  ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
+  twitterCard: "summary_large_image",
+  twitterTitle: "CTA Components | LandiNuxt",
+  twitterDescription: "Transform your website's conversion rates with our premium Call-to-Action components. Each component is optimized for maximum engagement and designed to turn visitors into customers.",
+  twitterImage: "/og-landinuxt.jpg",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+})
+
+useHead({
+  htmlAttrs: {
+    lang: 'en'
+  }
+})
 </script>

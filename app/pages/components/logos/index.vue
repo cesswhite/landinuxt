@@ -23,9 +23,28 @@
 
 <script setup lang="ts">
 import type { LogosTemplates } from "../../../../types/templates";
+const config = useRuntimeConfig()
+const route = useRoute()
 const _logos = await queryContent("logos").find();
 
 useSeoMeta({
-    title: "Logos Section | LandiNuxt",
-});
+  title: "Logo Components | LandiNuxt",
+  description: "Elevate your brand's visibility with our diverse range of Logos section components. Each component is designed to showcase your partnerships and collaborations in a visually appealing way.",
+  ogTitle: "Logo Components | LandiNuxt",
+  ogDescription: "Elevate your brand's visibility with our diverse range of Logos section components. Each component is designed to showcase your partnerships and collaborations in a visually appealing way.",
+  ogImage: "/og-landinuxt.jpg",
+  ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
+  twitterCard: "summary_large_image",
+  twitterTitle: "Logo Components | LandiNuxt",
+  twitterDescription: "Elevate your brand's visibility with our diverse range of Logos section components. Each component is designed to showcase your partnerships and collaborations in a visually appealing way.",
+  twitterImage: "/og-landinuxt.jpg",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+})
+
+useHead({
+  htmlAttrs: {
+    lang: 'en'
+  }
+})
 </script>

@@ -19,7 +19,27 @@
 </template>
 
 <script setup lang="ts">
+const config = useRuntimeConfig()
+const route = useRoute()
+
 useSeoMeta({
-    title: "Landing Pages Section | LandiNuxt",
-});
+  title: "Landing Pages | LandiNuxt",
+  description: "Explore a variety of beautifully pre-built landing pages so you can launch your project today — not someday. Instant pages for instant results.",
+  ogTitle: "Landing Pages | LandiNuxt",
+  ogDescription: "Explore a variety of beautifully pre-built landing pages so you can launch your project today — not someday. Instant pages for instant results.",
+  ogImage: "/og-landinuxt.jpg",
+  ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
+  twitterCard: "summary_large_image",
+  twitterTitle: "Landing Pages | LandiNuxt",
+  twitterDescription: "Explore a variety of beautifully pre-built landing pages so you can launch your project today — not someday. Instant pages for instant results.",
+  twitterImage: "/og-landinuxt.jpg",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+})
+
+useHead({
+  htmlAttrs: {
+    lang: 'en'
+  }
+})
 </script>

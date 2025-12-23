@@ -25,9 +25,28 @@
 
 <script setup lang="ts">
 import type { FootersTemplates } from "../../../../types/templates";
+const config = useRuntimeConfig()
+const route = useRoute()
 const _footers = await queryContent("footers").find();
 
 useSeoMeta({
-    title: "Footers Section | LandiNuxt",
-});
+  title: "Footer Components | LandiNuxt",
+  description: "Discover a range of footer sections designed to provide both functionality and style. From minimal to content-rich designs, these footers are crafted to enhance user experience and ensure seamless navigation.",
+  ogTitle: "Footer Components | LandiNuxt",
+  ogDescription: "Discover a range of footer sections designed to provide both functionality and style. From minimal to content-rich designs, these footers are crafted to enhance user experience and ensure seamless navigation.",
+  ogImage: "/og-landinuxt.jpg",
+  ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
+  twitterCard: "summary_large_image",
+  twitterTitle: "Footer Components | LandiNuxt",
+  twitterDescription: "Discover a range of footer sections designed to provide both functionality and style. From minimal to content-rich designs, these footers are crafted to enhance user experience and ensure seamless navigation.",
+  twitterImage: "/og-landinuxt.jpg",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+})
+
+useHead({
+  htmlAttrs: {
+    lang: 'en'
+  }
+})
 </script>

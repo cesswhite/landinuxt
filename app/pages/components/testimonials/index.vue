@@ -24,9 +24,28 @@
 
 <script setup lang="ts">
 import type { TestimonialsTemplates } from "../../../../types/templates";
+const config = useRuntimeConfig()
+const route = useRoute()
 const _testimonials = await queryContent("testimonials").find();
 
 useSeoMeta({
-    title: "Testimonials Section | LandiNuxt",
-});
+  title: "Testimonial Components | LandiNuxt",
+  description: "Enhance your website's credibility with our premium Testimonials components. Each component is crafted to showcase customer satisfaction and build trust with potential clients.",
+  ogTitle: "Testimonial Components | LandiNuxt",
+  ogDescription: "Enhance your website's credibility with our premium Testimonials components. Each component is crafted to showcase customer satisfaction and build trust with potential clients.",
+  ogImage: "/og-landinuxt.jpg",
+  ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
+  twitterCard: "summary_large_image",
+  twitterTitle: "Testimonial Components | LandiNuxt",
+  twitterDescription: "Enhance your website's credibility with our premium Testimonials components. Each component is crafted to showcase customer satisfaction and build trust with potential clients.",
+  twitterImage: "/og-landinuxt.jpg",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+})
+
+useHead({
+  htmlAttrs: {
+    lang: 'en'
+  }
+})
 </script>

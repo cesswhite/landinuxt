@@ -22,9 +22,28 @@
 
 <script setup lang="ts">
 import type { AuthTemplates } from "../../../../types/templates";
+const config = useRuntimeConfig()
+const route = useRoute()
 const _auth = await queryContent("auth").find();
 
 useSeoMeta({
-    title: "Auth Section | LandiNuxt",
-});
+  title: "Authentication Components | LandiNuxt",
+  description: "Enhance your website's user experience with our advanced authentication components. Each component is designed for seamless interaction and to facilitate essential tasks such as signin, signup, password recovery, and token management, covering all aspects of the authentication flow.",
+  ogTitle: "Authentication Components | LandiNuxt",
+  ogDescription: "Enhance your website's user experience with our advanced authentication components. Each component is designed for seamless interaction and to facilitate essential tasks such as signin, signup, password recovery, and token management, covering all aspects of the authentication flow.",
+  ogImage: "/og-landinuxt.jpg",
+  ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
+  twitterCard: "summary_large_image",
+  twitterTitle: "Authentication Components | LandiNuxt",
+  twitterDescription: "Enhance your website's user experience with our advanced authentication components. Each component is designed for seamless interaction and to facilitate essential tasks such as signin, signup, password recovery, and token management, covering all aspects of the authentication flow.",
+  twitterImage: "/og-landinuxt.jpg",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+})
+
+useHead({
+  htmlAttrs: {
+    lang: 'en'
+  }
+})
 </script>

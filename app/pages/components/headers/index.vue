@@ -24,9 +24,28 @@
 
 <script setup lang="ts">
 import type { HeadersTemplates } from "../../../../types/templates";
+const config = useRuntimeConfig()
+const route = useRoute()
 const _headers = await queryContent("headers").find();
 
 useSeoMeta({
-  title: "Headers Section | LandiNuxt",
-});
+  title: "Header Components | LandiNuxt",
+  description: "Explore a diverse collection of header sections crafted to captivate your audience. From clean and simple to feature-rich designs, these headers effectively convey your message and engage users.",
+  ogTitle: "Header Components | LandiNuxt",
+  ogDescription: "Explore a diverse collection of header sections crafted to captivate your audience. From clean and simple to feature-rich designs, these headers effectively convey your message and engage users.",
+  ogImage: "/og-landinuxt.jpg",
+  ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
+  twitterCard: "summary_large_image",
+  twitterTitle: "Header Components | LandiNuxt",
+  twitterDescription: "Explore a diverse collection of header sections crafted to captivate your audience. From clean and simple to feature-rich designs, these headers effectively convey your message and engage users.",
+  twitterImage: "/og-landinuxt.jpg",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+})
+
+useHead({
+  htmlAttrs: {
+    lang: 'en'
+  }
+})
 </script>

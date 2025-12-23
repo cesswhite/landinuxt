@@ -18,7 +18,27 @@
 </template>
 
 <script setup lang="ts">
+const config = useRuntimeConfig()
+const route = useRoute()
+
 useSeoMeta({
-    title: "All Components Section | LandiNuxt",
-});
+  title: "All Components | LandiNuxt",
+  description: "Browse our complete collection of pre-built UI components. Beautiful, responsive UI blocks ready to drop into any Nuxt project. Headers, heroes, features, footers, and more.",
+  ogTitle: "All Components | LandiNuxt",
+  ogDescription: "Browse our complete collection of pre-built UI components. Beautiful, responsive UI blocks ready to drop into any Nuxt project. Headers, heroes, features, footers, and more.",
+  ogImage: "/og-landinuxt.jpg",
+  ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
+  twitterCard: "summary_large_image",
+  twitterTitle: "All Components | LandiNuxt",
+  twitterDescription: "Browse our complete collection of pre-built UI components. Beautiful, responsive UI blocks ready to drop into any Nuxt project. Headers, heroes, features, footers, and more.",
+  twitterImage: "/og-landinuxt.jpg",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+})
+
+useHead({
+  htmlAttrs: {
+    lang: 'en'
+  }
+})
 </script>

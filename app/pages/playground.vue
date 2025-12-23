@@ -33,6 +33,29 @@
 </template>
 
 <script setup lang="ts">
+const config = useRuntimeConfig()
+const route = useRoute()
+
+useSeoMeta({
+  title: "Playground | LandiNuxt",
+  description: "Interactive playground to explore and test LandiNuxt components in real-time. Experiment with different UI elements and see them come to life.",
+  ogTitle: "Playground | LandiNuxt",
+  ogDescription: "Interactive playground to explore and test LandiNuxt components in real-time. Experiment with different UI elements and see them come to life.",
+  ogImage: "/og-landinuxt.jpg",
+  ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
+  twitterCard: "summary_large_image",
+  twitterTitle: "Playground | LandiNuxt",
+  twitterDescription: "Interactive playground to explore and test LandiNuxt components in real-time. Experiment with different UI elements and see them come to life.",
+  twitterImage: "/og-landinuxt.jpg",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+})
+
+useHead({
+  htmlAttrs: {
+    lang: 'en'
+  }
+})
 
 const images = [
   {

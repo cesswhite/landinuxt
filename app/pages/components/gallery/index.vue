@@ -19,10 +19,29 @@
 
 <script setup lang="ts">
 import type { GalleryTemplates } from "../../../../types/templates";
+const config = useRuntimeConfig()
+const route = useRoute()
 const _gallery = await queryContent("gallery").find();
 
 useSeoMeta({
-  title: "Gallery Section | LandiNuxt",
-});
+  title: "Gallery Components | LandiNuxt",
+  description: "Showcase your visual content with beautiful gallery sections. From grid layouts to lightbox displays, these components help you present images, portfolios, and media in an engaging and professional way.",
+  ogTitle: "Gallery Components | LandiNuxt",
+  ogDescription: "Showcase your visual content with beautiful gallery sections. From grid layouts to lightbox displays, these components help you present images, portfolios, and media in an engaging and professional way.",
+  ogImage: "/og-landinuxt.jpg",
+  ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
+  twitterCard: "summary_large_image",
+  twitterTitle: "Gallery Components | LandiNuxt",
+  twitterDescription: "Showcase your visual content with beautiful gallery sections. From grid layouts to lightbox displays, these components help you present images, portfolios, and media in an engaging and professional way.",
+  twitterImage: "/og-landinuxt.jpg",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+})
+
+useHead({
+  htmlAttrs: {
+    lang: 'en'
+  }
+})
 </script>
 

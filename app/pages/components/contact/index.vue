@@ -22,9 +22,28 @@
 
 <script setup lang="ts">
 import type { ContactTemplates } from "../../../../types/templates";
+const config = useRuntimeConfig()
+const route = useRoute()
 const _contact = await queryContent("contact").find();
 
 useSeoMeta({
-    title: "Contact Section | LandiNuxt",
-});
+  title: "Contact Components | LandiNuxt",
+  description: "Enhance your website's user experience with our advanced Contact section components. Each component is crafted for seamless interaction and designed to facilitate meaningful connections.",
+  ogTitle: "Contact Components | LandiNuxt",
+  ogDescription: "Enhance your website's user experience with our advanced Contact section components. Each component is crafted for seamless interaction and designed to facilitate meaningful connections.",
+  ogImage: "/og-landinuxt.jpg",
+  ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
+  twitterCard: "summary_large_image",
+  twitterTitle: "Contact Components | LandiNuxt",
+  twitterDescription: "Enhance your website's user experience with our advanced Contact section components. Each component is crafted for seamless interaction and designed to facilitate meaningful connections.",
+  twitterImage: "/og-landinuxt.jpg",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+})
+
+useHead({
+  htmlAttrs: {
+    lang: 'en'
+  }
+})
 </script>
