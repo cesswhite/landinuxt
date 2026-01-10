@@ -32,11 +32,30 @@
 import type { FeaturesTemplates } from "../../../../types/templates";
 const config = useRuntimeConfig()
 const route = useRoute()
+const { generateBreadcrumbs } = useBreadcrumbs()
+const { generateBreadcrumbList, generateItemList, generateWebPage, addStructuredData } = useStructuredData()
 const _features = await queryContent("features").find();
+
+// Breadcrumbs
+const breadcrumbs = generateBreadcrumbs([
+  { label: 'Home', icon: 'i-lucide-home', to: '/' },
+  { label: 'Components', icon: 'i-lucide-layers', to: '/components' },
+  { label: 'Features', icon: 'i-lucide-star' },
+])
+
+// Build ItemList for feature components
+const featureItems = computed(() => {
+  return _features.map((item, index) => ({
+    name: `Nuxt Feature Component ${index + 1}: ${item.title || `Feature ${index + 1}`}`,
+    description: item.description || `Pre-built Nuxt feature section component for landing pages. Copy-paste ready, fully compatible with Nuxt UI v4.`,
+    url: `/components/features#${item._path?.replace('/features/', '') || index + 1}`,
+    position: index + 1,
+  }))
+})
 
 useSeoMeta({
   title: "Nuxt Feature Components: 13+ Pre-built Feature Sections for Landing Pages | LandiNuxt",
-  description: "Discover 13+ pre-built Nuxt feature sections to showcase your product benefits. From minimalist to feature-packed designs with icons, images, and descriptions. Copy-paste ready, fully compatible with Nuxt UI v4.",
+  description: "Nuxt landing components: Discover 13+ pre-built Nuxt feature sections to showcase your product benefits. From minimalist to feature-packed designs with icons, images, and descriptions. Copy-paste ready, fully compatible with Nuxt UI v4.",
   ogTitle: "Nuxt Feature Components: 13+ Pre-built Feature Sections | LandiNuxt",
   ogDescription: "Discover 13+ pre-built Nuxt feature sections. Copy-paste ready feature components with icons, images, and descriptions. Fully compatible with Nuxt UI v4.",
   ogImage: "/og-landinuxt.jpg",
@@ -49,9 +68,30 @@ useSeoMeta({
   ogImageHeight: 630,
 })
 
+// Structured Data
+const breadcrumbData = generateBreadcrumbList(breadcrumbs)
+addStructuredData(breadcrumbData)
+
+const itemListData = generateItemList(featureItems.value)
+addStructuredData(itemListData)
+
+const webPageData = generateWebPage({
+  name: 'Nuxt Feature Components for Landing Pages',
+  description: 'Browse 13+ pre-built Nuxt feature section components for landing pages. Copy-paste ready feature components with icons, images, and descriptions. Fully compatible with Nuxt UI v4.',
+  url: route.path,
+  breadcrumb: breadcrumbs,
+})
+addStructuredData(webPageData)
+
 useHead({
   htmlAttrs: {
     lang: 'en'
-  }
+  },
+  link: [
+    {
+      rel: 'canonical',
+      href: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
+    },
+  ],
 })
 </script>

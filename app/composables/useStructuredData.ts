@@ -1,8 +1,17 @@
 import type { BreadcrumbItem } from '@nuxt/ui'
 
 export interface StructuredDataOptions {
-  type: 'BreadcrumbList' | 'FAQPage' | 'Article' | 'HowTo' | 'Organization' | 'WebSite'
+  type: 'BreadcrumbList' | 'FAQPage' | 'Article' | 'HowTo' | 'Organization' | 'WebSite' | 'ItemList' | 'WebPage' | 'Person'
   data?: Record<string, any>
+}
+
+export interface ItemListItem {
+  '@type': string
+  position: number
+  name: string
+  description?: string
+  url?: string
+  image?: string
 }
 
 export const useStructuredData = () => {
@@ -55,6 +64,7 @@ export const useStructuredData = () => {
         ? {
             '@type': 'Person',
             name: article.author,
+            url: `${siteUrl}/about`,
           }
         : undefined,
       datePublished: article.datePublished,
@@ -92,17 +102,27 @@ export const useStructuredData = () => {
     }
   }
 
-  const generateOrganization = () => {
+  const generateOrganization = (options?: {
+    sameAs?: string[]
+    logo?: string
+  }) => {
     return {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'LandiNuxt',
       url: siteUrl,
-      logo: `${siteUrl}/favicon.svg`,
+      logo: {
+        '@type': 'ImageObject',
+        url: options?.logo || `${siteUrl}/favicon.svg`,
+      },
       description:
         'Pre-built Nuxt landing page components and templates. Build beautiful, responsive landing pages faster.',
-      sameAs: [
-        // Add social media links if available
+      sameAs: options?.sameAs || [
+        // Add social media links: GitHub, YouTube, X/Twitter, LinkedIn
+        // Example: 'https://github.com/yourusername/landinuxt',
+        // 'https://www.youtube.com/@landinuxt',
+        // 'https://twitter.com/landinuxt',
+        // 'https://www.linkedin.com/company/landinuxt',
       ],
     }
   }
@@ -126,6 +146,70 @@ export const useStructuredData = () => {
     }
   }
 
+  const generateItemList = (items: Array<{
+    name: string
+    description?: string
+    url?: string
+    image?: string
+    position: number
+  }>) => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      numberOfItems: items.length,
+      itemListElement: items.map((item) => ({
+        '@type': 'ListItem',
+        position: item.position,
+        name: item.name,
+        description: item.description,
+        url: item.url ? `${siteUrl}${item.url}` : undefined,
+        image: item.image ? `${siteUrl}${item.image}` : undefined,
+      })),
+    }
+  }
+
+  const generateWebPage = (options: {
+    name: string
+    description: string
+    url?: string
+    breadcrumb?: BreadcrumbItem[]
+    mainEntity?: {
+      '@type': string
+      [key: string]: any
+    }
+  }) => {
+    const pageUrl = options.url || route.path
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: options.name,
+      description: options.description,
+      url: `${siteUrl}${pageUrl}`,
+      breadcrumb: options.breadcrumb ? generateBreadcrumbList(options.breadcrumb) : undefined,
+      mainEntity: options.mainEntity,
+    }
+  }
+
+  const generatePerson = (options: {
+    name: string
+    description?: string
+    jobTitle?: string
+    image?: string
+    sameAs?: string[]
+    url?: string
+  }) => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: options.name,
+      description: options.description,
+      jobTitle: options.jobTitle,
+      image: options.image ? `${siteUrl}${options.image}` : undefined,
+      url: options.url ? `${siteUrl}${options.url}` : options.url,
+      sameAs: options.sameAs || [],
+    }
+  }
+
   const addStructuredData = (structuredData: Record<string, any>) => {
     useHead({
       script: [
@@ -144,6 +228,9 @@ export const useStructuredData = () => {
     generateHowTo,
     generateOrganization,
     generateWebSite,
+    generateItemList,
+    generateWebPage,
+    generatePerson,
     addStructuredData,
   }
 }

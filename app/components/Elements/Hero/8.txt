@@ -1,0 +1,166 @@
+# double-marquee - Hero Component
+
+## Description
+
+A hero section that includes a title, description, two call-to-action buttons, and a double marquee display of art
+
+## Rules for Implementation
+
+When creating this component, follow these rules:
+
+1. **Framework**: Use Nuxt 3 with Composition API (script setup)
+2. **UI Library**: Use Nuxt UI v4 components (UButton, NuxtImg, etc.)
+3. **Styling**: Use Tailwind CSS v4 utility classes
+4. **Responsive Design**: Ensure the component is fully responsive (mobile-first approach)
+5. **Dark Mode**: Make sure the component supports dark mode when applicable
+6. **Accessibility**: Include proper ARIA labels and semantic HTML
+7. **Performance**: Use lazy loading for images and optimize assets
+8. **Code Quality**: Write clean, readable, and maintainable code
+9. **TypeScript**: Use TypeScript for type safety (if applicable)
+10. **Component Structure**: Follow Vue 3 best practices and composition patterns
+
+## Required Skills
+
+To implement this component, you should have knowledge of:
+
+- **Vue 3**: Composition API, script setup, template syntax
+- **Nuxt 3**: File-based routing, auto-imports, composables
+- **Nuxt UI v4**: Component library usage (UButton, NuxtImg, USlideover, etc.)
+- **Tailwind CSS v4**: Utility-first CSS framework, responsive design, dark mode
+- **TypeScript**: Type definitions, interfaces (optional but recommended)
+- **Responsive Design**: Mobile-first approach, breakpoints, flexible layouts
+- **Modern CSS**: Flexbox, Grid, gradients, positioning
+
+## Reference Component Code
+
+This is the complete working code for this component. Use it as a reference:
+
+```vue
+<template>
+  <!-- README
+  To use the Instrument Serif Font Family, ensure you have installed the latest version of
+      Nuxt UI. You can visit the following link to install:
+  https://ui.nuxt.com/docs/getting-started/installation/nuxt
+  After this, ensure to add the following code in your main.css file or app.vue
+  
+  --font-family-instrument: "Instrument Serif", serif;
+  
+  That's it! You can now use the Instrument Serif font in your app.
+   -->
+  <div
+    class="bg-dark-50 dark:bg-dark-950 relative flex h-full min-h-dvh w-full flex-col items-center justify-center pt-32 pb-4 xl:pt-24"
+  >
+    <div class="relative z-20 grid w-full grid-cols-12 gap-y-12 md:gap-y-24">
+      <div class="col-span-full flex flex-col items-start justify-center px-4">
+        <h1
+          class="text-dark-900 dark:text-dark-50 mt-4 w-full text-left font-sans text-5xl font-light md:text-7xl"
+        >
+          Share
+          <span class="font-family-instrument inline-block italic">skills</span>
+          <br />
+          &
+          <span class="font-family-instrument inline-block italic">grow</span>
+          together
+        </h1>
+        <p
+          class="text-dark-900/60 dark:text-dark-50/60 mt-4 w-full text-left text-lg leading-8 2xl:text-xl"
+        >
+          Swap your talents, learn new tricks, and level up—together we grow
+          faster!
+        </p>
+        <div class="mt-4 flex w-auto items-start justify-start gap-2">
+          <UButton
+            variant="solid"
+            color="neutral"
+            size="lg"
+            class="rounded-full"
+          >
+            Get started
+          </UButton>
+          <UButton
+            variant="link"
+            color="neutral"
+            size="lg"
+            class="rounded-full"
+          >
+            Discover more
+          </UButton>
+        </div>
+      </div>
+      <div class="col-span-full">
+        <div class="flex w-full flex-col gap-4">
+          <UMarquee pause-on-hover>
+            <div
+              class="flex w-full items-center justify-center gap-4 first:ml-0 xl:justify-between xl:first:ml-4"
+            >
+              <template v-for="(f_image, index) in images" :key="index">
+                <NuxtImg
+                  class="size-48 object-cover object-center xl:size-52"
+                  :src="f_image"
+                  loading="lazy"
+                  alt="my-photo-work"
+                  :placeholder="[50, 25, 75, 5]"
+                  format="webp"
+                />
+              </template>
+            </div>
+          </UMarquee>
+          <UMarquee pause-on-hover reverse>
+            <div
+              class="flex w-full items-center justify-center gap-4 first:ml-4 xl:first:ml-4"
+            >
+              <template v-for="(f_image, index) in images" :key="index">
+                <NuxtImg
+                  class="size-48 object-cover object-center xl:size-52"
+                  :src="f_image"
+                  loading="lazy"
+                  alt="my-photo-work"
+                  :placeholder="[50, 25, 75, 5]"
+                  format="webp"
+                />
+              </template>
+            </div>
+          </UMarquee>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+const images = [
+  "https://images.unsplash.com/photo-1557802891-958ecf3d5992?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1560135874-bb540cdd5929?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1559926431-73aebfacd993?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1559762412-627400abeec1?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1560065569-21beb63d2b0c?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1559666126-84f389727b9a?q=80&w=1754&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1502759683299-cdcd6974244f?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+];
+</script>
+```
+
+## Code Explanation
+
+This Vue component implements a double-marquee for landing pages. It uses Nuxt UI components such as UButton, USlideover, NuxtImg, etc. The code is optimized to be responsive and compatible with dark mode when available.
+
+## Technical Implementation Details
+
+### Key Features:
+
+- **Responsive Layout**: Uses Tailwind's responsive breakpoints (sm:, md:, lg:, xl:, 2xl:)
+- **Component Library**: Leverages Nuxt UI v4 for consistent design system
+- **Image Optimization**: Uses NuxtImg for automatic image optimization and lazy loading
+- **Dark Mode Support**: Includes dark mode classes (dark:) for theme switching
+- **Accessibility**: Proper semantic HTML and ARIA attributes
+
+## Usage Instructions
+
+1. Copy the component code above
+2. Paste it into your Nuxt 3 project
+3. Ensure you have Nuxt UI v4 installed: `npm install @nuxt/ui`
+4. Make sure Nuxt Image is configured: `npm install @nuxt/image`
+5. Customize the content, colors, and styling to match your needs
+6. Test the component in different screen sizes and dark mode
+

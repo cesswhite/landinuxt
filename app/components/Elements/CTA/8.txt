@@ -1,0 +1,89 @@
+# connect - CTA Component
+
+## Description
+
+This CTA component features a title, description, and a prominent button for connecting, all set against a vibrant gradient background with a primary color scheme
+
+## Rules for Implementation
+
+When creating this component, follow these rules:
+
+1. **Framework**: Use Nuxt 3 with Composition API (script setup)
+2. **UI Library**: Use Nuxt UI v4 components (UButton, NuxtImg, etc.)
+3. **Styling**: Use Tailwind CSS v4 utility classes
+4. **Responsive Design**: Ensure the component is fully responsive (mobile-first approach)
+5. **Dark Mode**: Make sure the component supports dark mode when applicable
+6. **Accessibility**: Include proper ARIA labels and semantic HTML
+7. **Performance**: Use lazy loading for images and optimize assets
+8. **Code Quality**: Write clean, readable, and maintainable code
+9. **TypeScript**: Use TypeScript for type safety (if applicable)
+10. **Component Structure**: Follow Vue 3 best practices and composition patterns
+
+## Required Skills
+
+To implement this component, you should have knowledge of:
+
+- **Vue 3**: Composition API, script setup, template syntax
+- **Nuxt 3**: File-based routing, auto-imports, composables
+- **Nuxt UI v4**: Component library usage (UButton, NuxtImg, USlideover, etc.)
+- **Tailwind CSS v4**: Utility-first CSS framework, responsive design, dark mode
+- **TypeScript**: Type definitions, interfaces (optional but recommended)
+- **Responsive Design**: Mobile-first approach, breakpoints, flexible layouts
+- **Modern CSS**: Flexbox, Grid, gradients, positioning
+
+## Reference Component Code
+
+This is the complete working code for this component. Use it as a reference:
+
+```vue
+<template>
+  <div
+    class="from-primary-800 via-primary-500 to-primary-300 relative flex h-auto w-full flex-col items-start justify-between gap-y-4 rounded-xl bg-gradient-to-tr p-8 lg:p-14 xl:flex-row xl:items-center xl:gap-y-0"
+  >
+    <div class="flex flex-col items-start justify-start gap-y-2">
+      <h1 class="text-dark-50 text-3xl font-bold">
+        Explore Components. <br />
+        Speed Up Your Development
+      </h1>
+      <p class="text-dark-50/70 w-full text-base font-medium lg:w-1/2">
+        Discover our collection of ready-to-use components, optimized with Nuxt
+        UI. Copy, paste, and customize easily to create effective landing pages
+        in minutes.
+      </p>
+    </div>
+    <UButton
+      to="/components"
+      trailing-icon="i-heroicons-arrow-right"
+      variant="solid"
+      size="xl"
+      class="bg-dark-50/90 hover:bg-dark-50 text-primary-500 rounded-full px-6"
+    >
+      Connect
+    </UButton>
+  </div>
+</template>
+```
+
+## Code Explanation
+
+This Vue component implements a connect for landing pages. It uses Nuxt UI components such as UButton, USlideover, NuxtImg, etc. The code is optimized to be responsive and compatible with dark mode when available.
+
+## Technical Implementation Details
+
+### Key Features:
+
+- **Responsive Layout**: Uses Tailwind's responsive breakpoints (sm:, md:, lg:, xl:, 2xl:)
+- **Component Library**: Leverages Nuxt UI v4 for consistent design system
+- **Image Optimization**: Uses NuxtImg for automatic image optimization and lazy loading
+- **Dark Mode Support**: Includes dark mode classes (dark:) for theme switching
+- **Accessibility**: Proper semantic HTML and ARIA attributes
+
+## Usage Instructions
+
+1. Copy the component code above
+2. Paste it into your Nuxt 3 project
+3. Ensure you have Nuxt UI v4 installed: `npm install @nuxt/ui`
+4. Make sure Nuxt Image is configured: `npm install @nuxt/image`
+5. Customize the content, colors, and styling to match your needs
+6. Test the component in different screen sizes and dark mode
+

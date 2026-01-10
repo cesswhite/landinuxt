@@ -37,11 +37,30 @@
 import type { HeroTemplates } from "../../../../types/templates";
 const config = useRuntimeConfig()
 const route = useRoute()
+const { generateBreadcrumbs } = useBreadcrumbs()
+const { generateBreadcrumbList, generateItemList, generateWebPage, addStructuredData } = useStructuredData()
 const _hero = await queryContent("hero").find();
+
+// Breadcrumbs
+const breadcrumbs = generateBreadcrumbs([
+  { label: 'Home', icon: 'i-lucide-home', to: '/' },
+  { label: 'Components', icon: 'i-lucide-layers', to: '/components' },
+  { label: 'Hero', icon: 'i-lucide-zap' },
+])
+
+// Build ItemList for hero components
+const heroItems = computed(() => {
+  return _hero.map((item, index) => ({
+    name: `Nuxt Hero Component ${index + 1}: ${item.title || `Hero ${index + 1}`}`,
+    description: item.description || `Pre-built Nuxt hero section component for landing pages. Copy-paste ready, fully compatible with Nuxt UI v4.`,
+    url: `/components/hero#${item._path?.replace('/hero/', '') || index + 1}`,
+    position: index + 1,
+  }))
+})
 
 useSeoMeta({
   title: "Nuxt Hero Components: 18+ Pre-built Hero Sections for Landing Pages | LandiNuxt",
-  description: "Discover 18+ pre-built Nuxt hero sections to engage your audience. From clean and simple to feature-rich designs with CTAs, animations, and images. Copy-paste ready, fully compatible with Nuxt UI v4.",
+  description: "Nuxt landing components: Discover 18+ pre-built Nuxt hero sections to engage your audience. From clean and simple to feature-rich designs with CTAs, animations, and images. Copy-paste ready, fully compatible with Nuxt UI v4.",
   ogTitle: "Nuxt Hero Components: 18+ Pre-built Hero Sections | LandiNuxt",
   ogDescription: "Discover 18+ pre-built Nuxt hero sections. Copy-paste ready hero components with CTAs, animations, and images. Fully compatible with Nuxt UI v4.",
   ogImage: "/og-landinuxt.jpg",
@@ -54,9 +73,30 @@ useSeoMeta({
   ogImageHeight: 630,
 })
 
+// Structured Data
+const breadcrumbData = generateBreadcrumbList(breadcrumbs)
+addStructuredData(breadcrumbData)
+
+const itemListData = generateItemList(heroItems.value)
+addStructuredData(itemListData)
+
+const webPageData = generateWebPage({
+  name: 'Nuxt Hero Components for Landing Pages',
+  description: 'Browse 18+ pre-built Nuxt hero section components for landing pages. Copy-paste ready hero components with CTAs, animations, and images. Fully compatible with Nuxt UI v4.',
+  url: route.path,
+  breadcrumb: breadcrumbs,
+})
+addStructuredData(webPageData)
+
 useHead({
   htmlAttrs: {
     lang: 'en'
-  }
+  },
+  link: [
+    {
+      rel: 'canonical',
+      href: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
+    },
+  ],
 })
 </script>

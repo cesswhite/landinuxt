@@ -11,9 +11,15 @@
                 customize easily to create effective landing pages in minutes.
             </p>
         </div>
-        <UButton to="/components" trailing-icon="i-heroicons-arrow-right" variant="solid" size="xl"
-            class="bg-dark-50/90 hover:bg-dark-50 text-primary-500 rounded-lg px-6">
-            Go to Components
-        </UButton>
+        <div class="flex flex-col sm:flex-row gap-3">
+            <UButton to="/nuxt-landing-components" trailing-icon="i-heroicons-arrow-right" block variant="solid"
+                size="xl" class="bg-dark-50/90 hover:bg-dark-50 text-primary-500 rounded-lg px-8">
+                Nuxt Components
+            </UButton>
+            <UButton to="/components" trailing-icon="i-heroicons-arrow-right" variant="outline" block size="xl"
+                class="bg-dark-50/20 hover:bg-dark-50/30 text-dark-50 border-dark-50/30 rounded-lg px-6">
+                Browse All Components
+            </UButton>
+        </div>
     </div>
 </template>

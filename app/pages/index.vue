@@ -29,7 +29,17 @@ useSeoMeta({
 });
 
 // Structured Data
-const organizationData = generateOrganization()
+const organizationData = generateOrganization({
+  sameAs: [
+    // Add your actual social media profiles here when available
+    // Example:
+    // 'https://github.com/yourusername/landinuxt',
+    // 'https://www.youtube.com/@landinuxt',
+    // 'https://twitter.com/landinuxt',
+    // 'https://www.linkedin.com/company/landinuxt',
+  ],
+  logo: `${config.public.siteUrl || 'https://www.landinuxt.com'}/favicon.svg`,
+})
 addStructuredData(organizationData)
 
 const websiteData = generateWebSite()

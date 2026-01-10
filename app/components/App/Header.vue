@@ -12,7 +12,7 @@
             Home
           </UButton>
           <UDropdownMenu :items="items">
-            <UButton variant="ghost" color="neutral" size="lg" label="Sections" class="cursor-pointer">
+            <UButton variant="ghost" color="neutral" size="lg" label="Nuxt Components" class="cursor-pointer">
               <template #trailing>
                 <UIcon name="i-heroicons-chevron-down" />
               </template>
@@ -74,9 +74,13 @@
 const items = [
   [
     {
-      label: "All Sections",
+      label: "All Nuxt Components",
       to: '/components'
     },
+    /* {
+      label: "All Sections",
+      to: '/components'
+    }, */
     {
       label: "Header Section",
       to: '/components/headers'

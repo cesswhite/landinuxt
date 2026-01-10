@@ -9,25 +9,36 @@
             <!-- Hero Section -->
             <div class="mx-auto text-center pt-12 pb-16 flex flex-col gap-y-4">
                 <h1 class="text-4xl font-bold tracking-tight text-dark-950 dark:text-dark-50 sm:text-5xl 2xl:text-6xl">
-                    Nuxt Landing Components and Templates
+                    Nuxt Landing Components
                 </h1>
                 <p class="text-xl/7 text-dark-950/60 dark:text-dark-50/50 w-full md:w-2/3 mx-auto md:text-2xl/7">
-                    Pre-built sections (Hero, Pricing, Features, FAQ, CTA) and complete landing page templates for Nuxt.
-                    Build high-converting landing pages faster with copy-paste components fully integrated with Nuxt UI
-                    v4.
+                    Nuxt landing components are pre-built, copy-paste ready sections designed specifically for building high-converting landing pages with Nuxt. Unlike Nuxt UI (which provides base UI elements) or Nuxt Templates (complete page structures), our components focus on landing page sections like Hero, Features, Pricing, FAQ, and CTA that you can mix and match. All components are fully compatible with Nuxt UI v4, optimized for SSR/ISR, and include dark mode support. Build faster by copying, pasting, and customizing instead of building from scratch.
                 </p>
             </div>
 
             <!-- Component Categories -->
             <div class="py-12">
                 <h2 class="text-2xl font-bold mb-8 text-dark-950 dark:text-dark-50">
-                    Pre-built Component Sections
+                    Complete Index of Nuxt Landing Components
                 </h2>
                 <p class="text-lg text-dark-950/60 dark:text-dark-50/60 mb-8">
-                    Browse our complete collection of pre-built Nuxt landing page components. Each category includes
-                    multiple ready-to-use components that you can copy and paste directly into your project.
+                    Browse our complete collection of 100+ pre-built Nuxt landing page components. Each category includes
+                    multiple ready-to-use components that you can copy and paste directly into your project. Every component includes code snippets, usage notes, and is fully compatible with Nuxt UI v4.
                 </p>
                 <ElementsContainer />
+            </div>
+
+            <!-- Comparison Section -->
+            <div class="py-12 border-t border-dark-200 dark:border-dark-800">
+                <h2 class="text-2xl font-bold mb-4 text-dark-950 dark:text-dark-50">
+                    How Do Nuxt Landing Components Differ from Nuxt UI and Nuxt Templates?
+                </h2>
+                <p class="text-lg text-dark-950/60 dark:text-dark-50/60 mb-6">
+                    Understanding the differences helps you choose the right solution for your project. Nuxt UI provides base components (buttons, inputs, cards), Nuxt Templates offer complete page structures, while our Nuxt landing components focus on conversion-optimized landing page sections.
+                </p>
+                <UButton to="/nuxt-landing-comparison" size="lg" variant="outline">
+                    View Detailed Comparison
+                </UButton>
             </div>
 
             <!-- Complete Landing Pages -->
@@ -134,7 +145,52 @@ import type { BreadcrumbItem } from '@nuxt/ui'
 const config = useRuntimeConfig()
 const route = useRoute()
 const { generateBreadcrumbs } = useBreadcrumbs()
-const { generateBreadcrumbList, generateFAQPage, generateWebSite, addStructuredData } = useStructuredData()
+const { generateBreadcrumbList, generateFAQPage, generateWebSite, generateItemList, generateWebPage, addStructuredData } = useStructuredData()
+
+// Fetch all components for ItemList
+const _hero = await queryContent("hero").find()
+const _headers = await queryContent("headers").find()
+const _features = await queryContent("features").find()
+const _footers = await queryContent("footers").find()
+const _cta = await queryContent("cta").find()
+const _testimonials = await queryContent("testimonials").find()
+const _contact = await queryContent("contact").find()
+const _logos = await queryContent('logos').find()
+const _faq = await queryContent('faq').find()
+const _auth = await queryContent('auth').find()
+const _gallery = await queryContent('gallery').find()
+
+// Build comprehensive component list for ItemList schema
+const componentListItems = computed(() => {
+  const items: Array<{ name: string; description: string; url: string; position: number }> = []
+  let position = 1
+
+  // Category pages
+  const categories = [
+    { name: 'Headers', items: _headers, path: '/components/headers' },
+    { name: 'Hero', items: _hero, path: '/components/hero' },
+    { name: 'Logos', items: _logos, path: '/components/logos' },
+    { name: 'Features', items: _features, path: '/components/features' },
+    { name: 'CTA', items: _cta, path: '/components/cta' },
+    { name: 'Testimonials', items: _testimonials, path: '/components/testimonials' },
+    { name: 'Contact', items: _contact, path: '/components/contact' },
+    { name: 'FAQ', items: _faq, path: '/components/faq' },
+    { name: 'Footers', items: _footers, path: '/components/footers' },
+    { name: 'Auth', items: _auth, path: '/components/auth' },
+    { name: 'Gallery', items: _gallery, path: '/components/gallery' },
+  ]
+
+  categories.forEach(category => {
+    items.push({
+      name: `${category.name} Components for Nuxt Landing Pages`,
+      description: `Browse ${category.items.length}+ pre-built ${category.name.toLowerCase()} components for Nuxt landing pages. Copy-paste ready, fully compatible with Nuxt UI v4.`,
+      url: category.path,
+      position: position++
+    })
+  })
+
+  return items
+})
 
 // Breadcrumbs
 const breadcrumbs = generateBreadcrumbs([
@@ -191,9 +247,9 @@ const faqItems = [
 
 // SEO Meta
 useSeoMeta({
-    title: 'Nuxt Landing Components and Templates | Pre-built Sections (Hero, Pricing, FAQ, CTA) | LandiNuxt',
+    title: 'Nuxt Landing Components | LandiNuxt',
     description:
-        'Build Nuxt landing pages faster with pre-built components: Hero, Pricing, Features, FAQ, CTA sections, and complete templates. Fully compatible with Nuxt UI v4. SSR/ISR ready, dark mode support, and accessible.',
+        'Nuxt landing components: 100+ pre-built sections (Hero, Features, Pricing, FAQ, CTA, Headers, Footers, Testimonials, Contact) for Nuxt landing pages. Copy-paste ready, fully compatible with Nuxt UI v4, SSR/ISR optimized, dark mode support.',
     ogTitle: 'Nuxt Landing Components and Templates | LandiNuxt',
     ogDescription:
         'Pre-built Nuxt landing page components and templates. Build high-converting landing pages faster with copy-paste components fully integrated with Nuxt UI v4.',
@@ -219,6 +275,19 @@ const faqData = generateFAQPage(
     }))
 )
 addStructuredData(faqData)
+
+// ItemList for component index
+const itemListData = generateItemList(componentListItems.value)
+addStructuredData(itemListData)
+
+// WebPage schema
+const webPageData = generateWebPage({
+    name: 'Nuxt Landing Components',
+    description: 'Complete index of 100+ pre-built Nuxt landing page components. Hero, Features, Pricing, FAQ, CTA, Headers, Footers, Testimonials, Contact sections. Copy-paste ready, fully compatible with Nuxt UI v4.',
+    url: route.path,
+    breadcrumb: breadcrumbs,
+})
+addStructuredData(webPageData)
 
 const websiteData = generateWebSite()
 addStructuredData(websiteData)

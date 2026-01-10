@@ -14,6 +14,8 @@
 <script setup lang="ts">
 const route = useRoute()
 const config = useRuntimeConfig()
+const { generateBreadcrumbs } = useBreadcrumbs()
+const { generateBreadcrumbList, generateWebPage, addStructuredData } = useStructuredData()
 const { params } = route
 const name = ref(params.name)
 const _landings = await queryContent(`/landings/${name.value}`).findOne()
@@ -24,12 +26,19 @@ const landingTitle = computed(() => {
 })
 
 const landingDescription = computed(() => {
-  return _landings?.description || `Explore the ${landingTitle.value} landing page template. Beautiful, responsive design ready to use in your Nuxt project.`
+  return _landings?.description || `Explore the ${landingTitle.value} landing page template built with Nuxt landing components. Beautiful, responsive design ready to use in your Nuxt project. Fully compatible with Nuxt UI v4.`
 })
 
+// Breadcrumbs
+const breadcrumbs = generateBreadcrumbs([
+  { label: 'Home', icon: 'i-lucide-home', to: '/' },
+  { label: 'Landing Pages', icon: 'i-lucide-layout', to: '/landings' },
+  { label: landingTitle.value, icon: 'i-lucide-file' },
+])
+
 useSeoMeta({
-  title: `${landingTitle.value} Landing Page | LandiNuxt`,
-  description: landingDescription.value,
+  title: `${landingTitle.value} Landing Page Template | Nuxt Landing Components | LandiNuxt`,
+  description: `Nuxt landing components: ${landingDescription.value}`,
   ogTitle: `${landingTitle.value} Landing Page | LandiNuxt`,
   ogDescription: landingDescription.value,
   ogImage: "/og-landinuxt.jpg",
@@ -42,9 +51,27 @@ useSeoMeta({
   ogImageHeight: 630,
 })
 
+// Structured Data
+const breadcrumbData = generateBreadcrumbList(breadcrumbs)
+addStructuredData(breadcrumbData)
+
+const webPageData = generateWebPage({
+  name: `${landingTitle.value} Landing Page Template`,
+  description: landingDescription.value,
+  url: route.path,
+  breadcrumb: breadcrumbs,
+})
+addStructuredData(webPageData)
+
 useHead({
   htmlAttrs: {
     lang: 'en'
-  }
+  },
+  link: [
+    {
+      rel: 'canonical',
+      href: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
+    },
+  ],
 })
 </script>

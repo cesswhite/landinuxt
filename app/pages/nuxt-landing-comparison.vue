@@ -348,7 +348,7 @@ const formatValue = (value: string) => {
 useSeoMeta({
   title: 'Nuxt UI vs Shadcn vs Free Libraries: Best Components for Landing Pages | LandiNuxt',
   description:
-    'Compare Nuxt UI, Shadcn for Nuxt, and free community libraries. Feature matrices, performance notes, and recommendations for MVP, Enterprise, and Content-heavy use cases.',
+    'Nuxt landing components comparison: Compare Nuxt UI, Shadcn for Nuxt, and free community libraries. Feature matrices, performance notes, and recommendations for MVP, Enterprise, and Content-heavy use cases.',
   ogTitle: 'Nuxt UI vs Shadcn vs Free Libraries: Best for Landing Pages',
   ogDescription:
     'Compare Nuxt UI, Shadcn, and free libraries. Find the best component library for your Nuxt landing page project with detailed feature comparisons.',
