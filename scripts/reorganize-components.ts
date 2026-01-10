@@ -60,6 +60,11 @@ function findImagePath(category: string, componentNumber: string): { local: stri
   return { local: localPath, github: githubUrl }
 }
 
+// URLs for reference documentation
+const NUXT_UI_URL = 'https://ui.nuxt.com/llms-full.txt'
+const NUXT_URL = 'https://nuxt.com/llms-full.txt'
+const TAILWINDCSS_URL = 'https://tailwindcss.com/'
+
 function generateLLMFile(
   category: string,
   componentNumber: string,
@@ -71,6 +76,12 @@ function generateLLMFile(
   let content = `# ${title} - ${category} Component\n\n`
   content += `## Description\n\n${description}\n\n`
   
+  content += `## Reference Documentation\n\n`
+  content += `When implementing this component, refer to the following official documentation:\n\n`
+  content += `- **Nuxt UI Documentation**: ${NUXT_UI_URL}\n`
+  content += `- **Nuxt 4 Documentation**: ${NUXT_URL}\n`
+  content += `- **Tailwind CSS v4 Documentation**: ${TAILWINDCSS_URL}\n\n`
+  
   if (imageInfo) {
     content += `## Reference Image\n\n`
     content += `**Public Image URL (GitHub Raw):**\n`
@@ -78,27 +89,34 @@ function generateLLMFile(
     content += `You can view this image directly in your browser or use it as a reference when implementing the component.\n\n`
   }
   
-  content += `## Rules for Implementation\n\n`
-  content += `When creating this component, follow these rules:\n\n`
-  content += `1. **Framework**: Use Nuxt 3 with Composition API (script setup)\n`
-  content += `2. **UI Library**: Use Nuxt UI v4 components (UButton, NuxtImg, etc.)\n`
-  content += `3. **Styling**: Use Tailwind CSS v4 utility classes\n`
-  content += `4. **Responsive Design**: Ensure the component is fully responsive (mobile-first approach)\n`
-  content += `5. **Dark Mode**: Make sure the component supports dark mode when applicable\n`
-  content += `6. **Accessibility**: Include proper ARIA labels and semantic HTML\n`
-  content += `7. **Performance**: Use lazy loading for images and optimize assets\n`
-  content += `8. **Code Quality**: Write clean, readable, and maintainable code\n`
-  content += `9. **TypeScript**: Use TypeScript for type safety (if applicable)\n`
-  content += `10. **Component Structure**: Follow Vue 3 best practices and composition patterns\n\n`
+  content += `## Implementation Rules and Guidelines\n\n`
+  content += `When implementing this component, you MUST follow these rules strictly:\n\n`
+  content += `1. **Framework Version**: Use Nuxt 4 (not Nuxt 3). Nuxt 4 is the latest version with improved performance and features.\n`
+  content += `2. **Composition API**: Always use Vue 3 Composition API with \`<script setup lang="ts">\` syntax. Do not use Options API.\n`
+  content += `3. **UI Library**: Use Nuxt UI v4 components exclusively. Common components include: UButton, NuxtImg, USlideover, UCard, UBadge, UIcon, etc. Refer to the Nuxt UI documentation for component props and usage.\n`
+  content += `4. **Styling Framework**: Use Tailwind CSS v4 utility classes for all styling. Do not use inline styles or CSS modules. Apply classes directly to HTML elements using the \`class\` attribute.\n`
+  content += `5. **Responsive Design**: Implement mobile-first responsive design using Tailwind breakpoints: \`sm:\`, \`md:\`, \`lg:\`, \`xl:\`, \`2xl:\`. Start with mobile styles and progressively enhance for larger screens.\n`
+  content += `6. **Dark Mode Support**: Always include dark mode variants using Tailwind's \`dark:\` prefix. Test both light and dark modes to ensure proper contrast and readability.\n`
+  content += `7. **Accessibility**: Include proper ARIA labels, semantic HTML elements (\`<header>\`, \`<nav>\`, \`<main>\`, etc.), and ensure keyboard navigation works correctly. Use \`aria-label\` for icon-only buttons.\n`
+  content += `8. **Image Optimization**: Use \`NuxtImg\` component (not regular \`<img>\` tags) for all images. Set \`loading="lazy"\`, appropriate \`alt\` text, and use \`format="webp"\` when possible.\n`
+  content += `9. **Code Quality**: Write clean, readable, and maintainable code. Use meaningful variable names, add comments for complex logic, and follow Vue 3 and Nuxt 4 best practices.\n`
+  content += `10. **TypeScript**: Use TypeScript for type safety. Define proper types for props, emits, and composables. Use \`lang="ts"\` in script tags.\n`
+  content += `11. **Component Structure**: Follow Vue 3 Single File Component (SFC) structure: \`<template>\`, \`<script setup>\`, and optionally \`<style>\`. Keep components focused and reusable.\n`
+  content += `12. **Nuxt Auto-imports**: Leverage Nuxt 4's auto-imports feature. You don't need to import composables like \`useState\`, \`useRoute\`, or Nuxt UI components manually.\n\n`
   
   content += `## Reference Component Code\n\n`
   content += `This is the complete working code for this component. Use it as a reference:\n\n`
   content += `\`\`\`vue\n${vueCode}\n\`\`\`\n\n`
   
-  content += `## Code Explanation\n\n`
-  content += `This Vue component implements a ${title.toLowerCase()} for landing pages. `
-  content += `It uses Nuxt UI components such as UButton, USlideover, NuxtImg, etc. `
-  content += `The code is optimized to be responsive and compatible with dark mode when available.\n\n`
+  content += `## Component Code Analysis\n\n`
+  content += `This is a Vue 3 Single File Component (SFC) designed for Nuxt 4 landing pages. The component structure follows these patterns:\n\n`
+  content += `- **Template Section**: Contains the HTML structure with Tailwind CSS classes for styling\n`
+  content += `- **Component Usage**: Utilizes Nuxt UI v4 components (UButton, NuxtImg, UIcon, etc.) which are auto-imported in Nuxt 4\n`
+  content += `- **Responsive Design**: Implements responsive breakpoints using Tailwind's mobile-first approach\n`
+  content += `- **Dark Mode**: Includes dark mode variants using the \`dark:\` prefix for theme switching\n`
+  content += `- **Accessibility**: Uses semantic HTML and ARIA attributes for screen readers and keyboard navigation\n`
+  content += `- **Performance**: Optimizes images with NuxtImg component and lazy loading\n\n`
+  content += `**Important**: This code is production-ready and follows Nuxt 4 best practices. Use it as a reference but adapt it to your specific needs.\n\n`
   
   content += `## Technical Implementation Details\n\n`
   content += `### Key Features:\n\n`
@@ -108,13 +126,29 @@ function generateLLMFile(
   content += `- **Dark Mode Support**: Includes dark mode classes (dark:) for theme switching\n`
   content += `- **Accessibility**: Proper semantic HTML and ARIA attributes\n\n`
   
-  content += `## Usage Instructions\n\n`
-  content += `1. Copy the component code above\n`
-  content += `2. Paste it into your Nuxt 3 project\n`
-  content += `3. Ensure you have Nuxt UI v4 installed: \`npm install @nuxt/ui\`\n`
-  content += `4. Make sure Nuxt Image is configured: \`npm install @nuxt/image\`\n`
-  content += `5. Customize the content, colors, and styling to match your needs\n`
-  content += `6. Test the component in different screen sizes and dark mode\n\n`
+  content += `## Step-by-Step Implementation Guide\n\n`
+  content += `Follow these steps to implement this component in your Nuxt 4 project:\n\n`
+  content += `### Prerequisites\n`
+  content += `1. Ensure you have a Nuxt 4 project set up. If not, create one with: \`npx nuxi@latest init my-project\`\n`
+  content += `2. Install Nuxt UI v4: \`npm install @nuxt/ui\` or \`pnpm add @nuxt/ui\` or \`yarn add @nuxt/ui\`\n`
+  content += `3. Install Nuxt Image module: \`npm install @nuxt/image\` (if not already included with Nuxt UI)\n`
+  content += `4. Configure \`nuxt.config.ts\` to include the modules: \`modules: ['@nuxt/ui', '@nuxt/image']\`\n\n`
+  content += `### Implementation Steps\n`
+  content += `1. **Copy the Code**: Copy the entire component code from the "Reference Component Code" section above\n`
+  content += `2. **Create Component File**: Create a new \`.vue\` file in your project (e.g., \`components/MyComponent.vue\` or \`app/components/MyComponent.vue\`)\n`
+  content += `3. **Paste and Review**: Paste the code into your component file and review the structure\n`
+  content += `4. **Customize Content**: Replace placeholder text, images, and links with your actual content\n`
+  content += `5. **Adjust Styling**: Modify Tailwind classes to match your design system and color scheme\n`
+  content += `6. **Test Responsiveness**: Test the component at different breakpoints (mobile, tablet, desktop)\n`
+  content += `7. **Test Dark Mode**: Verify the component looks correct in both light and dark modes\n`
+  content += `8. **Verify Accessibility**: Test with keyboard navigation and screen readers\n`
+  content += `9. **Optimize Images**: Replace image URLs with your own optimized images\n`
+  content += `10. **Final Review**: Ensure all functionality works as expected before deploying\n\n`
+  content += `### Important Notes\n`
+  content += `- Nuxt 4 auto-imports components and composables, so you don't need manual imports\n`
+  content += `- All Nuxt UI components are available globally once \`@nuxt/ui\` is installed\n`
+  content += `- Tailwind CSS v4 is included with Nuxt UI v4, no separate installation needed\n`
+  content += `- The component uses TypeScript by default in Nuxt 4 projects\n\n`
   
   if (imageInfo) {
     content += `## Visual Reference\n\n`
@@ -278,11 +312,11 @@ function processComponents() {
           console.log(`✓ Movido: ${componentFile} → ${componentNumber}/index.vue`)
         }
 
-        // Generate llm.md
+        // Generate llms.txt
         const llmContent = generateLLMFile(category, componentNumber, title, description, codeToUse, imageInfo)
-        const llmPath = join(componentDir, 'llm.md')
+        const llmPath = join(componentDir, 'llms.txt')
         writeFileSync(llmPath, llmContent, 'utf-8')
-        console.log(`✓ Generado: ${componentNumber}/llm.md`)
+        console.log(`✓ Generado: ${componentNumber}/llms.txt`)
 
         // Generate Claude.md
         const claudeContent = generateClaudeFile(category, componentNumber, title, description, codeToUse, imageInfo)

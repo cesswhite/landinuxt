@@ -1,0 +1,224 @@
+# bento - Features Component
+
+## Description
+
+A bento section showcasing a large collection of static images with ample space for numerous options
+
+
+## Reference Documentation
+
+When implementing this component, refer to the following official documentation:
+
+- **Nuxt UI Documentation**: https://ui.nuxt.com/llms-full.txt
+- **Nuxt 4 Documentation**: https://nuxt.com/llms-full.txt
+- **Tailwind CSS v4 Documentation**: https://tailwindcss.com/
+
+## Implementation Rules and Guidelines
+
+When implementing this component, you MUST follow these rules strictly:
+
+1. **Framework Version**: Use Nuxt 4 (not Nuxt 3). Nuxt 4 is the latest version with improved performance and features.
+2. **Composition API**: Always use Vue 3 Composition API with `<script setup lang="ts">` syntax. Do not use Options API.
+3. **UI Library**: Use Nuxt UI v4 components exclusively. Common components include: UButton, NuxtImg, USlideover, UCard, UBadge, UIcon, etc. Refer to the Nuxt UI documentation for component props and usage.
+4. **Styling Framework**: Use Tailwind CSS v4 utility classes for all styling. Do not use inline styles or CSS modules. Apply classes directly to HTML elements using the `class` attribute.
+5. **Responsive Design**: Implement mobile-first responsive design using Tailwind breakpoints: `sm:`, `md:`, `lg:`, `xl:`, `2xl:`. Start with mobile styles and progressively enhance for larger screens.
+6. **Dark Mode Support**: Always include dark mode variants using Tailwind's `dark:` prefix. Test both light and dark modes to ensure proper contrast and readability.
+7. **Accessibility**: Include proper ARIA labels, semantic HTML elements (`<header>`, `<nav>`, `<main>`, etc.), and ensure keyboard navigation works correctly. Use `aria-label` for icon-only buttons.
+8. **Image Optimization**: Use `NuxtImg` component (not regular `<img>` tags) for all images. Set `loading="lazy"`, appropriate `alt` text, and use `format="webp"` when possible.
+9. **Code Quality**: Write clean, readable, and maintainable code. Use meaningful variable names, add comments for complex logic, and follow Vue 3 and Nuxt 4 best practices.
+10. **TypeScript**: Use TypeScript for type safety. Define proper types for props, emits, and composables. Use `lang="ts"` in script tags.
+11. **Component Structure**: Follow Vue 3 Single File Component (SFC) structure: `<template>`, `<script setup>`, and optionally `<style>`. Keep components focused and reusable.
+12. **Nuxt Auto-imports**: Leverage Nuxt 4's auto-imports feature. You don't need to import composables like `useState`, `useRoute`, or Nuxt UI components manually.
+
+
+## Reference Component Code
+
+This is the complete working code for this component. Use it as a reference:
+
+```vue
+<template>
+  <div class="dark:bg-dark-950 relative w-full py-36">
+    <UContainer>
+      <div class="grid grid-cols-12 gap-2">
+        <div
+          class="bg-dark-100 dark:bg-dark-900/90 relative col-span-full flex h-24 items-center justify-center rounded-lg p-4 md:col-span-2"
+        >
+          <NuxtImg
+            class="mx-auto h-12 object-contain object-center"
+            src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/icon-neutral_hxtgng.webp"
+          />
+        </div>
+        <div
+          class="bg-dark-100 dark:bg-dark-900/90 relative col-span-full flex h-24 items-center justify-center rounded-lg p-4 md:col-span-10"
+        >
+          <NuxtImg
+            class="mx-auto h-12 object-contain object-center"
+            src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/logo-neutral_q3bdxv.webp"
+          />
+        </div>
+        <div
+          class="bg-dark-100 dark:bg-dark-900/90 relative col-span-full flex h-72 items-center justify-center rounded-lg p-4 md:col-span-6 lg:col-span-4"
+        >
+          <div class="flex h-full flex-col items-center justify-between">
+            <span class="text-dark-950 dark:text-dark-50 text-lg font-semibold">
+              Coffee Sold
+            </span>
+            <h1
+              class="bg-gradient-to-br from-rose-600 via-pink-500 to-violet-400 bg-clip-text text-center text-8xl font-light text-transparent dark:from-rose-400 dark:via-pink-400 dark:to-violet-400"
+            >
+              1500+
+            </h1>
+            <span
+              class="text-dark-950/60 dark:text-dark-50/50 mx-auto w-full text-center text-sm font-medium md:w-10/12"
+            >
+              Cups of coffee sold this month.
+            </span>
+          </div>
+        </div>
+        <div
+          class="bg-dark-100 dark:bg-dark-900/90 relative col-span-full flex h-72 items-center justify-center rounded-lg p-4 md:col-span-6 lg:col-span-4"
+        >
+          <div class="flex h-full flex-col items-center justify-between">
+            <span class="text-dark-950 dark:text-dark-50 text-lg font-semibold">
+              Happy Customers
+            </span>
+            <h1
+              class="bg-gradient-to-br from-orange-600 via-yellow-500 to-red-400 bg-clip-text text-center text-8xl font-light text-transparent dark:from-orange-400 dark:via-yellow-400 dark:to-red-400"
+            >
+              5000+
+            </h1>
+            <span
+              class="text-dark-950/60 dark:text-dark-50/50 mx-auto w-full text-center text-sm font-medium md:w-10/12"
+            >
+              Satisfied customers served this year.
+            </span>
+          </div>
+        </div>
+        <div
+          class="bg-dark-100 dark:bg-dark-900/90 relative col-span-full flex h-72 items-center justify-center rounded-lg p-4 md:col-span-full lg:col-span-4"
+        >
+          <div class="flex h-full flex-col items-center justify-between">
+            <span class="text-dark-950 dark:text-dark-50 text-lg font-semibold">
+              Coffee Beans Used
+            </span>
+            <h1
+              class="bg-gradient-to-br from-cyan-600 via-indigo-500 to-violet-400 bg-clip-text py-1.5 text-center text-8xl font-light text-transparent dark:from-cyan-400 dark:via-indigo-400 dark:to-violet-400"
+            >
+              2000kg
+            </h1>
+            <span
+              class="text-dark-950/60 dark:text-dark-50/50 mx-auto w-full text-center text-sm font-medium md:w-10/12"
+            >
+              Amount of coffee beans used this year.
+            </span>
+          </div>
+        </div>
+        <div
+          class="bg-dark-100 dark:bg-dark-900/90 relative col-span-full flex h-96 items-center justify-center overflow-hidden rounded-lg p-4 md:col-span-full lg:col-span-4"
+        >
+          <NuxtImg
+            class="absolute mx-auto size-full object-cover object-center"
+            src="https://images.unsplash.com/photo-1544373823-c2b242bd6324?q=80&w=1827&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          />
+        </div>
+        <div
+          class="bg-dark-100 dark:bg-dark-900/90 relative col-span-full flex h-96 items-center justify-center overflow-hidden rounded-lg p-4 md:col-span-6 lg:col-span-4"
+        >
+          <div
+            class="relative z-20 flex h-full flex-col items-center justify-between"
+          >
+            <span class="text-dark-50 text-lg font-semibold">
+              Coffee Goals
+            </span>
+            <h1 class="text-dark-50 text-center text-8xl font-light">
+              100k cups
+            </h1>
+            <span
+              class="text-dark-50/60 mx-auto w-10/12 text-center text-sm font-medium"
+            >
+              Our goal is to serve 1 million cups of coffee this year.
+            </span>
+          </div>
+          <div
+            class="from-dark-950 absolute z-10 h-full w-full bg-gradient-to-t"
+          />
+          <NuxtImg
+            class="absolute mx-auto size-full object-cover object-center"
+            src="https://images.unsplash.com/photo-1502045856-4882464b27a9?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          />
+        </div>
+        <div
+          class="bg-dark-100 dark:bg-dark-900/90 relative col-span-full flex h-96 items-center justify-center overflow-hidden rounded-lg p-4 md:col-span-6 lg:col-span-4"
+        >
+          <NuxtImg
+            class="absolute mx-auto size-full object-cover object-center"
+            src="https://images.unsplash.com/photo-1511081692775-05d0f180a065?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          />
+        </div>
+      </div>
+    </UContainer>
+  </div>
+</template>
+```
+
+## Component Code Analysis
+
+This is a Vue 3 Single File Component (SFC) designed for Nuxt 4 landing pages. The component structure follows these patterns:
+
+- **Template Section**: Contains the HTML structure with Tailwind CSS classes for styling
+- **Component Usage**: Utilizes Nuxt UI v4 components (UButton, NuxtImg, UIcon, etc.) which are auto-imported in Nuxt 4
+- **Responsive Design**: Implements responsive breakpoints using Tailwind's mobile-first approach
+- **Dark Mode**: Includes dark mode variants using the `dark:` prefix for theme switching
+- **Accessibility**: Uses semantic HTML and ARIA attributes for screen readers and keyboard navigation
+- **Performance**: Optimizes images with NuxtImg component and lazy loading
+
+**Important**: This code is production-ready and follows Nuxt 4 best practices. Use it as a reference but adapt it to your specific needs.
+
+
+## Technical Implementation Details
+
+### Key Features:
+
+- **Responsive Layout**: Uses Tailwind's responsive breakpoints (sm:, md:, lg:, xl:, 2xl:)
+- **Component Library**: Leverages Nuxt UI v4 for consistent design system
+- **Image Optimization**: Uses NuxtImg for automatic image optimization and lazy loading
+- **Dark Mode Support**: Includes dark mode classes (dark:) for theme switching
+- **Accessibility**: Proper semantic HTML and ARIA attributes
+
+## Step-by-Step Implementation Guide
+
+Follow these steps to implement this component in your Nuxt 4 project:
+
+### Prerequisites
+1. Ensure you have a Nuxt 4 project set up. If not, create one with: `npx nuxi@latest init my-project`
+2. Install Nuxt UI v4: `npm install @nuxt/ui` or `pnpm add @nuxt/ui` or `yarn add @nuxt/ui`
+3. Install Nuxt Image module: `npm install @nuxt/image` (if not already included with Nuxt UI)
+4. Configure `nuxt.config.ts` to include the modules: `modules: ['@nuxt/ui', '@nuxt/image']`
+
+### Implementation Steps
+1. **Copy the Code**: Copy the entire component code from the "Reference Component Code" section above
+2. **Create Component File**: Create a new `.vue` file in your project (e.g., `components/MyComponent.vue` or `app/components/MyComponent.vue`)
+3. **Paste and Review**: Paste the code into your component file and review the structure
+4. **Customize Content**: Replace placeholder text, images, and links with your actual content
+5. **Adjust Styling**: Modify Tailwind classes to match your design system and color scheme
+6. **Test Responsiveness**: Test the component at different breakpoints (mobile, tablet, desktop)
+7. **Test Dark Mode**: Verify the component looks correct in both light and dark modes
+8. **Verify Accessibility**: Test with keyboard navigation and screen readers
+9. **Optimize Images**: Replace image URLs with your own optimized images
+10. **Final Review**: Ensure all functionality works as expected before deploying
+
+### Important Notes
+- Nuxt 4 auto-imports components and composables, so you don't need manual imports
+- All Nuxt UI components are available globally once `@nuxt/ui` is installed
+- Tailwind CSS v4 is included with Nuxt UI v4, no separate installation needed
+- The component uses TypeScript by default in Nuxt 4 projects
+
+
+
+1. Copy the component code above
+2. Paste it into your Nuxt 4 project
+3. Ensure you have Nuxt UI v4 installed: `npm install @nuxt/ui`
+4. Make sure Nuxt Image is configured: `npm install @nuxt/image`
+5. Customize the content, colors, and styling to match your needs
+6. Test the component in different screen sizes and dark mode
+

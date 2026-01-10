@@ -1,0 +1,234 @@
+# space - Hero Component
+
+## Description
+
+A hero section featuring a title, description, and a primary gradient call-to-action button
+
+
+## Reference Documentation
+
+When implementing this component, refer to the following official documentation:
+
+- **Nuxt UI Documentation**: https://ui.nuxt.com/llms-full.txt
+- **Nuxt 4 Documentation**: https://nuxt.com/llms-full.txt
+- **Tailwind CSS v4 Documentation**: https://tailwindcss.com/
+
+## Implementation Rules and Guidelines
+
+When implementing this component, you MUST follow these rules strictly:
+
+1. **Framework Version**: Use Nuxt 4 (not Nuxt 3). Nuxt 4 is the latest version with improved performance and features.
+2. **Composition API**: Always use Vue 3 Composition API with `<script setup lang="ts">` syntax. Do not use Options API.
+3. **UI Library**: Use Nuxt UI v4 components exclusively. Common components include: UButton, NuxtImg, USlideover, UCard, UBadge, UIcon, etc. Refer to the Nuxt UI documentation for component props and usage.
+4. **Styling Framework**: Use Tailwind CSS v4 utility classes for all styling. Do not use inline styles or CSS modules. Apply classes directly to HTML elements using the `class` attribute.
+5. **Responsive Design**: Implement mobile-first responsive design using Tailwind breakpoints: `sm:`, `md:`, `lg:`, `xl:`, `2xl:`. Start with mobile styles and progressively enhance for larger screens.
+6. **Dark Mode Support**: Always include dark mode variants using Tailwind's `dark:` prefix. Test both light and dark modes to ensure proper contrast and readability.
+7. **Accessibility**: Include proper ARIA labels, semantic HTML elements (`<header>`, `<nav>`, `<main>`, etc.), and ensure keyboard navigation works correctly. Use `aria-label` for icon-only buttons.
+8. **Image Optimization**: Use `NuxtImg` component (not regular `<img>` tags) for all images. Set `loading="lazy"`, appropriate `alt` text, and use `format="webp"` when possible.
+9. **Code Quality**: Write clean, readable, and maintainable code. Use meaningful variable names, add comments for complex logic, and follow Vue 3 and Nuxt 4 best practices.
+10. **TypeScript**: Use TypeScript for type safety. Define proper types for props, emits, and composables. Use `lang="ts"` in script tags.
+11. **Component Structure**: Follow Vue 3 Single File Component (SFC) structure: `<template>`, `<script setup>`, and optionally `<style>`. Keep components focused and reusable.
+12. **Nuxt Auto-imports**: Leverage Nuxt 4's auto-imports feature. You don't need to import composables like `useState`, `useRoute`, or Nuxt UI components manually.
+
+
+## Reference Component Code
+
+This is the complete working code for this component. Use it as a reference:
+
+```vue
+<template>
+  <div
+    class="relative flex h-dvh w-full items-center justify-center overflow-hidden bg-dark-50 dark:bg-dark-950"
+  >
+    <!-- SVG Container -->
+    <div
+      class="absolute z-10 h-dvh w-[820px] pt-24 opacity-70 saturate-200 md:w-[1080px] lg:w-full lg:pt-[400px] xl:pt-0 dark:opacity-90"
+    >
+      <svg
+        class="h-full w-full"
+        viewBox="0 0 1834 1080"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g filter="url(#filter0_f_3106_1413)">
+          <path
+            class="fill-primary-500"
+            d="M2043.57 646.103C1998.53 578.986 1921.39 545.06 1845.18 558.851L759.526 755.313C541.677 794.736 536.297 1124.82 752.689 1174.82L2193.64 1507.76C2373.22 1549.25 2505.73 1334.72 2398.87 1175.5L2043.57 646.103Z"
+          />
+        </g>
+        <g filter="url(#filter1_f_3106_1413)">
+          <path
+            class="fill-primary-400"
+            d="M2023.6 770.094C1978.55 702.977 1901.41 669.051 1825.2 682.842L739.547 879.304C521.698 918.727 516.318 1248.82 732.71 1298.81L2173.66 1631.75C2353.24 1673.24 2485.75 1458.71 2378.89 1299.49L2023.6 770.094Z"
+          />
+        </g>
+        <g
+          style="mix-blend-mode: plus-lighter"
+          filter="url(#filter2_f_3106_1413)"
+        >
+          <path
+            class="fill-white"
+            d="M1900.49 905.625C1837.91 854.458 1754.25 844.366 1685.31 879.668L703.319 1382.59C506.27 1483.5 596.866 1800.96 818.457 1786.04L2294.03 1686.71C2477.92 1674.33 2542.51 1430.59 2394.07 1309.21L1900.49 905.625Z"
+          />
+        </g>
+        <defs>
+          <filter
+            id="filter0_f_3106_1413"
+            x="0.827881"
+            y="-36.5913"
+            width="3028.72"
+            height="2141.98"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="BackgroundImageFix"
+              result="shape"
+            />
+            <feGaussianBlur
+              stdDeviation="296.204"
+              result="effect1_foregroundBlur_3106_1413"
+            />
+          </filter>
+          <filter
+            id="filter1_f_3106_1413"
+            x="217.812"
+            y="324.363"
+            width="2554.79"
+            height="1668.05"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="BackgroundImageFix"
+              result="shape"
+            />
+            <feGaussianBlur
+              stdDeviation="177.722"
+              result="effect1_foregroundBlur_3106_1413"
+            />
+          </filter>
+          <filter
+            id="filter2_f_3106_1413"
+            x="239.247"
+            y="503.372"
+            width="2592.35"
+            height="1638.62"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="BackgroundImageFix"
+              result="shape"
+            />
+            <feGaussianBlur
+              stdDeviation="177.722"
+              result="effect1_foregroundBlur_3106_1413"
+            />
+          </filter>
+        </defs>
+      </svg>
+    </div>
+    <div class="relative z-30">
+      <div class="flex flex-col items-center justify-center px-4">
+        <!-- You can change the gradient color and direction easy in https://www.onamu.dev/ -->
+        <h1
+          class="via-primary-900/90 to-primary-600/90 dark:via-primary-200/90 dark:to-primary-400/90 font-family-inter mt-4 bg-gradient-to-br from-dark-950/90 from-55% via-70% to-85% bg-clip-text text-center text-5xl font-bold text-transparent sm:text-6xl lg:text-7xl dark:from-dark-50/90"
+        >
+          Embark on a Journey to <br />
+          Space Exploration
+        </h1>
+        <p
+          class="text-primary-950/60 dark:text-primary-50/60 mt-4 w-full text-center text-lg leading-8 md:w-3/5 2xl:text-xl"
+        >
+          Join our startup and experience the thrill of traveling to space with
+          our innovative solutions.
+        </p>
+        <div class="mt-4 flex gap-4">
+          <UButton
+            variant="solid"
+            color="neutral"
+            to="#"
+            size="lg"
+            class="px-12"
+            icon="i-heroicons-rocket-launch-solid"
+          >
+            Launch rocket
+          </UButton>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+```
+
+## Component Code Analysis
+
+This is a Vue 3 Single File Component (SFC) designed for Nuxt 4 landing pages. The component structure follows these patterns:
+
+- **Template Section**: Contains the HTML structure with Tailwind CSS classes for styling
+- **Component Usage**: Utilizes Nuxt UI v4 components (UButton, NuxtImg, UIcon, etc.) which are auto-imported in Nuxt 4
+- **Responsive Design**: Implements responsive breakpoints using Tailwind's mobile-first approach
+- **Dark Mode**: Includes dark mode variants using the `dark:` prefix for theme switching
+- **Accessibility**: Uses semantic HTML and ARIA attributes for screen readers and keyboard navigation
+- **Performance**: Optimizes images with NuxtImg component and lazy loading
+
+**Important**: This code is production-ready and follows Nuxt 4 best practices. Use it as a reference but adapt it to your specific needs.
+
+
+## Technical Implementation Details
+
+### Key Features:
+
+- **Responsive Layout**: Uses Tailwind's responsive breakpoints (sm:, md:, lg:, xl:, 2xl:)
+- **Component Library**: Leverages Nuxt UI v4 for consistent design system
+- **Image Optimization**: Uses NuxtImg for automatic image optimization and lazy loading
+- **Dark Mode Support**: Includes dark mode classes (dark:) for theme switching
+- **Accessibility**: Proper semantic HTML and ARIA attributes
+
+## Step-by-Step Implementation Guide
+
+Follow these steps to implement this component in your Nuxt 4 project:
+
+### Prerequisites
+1. Ensure you have a Nuxt 4 project set up. If not, create one with: `npx nuxi@latest init my-project`
+2. Install Nuxt UI v4: `npm install @nuxt/ui` or `pnpm add @nuxt/ui` or `yarn add @nuxt/ui`
+3. Install Nuxt Image module: `npm install @nuxt/image` (if not already included with Nuxt UI)
+4. Configure `nuxt.config.ts` to include the modules: `modules: ['@nuxt/ui', '@nuxt/image']`
+
+### Implementation Steps
+1. **Copy the Code**: Copy the entire component code from the "Reference Component Code" section above
+2. **Create Component File**: Create a new `.vue` file in your project (e.g., `components/MyComponent.vue` or `app/components/MyComponent.vue`)
+3. **Paste and Review**: Paste the code into your component file and review the structure
+4. **Customize Content**: Replace placeholder text, images, and links with your actual content
+5. **Adjust Styling**: Modify Tailwind classes to match your design system and color scheme
+6. **Test Responsiveness**: Test the component at different breakpoints (mobile, tablet, desktop)
+7. **Test Dark Mode**: Verify the component looks correct in both light and dark modes
+8. **Verify Accessibility**: Test with keyboard navigation and screen readers
+9. **Optimize Images**: Replace image URLs with your own optimized images
+10. **Final Review**: Ensure all functionality works as expected before deploying
+
+### Important Notes
+- Nuxt 4 auto-imports components and composables, so you don't need manual imports
+- All Nuxt UI components are available globally once `@nuxt/ui` is installed
+- Tailwind CSS v4 is included with Nuxt UI v4, no separate installation needed
+- The component uses TypeScript by default in Nuxt 4 projects
+
+
+
+1. Copy the component code above
+2. Paste it into your Nuxt 4 project
+3. Ensure you have Nuxt UI v4 installed: `npm install @nuxt/ui`
+4. Make sure Nuxt Image is configured: `npm install @nuxt/image`
+5. Customize the content, colors, and styling to match your needs
+6. Test the component in different screen sizes and dark mode
+

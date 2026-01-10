@@ -1,0 +1,347 @@
+# grid - Footers Component
+
+## Description
+
+This footer component showcases a description, a mini logo, columns, all organized within a grid layout with borders.
+
+
+## Reference Documentation
+
+When implementing this component, refer to the following official documentation:
+
+- **Nuxt UI Documentation**: https://ui.nuxt.com/llms-full.txt
+- **Nuxt 4 Documentation**: https://nuxt.com/llms-full.txt
+- **Tailwind CSS v4 Documentation**: https://tailwindcss.com/
+
+## Implementation Rules and Guidelines
+
+When implementing this component, you MUST follow these rules strictly:
+
+1. **Framework Version**: Use Nuxt 4 (not Nuxt 3). Nuxt 4 is the latest version with improved performance and features.
+2. **Composition API**: Always use Vue 3 Composition API with `<script setup lang="ts">` syntax. Do not use Options API.
+3. **UI Library**: Use Nuxt UI v4 components exclusively. Common components include: UButton, NuxtImg, USlideover, UCard, UBadge, UIcon, etc. Refer to the Nuxt UI documentation for component props and usage.
+4. **Styling Framework**: Use Tailwind CSS v4 utility classes for all styling. Do not use inline styles or CSS modules. Apply classes directly to HTML elements using the `class` attribute.
+5. **Responsive Design**: Implement mobile-first responsive design using Tailwind breakpoints: `sm:`, `md:`, `lg:`, `xl:`, `2xl:`. Start with mobile styles and progressively enhance for larger screens.
+6. **Dark Mode Support**: Always include dark mode variants using Tailwind's `dark:` prefix. Test both light and dark modes to ensure proper contrast and readability.
+7. **Accessibility**: Include proper ARIA labels, semantic HTML elements (`<header>`, `<nav>`, `<main>`, etc.), and ensure keyboard navigation works correctly. Use `aria-label` for icon-only buttons.
+8. **Image Optimization**: Use `NuxtImg` component (not regular `<img>` tags) for all images. Set `loading="lazy"`, appropriate `alt` text, and use `format="webp"` when possible.
+9. **Code Quality**: Write clean, readable, and maintainable code. Use meaningful variable names, add comments for complex logic, and follow Vue 3 and Nuxt 4 best practices.
+10. **TypeScript**: Use TypeScript for type safety. Define proper types for props, emits, and composables. Use `lang="ts"` in script tags.
+11. **Component Structure**: Follow Vue 3 Single File Component (SFC) structure: `<template>`, `<script setup>`, and optionally `<style>`. Keep components focused and reusable.
+12. **Nuxt Auto-imports**: Leverage Nuxt 4's auto-imports feature. You don't need to import composables like `useState`, `useRoute`, or Nuxt UI components manually.
+
+
+## Reference Component Code
+
+This is the complete working code for this component. Use it as a reference:
+
+```vue
+<template>
+  <footer
+    class="bg-dark-50 dark:bg-dark-950 relative flex h-auto w-full flex-col overflow-hidden px-4 py-2"
+  >
+    <div class="border-dark-950 dark:border-dark-50 grid grid-cols-12 border">
+      <div
+        class="border-dark-950 dark:border-dark-50 col-span-full flex flex-col items-start justify-start gap-y-4 border-b p-8 lg:col-span-6 lg:border-r lg:border-b-0"
+      >
+        <div class="mx-auto h-10 md:mx-0">
+          <NuxtImg
+            src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/icon-neutral_hxtgng.webp"
+            class="size-full object-contain object-center"
+            loading="lazy"
+            alt="my-company-logo-description"
+            :placeholder="[50, 25, 75, 5]"
+            format="webp"
+          />
+        </div>
+        <p class="text-dark-950/70 dark:text-dark-50/70 w-full md:pr-44">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim qui
+          vero nihil laudantium? Nemo reiciendis asperiores quidem ducimus
+          corrupti incidunt porro ad itaque natus, quisquam commodi, ipsa vitae
+          nulla ex!
+        </p>
+      </div>
+      <ul
+        class="border-dark-950 dark:border-dark-50 col-span-full flex flex-col gap-y-4 pb-4 sm:col-span-4 sm:border-r lg:col-span-2"
+      >
+        <template v-for="(nav, index) in navigation" :key="index">
+          <li
+            class="text-dark-950 dark:text-dark-50 font-family-inter border-dark-950 dark:border-dark-50 border-b p-4 text-base capitalize uppercase"
+          >
+            {{ nav.label }}
+          </li>
+          <li
+            v-for="(inner_link, _index) in nav.links"
+            :key="_index"
+            class="px-4"
+          >
+            <UButton
+              :to="inner_link.link"
+              target="_blank"
+              variant="link"
+              color="neutral"
+              size="md"
+              class="p-0 uppercase"
+            >
+              {{ inner_link.label }}
+            </UButton>
+          </li>
+        </template>
+      </ul>
+      <ul
+        class="border-dark-950 dark:border-dark-50 dark:border-dark-50 col-span-full flex flex-col gap-y-4 border-t pb-4 sm:col-span-4 sm:border-t-0 sm:border-r lg:col-span-2"
+      >
+        <template v-for="(nav, index) in social_media_navigation" :key="index">
+          <li
+            class="text-dark-950 dark:text-dark-50 font-family-inter border-dark-950 dark:border-dark-50 border-b p-4 text-base capitalize uppercase"
+          >
+            {{ nav.label }}
+          </li>
+          <li
+            v-for="(inner_link, _index) in nav.links"
+            :key="_index"
+            class="px-4"
+          >
+            <UButton
+              :to="inner_link.link"
+              target="_blank"
+              variant="link"
+              color="neutral"
+              size="md"
+              class="p-0 uppercase"
+            >
+              {{ inner_link.label }}
+            </UButton>
+          </li>
+        </template>
+      </ul>
+      <ul
+        class="col-span-full flex flex-col gap-y-4 border-t pb-4 sm:col-span-4 sm:border-t-0 lg:col-span-2"
+      >
+        <template v-for="(nav, index) in other_navigation" :key="index">
+          <li
+            class="text-dark-950 dark:text-dark-50 font-family-inter border-dark-950 dark:border-dark-50 border-b p-4 text-base capitalize uppercase"
+          >
+            {{ nav.label }}
+          </li>
+          <li
+            v-for="(inner_link, _index) in nav.links"
+            :key="_index"
+            class="px-4"
+          >
+            <UButton
+              :to="inner_link.link"
+              target="_blank"
+              variant="link"
+              color="neutral"
+              size="md"
+              class="p-0 uppercase"
+            >
+              {{ inner_link.label }}
+            </UButton>
+          </li>
+        </template>
+      </ul>
+      <div
+        class="border-dark-950 dark:border-dark-50 col-span-full flex w-full flex-col items-center justify-center gap-4 border-t py-4 md:flex-row"
+      >
+        <template v-for="(nav, index) in bottom_navigation" :key="index">
+          <UButton
+            :to="nav.link"
+            target="_blank"
+            variant="link"
+            color="neutral"
+            class="p-0 uppercase"
+          >
+            {{ nav.label }}
+          </UButton>
+        </template>
+      </div>
+      <div
+        class="border-dark-950 dark:border-dark-50 col-span-full flex w-full flex-col items-center justify-center gap-4 border-t p-4 md:flex-row"
+      >
+        <div
+          class="text-dark-950/70 dark:text-dark-50/70 flex items-center justify-start text-center text-sm uppercase"
+        >
+          ©LandiNuxt is a Open Source Project by Eco Development Studios
+        </div>
+      </div>
+    </div>
+  </footer>
+</template>
+
+<script setup lang="ts">
+const navigation = [
+  {
+    label: "Services",
+    links: [
+      {
+        label: "Development",
+        link: "#",
+      },
+      {
+        label: "Design",
+        link: "#",
+      },
+      {
+        label: "Mobile Apps",
+        link: "#",
+      },
+      {
+        label: "Imagene Data",
+        link: "#",
+      },
+    ],
+  },
+];
+
+const other_navigation = [
+  {
+    label: "Company",
+    links: [
+      {
+        label: "About",
+        link: "#",
+      },
+      {
+        label: "Website",
+        link: "#",
+      },
+      {
+        label: "Brand",
+        link: "#",
+      },
+      {
+        label: "Gallery",
+        link: "#",
+      },
+      {
+        label: "Blog",
+        link: "#",
+      },
+      {
+        label: "Services",
+        link: "#",
+      },
+      {
+        label: "Careers",
+        link: "#",
+      },
+    ],
+  },
+];
+
+const social_media_navigation = [
+  {
+    label: "Social Media",
+    links: [
+      {
+        label: "X",
+        link: "https://x.com/",
+      },
+      {
+        label: "Instagram",
+        link: "https://instagram.com/",
+      },
+      {
+        label: "Facebook",
+        link: "https://facebook.com/",
+      },
+      {
+        label: "LinkedIn",
+        link: "https://linkedin.com/",
+      },
+      {
+        label: "YouTube",
+        link: "https://youtube.com/",
+      },
+      {
+        label: "GitHub",
+        link: "https://github.com/",
+      },
+    ],
+  },
+];
+
+const bottom_navigation = [
+  {
+    label: "Privacy Policy",
+    link: "#",
+  },
+  {
+    label: "Terms & Conditions",
+    link: "#",
+  },
+  {
+    label: "Contact",
+    link: "#",
+  },
+  {
+    label: "Website",
+    link: "#",
+  },
+];
+</script>
+```
+
+## Component Code Analysis
+
+This is a Vue 3 Single File Component (SFC) designed for Nuxt 4 landing pages. The component structure follows these patterns:
+
+- **Template Section**: Contains the HTML structure with Tailwind CSS classes for styling
+- **Component Usage**: Utilizes Nuxt UI v4 components (UButton, NuxtImg, UIcon, etc.) which are auto-imported in Nuxt 4
+- **Responsive Design**: Implements responsive breakpoints using Tailwind's mobile-first approach
+- **Dark Mode**: Includes dark mode variants using the `dark:` prefix for theme switching
+- **Accessibility**: Uses semantic HTML and ARIA attributes for screen readers and keyboard navigation
+- **Performance**: Optimizes images with NuxtImg component and lazy loading
+
+**Important**: This code is production-ready and follows Nuxt 4 best practices. Use it as a reference but adapt it to your specific needs.
+
+
+## Technical Implementation Details
+
+### Key Features:
+
+- **Responsive Layout**: Uses Tailwind's responsive breakpoints (sm:, md:, lg:, xl:, 2xl:)
+- **Component Library**: Leverages Nuxt UI v4 for consistent design system
+- **Image Optimization**: Uses NuxtImg for automatic image optimization and lazy loading
+- **Dark Mode Support**: Includes dark mode classes (dark:) for theme switching
+- **Accessibility**: Proper semantic HTML and ARIA attributes
+
+## Step-by-Step Implementation Guide
+
+Follow these steps to implement this component in your Nuxt 4 project:
+
+### Prerequisites
+1. Ensure you have a Nuxt 4 project set up. If not, create one with: `npx nuxi@latest init my-project`
+2. Install Nuxt UI v4: `npm install @nuxt/ui` or `pnpm add @nuxt/ui` or `yarn add @nuxt/ui`
+3. Install Nuxt Image module: `npm install @nuxt/image` (if not already included with Nuxt UI)
+4. Configure `nuxt.config.ts` to include the modules: `modules: ['@nuxt/ui', '@nuxt/image']`
+
+### Implementation Steps
+1. **Copy the Code**: Copy the entire component code from the "Reference Component Code" section above
+2. **Create Component File**: Create a new `.vue` file in your project (e.g., `components/MyComponent.vue` or `app/components/MyComponent.vue`)
+3. **Paste and Review**: Paste the code into your component file and review the structure
+4. **Customize Content**: Replace placeholder text, images, and links with your actual content
+5. **Adjust Styling**: Modify Tailwind classes to match your design system and color scheme
+6. **Test Responsiveness**: Test the component at different breakpoints (mobile, tablet, desktop)
+7. **Test Dark Mode**: Verify the component looks correct in both light and dark modes
+8. **Verify Accessibility**: Test with keyboard navigation and screen readers
+9. **Optimize Images**: Replace image URLs with your own optimized images
+10. **Final Review**: Ensure all functionality works as expected before deploying
+
+### Important Notes
+- Nuxt 4 auto-imports components and composables, so you don't need manual imports
+- All Nuxt UI components are available globally once `@nuxt/ui` is installed
+- Tailwind CSS v4 is included with Nuxt UI v4, no separate installation needed
+- The component uses TypeScript by default in Nuxt 4 projects
+
+
+
+1. Copy the component code above
+2. Paste it into your Nuxt 4 project
+3. Ensure you have Nuxt UI v4 installed: `npm install @nuxt/ui`
+4. Make sure Nuxt Image is configured: `npm install @nuxt/image`
+5. Customize the content, colors, and styling to match your needs
+6. Test the component in different screen sizes and dark mode
+

@@ -1,0 +1,193 @@
+# portrait - Features Component
+
+## Description
+
+Explore this feature section, showcasing a prominent image, detailed description, and a call-to-action to learn more.
+
+
+## Reference Documentation
+
+When implementing this component, refer to the following official documentation:
+
+- **Nuxt UI Documentation**: https://ui.nuxt.com/llms-full.txt
+- **Nuxt 4 Documentation**: https://nuxt.com/llms-full.txt
+- **Tailwind CSS v4 Documentation**: https://tailwindcss.com/
+
+## Implementation Rules and Guidelines
+
+When implementing this component, you MUST follow these rules strictly:
+
+1. **Framework Version**: Use Nuxt 4 (not Nuxt 3). Nuxt 4 is the latest version with improved performance and features.
+2. **Composition API**: Always use Vue 3 Composition API with `<script setup lang="ts">` syntax. Do not use Options API.
+3. **UI Library**: Use Nuxt UI v4 components exclusively. Common components include: UButton, NuxtImg, USlideover, UCard, UBadge, UIcon, etc. Refer to the Nuxt UI documentation for component props and usage.
+4. **Styling Framework**: Use Tailwind CSS v4 utility classes for all styling. Do not use inline styles or CSS modules. Apply classes directly to HTML elements using the `class` attribute.
+5. **Responsive Design**: Implement mobile-first responsive design using Tailwind breakpoints: `sm:`, `md:`, `lg:`, `xl:`, `2xl:`. Start with mobile styles and progressively enhance for larger screens.
+6. **Dark Mode Support**: Always include dark mode variants using Tailwind's `dark:` prefix. Test both light and dark modes to ensure proper contrast and readability.
+7. **Accessibility**: Include proper ARIA labels, semantic HTML elements (`<header>`, `<nav>`, `<main>`, etc.), and ensure keyboard navigation works correctly. Use `aria-label` for icon-only buttons.
+8. **Image Optimization**: Use `NuxtImg` component (not regular `<img>` tags) for all images. Set `loading="lazy"`, appropriate `alt` text, and use `format="webp"` when possible.
+9. **Code Quality**: Write clean, readable, and maintainable code. Use meaningful variable names, add comments for complex logic, and follow Vue 3 and Nuxt 4 best practices.
+10. **TypeScript**: Use TypeScript for type safety. Define proper types for props, emits, and composables. Use `lang="ts"` in script tags.
+11. **Component Structure**: Follow Vue 3 Single File Component (SFC) structure: `<template>`, `<script setup>`, and optionally `<style>`. Keep components focused and reusable.
+12. **Nuxt Auto-imports**: Leverage Nuxt 4's auto-imports feature. You don't need to import composables like `useState`, `useRoute`, or Nuxt UI components manually.
+
+
+## Reference Component Code
+
+This is the complete working code for this component. Use it as a reference:
+
+```vue
+<template>
+  <!-- README
+  To use the Instrument Serif Font Family, ensure you have installed the latest version of
+  Nuxt UI. You can visit the following link to install:
+  https://ui.nuxt.com/docs/getting-started/installation/nuxt
+  After this, ensure to add the following code in your main.css file or app.vue
+  
+  --font-family-instrument: "Instrument Serif", serif;
+  
+  That's it! You can now use the Instrument Serif font in your app.
+   -->
+  <div class="flex w-full flex-col gap-y-32">
+    <template v-for="(feat, index) in features" :key="index">
+      <div
+        class="flex w-full flex-col-reverse items-end justify-start md:flex-row md:even:flex-row-reverse"
+      >
+        <div class="mt-12 h-[320px] w-full md:w-1/2 lg:h-[640px]">
+          <NuxtImg
+            :src="feat.image"
+            class="size-full rounded-sm object-cover object-center"
+            loading="lazy"
+            alt="my-company-logo-description"
+            width="640"
+            height="640"
+            :placeholder="[50, 25, 75, 5]"
+            format="webp"
+          />
+        </div>
+        <div
+          class="flex w-full flex-col items-start gap-y-2 p-0 md:w-1/2 md:px-8"
+        >
+          <span
+            class="font-family-instrument text-dark-950 dark:text-dark-50 text-4xl lg:text-6xl"
+          >
+            {{ feat.title }}
+          </span>
+          <p
+            class="font-family-instrument text-dark-950/50 dark:text-dark-50/50 text-xl lg:text-2xl"
+          >
+            {{ feat.description }}
+          </p>
+          <div class="mt-12 w-auto">
+            <UButton
+              :to="feat.link"
+              icon="i-heroicons-arrow-long-right"
+              variant="link"
+              color="neutral"
+            >
+              Learn more about
+            </UButton>
+          </div>
+        </div>
+      </div>
+    </template>
+  </div>
+</template>
+
+<script setup lang="ts">
+const features = [
+  {
+    image:
+      "https://images.pexels.com/photos/326514/pexels-photo-326514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Development",
+    description:
+      "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",
+    link: "#",
+  },
+  {
+    image: "https://images.pexels.com/photos/7988114/pexels-photo-7988114.jpeg",
+    title: "Design",
+    description:
+      "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",
+    link: "#",
+  },
+  {
+    image:
+      "https://images.pexels.com/photos/159299/graphic-design-studio-tracfone-programming-html-159299.jpeg",
+    title: "Mobile Apps",
+    description:
+      "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",
+    link: "#",
+  },
+  {
+    image:
+      "https://images.pexels.com/photos/12495614/pexels-photo-12495614.jpeg",
+    title: "Imagene Data",
+    description:
+      "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",
+    link: "#",
+  },
+];
+</script>
+```
+
+## Component Code Analysis
+
+This is a Vue 3 Single File Component (SFC) designed for Nuxt 4 landing pages. The component structure follows these patterns:
+
+- **Template Section**: Contains the HTML structure with Tailwind CSS classes for styling
+- **Component Usage**: Utilizes Nuxt UI v4 components (UButton, NuxtImg, UIcon, etc.) which are auto-imported in Nuxt 4
+- **Responsive Design**: Implements responsive breakpoints using Tailwind's mobile-first approach
+- **Dark Mode**: Includes dark mode variants using the `dark:` prefix for theme switching
+- **Accessibility**: Uses semantic HTML and ARIA attributes for screen readers and keyboard navigation
+- **Performance**: Optimizes images with NuxtImg component and lazy loading
+
+**Important**: This code is production-ready and follows Nuxt 4 best practices. Use it as a reference but adapt it to your specific needs.
+
+
+## Technical Implementation Details
+
+### Key Features:
+
+- **Responsive Layout**: Uses Tailwind's responsive breakpoints (sm:, md:, lg:, xl:, 2xl:)
+- **Component Library**: Leverages Nuxt UI v4 for consistent design system
+- **Image Optimization**: Uses NuxtImg for automatic image optimization and lazy loading
+- **Dark Mode Support**: Includes dark mode classes (dark:) for theme switching
+- **Accessibility**: Proper semantic HTML and ARIA attributes
+
+## Step-by-Step Implementation Guide
+
+Follow these steps to implement this component in your Nuxt 4 project:
+
+### Prerequisites
+1. Ensure you have a Nuxt 4 project set up. If not, create one with: `npx nuxi@latest init my-project`
+2. Install Nuxt UI v4: `npm install @nuxt/ui` or `pnpm add @nuxt/ui` or `yarn add @nuxt/ui`
+3. Install Nuxt Image module: `npm install @nuxt/image` (if not already included with Nuxt UI)
+4. Configure `nuxt.config.ts` to include the modules: `modules: ['@nuxt/ui', '@nuxt/image']`
+
+### Implementation Steps
+1. **Copy the Code**: Copy the entire component code from the "Reference Component Code" section above
+2. **Create Component File**: Create a new `.vue` file in your project (e.g., `components/MyComponent.vue` or `app/components/MyComponent.vue`)
+3. **Paste and Review**: Paste the code into your component file and review the structure
+4. **Customize Content**: Replace placeholder text, images, and links with your actual content
+5. **Adjust Styling**: Modify Tailwind classes to match your design system and color scheme
+6. **Test Responsiveness**: Test the component at different breakpoints (mobile, tablet, desktop)
+7. **Test Dark Mode**: Verify the component looks correct in both light and dark modes
+8. **Verify Accessibility**: Test with keyboard navigation and screen readers
+9. **Optimize Images**: Replace image URLs with your own optimized images
+10. **Final Review**: Ensure all functionality works as expected before deploying
+
+### Important Notes
+- Nuxt 4 auto-imports components and composables, so you don't need manual imports
+- All Nuxt UI components are available globally once `@nuxt/ui` is installed
+- Tailwind CSS v4 is included with Nuxt UI v4, no separate installation needed
+- The component uses TypeScript by default in Nuxt 4 projects
+
+
+
+1. Copy the component code above
+2. Paste it into your Nuxt 4 project
+3. Ensure you have Nuxt UI v4 installed: `npm install @nuxt/ui`
+4. Make sure Nuxt Image is configured: `npm install @nuxt/image`
+5. Customize the content, colors, and styling to match your needs
+6. Test the component in different screen sizes and dark mode
+

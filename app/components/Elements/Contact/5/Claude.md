@@ -4,22 +4,77 @@
 
 This contact section features a multi-form with diverse inputs to collect more data
 
-## Implementation Guidelines for Claude
+## Critical Instructions for Claude
 
-### Context
-You are helping to implement a contact component for a Nuxt 3 landing page. This component should match the design shown in the reference image (if provided) and follow the code structure below.
+### Step 1: Read the LLM Instructions File
 
-### Requirements
-1. Use Nuxt 3 with Composition API (script setup)
-2. Implement using Nuxt UI v4 components
-3. Apply Tailwind CSS v4 utility classes for styling
-4. Ensure full responsiveness across all screen sizes
-5. Support dark mode using Tailwind's dark: prefix
-6. Include proper accessibility attributes
-7. Optimize images using NuxtImg component
-8. Follow Vue 3 best practices
+**IMPORTANT**: Before implementing this component, you MUST read and understand the `llms.txt` file in this same directory. This file contains:
 
-### Reference Code
+- Complete implementation rules and guidelines
+- Reference documentation links (Nuxt UI, Nuxt 4, Tailwind CSS v4)
+- Detailed component code reference
+- Step-by-step implementation guide
+- Technical implementation details
+
+**Action Required**: 
+1. Locate and read the `llms.txt` file in this component's directory
+2. Review all sections, especially "Implementation Rules and Guidelines"
+3. Understand the reference code structure
+4. Note the documentation URLs for reference during implementation
+
+### Step 2: Verify Your Skills
+
+**IMPORTANT**: Before starting implementation, review the `Skills.md` file in this directory to verify you have the required technical knowledge.
+
+**Action Required**:
+1. Read the `Skills.md` file completely
+2. Self-assess your proficiency in each skill area:
+   - Core Framework Knowledge (Vue 3, Nuxt 4, Nuxt UI v4, Tailwind CSS v4)
+   - Advanced Technical Skills (TypeScript, Modern CSS, Responsive Design, Accessibility)
+   - Performance Optimization
+   - Component Architecture
+3. If you lack proficiency in any essential skill, refer to the documentation links in `llms.txt` to fill knowledge gaps
+4. Only proceed with implementation once you're confident in your skills
+
+### Step 3: Implementation Context
+
+You are helping to implement a contact component for a **Nuxt 4** landing page. This component should:
+
+- Match the design shown in the reference image exactly
+- Follow the code structure provided in `llms.txt`
+- Adhere to all rules and guidelines specified in `llms.txt`
+- Use the technical skills outlined in `Skills.md`
+
+## Implementation Requirements
+
+### Framework & Tools
+1. **Use Nuxt 4** (not Nuxt 3) with Composition API (`<script setup lang="ts">`)
+2. **Implement using Nuxt UI v4 components** exclusively
+3. **Apply Tailwind CSS v4 utility classes** for all styling
+4. **Ensure full responsiveness** across all screen sizes (mobile-first)
+5. **Support dark mode** using Tailwind's `dark:` prefix
+6. **Include proper accessibility attributes** (ARIA labels, semantic HTML)
+7. **Optimize images** using `NuxtImg` component (never use `<img>` tags)
+8. **Follow Vue 3 and Nuxt 4 best practices** as outlined in `llms.txt`
+
+### Code Quality Standards
+- Write clean, readable, and maintainable code
+- Use TypeScript for type safety
+- Follow the component structure patterns shown in `llms.txt`
+- Leverage Nuxt 4's auto-imports (no manual imports needed)
+- Ensure proper semantic HTML structure
+- Include appropriate ARIA attributes for accessibility
+
+## Reference Code
+
+The complete reference code is available in the `llms.txt` file. Use it as your primary reference for:
+
+- Component structure and organization
+- Tailwind CSS class usage
+- Nuxt UI component implementation
+- Responsive design patterns
+- Dark mode implementation
+- Accessibility features
 
 ```vue
 <template>
@@ -189,16 +244,53 @@ async function onSubmit(event: FormSubmitEvent<any>) {
 </script>
 ```
 
-### Implementation Steps
-1. Review the reference image to understand the visual design
-2. Analyze the provided code structure
-3. Implement the component matching the design and code patterns
-4. Ensure responsive behavior matches the reference
-5. Test dark mode compatibility
-6. Verify accessibility features
+## Implementation Workflow
 
-### Notes
-- Pay special attention to spacing, typography, and color usage
-- Ensure the component is pixel-perfect to the reference image
-- Maintain code quality and readability
-- Use semantic HTML elements where appropriate
+### Pre-Implementation Checklist
+- [ ] Read and understood `llms.txt` file completely
+- [ ] Reviewed and verified skills in `Skills.md` file
+- [ ] Analyzed reference image for visual requirements
+- [ ] Understood the reference code structure
+- [ ] Have access to Nuxt UI, Nuxt 4, and Tailwind CSS v4 documentation
+
+### Implementation Steps
+1. **Analyze Requirements**: Review the reference image and understand the visual design
+2. **Review Reference Code**: Study the code structure in `llms.txt` to understand patterns
+3. **Check Skills**: Verify you have all required skills from `Skills.md`
+4. **Implement Component**: Create the component following all rules from `llms.txt`
+5. **Ensure Responsiveness**: Test at all breakpoints (mobile, tablet, desktop)
+6. **Test Dark Mode**: Verify appearance in both light and dark modes
+7. **Verify Accessibility**: Test with keyboard navigation and screen readers
+8. **Optimize Performance**: Ensure images are optimized and code is efficient
+9. **Code Review**: Review your implementation against the rules in `llms.txt`
+10. **Final Testing**: Test all functionality and visual appearance
+
+### Quality Assurance
+- Component matches the reference image pixel-perfectly
+- All responsive breakpoints work correctly
+- Dark mode displays properly
+- Accessibility standards are met (WCAG 2.1 AA)
+- Code follows all rules from `llms.txt`
+- Performance is optimized (lazy loading, image optimization)
+- TypeScript types are properly defined
+- Code is clean, readable, and maintainable
+
+## Important Notes
+
+- **Always refer to `llms.txt`** for the most up-to-date implementation rules and guidelines
+- **Verify your skills** using `Skills.md` before starting implementation
+- **Use the reference documentation** links provided in `llms.txt` when you need clarification
+- **Follow Nuxt 4 best practices** as outlined in the official documentation
+- **Test thoroughly** at different screen sizes and in both light/dark modes
+- **Prioritize accessibility** - ensure your implementation is usable by everyone
+- **Maintain code quality** - write code that is maintainable and follows best practices
+
+## Getting Help
+
+If you encounter issues during implementation:
+
+1. Re-read the relevant sections in `llms.txt`
+2. Check the official documentation links provided in `llms.txt`
+3. Review the `Skills.md` file to identify any knowledge gaps
+4. Refer to the reference code in `llms.txt` for implementation patterns
+5. Ensure you're following all 12 implementation rules from `llms.txt`
