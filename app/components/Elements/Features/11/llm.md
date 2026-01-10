@@ -1,0 +1,117 @@
+# luxury - Features Component
+
+## Description
+
+A feature section with a title and description, showcasing services across three columns.
+
+## Rules for Implementation
+
+When creating this component, follow these rules:
+
+1. **Framework**: Use Nuxt 3 with Composition API (script setup)
+2. **UI Library**: Use Nuxt UI v4 components (UButton, NuxtImg, etc.)
+3. **Styling**: Use Tailwind CSS v4 utility classes
+4. **Responsive Design**: Ensure the component is fully responsive (mobile-first approach)
+5. **Dark Mode**: Make sure the component supports dark mode when applicable
+6. **Accessibility**: Include proper ARIA labels and semantic HTML
+7. **Performance**: Use lazy loading for images and optimize assets
+8. **Code Quality**: Write clean, readable, and maintainable code
+9. **TypeScript**: Use TypeScript for type safety (if applicable)
+10. **Component Structure**: Follow Vue 3 best practices and composition patterns
+
+## Reference Component Code
+
+This is the complete working code for this component. Use it as a reference:
+
+```vue
+<template>
+  <div class="bg-dark-50 dark:bg-dark-950 relative h-auto w-full py-32">
+    <UContainer>
+      <div class="w-full">
+        <div class="grid grid-cols-12 gap-8 md:gap-4">
+          <h1
+            class="text-dark-950 dark:text-dark-50 col-span-full text-5xl font-medium md:col-span-6"
+          >
+            Experience the Pinnacle <br />
+            of Luxury Living
+          </h1>
+          <p
+            class="text-dark-950/60 dark:text-dark-50/60 col-span-full text-pretty md:col-span-6"
+          >
+            Indulge in an exquisite collection of world-class luxury hotels.
+            Each destination offers unparalleled elegance, exceptional service,
+            and unforgettable experiences tailored to your every desire.
+          </p>
+        </div>
+      </div>
+    </UContainer>
+     <div class="grid grid-cols-12 mt-24">
+            <template v-for="(img, index) in images" :key="index">
+                <div class="col-span-full md:col-span-6 lg:col-span-4 h-96 relative">
+                    <NuxtImg :src="img.url" class="size-full object-center object-cover" />
+                    <div class="absolute bottom-6 left-6 flex flex-col z-20">
+                        <span class="inline-block text-dark-50 text-sm">
+                            {{ img.title }}
+                        </span>
+                        <span class="inline-block text-dark-50/60 truncate w-56 text-sm">
+                            {{ img.short_description }}
+                        </span>
+                    </div>
+                    <div class="absolute bottom-6 right-6 flex items-center justify-center z-20">
+                        <UButton :to="img.url" target="_blank" icon="i-lucide-arrow-up-right" variant="link"
+                            color="neutral" />
+                    </div>
+                    <div class="absolute left-o top-0 size-full z-10 bg-gradient-to-t from-dark-950/80" />
+                </div>
+            </template>
+        </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+const images = ref([
+  {
+    title: "Sunset over the Mountains",
+    url: "https://images.unsplash.com/photo-1531973819741-e27a5ae2cc7b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    short_description:
+      "A breathtaking view of the sun setting behind majestic mountains.",
+  },
+  {
+    title: "Calm Lake Reflection",
+    url: "https://images.unsplash.com/photo-1531973968078-9bb02785f13d?q=80&w=1985&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    short_description:
+      "A serene lake mirroring the clear sky and lush surroundings.",
+  },
+  {
+    title: "Foggy Forest Path",
+    url: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    short_description:
+      "A mysterious path surrounded by tall trees and dense fog.",
+  },
+]);
+</script>
+```
+
+## Code Explanation
+
+This Vue component implements a luxury for landing pages. It uses Nuxt UI components such as UButton, USlideover, NuxtImg, etc. The code is optimized to be responsive and compatible with dark mode when available.
+
+## Technical Implementation Details
+
+### Key Features:
+
+- **Responsive Layout**: Uses Tailwind's responsive breakpoints (sm:, md:, lg:, xl:, 2xl:)
+- **Component Library**: Leverages Nuxt UI v4 for consistent design system
+- **Image Optimization**: Uses NuxtImg for automatic image optimization and lazy loading
+- **Dark Mode Support**: Includes dark mode classes (dark:) for theme switching
+- **Accessibility**: Proper semantic HTML and ARIA attributes
+
+## Usage Instructions
+
+1. Copy the component code above
+2. Paste it into your Nuxt 3 project
+3. Ensure you have Nuxt UI v4 installed: `npm install @nuxt/ui`
+4. Make sure Nuxt Image is configured: `npm install @nuxt/image`
+5. Customize the content, colors, and styling to match your needs
+6. Test the component in different screen sizes and dark mode
+

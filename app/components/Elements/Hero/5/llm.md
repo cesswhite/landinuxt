@@ -1,0 +1,141 @@
+# only-dark - Hero Component
+
+## Description
+
+This hero section features a single title and a pair of call-to-action buttons. The background image is dark, and the bottom of the section showcases various brands.
+
+## Rules for Implementation
+
+When creating this component, follow these rules:
+
+1. **Framework**: Use Nuxt 3 with Composition API (script setup)
+2. **UI Library**: Use Nuxt UI v4 components (UButton, NuxtImg, etc.)
+3. **Styling**: Use Tailwind CSS v4 utility classes
+4. **Responsive Design**: Ensure the component is fully responsive (mobile-first approach)
+5. **Dark Mode**: Make sure the component supports dark mode when applicable
+6. **Accessibility**: Include proper ARIA labels and semantic HTML
+7. **Performance**: Use lazy loading for images and optimize assets
+8. **Code Quality**: Write clean, readable, and maintainable code
+9. **TypeScript**: Use TypeScript for type safety (if applicable)
+10. **Component Structure**: Follow Vue 3 best practices and composition patterns
+
+## Reference Component Code
+
+This is the complete working code for this component. Use it as a reference:
+
+```vue
+<template>
+  <div
+    class="relative flex h-full min-h-dvh w-full items-center justify-center"
+  >
+    <!-- Background Image (try a dark image) -->
+    <NuxtImg
+      class="absolute z-10 h-full w-full object-cover object-center"
+      src="https://images.unsplash.com/photo-1651352076676-58a34812f3d2?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      loading="lazy"
+      alt="my-hero-background"
+      :placeholder="[50, 25, 75, 5]"
+      format="webp"
+    />
+    <div class="relative z-10 w-11/12 md:w-10/12">
+      <div class="flex flex-col items-start justify-start">
+        <h1
+          class="text-dark-100 mt-4 text-left text-5xl font-normal sm:text-6xl md:text-7xl"
+        >
+          Unlock the Power of <br />
+          Cutting-Edge Innovation
+        </h1>
+        <div class="mt-8 flex gap-4">
+          <UButton
+            variant="solid"
+            color="neutral"
+            to="#"
+            size="lg"
+            trailing
+            class="rounded-full px-8"
+          >
+            Get started
+          </UButton>
+          <UButton
+            variant="link"
+            color="neutral"
+            to="#"
+            size="lg"
+            class="rounded-full px-8"
+          >
+            Request demo
+          </UButton>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-8 z-20 w-full">
+      <div class="flex w-full items-center justify-center gap-16">
+        <template v-for="icon in icons">
+          <div class="group size-auto items-center justify-center">
+            <UIcon
+              :name="icon"
+              class="text-dark-50/10 group-hover:text-dark-50/50 size-8"
+            />
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+const icons = [
+  "i-simple-icons-adobeillustrator",
+  "i-simple-icons-amazon",
+  "i-simple-icons-akaunting",
+  "i-simple-icons-alchemy",
+  "i-simple-icons-amp",
+  "i-simple-icons-google",
+  "i-simple-icons-facebook",
+  "i-simple-icons-vite",
+  "i-simple-icons-nike",
+  "i-simple-icons-apple",
+  "i-simple-icons-microsoft",
+  "i-simple-icons-twitter",
+  "i-simple-icons-linkedin",
+  "i-simple-icons-instagram",
+  "i-simple-icons-youtube",
+  "i-simple-icons-whatsapp",
+  "i-simple-icons-telegram",
+  "i-simple-icons-tiktok",
+  "i-simple-icons-snapchat",
+  "i-simple-icons-pinterest",
+  "i-simple-icons-twitch",
+  "i-simple-icons-discord",
+  "i-simple-icons-reddit",
+  "i-simple-icons-medium",
+  "i-simple-icons-spotify",
+  "i-simple-icons-netflix",
+  "i-simple-icons-hulu",
+];
+</script>
+```
+
+## Code Explanation
+
+This Vue component implements a only-dark for landing pages. It uses Nuxt UI components such as UButton, USlideover, NuxtImg, etc. The code is optimized to be responsive and compatible with dark mode when available.
+
+## Technical Implementation Details
+
+### Key Features:
+
+- **Responsive Layout**: Uses Tailwind's responsive breakpoints (sm:, md:, lg:, xl:, 2xl:)
+- **Component Library**: Leverages Nuxt UI v4 for consistent design system
+- **Image Optimization**: Uses NuxtImg for automatic image optimization and lazy loading
+- **Dark Mode Support**: Includes dark mode classes (dark:) for theme switching
+- **Accessibility**: Proper semantic HTML and ARIA attributes
+
+## Usage Instructions
+
+1. Copy the component code above
+2. Paste it into your Nuxt 3 project
+3. Ensure you have Nuxt UI v4 installed: `npm install @nuxt/ui`
+4. Make sure Nuxt Image is configured: `npm install @nuxt/image`
+5. Customize the content, colors, and styling to match your needs
+6. Test the component in different screen sizes and dark mode
+

@@ -1,0 +1,107 @@
+# heading - CTA Component
+
+## Description
+
+This premium CTA component features a bold headline, compelling description, and dual call-to-action buttons alongside a visually striking two-image showcase that highlights your product's key features and benefits.
+
+## Rules for Implementation
+
+When creating this component, follow these rules:
+
+1. **Framework**: Use Nuxt 3 with Composition API (script setup)
+2. **UI Library**: Use Nuxt UI v4 components (UButton, NuxtImg, etc.)
+3. **Styling**: Use Tailwind CSS v4 utility classes
+4. **Responsive Design**: Ensure the component is fully responsive (mobile-first approach)
+5. **Dark Mode**: Make sure the component supports dark mode when applicable
+6. **Accessibility**: Include proper ARIA labels and semantic HTML
+7. **Performance**: Use lazy loading for images and optimize assets
+8. **Code Quality**: Write clean, readable, and maintainable code
+9. **TypeScript**: Use TypeScript for type safety (if applicable)
+10. **Component Structure**: Follow Vue 3 best practices and composition patterns
+
+## Reference Component Code
+
+This is the complete working code for this component. Use it as a reference:
+
+```vue
+<template>
+  <div class="relative w-full px-8 py-24">
+    <div
+      class="bg-primary-500 dark:bg-primary-600 grid grid-cols-12 gap-4 rounded-xl"
+    >
+      <div
+        class="col-span-full flex flex-col items-start justify-center gap-2 p-8 lg:col-span-6"
+      >
+        <h2 class="text-dark-50 text-center text-4xl font-bold tracking-tight">
+          Elevate Your Design with Mesh Gradient App
+        </h2>
+        <p class="text-dark-50/60 w-full text-center text-lg md:text-xl">
+          Create stunning visual effects and unique gradients that will make
+          your projects stand out. Join over 200k designers who've transformed
+          their workflow with our intuitive tools.
+        </p>
+        <div class="mx-auto flex flex-col gap-2 lg:flex-row">
+          <UButton
+            to="#"
+            size="lg"
+            color="neutral"
+            variant="solid"
+            icon="i-ic-baseline-apple"
+            label="Download App"
+            class="cursor-pointer"
+          />
+          <UButton
+            to="#"
+            size="lg"
+            color="neutral"
+            variant="soft"
+            icon="i-mdi-google-play"
+            label="Download App"
+            class="cursor-pointer"
+          />
+        </div>
+      </div>
+      <div class="col-span-full grid grid-cols-subgrid gap-4 lg:col-span-6">
+        <div class="col-span-full lg:col-span-3">
+          <NuxtImg
+            src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/single-2_jqyqd8_bmrdlq.webp"
+            alt="mesh-gradient"
+            class="w-full rounded-md object-cover object-bottom md:h-96 md:object-contain lg:h-auto"
+          />
+        </div>
+        <div class="col-span-full lg:col-span-3">
+          <NuxtImg
+            src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/single-1_jcfqxi_v7ciwm.webp"
+            alt="mesh-gradient"
+            class="w-full rounded-md object-cover object-center md:h-96 md:object-contain lg:h-auto"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+```
+
+## Code Explanation
+
+This Vue component implements a heading for landing pages. It uses Nuxt UI components such as UButton, USlideover, NuxtImg, etc. The code is optimized to be responsive and compatible with dark mode when available.
+
+## Technical Implementation Details
+
+### Key Features:
+
+- **Responsive Layout**: Uses Tailwind's responsive breakpoints (sm:, md:, lg:, xl:, 2xl:)
+- **Component Library**: Leverages Nuxt UI v4 for consistent design system
+- **Image Optimization**: Uses NuxtImg for automatic image optimization and lazy loading
+- **Dark Mode Support**: Includes dark mode classes (dark:) for theme switching
+- **Accessibility**: Proper semantic HTML and ARIA attributes
+
+## Usage Instructions
+
+1. Copy the component code above
+2. Paste it into your Nuxt 3 project
+3. Ensure you have Nuxt UI v4 installed: `npm install @nuxt/ui`
+4. Make sure Nuxt Image is configured: `npm install @nuxt/image`
+5. Customize the content, colors, and styling to match your needs
+6. Test the component in different screen sizes and dark mode
+

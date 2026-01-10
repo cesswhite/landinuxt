@@ -4,6 +4,13 @@
 
 This hero section features a captivating background image, a clear and concise title, and an engaging button for user interaction
 
+## Reference Image
+
+**Public Image URL (GitHub Raw):**
+https://raw.githubusercontent.com/cesswhite/landingnuxt/feat/add-llm-instructions/public/components/hero/1.simple.png
+
+You can view this image directly in your browser or use it as a reference when implementing the component.
+
 ## Rules for Implementation
 
 When creating this component, follow these rules:
@@ -106,4 +113,11 @@ This Vue component implements a simple for landing pages. It uses Nuxt UI compon
 4. Make sure Nuxt Image is configured: `npm install @nuxt/image`
 5. Customize the content, colors, and styling to match your needs
 6. Test the component in different screen sizes and dark mode
+
+## Visual Reference
+
+**View the reference image here:**
+https://raw.githubusercontent.com/cesswhite/landingnuxt/feat/add-llm-instructions/public/components/hero/1.simple.png
+
+The image shows exactly how this component should look when rendered. Use it as a visual guide to ensure your implementation matches the design.
 

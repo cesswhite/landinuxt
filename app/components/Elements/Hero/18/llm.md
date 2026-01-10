@@ -1,0 +1,137 @@
+# high-converting - Hero Component
+
+## Description
+
+A high-converting hero section featuring a compelling headline, descriptive title, engaging copy, social proof with user avatars, download buttons, and a prominent product showcase image - all optimized for maximum conversion rates.
+
+## Rules for Implementation
+
+When creating this component, follow these rules:
+
+1. **Framework**: Use Nuxt 3 with Composition API (script setup)
+2. **UI Library**: Use Nuxt UI v4 components (UButton, NuxtImg, etc.)
+3. **Styling**: Use Tailwind CSS v4 utility classes
+4. **Responsive Design**: Ensure the component is fully responsive (mobile-first approach)
+5. **Dark Mode**: Make sure the component supports dark mode when applicable
+6. **Accessibility**: Include proper ARIA labels and semantic HTML
+7. **Performance**: Use lazy loading for images and optimize assets
+8. **Code Quality**: Write clean, readable, and maintainable code
+9. **TypeScript**: Use TypeScript for type safety (if applicable)
+10. **Component Structure**: Follow Vue 3 best practices and composition patterns
+
+## Reference Component Code
+
+This is the complete working code for this component. Use it as a reference:
+
+```vue
+<template>
+  <div class="flex h-auto min-h-screen w-full items-center justify-center">
+    <div class="mx-auto h-full w-full max-w-7xl">
+      <div class="grid w-full grid-cols-12 gap-4">
+        <div
+          class="col-span-full flex h-screen items-center justify-center px-4 sm:h-auto md:col-span-6"
+        >
+          <div class="flex flex-col gap-y-6 md:gap-y-8">
+            <div>
+              <UBadge color="primary" size="lg" variant="outline">
+                Stunning Mesh Gradients & Effects
+              </UBadge>
+            </div>
+            <h1
+              class="text-dark-950 dark:text-dark-50 text-5xl/10 font-bold tracking-tight text-pretty md:text-6xl md:leading-[3.3rem] lg:text-7xl lg:leading-[3.6rem]"
+            >
+              The only way to make your app look
+              <span class="font-family-instrument italic">unique</span>
+            </h1>
+            <p
+              class="text-dark-950/60 dark:text-dark-50/60 text-lg font-medium text-pretty md:text-xl 2xl:text-xl"
+            >
+              Create stunning mesh gradients and effects that elevate your app's
+              visual identity, eye-catching interfaces that users will remember
+              and love.
+            </p>
+            <div class="flex gap-4">
+              <UButton
+                to="#"
+                size="lg"
+                color="primary"
+                variant="solid"
+                icon="i-ic-baseline-apple"
+                label="Download App"
+                class="cursor-pointer"
+              />
+              <UButton
+                to="#"
+                size="lg"
+                color="primary"
+                variant="soft"
+                icon="i-mdi-google-play"
+                label="Download App"
+                class="cursor-pointer"
+              />
+            </div>
+            <div class="flex gap-4">
+              <UAvatarGroup>
+                <UAvatar
+                  src="https://github.com/cesswhite.png"
+                  alt="Cess White"
+                />
+                <UAvatar
+                  src="https://github.com/betomoedano.png"
+                  alt="Betomoedano"
+                />
+                <UAvatar
+                  src="https://github.com/cesswhite.png"
+                  alt="Cess White"
+                />
+                <UAvatar
+                  src="https://github.com/betomoedano.png"
+                  alt="Betomoedano"
+                />
+              </UAvatarGroup>
+              <div
+                class="text-primary-500 dark:text-primary-400 text-base font-medium"
+              >
+                200k+ Downloads
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-full md:col-span-6">
+          <NuxtImg
+            loading="lazy"
+            alt="mesh-gradient"
+            format="webp"
+            class="h-full w-full rounded-md object-cover object-center"
+            src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/hero-1-demo_c9ywjy_hhruic.webp"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+```
+
+## Code Explanation
+
+This Vue component implements a high-converting for landing pages. It uses Nuxt UI components such as UButton, USlideover, NuxtImg, etc. The code is optimized to be responsive and compatible with dark mode when available.
+
+## Technical Implementation Details
+
+### Key Features:
+
+- **Responsive Layout**: Uses Tailwind's responsive breakpoints (sm:, md:, lg:, xl:, 2xl:)
+- **Component Library**: Leverages Nuxt UI v4 for consistent design system
+- **Image Optimization**: Uses NuxtImg for automatic image optimization and lazy loading
+- **Dark Mode Support**: Includes dark mode classes (dark:) for theme switching
+- **Accessibility**: Proper semantic HTML and ARIA attributes
+
+## Usage Instructions
+
+1. Copy the component code above
+2. Paste it into your Nuxt 3 project
+3. Ensure you have Nuxt UI v4 installed: `npm install @nuxt/ui`
+4. Make sure Nuxt Image is configured: `npm install @nuxt/image`
+5. Customize the content, colors, and styling to match your needs
+6. Test the component in different screen sizes and dark mode
+

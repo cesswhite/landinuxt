@@ -1,0 +1,76 @@
+# simple - CTA Component
+
+## Description
+
+This CTA component displays a title and description, encouraging quick action
+
+## Rules for Implementation
+
+When creating this component, follow these rules:
+
+1. **Framework**: Use Nuxt 3 with Composition API (script setup)
+2. **UI Library**: Use Nuxt UI v4 components (UButton, NuxtImg, etc.)
+3. **Styling**: Use Tailwind CSS v4 utility classes
+4. **Responsive Design**: Ensure the component is fully responsive (mobile-first approach)
+5. **Dark Mode**: Make sure the component supports dark mode when applicable
+6. **Accessibility**: Include proper ARIA labels and semantic HTML
+7. **Performance**: Use lazy loading for images and optimize assets
+8. **Code Quality**: Write clean, readable, and maintainable code
+9. **TypeScript**: Use TypeScript for type safety (if applicable)
+10. **Component Structure**: Follow Vue 3 best practices and composition patterns
+
+## Reference Component Code
+
+This is the complete working code for this component. Use it as a reference:
+
+```vue
+<template>
+  <div class="bg-primary-700 relative w-full py-32">
+    <div class="flex flex-col gap-y-4">
+      <h1 class="text-dark-50 text-center text-4xl font-bold">
+        Unlock Your Startup Success
+      </h1>
+      <p
+        class="text-dark-50/70 mx-auto w-full text-center text-lg font-normal md:w-1/2"
+      >
+        Unlock your Startup full potential with our guidance <br />
+        you can achieve a new milestone
+      </p>
+      <div class="mx-auto w-auto">
+        <UButton
+          to="#"
+          size="lg"
+          variant="solid"
+          class="text-dark-50 bg-primary-900 hover:bg-primary-950"
+        >
+          Discover more about
+        </UButton>
+      </div>
+    </div>
+  </div>
+</template>
+```
+
+## Code Explanation
+
+This Vue component implements a simple for landing pages. It uses Nuxt UI components such as UButton, USlideover, NuxtImg, etc. The code is optimized to be responsive and compatible with dark mode when available.
+
+## Technical Implementation Details
+
+### Key Features:
+
+- **Responsive Layout**: Uses Tailwind's responsive breakpoints (sm:, md:, lg:, xl:, 2xl:)
+- **Component Library**: Leverages Nuxt UI v4 for consistent design system
+- **Image Optimization**: Uses NuxtImg for automatic image optimization and lazy loading
+- **Dark Mode Support**: Includes dark mode classes (dark:) for theme switching
+- **Accessibility**: Proper semantic HTML and ARIA attributes
+
+## Usage Instructions
+
+1. Copy the component code above
+2. Paste it into your Nuxt 3 project
+3. Ensure you have Nuxt UI v4 installed: `npm install @nuxt/ui`
+4. Make sure Nuxt Image is configured: `npm install @nuxt/image`
+5. Customize the content, colors, and styling to match your needs
+6. Test the component in different screen sizes and dark mode
+

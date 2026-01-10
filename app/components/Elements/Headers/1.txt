@@ -7,7 +7,7 @@ This header component features a minimal navigation with a logo and a responsive
 ## Reference Image
 
 **Public Image URL (GitHub Raw):**
-https://raw.githubusercontent.com/cesswhite/landingnuxt/main/public/components/headers/1.simple.png
+https://raw.githubusercontent.com/cesswhite/landingnuxt/feat/add-llm-instructions/public/components/headers/1.simple.png
 
 You can view this image directly in your browser or use it as a reference when implementing the component.
 
@@ -127,7 +127,7 @@ This Vue component implements a simple for landing pages. It uses Nuxt UI compon
 ## Visual Reference
 
 **View the reference image here:**
-https://raw.githubusercontent.com/cesswhite/landingnuxt/main/public/components/headers/1.simple.png
+https://raw.githubusercontent.com/cesswhite/landingnuxt/feat/add-llm-instructions/public/components/headers/1.simple.png
 
 The image shows exactly how this component should look when rendered. Use it as a visual guide to ensure your implementation matches the design.
 

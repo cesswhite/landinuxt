@@ -18,7 +18,7 @@ const categoryMap: Record<string, string> = {
 
 // GitHub repository configuration
 const GITHUB_REPO = 'cesswhite/landingnuxt'
-const GITHUB_BRANCH = 'main' // Default branch, can be overridden
+const GITHUB_BRANCH = 'feat/add-llm-instructions' // Branch for testing
 const GITHUB_BASE_URL = `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}`
 
 const componentsDir = join(process.cwd(), 'app/components/Elements')

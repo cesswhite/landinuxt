@@ -1,0 +1,103 @@
+# simple - Auth Component
+
+## Description
+
+This login form displays a simple title with two input fields, ideal for a quick authentication flow.
+
+## Rules for Implementation
+
+When creating this component, follow these rules:
+
+1. **Framework**: Use Nuxt 3 with Composition API (script setup)
+2. **UI Library**: Use Nuxt UI v4 components (UButton, NuxtImg, etc.)
+3. **Styling**: Use Tailwind CSS v4 utility classes
+4. **Responsive Design**: Ensure the component is fully responsive (mobile-first approach)
+5. **Dark Mode**: Make sure the component supports dark mode when applicable
+6. **Accessibility**: Include proper ARIA labels and semantic HTML
+7. **Performance**: Use lazy loading for images and optimize assets
+8. **Code Quality**: Write clean, readable, and maintainable code
+9. **TypeScript**: Use TypeScript for type safety (if applicable)
+10. **Component Structure**: Follow Vue 3 best practices and composition patterns
+
+## Reference Component Code
+
+This is the complete working code for this component. Use it as a reference:
+
+```vue
+<template>
+    <div class="h-auto min-h-dvh w-full flex flex-col items-center justify-center">
+        <div class="w-full md:w-96 rounded-md bg-dark-50 dark:bg-dark-900 px-4 py-12">
+            <h1 class="w-full text-left font-bold text-lg text-dark-950 dark:text-dark-50">Welcome back, login to your
+                account</h1>
+            <div class="mt-4">
+                <UForm :validate="validate" :state="state" class="grid grid-cols-12 gap-4" @submit="onSubmit">
+                    <div class="col-span-full">
+                        <UFormField label="Email" name="email" size="lg">
+                            <UInput v-model="state.email" type="email" class="w-full" />
+                        </UFormField>
+                    </div>
+                    <div class="col-span-full">
+                        <UFormField label="Password" name="password" size="lg">
+                            <UInput v-model="state.password" type="password" class="w-full" />
+                        </UFormField>
+                    </div>
+                    <div class="col-span-full mt-4">
+                        <UButton block type="submit" size="lg" class="cursor-pointer">
+                            Sign In
+                        </UButton>
+                        <small class="text-dark-950/50 dark:text-dark-50/50 text-xs">
+                            Don't have an account? <NuxtLink to="#" class="text-primary-500 dark:text-primary-400">Sign
+                                up</NuxtLink>
+                        </small>
+                    </div>
+                </UForm>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup lang="ts">
+import type { FormError, FormSubmitEvent } from '#ui/types'
+
+const state = reactive({
+    email: undefined,
+    password: undefined
+})
+
+const validate = (state: any): FormError[] => {
+    const errors = []
+    if (!state.email) errors.push({ name: 'email', message: 'Field required' })
+    if (!state.password) errors.push({ name: 'password', message: 'Field required' })
+    return errors
+}
+
+async function onSubmit(event: FormSubmitEvent<any>) {
+    state.email = undefined
+    state.password = undefined
+}
+</script>
+```
+
+## Code Explanation
+
+This Vue component implements a simple for landing pages. It uses Nuxt UI components such as UButton, USlideover, NuxtImg, etc. The code is optimized to be responsive and compatible with dark mode when available.
+
+## Technical Implementation Details
+
+### Key Features:
+
+- **Responsive Layout**: Uses Tailwind's responsive breakpoints (sm:, md:, lg:, xl:, 2xl:)
+- **Component Library**: Leverages Nuxt UI v4 for consistent design system
+- **Image Optimization**: Uses NuxtImg for automatic image optimization and lazy loading
+- **Dark Mode Support**: Includes dark mode classes (dark:) for theme switching
+- **Accessibility**: Proper semantic HTML and ARIA attributes
+
+## Usage Instructions
+
+1. Copy the component code above
+2. Paste it into your Nuxt 3 project
+3. Ensure you have Nuxt UI v4 installed: `npm install @nuxt/ui`
+4. Make sure Nuxt Image is configured: `npm install @nuxt/image`
+5. Customize the content, colors, and styling to match your needs
+6. Test the component in different screen sizes and dark mode
+
