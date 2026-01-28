@@ -1,106 +1,97 @@
 <template>
   <NuxtLayout name="playground">
-    <div
-      class="bg-dark-50 dark:bg-dark-950 relative w-full px-4 py-44 lg:py-0 h-auto min-h-dvh flex items-center justify-center">
-      <UContainer>
-        <div class="grid grid-cols-12">
-          <template v-for="(image, index) in images" :key="index">
-            <div class="col-span-full md:col-span-3 group relative overflow-hidden cursor-pointer"
-              @click="openLightbox(index)">
-              <NuxtImg :src="image.src" :alt="image.alt"
-                class="h-96 w-full object-cover saturate-0 group-hover:saturate-100" loading="lazy"
-                :placeholder="[50, 25, 75, 5]" format="webp" />
+    <section id="gallery-marquee"
+      class="w-full overflow-hidden relative flex flex-col items-center justify-center py-12">
+      <h1 class="text-dark-950 dark:text-dark-50 text-center text-5xl 2xl:text-6xl font-bold tracking-tight">
+        Discover the Magic of Mexico.
+        <br />
+        <span
+          class="inline-block py-1 text-transparent bg-clip-text bg-linear-to-r from-primary-600 via-primary-300 to-primary-600 dark:from-primary-400 dark:via-primary-200 dark:to-primary-400 font-family-instrument italic">
+          Where Every Journey is a Celebration.
+        </span>
+      </h1>
+      <div class="mx-auto flex flex-col gap-8 mt-12">
+        <!-- Marquee 1 -->
+        <UMarquee :repeat="4" pause-on-hover :overlay="false" :ui="{
+          root: '[--gap:--spacing(8)] [--duration:100s]',
+          content: 'w-auto relative'
+        }">
+          <NuxtImg v-for="(image, index) in marquee1" :key="`marquee1-${index}`" :src="image"
+            :alt="`Tattoo preview ${index + 1}`" width="1280" height="100%" sizes="1280px" format="webp" quality="90"
+            class="size-64 md:size-80 object-cover object-center rounded-2xl shrink-0" loading="lazy" />
+        </UMarquee>
 
-            </div>
-          </template>
-        </div>
-      </UContainer>
-      <UModal v-model:open="isLightboxOpen" fullscreen :ui="{
-        body: 'p-0 bg-transparent flex items-center justify-center',
+        <!-- Marquee 2 (Reverse) -->
+        <UMarquee :repeat="4" pause-on-hover reverse :overlay="false" :ui="{
+          root: '[--gap:--spacing(8)] [--duration:100s]',
+          content: 'w-auto relative'
+        }">
+          <NuxtImg v-for="(image, index) in marquee2" :key="`marquee2-${index}`" :src="image"
+            :alt="`Tattoo preview ${index + 1}`" width="1280" height="100%" sizes="1280px" format="webp" quality="90"
+            class="size-64 md:size-80 object-cover object-center rounded-2xl shrink-0" loading="lazy" />
+        </UMarquee>
 
-      }">
-        <template #content>
-          <div class="relative w-full h-dvh flex items-center justify-center bg-dark-950/90 backdrop-blur-sm">
-            <UButton @click="isLightboxOpen = false" icon="i-heroicons-x-mark" variant="ghost" color="neutral"
-              class="absolute right-2 top-2 z-10" />
-            <NuxtImg v-if="currentImage" :src="currentImage.src" :alt="currentImage.alt"
-              class="w-full h-10/12 object-contain" format="webp" />
-          </div>
-        </template>
-      </UModal>
-    </div>
+        <!-- Marquee 3 -->
+        <UMarquee :repeat="4" pause-on-hover :overlay="false" :ui="{
+          root: '[--gap:--spacing(8)] [--duration:100s]',
+          content: 'w-auto relative'
+        }">
+          <NuxtImg v-for="(image, index) in marquee3" :key="`marquee3-${index}`" :src="image"
+            :alt="`Tattoo preview ${index + 1}`" width="1280" height="100%" sizes="1280px" format="webp" quality="90"
+            class="size-64 md:size-80 object-cover object-center rounded-2xl shrink-0" loading="lazy" />
+        </UMarquee>
+
+        <!-- Marquee 4 (Reverse) -->
+        <UMarquee :repeat="4" pause-on-hover reverse :overlay="false" :ui="{
+          root: '[--gap:--spacing(8)] [--duration:100s]',
+          content: 'w-auto relative'
+        }">
+          <NuxtImg v-for="(image, index) in marquee4" :key="`marquee4-${index}`" :src="image"
+            :alt="`Tattoo preview ${index + 1}`" width="1280" height="100%" sizes="1280px" format="webp" quality="90"
+            class="size-64 md:size-80 object-cover object-center rounded-2xl shrink-0" loading="lazy" />
+        </UMarquee>
+      </div>
+    </section>
+
+
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-const config = useRuntimeConfig()
-const route = useRoute()
 
-useSeoMeta({
-  title: "Playground | LandiNuxt",
-  description: "Interactive playground to explore and test LandiNuxt components in real-time. Experiment with different UI elements and see them come to life.",
-  ogTitle: "Playground | LandiNuxt",
-  ogDescription: "Interactive playground to explore and test LandiNuxt components in real-time. Experiment with different UI elements and see them come to life.",
-  ogImage: "/og-landinuxt.jpg",
-  ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
-  twitterCard: "summary_large_image",
-  twitterTitle: "Playground | LandiNuxt",
-  twitterDescription: "Interactive playground to explore and test LandiNuxt components in real-time. Experiment with different UI elements and see them come to life.",
-  twitterImage: "/og-landinuxt.jpg",
-  ogImageWidth: 1200,
-  ogImageHeight: 630,
-})
+type Marquee = string[]
+const marqueeImages: Marquee = [
+  'https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1465256410760-10640339c72c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1521216774850-01bc1c5fe0da?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1473726867722-6b8a5e529d76?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1518638150340-f706e86654de?q=80&w=1734&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1547995886-6dc09384c6e6?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1580934738416-ad531f2920f7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1534312663388-244b6be22824?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1678932331809-06eceb2fc145?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1585464231875-d9ef1f5ad396?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1535159530326-d7bf54bfb24e?q=80&w=1804&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1504814532849-cff240bbc503?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1551279880-03041531948f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1717654543196-4d6826ec4bb8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1516291251364-8e3c644a43aa?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1508642054-5e6cade8ff13?q=80&w=1819&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1493794179168-82ca7cb00437?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1512442827816-8e5a088619c9?q=80&w=1735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1580846629083-02669741360a?q=80&w=1727&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1650367310179-e1b5b8e453c3?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1588912422476-f2afaed1ec0c?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1617340407797-56eef3bf60c3?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1574493264149-87880133a2ba?q=80&w=1748&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+]
 
-useHead({
-  htmlAttrs: {
-    lang: 'en'
-  }
-})
+const marqueeCount = 4
+const perMarquee = Math.floor(marqueeImages.length / marqueeCount)
+const usableImages = marqueeImages.slice(0, perMarquee * marqueeCount)
 
-const images = [
-  {
-    src: "https://images.unsplash.com/photo-1610296669228-602fa827fc1f?q=80&w=1075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Desert landscape with sand dunes",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Cacti in desert",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1566345984367-fa2ba5cedc17?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Desert sunset",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1504192010706-dd7f569ee2be?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Mountain landscape",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Ocean view",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Forest path",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1534996858221-380b92700493?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Ocean view",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1529788295308-1eace6f67388?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Forest path",
-  },
-];
-
-const isLightboxOpen = ref(false);
-const currentIndex = ref(0);
-
-const currentImage = computed(() => {
-  return images[currentIndex.value];
-});
-
-function openLightbox(index: number) {
-  currentIndex.value = index;
-  isLightboxOpen.value = true;
-}
+const marquee1: Marquee = usableImages.slice(0 * perMarquee, 1 * perMarquee)
+const marquee2: Marquee = usableImages.slice(1 * perMarquee, 2 * perMarquee)
+const marquee3: Marquee = usableImages.slice(2 * perMarquee, 3 * perMarquee)
+const marquee4: Marquee = usableImages.slice(3 * perMarquee, 4 * perMarquee)
 </script>
