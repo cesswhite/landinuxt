@@ -46,7 +46,7 @@
         <div class="mt-8 flex flex-col-reverse items-center justify-center gap-4">
           <UButton to="/instructions" variant="ghost" size="xl"> Instructions </UButton>
           <UButton variant="solid" to="/components" size="xl">
-            Explore 50+ Free Components Now
+            Explore 90+ Free Components Now
           </UButton>
         </div>
       </div>
