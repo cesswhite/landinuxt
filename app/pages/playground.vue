@@ -1,97 +1,64 @@
 <template>
   <NuxtLayout name="playground">
-    <section id="gallery-marquee"
-      class="w-full overflow-hidden relative flex flex-col items-center justify-center py-12">
-      <h1 class="text-dark-950 dark:text-dark-50 text-center text-5xl 2xl:text-6xl font-bold tracking-tight">
-        Discover the Magic of Mexico.
-        <br />
-        <span
-          class="inline-block py-1 text-transparent bg-clip-text bg-linear-to-r from-primary-600 via-primary-300 to-primary-600 dark:from-primary-400 dark:via-primary-200 dark:to-primary-400 font-family-instrument italic">
-          Where Every Journey is a Celebration.
-        </span>
-      </h1>
-      <div class="mx-auto flex flex-col gap-8 mt-12">
-        <!-- Marquee 1 -->
-        <UMarquee :repeat="4" pause-on-hover :overlay="false" :ui="{
-          root: '[--gap:--spacing(8)] [--duration:100s]',
-          content: 'w-auto relative'
-        }">
-          <NuxtImg v-for="(image, index) in marquee1" :key="`marquee1-${index}`" :src="image"
-            :alt="`Tattoo preview ${index + 1}`" width="1280" height="100%" sizes="1280px" format="webp" quality="90"
-            class="size-64 md:size-80 object-cover object-center rounded-2xl shrink-0" loading="lazy" />
-        </UMarquee>
-
-        <!-- Marquee 2 (Reverse) -->
-        <UMarquee :repeat="4" pause-on-hover reverse :overlay="false" :ui="{
-          root: '[--gap:--spacing(8)] [--duration:100s]',
-          content: 'w-auto relative'
-        }">
-          <NuxtImg v-for="(image, index) in marquee2" :key="`marquee2-${index}`" :src="image"
-            :alt="`Tattoo preview ${index + 1}`" width="1280" height="100%" sizes="1280px" format="webp" quality="90"
-            class="size-64 md:size-80 object-cover object-center rounded-2xl shrink-0" loading="lazy" />
-        </UMarquee>
-
-        <!-- Marquee 3 -->
-        <UMarquee :repeat="4" pause-on-hover :overlay="false" :ui="{
-          root: '[--gap:--spacing(8)] [--duration:100s]',
-          content: 'w-auto relative'
-        }">
-          <NuxtImg v-for="(image, index) in marquee3" :key="`marquee3-${index}`" :src="image"
-            :alt="`Tattoo preview ${index + 1}`" width="1280" height="100%" sizes="1280px" format="webp" quality="90"
-            class="size-64 md:size-80 object-cover object-center rounded-2xl shrink-0" loading="lazy" />
-        </UMarquee>
-
-        <!-- Marquee 4 (Reverse) -->
-        <UMarquee :repeat="4" pause-on-hover reverse :overlay="false" :ui="{
-          root: '[--gap:--spacing(8)] [--duration:100s]',
-          content: 'w-auto relative'
-        }">
-          <NuxtImg v-for="(image, index) in marquee4" :key="`marquee4-${index}`" :src="image"
-            :alt="`Tattoo preview ${index + 1}`" width="1280" height="100%" sizes="1280px" format="webp" quality="90"
-            class="size-64 md:size-80 object-cover object-center rounded-2xl shrink-0" loading="lazy" />
-        </UMarquee>
-      </div>
-    </section>
-
-
+    <div
+      class="relative flex w-full min-h-screen overflow-x-auto overflow-y-hidden gap-x-4 md:gap-x-12 snap-x snap-mandatory overscroll-x-auto touch-auto [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden px-4 md:px-12">
+      <template v-for="(item, idx) in items" :key="idx">
+        <div class="shrink-0 snap-center flex items-center justify-center">
+          <div
+            class="shrink-0 w-96 md:w-[640px] xl:w-[1200px] relative flex flex-col items-center justify-center overflow-hidden user-select-none rounded-4xl flex-none h-[520px] md:h-[640px] xl:h-[720px] 2xl:h-[860px]">
+            <div
+              class="w-full absolute bottom-0 left-0 z-20 bg-linear-to-t h-96 from-dark-950/20 to-transparent px-4 2xl:px-0">
+              <div class="absolute top-0 left-0 size-full mask-t-from-15% backdrop-blur-xl" />
+            </div>
+            <NuxtImg :src="item.image" :alt="item.alt" width="1200" height="520" sizes="1200px" format="webp"
+              class="size-full object-cover object-center center-center z-10" />
+            <p
+              class="absolute z-30 bottom-0 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-center w-full text-dark-50 py-6 md:py-12 lg:py-8 xl:py-12">
+              {{ item.text }}
+            </p>
+          </div>
+        </div>
+      </template>
+    </div>
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-
-type Marquee = string[]
-const marqueeImages: Marquee = [
-  'https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1465256410760-10640339c72c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1521216774850-01bc1c5fe0da?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1473726867722-6b8a5e529d76?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1518638150340-f706e86654de?q=80&w=1734&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1547995886-6dc09384c6e6?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1580934738416-ad531f2920f7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1534312663388-244b6be22824?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1678932331809-06eceb2fc145?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1585464231875-d9ef1f5ad396?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1535159530326-d7bf54bfb24e?q=80&w=1804&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1504814532849-cff240bbc503?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1551279880-03041531948f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1717654543196-4d6826ec4bb8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1516291251364-8e3c644a43aa?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1508642054-5e6cade8ff13?q=80&w=1819&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1493794179168-82ca7cb00437?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1512442827816-8e5a088619c9?q=80&w=1735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1580846629083-02669741360a?q=80&w=1727&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1650367310179-e1b5b8e453c3?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1588912422476-f2afaed1ec0c?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1617340407797-56eef3bf60c3?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1574493264149-87880133a2ba?q=80&w=1748&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+const items = [
+  {
+    text: "History you can feel.",
+    image: 'https://images.unsplash.com/photo-1518638150340-f706e86654de?q=80&w=1734&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'Ancient Mexican ruins',
+  },
+  {
+    text: "City. Flavor. Life.",
+    image: 'https://images.unsplash.com/photo-1547995886-6dc09384c6e6?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'Mexican food experience',
+  },
+  {
+    text: "Welcome to Mexico.",
+    image: 'https://images.unsplash.com/photo-1580934738416-ad531f2920f7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'Mexican festival celebration',
+  },
+  {
+    text: "Deep roots. New light.",
+    image: 'https://images.unsplash.com/photo-1534312663388-244b6be22824?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'Adventure in Mexico',
+  },
+  {
+    text: "Walk. Discover. Connect.",
+    image: 'https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'Mexico landscape view',
+  },
+  {
+    text: "Desert air. Pure thrill.",
+    image: 'https://images.unsplash.com/photo-1465256410760-10640339c72c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'Riviera Maya beach',
+  },
+  {
+    text: "Culture. Unfiltered.",
+    image: 'https://images.unsplash.com/photo-1521216774850-01bc1c5fe0da?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'Mexico City cultural scene',
+  },
 ]
-
-const marqueeCount = 4
-const perMarquee = Math.floor(marqueeImages.length / marqueeCount)
-const usableImages = marqueeImages.slice(0, perMarquee * marqueeCount)
-
-const marquee1: Marquee = usableImages.slice(0 * perMarquee, 1 * perMarquee)
-const marquee2: Marquee = usableImages.slice(1 * perMarquee, 2 * perMarquee)
-const marquee3: Marquee = usableImages.slice(2 * perMarquee, 3 * perMarquee)
-const marquee4: Marquee = usableImages.slice(3 * perMarquee, 4 * perMarquee)
 </script>

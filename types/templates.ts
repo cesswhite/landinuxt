@@ -53,4 +53,4 @@ export type ContactTemplates = 'simple' | 'single' | 'enterprise' | 'map' | 'mul
 export type LogosTemplates = 'simple' | 'animated' | 'multi' | 'mini' | 'double' | 'high-converting'
 export type FAQTemplates = 'simple' | 'border' | 'grid' | 'high-converting' 
 export type AuthTemplates = 'simple' | 'logo' | 'big' | 'create' | 'reset'
-export type GalleryTemplates = 'grid' | 'windows' | 'carousel' | 'lightbox' | 'minimal' | 'modern' | 'marquee'
+export type GalleryTemplates = 'grid' | 'windows' | 'marquee' | 'slider'

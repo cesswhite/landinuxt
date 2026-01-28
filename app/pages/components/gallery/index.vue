@@ -10,6 +10,7 @@
               <LazyElementsGallery1 v-if="item.title === ('grid' as GalleryTemplates)" />
               <LazyElementsGallery2 v-if="item.title === ('windows' as GalleryTemplates)" />
               <LazyElementsGallery3 v-if="item.title === ('marquee' as GalleryTemplates)" />
+              <LazyElementsGallery4 v-if="item.title === ('slider' as GalleryTemplates)" />
             </template>
           </ElementsWrapper>
         </template>
