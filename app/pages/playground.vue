@@ -1,64 +1,78 @@
 <template>
   <NuxtLayout name="playground">
-    <div
-      class="relative flex w-full min-h-screen overflow-x-auto overflow-y-hidden gap-x-4 md:gap-x-12 snap-x snap-mandatory overscroll-x-auto touch-auto [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden px-4 md:px-12">
-      <template v-for="(item, idx) in items" :key="idx">
-        <div class="shrink-0 snap-center flex items-center justify-center">
-          <div
-            class="shrink-0 w-96 md:w-[640px] xl:w-[1200px] relative flex flex-col items-center justify-center overflow-hidden user-select-none rounded-4xl flex-none h-[520px] md:h-[640px] xl:h-[720px] 2xl:h-[860px]">
-            <div
-              class="w-full absolute bottom-0 left-0 z-20 bg-linear-to-t h-96 from-dark-950/20 to-transparent px-4 2xl:px-0">
-              <div class="absolute top-0 left-0 size-full mask-t-from-15% backdrop-blur-xl" />
-            </div>
-            <NuxtImg :src="item.image" :alt="item.alt" width="1200" height="520" sizes="1200px" format="webp"
-              class="size-full object-cover object-center center-center z-10" />
-            <p
-              class="absolute z-30 bottom-0 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-center w-full text-dark-50 py-6 md:py-12 lg:py-8 xl:py-12">
-              {{ item.text }}
-            </p>
+    <section id="features" class="w-full h-auto lg:h-[calc(100dvh*1.5)] xl:h-[calc(100dvh*2.5)] relative py-24">
+      <div class="absolute top-0 left-0 w-full h-full">
+        <NuxtImg
+          src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Lifestyle photoshoot with natural light" width="100%" height="100dvh" loading="lazy"
+          class="absolute inset-0 w-full h-full object-cover object-center" format="webp" quality="100" />
+      </div>
+      <div class="w-full text-center mx-auto relative z-10">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center w-full text-dark-50">
+          Photoshoots, made effortless.
+        </h1>
+        <p class="text-2xl md:text-3xl lg:text-4xl text-center text-dark-50/70 w-4/5! lg:w-1/2 mt-2 mx-auto">
+          Book a session. Show up. Get stunning photos.
+        </p>
+      </div>
+
+      <div class="relative mt-96 lg:mt-0 lg:absolute lg:bottom-36 left-0 w-full">
+        <div class="max-w-7xl mx-auto">
+          <div class="w-full sm:w-4/5 md:w-full h-full grid grid-cols-12 gap-y-12 px-4 md:gap-x-12 mx-auto 2xl:px-0">
+            <template v-for="(feature, index) in features" :key="index">
+              <div v-motion-fade-visible class="col-span-full md:col-span-6 xl:col-span-4">
+                <UIcon :name="feature.icon" class="text-dark-50 text-3xl" />
+                <p class="text-lg text-dark-50/95 w-full max-w-3xl mx-auto text-left font-medium">
+                  <span class="text-dark-50 inline-block font-bold">
+                    {{ feature.title }}
+                  </span>
+                  {{ feature.description }}
+                </p>
+              </div>
+            </template>
           </div>
         </div>
-      </template>
-    </div>
+      </div>
+    </section>
   </NuxtLayout>
 </template>
-
 <script setup lang="ts">
-const items = [
+interface Feature {
+  icon: string
+  title: string
+  description: string
+}
+
+const features: Feature[] = [
   {
-    text: "History you can feel.",
-    image: 'https://images.unsplash.com/photo-1518638150340-f706e86654de?q=80&w=1734&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Ancient Mexican ruins',
+    icon: 'i-mdi-camera-outline',
+    title: 'Look your best, naturally.',
+    description: 'Guided posing and flattering light — so your photos feel like you, on your best day.',
   },
   {
-    text: "City. Flavor. Life.",
-    image: 'https://images.unsplash.com/photo-1547995886-6dc09384c6e6?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Mexican food experience',
+    icon: 'i-mdi-map-marker-radius-outline',
+    title: 'Studio or on location.',
+    description: 'City streets, beaches, cafés, or your space — we shoot wherever your story looks right.',
   },
   {
-    text: "Welcome to Mexico.",
-    image: 'https://images.unsplash.com/photo-1580934738416-ad531f2920f7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Mexican festival celebration',
+    icon: 'i-mdi-tune-variant',
+    title: 'Styling that clicks.',
+    description: 'Outfit guidance and quick touch-ups — small details that make every frame feel intentional.'
   },
   {
-    text: "Deep roots. New light.",
-    image: 'https://images.unsplash.com/photo-1534312663388-244b6be22824?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Adventure in Mexico',
+    icon: 'i-mdi-share-variant',
+    title: 'Ready to share.',
+    description: 'Social-sized exports and high-res files — perfect for Instagram, portfolios, and press kits.',
   },
   {
-    text: "Walk. Discover. Connect.",
-    image: 'https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Mexico landscape view',
+    icon: 'i-mdi-palette-outline',
+    title: 'A style for every vibe.',
+    description: 'Headshots, lifestyle, couples, brands — clean, modern edits that match your mood.',
   },
   {
-    text: "Desert air. Pure thrill.",
-    image: 'https://images.unsplash.com/photo-1465256410760-10640339c72c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Riviera Maya beach',
-  },
-  {
-    text: "Culture. Unfiltered.",
-    image: 'https://images.unsplash.com/photo-1521216774850-01bc1c5fe0da?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Mexico City cultural scene',
-  },
+    icon: 'i-mdi-lightning-bolt-outline',
+    title: 'Fast turnaround.',
+    description: 'Get your gallery quickly, pick favorites, and download in one place — simple from start to finish.',
+  }
 ]
 </script>

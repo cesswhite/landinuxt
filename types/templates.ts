@@ -38,7 +38,8 @@ export type FeaturesTemplates =
   | "ancient"
   | "bento"
   | "luxury"
-  | "high-converting";
+  | "high-converting"
+  | "full-featured";
 export type FootersTemplates =
   | "simple"
   | "space"

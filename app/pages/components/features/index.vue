@@ -20,6 +20,7 @@
               <LazyElementsFeatures11 v-if="item.title === ('luxury' as FeaturesTemplates)" />
               <LazyElementsFeatures12 v-if="item.title === ('bento' as FeaturesTemplates)" />
               <LazyElementsFeatures13 v-if="item.title === ('high-converting' as FeaturesTemplates)" />
+              <LazyElementsFeatures14 v-if="item.title === ('full-featured' as FeaturesTemplates)" />
             </template>
           </ElementsWrapper>
         </template>
