@@ -28,24 +28,20 @@
               class="size-full object-contain object-center" format="webp" />
           </NuxtLink>
         </div>
-        <div
-          class="text-primary-500/60 dark:text-primary-400/60 relative text-center text-base italic font-family-instrument">
-          Build less. Convert more.
-        </div>
         <h1
           class="mt-4 text-center font-bold tracking-tight text-dark-950 text-5xl lg:text-6xl xl:text-7xl dark:text-neutral-50">
-          Ship faster.
+          Effortless sites.
           <br />
-          Cook better UIs.
+          Instantly beautiful.
         </h1>
         <p
           class="text-dark-950/60 dark:text-dark-50/50 mt-2 text-center text-lg/6 2xl:text-xl w-full md:w-10/12 lg:w-1/2">
-          Nuxt-powered componentes and sections to ship faster, no hassle, just clean UI
-          with instant results
+          Unlock the power of Nuxt with free, modern UI components and landing sections. Build fast. Look stunning.
+          Launch with confidence.
         </p>
         <div class="mt-8 flex flex-col-reverse items-center justify-center gap-4">
           <UButton to="/instructions" variant="ghost" size="xl"> Instructions </UButton>
-          <UButton variant="solid" to="/components" size="xl">
+          <UButton variant="solid" to="/components" size="xl" class="rounded-full px-8">
             Explore 90+ Free Components Now
           </UButton>
         </div>
