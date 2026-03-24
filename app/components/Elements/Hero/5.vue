@@ -11,7 +11,7 @@
           Cutting-Edge Innovation
         </h1>
         <div class="mt-8 flex gap-4">
-          <UButton variant="solid" color="neutral" to="#" size="lg" trailing class="rounded-full px-8">
+          <UButton variant="solid" color="neutral" to="#" size="lg" trailing-icon="i-heroicons-arrow-right" class="rounded-full px-8">
             Get started
           </UButton>
           <UButton variant="link" color="neutral" to="#" size="lg" class="rounded-full px-8">

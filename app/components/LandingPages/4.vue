@@ -455,7 +455,7 @@
                                 totam, quas maiores!
                             </p>
                             <div class="">
-                                <UButton icon="i-heroicons-arrow-right" trailing variant="link" color="primary"
+                                <UButton trailing-icon="i-heroicons-arrow-right" variant="link" color="primary"
                                     class="p-0">
                                     Learn more about us
                                 </UButton>

@@ -40,15 +40,17 @@
                     product launches.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <UCard to="/landings" class="hover:shadow-lg transition-shadow cursor-pointer">
-                        <h3 class="font-semibold text-xl mb-2 text-dark-950 dark:text-dark-50">
-                            Browse All Templates
-                        </h3>
-                        <p class="text-sm text-dark-950/60 dark:text-dark-50/60">
-                            Explore our collection of complete landing page templates including Simple, Showcase, SaaS,
-                            and Agency designs.
-                        </p>
-                    </UCard>
+                    <ULink to="/landings" class="block">
+                        <UCard class="hover:shadow-lg transition-shadow cursor-pointer">
+                            <h3 class="font-semibold text-xl mb-2 text-dark-950 dark:text-dark-50">
+                                Browse All Templates
+                            </h3>
+                            <p class="text-sm text-dark-950/60 dark:text-dark-50/60">
+                                Explore our collection of complete landing page templates including Simple, Showcase, SaaS,
+                                and Agency designs.
+                            </p>
+                        </UCard>
+                    </ULink>
                 </div>
             </div>
 
@@ -99,7 +101,11 @@
                     Frequently Asked Questions
                 </h2>
                 <div class="space-y-4">
-                    <UAccordion :items="faqItems" />
+                    <UAccordion
+                    :items="faqItems"
+                    :unmount-on-hide="false"
+                    :ui="{ trigger: 'text-base', body: 'text-base text-muted' }"
+                />
                 </div>
             </div>
 

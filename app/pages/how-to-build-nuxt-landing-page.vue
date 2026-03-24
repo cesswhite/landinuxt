@@ -54,58 +54,66 @@
           Additional Resources
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <UCard to="/nuxt-landing-components" class="hover:shadow-lg transition-shadow cursor-pointer">
-            <div class="flex items-start gap-4">
-              <Icon name="i-lucide-layers" class="w-6 h-6 text-primary-600 dark:text-primary-400" />
-              <div>
-                <h3 class="font-semibold text-lg mb-2 text-dark-950 dark:text-dark-50">
-                  Browse Components
-                </h3>
-                <p class="text-sm text-dark-950/60 dark:text-dark-50/60">
-                  Explore our collection of pre-built landing page components ready to copy and paste.
-                </p>
+          <ULink to="/nuxt-landing-components" class="block">
+            <UCard class="hover:shadow-lg transition-shadow cursor-pointer">
+              <div class="flex items-start gap-4">
+                <Icon name="i-lucide-layers" class="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <div>
+                  <h3 class="font-semibold text-lg mb-2 text-dark-950 dark:text-dark-50">
+                    Browse Components
+                  </h3>
+                  <p class="text-sm text-dark-950/60 dark:text-dark-50/60">
+                    Explore our collection of pre-built landing page components ready to copy and paste.
+                  </p>
+                </div>
               </div>
-            </div>
-          </UCard>
-          <UCard to="/nuxt-landing-comparison" class="hover:shadow-lg transition-shadow cursor-pointer">
-            <div class="flex items-start gap-4">
-              <Icon name="i-lucide-git-compare" class="w-6 h-6 text-primary-600 dark:text-primary-400" />
-              <div>
-                <h3 class="font-semibold text-lg mb-2 text-dark-950 dark:text-dark-50">
-                  Compare Libraries
-                </h3>
-                <p class="text-sm text-dark-950/60 dark:text-dark-50/60">
-                  Compare Nuxt UI, Shadcn, and free libraries to choose the best for your project.
-                </p>
+            </UCard>
+          </ULink>
+          <ULink to="/nuxt-landing-comparison" class="block">
+            <UCard class="hover:shadow-lg transition-shadow cursor-pointer">
+              <div class="flex items-start gap-4">
+                <Icon name="i-lucide-git-compare" class="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <div>
+                  <h3 class="font-semibold text-lg mb-2 text-dark-950 dark:text-dark-50">
+                    Compare Libraries
+                  </h3>
+                  <p class="text-sm text-dark-950/60 dark:text-dark-50/60">
+                    Compare Nuxt UI, Shadcn, and free libraries to choose the best for your project.
+                  </p>
+                </div>
               </div>
-            </div>
-          </UCard>
-          <UCard to="/landings" class="hover:shadow-lg transition-shadow cursor-pointer">
-            <div class="flex items-start gap-4">
-              <Icon name="i-lucide-layout-template" class="w-6 h-6 text-primary-600 dark:text-primary-400" />
-              <div>
-                <h3 class="font-semibold text-lg mb-2 text-dark-950 dark:text-dark-50">
-                  View Templates
-                </h3>
-                <p class="text-sm text-dark-950/60 dark:text-dark-50/60">
-                  See complete landing page templates for inspiration and quick starts.
-                </p>
+            </UCard>
+          </ULink>
+          <ULink to="/landings" class="block">
+            <UCard class="hover:shadow-lg transition-shadow cursor-pointer">
+              <div class="flex items-start gap-4">
+                <Icon name="i-lucide-layout-template" class="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <div>
+                  <h3 class="font-semibold text-lg mb-2 text-dark-950 dark:text-dark-50">
+                    View Templates
+                  </h3>
+                  <p class="text-sm text-dark-950/60 dark:text-dark-50/60">
+                    See complete landing page templates for inspiration and quick starts.
+                  </p>
+                </div>
               </div>
-            </div>
-          </UCard>
-          <UCard to="https://ui.nuxt.com" external class="hover:shadow-lg transition-shadow cursor-pointer">
-            <div class="flex items-start gap-4">
-              <Icon name="i-lucide-book-open" class="w-6 h-6 text-primary-600 dark:text-primary-400" />
-              <div>
-                <h3 class="font-semibold text-lg mb-2 text-dark-950 dark:text-dark-50">
-                  Nuxt UI Docs
-                </h3>
-                <p class="text-sm text-dark-950/60 dark:text-dark-50/60">
-                  Official Nuxt UI documentation for advanced customization and theming.
-                </p>
+            </UCard>
+          </ULink>
+          <ULink to="https://ui.nuxt.com" target="_blank" class="block">
+            <UCard class="hover:shadow-lg transition-shadow cursor-pointer">
+              <div class="flex items-start gap-4">
+                <Icon name="i-lucide-book-open" class="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <div>
+                  <h3 class="font-semibold text-lg mb-2 text-dark-950 dark:text-dark-50">
+                    Nuxt UI Docs
+                  </h3>
+                  <p class="text-sm text-dark-950/60 dark:text-dark-50/60">
+                    Official Nuxt UI documentation for advanced customization and theming.
+                  </p>
+                </div>
               </div>
-            </div>
-          </UCard>
+            </UCard>
+          </ULink>
         </div>
       </div>
 

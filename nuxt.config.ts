@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  
+  ssr: false,
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.landinuxt.com',
     name: 'LandiNuxt',

@@ -42,15 +42,17 @@
                     agencias y lanzamientos de productos.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <UCard to="/landings" class="hover:shadow-lg transition-shadow cursor-pointer">
-                        <h3 class="font-semibold text-xl mb-2 text-dark-950 dark:text-dark-50">
-                            Ver Todas las Plantillas
-                        </h3>
-                        <p class="text-sm text-dark-950/60 dark:text-dark-50/60">
-                            Explora nuestra colección de plantillas completas de landing pages incluyendo diseños
-                            Simple, Showcase, SaaS y Agency.
-                        </p>
-                    </UCard>
+                    <ULink to="/landings" class="block">
+                        <UCard class="hover:shadow-lg transition-shadow cursor-pointer">
+                            <h3 class="font-semibold text-xl mb-2 text-dark-950 dark:text-dark-50">
+                                Ver Todas las Plantillas
+                            </h3>
+                            <p class="text-sm text-dark-950/60 dark:text-dark-50/60">
+                                Explora nuestra colección de plantillas completas de landing pages incluyendo diseños
+                                Simple, Showcase, SaaS y Agency.
+                            </p>
+                        </UCard>
+                    </ULink>
                 </div>
             </div>
 
@@ -101,7 +103,11 @@
                     Preguntas Frecuentes
                 </h2>
                 <div class="space-y-4">
-                    <UAccordion :items="faqItems" />
+                    <UAccordion
+                    :items="faqItems"
+                    :unmount-on-hide="false"
+                    :ui="{ trigger: 'text-base', body: 'text-base text-muted' }"
+                />
                 </div>
             </div>
 

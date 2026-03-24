@@ -22,8 +22,15 @@ const _repositories = ref<Repository[]>([
     {
         name: 'v4.20',
         url: 'https://github.com/cesswhite/v4.20',
-        description: 'Minimal, fast Nuxt starter for developers',
+        description: 'Minimal and fast Nuxt 4 starter for devs',
         image: 'https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/v4.20_qxnmfj.webp',
+        isPremium: false
+    },
+    {
+        name: 'v4.20i',
+        url: 'https://github.com/cesswhite/v4.20i',
+        description: 'Nuxt 4 starter with i18n support',
+        image: 'https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/v4.20i_njqrz6.webp',
         isPremium: false
     },
     {
