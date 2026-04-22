@@ -1,7 +1,7 @@
 <template>
   <div class="flex w-full flex-col gap-12 rounded-xl border bg-dark-50  p-4 md:gap-24 dark:bg-dark-900">
-    <div v-motion :initial="{ opacity: 0, filter: 'blur(10px)' }" :enter="{ opacity: 1, filter: 'blur(0px)' }"
-      :duration="1200" class="flex w-full flex-col gap-4 md:flex-row md:gap-0">
+    <div v-motion :initial="{ opacity: 0, y: 16 }" :enter="{ opacity: 1, y: 0 }"
+      :duration="450" class="flex w-full flex-col gap-4 md:flex-row md:gap-0">
       <div class="flex w-full flex-col gap-2 md:w-1/2">
         <div class="text-primary-600 dark:text-primary-500 text-sm">
           Embark on a Wild Adventure
@@ -19,8 +19,8 @@
     </div>
     <div class="flex flex-col items-start justify-between gap-x-16 gap-y-8 md:flex-row">
       <template v-for="image in images" :key="image.src">
-        <div v-motion :initial="{ opacity: 0, filter: 'blur(10px)' }" :enter="{ opacity: 1, filter: 'blur(0px)' }"
-          :duration="1200" class="flex flex-1 flex-col gap-2">
+        <div v-motion :initial="{ opacity: 0, y: 16 }" :enter="{ opacity: 1, y: 0 }"
+          :duration="450" class="flex flex-1 flex-col gap-2">
           <div
             class="bg-primary-950/10 dark:bg-primary-50/10 flex h-96 w-full items-center justify-center rounded-md p-1">
             <NuxtImg :src="image.src" class="size-full rounded-sm object-cover object-center" loading="lazy"

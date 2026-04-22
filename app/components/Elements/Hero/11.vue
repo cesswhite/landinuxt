@@ -1,5 +1,5 @@
 <template>
-    <div v-motion-fade :delay="100" :duration="1250"
+    <div v-motion-fade :delay="60" :duration="420"
         class="relative flex flex-col h-full min-h-dvh w-full items-center justify-center bg-dark-50 dark:bg-dark-950 py-24">
         <div class="relative z-20 w-11/12 md:w-10/12">
             <div class="flex flex-col items-center justify-center">
@@ -27,17 +27,17 @@
             <div class="col-span-3 p-2 bg-primary-500/10 dark:bg-primary-600/10">
                 <NuxtImg class="h-[580px] w-full object-center object-cover"
                     src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1715&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    format="webp" />
+                    format="webp" loading="eager" fetchpriority="high" />
             </div>
             <div class="col-span-6 p-2 bg-primary-500/10 dark:bg-primary-600/10">
                 <NuxtImg class="h-[600px] w-full object-center object-cover"
                     src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    format="webp" />
+                    format="webp" loading="lazy" />
             </div>
             <div class="col-span-3 p-2 bg-primary-500/10 dark:bg-primary-600/10">
                 <NuxtImg class="h-[580px] w-full object-center object-cover"
                     src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    format="webp" />
+                    format="webp" loading="lazy" />
             </div>
         </div>
     </div>

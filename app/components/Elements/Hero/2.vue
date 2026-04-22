@@ -1,7 +1,7 @@
 <template>
   <div class="relative flex h-full min-h-dvh w-full items-center justify-center bg-dark-50 dark:bg-dark-950">
     <div class="relative z-20 w-11/12 md:w-10/12">
-      <div v-motion-fade :delay="100" :duration="1250" class="flex flex-col items-center justify-center">
+      <div v-motion-fade :delay="60" :duration="420" class="flex flex-col items-center justify-center">
         <UBadge variant="soft" class="border-primary rounded-full border px-4 text-center md:px-12" size="lg">
           Beautifully crafted components
         </UBadge>
