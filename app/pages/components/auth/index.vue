@@ -1,6 +1,6 @@
 <template>
-    <NuxtLayout name="default">
-        <div class="relative w-full px-4 py-24">
+    <NuxtLayout name="components-hub">
+        <div class="relative w-full">
             <ElementsHeader name="Auth" :number="_auth.length"
                 description="Enhance your website's user experience with our advanced authentication components. Each component is designed for seamless interaction and to facilitate essential tasks such as signin, signup, password recovery, and token management, covering all aspects of the authentication flow." />
             <ContentList path="/auth" v-slot="{ list }">

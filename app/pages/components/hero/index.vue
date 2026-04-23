@@ -1,6 +1,6 @@
 <template>
-  <NuxtLayout name="default">
-    <div class="relative w-full py-24 px-4">
+  <NuxtLayout name="components-hub">
+    <div class="relative w-full">
       <ElementsHeader name="Hero" :number="_hero.length"
         description="Discover a wide range of hero sections tailored to engage your audience. Clean and simple to feature-rich designs, these sections are designed to convey your message effectively and captivate users." />
       <ContentList path="/hero" v-slot="{ list }">

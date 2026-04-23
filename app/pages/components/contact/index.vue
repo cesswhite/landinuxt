@@ -1,6 +1,6 @@
 <template>
-    <NuxtLayout name="default">
-        <div class="relative w-full px-4 py-24">
+    <NuxtLayout name="components-hub">
+        <div class="relative w-full">
             <ElementsHeader name="Contact" :number="_contact.length"
                 description="Enhance your website's user experience with our advanced Contact section components. Each component is crafted for seamless interaction and designed to facilitate meaningful connections." />
             <ContentList path="/contact" v-slot="{ list }">

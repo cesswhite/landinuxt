@@ -1,6 +1,6 @@
 <template>
-    <NuxtLayout name="default">
-        <div class="relative w-full px-4 py-24">
+    <NuxtLayout name="components-hub">
+        <div class="relative w-full">
             <ElementsHeader name="Logos" :number="_logos.length"
                 description="Elevate your brand's visibility with our diverse range of Logos section components. Each component is designed to showcase your partnerships and collaborations in a visually appealing way." />
             <ContentList path="/logos" v-slot="{ list }">

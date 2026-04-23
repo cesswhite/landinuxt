@@ -1,6 +1,6 @@
 <template>
-    <NuxtLayout name="default">
-        <div class="relative w-full px-4 py-24">
+    <NuxtLayout name="components-hub">
+        <div class="relative w-full">
             <ElementsHeader name="Testimonials" :number="_testimonials.length"
                 description="Enhance your website's credibility with our premium Testimonials components. Each component is crafted to showcase customer satisfaction and build trust with potential clients." />
             <ContentList path="/testimonials" v-slot="{ list }">
