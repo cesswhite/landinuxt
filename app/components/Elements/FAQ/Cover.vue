@@ -1,5 +1,5 @@
 <template>
-    <div class="flex h-full w-full items-center justify-center p-4 will-change-auto">
+    <div class="flex h-full w-full items-center justify-center will-change-auto">
 
 
         <svg class="fill-dark-800 dark:fill-dark-50" viewBox="0 0 1080 670" fill="none"
