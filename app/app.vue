@@ -10,14 +10,9 @@ const colorMode = useColorMode();
 
 const updateBodyBackground = () => {
   if (import.meta.client) {
-    const root = document.documentElement;
-    if (colorMode.value === 'dark') {
-      const darkColor = getComputedStyle(root).getPropertyValue('--color-dark-950').trim();
-      document.body.style.backgroundColor = darkColor || '#000000';
-    } else {
-      const lightColor = getComputedStyle(root).getPropertyValue('--color-dark-50').trim();
-      document.body.style.backgroundColor = lightColor || '#ffffff';
-    }
+    // Pure white (light) / black (dark), aligned with `html` rules in `global.css`
+    document.body.style.backgroundColor =
+      colorMode.value === 'dark' ? 'black' : 'white';
   }
 };
 

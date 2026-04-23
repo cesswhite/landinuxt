@@ -1,50 +1,56 @@
 <template>
   <div class="flex w-full h-full">
-    <USidebar v-model:open="sidebarOpen" collapsible="icon" rail :ui="{
-      container:
-        'fixed bottom-0 p-2 left-0 z-10 hidden h-full w-(--sidebar-width) transition-[left,right,width] duration-200 ease-linear lg:flex',
-      inner:
-        'size-full max-h-full ? rounded-xl',
-      body: 'min-h-0 gap-3 overflow-y-auto py-3',
-      header: 'min-h-12 shrink-0',
-      footer: 'shrink-0',
-    }">
-      <template #header>
-        <div class="w-full">
-          <NuxtLink to="/" class="flex w-full h-8 items-center justify-start gap-x-2">
-            <div class="size-8">
+    <USidebar v-model:open="sidebarOpen" collapsible="icon" variant="inset" :ui="componentsHubSidebarUi">
+      <template #header="{ open: isOpen }">
+        <div class="flex items-center justify-between w-full px-2" :class="{ 'flex-col gap-y-4': !isOpen }">
+          <NuxtLink to="/" class="flex w-full h-auto items-center justify-start gap-x-2 min-w-0">
+            <div class="size-8 shrink-0">
               <AppLogo />
             </div>
-            <template v-if="sidebarOpen">
-              <div class="h-5">
+            <template v-if="isOpen">
+              <div class="h-5 min-w-0">
                 <AppName />
               </div>
             </template>
           </NuxtLink>
+          <div v-motion class="inline-flex shrink-0 mt-1" :tapped="toggleButtonTapped">
+            <UButton icon="i-lucide-panel-left" :size="isOpen ? 'sm' : 'md'" color="neutral" variant="ghost" square
+              class="cursor-pointer" aria-label="Toggle sidebar" @click="sidebarOpen = !sidebarOpen" />
+          </div>
         </div>
       </template>
 
-      <template #default>
-        <div class="flex min-h-0 flex-1 flex-col gap-3">
-          <!--           <UInput v-model="search" placeholder="Search" icon="i-lucide-search" size="sm" class="w-full shrink-0" /> -->
+      <template #default="{ open: isOpen }">
+        <div v-if="isOpen" class="flex min-h-0 flex-1 flex-col gap-3 mt-8">
           <UNavigationMenu :items="navItems" orientation="vertical" class="min-h-0 min-w-0 flex-1 overflow-y-auto"
             :ui="{ root: 'min-h-0', link: 'p-1.5 overflow-hidden' }" />
         </div>
       </template>
 
       <template #footer>
-        <UButton to="/contribution" block trailing-icon="i-lucide-arrow-right" color="neutral" variant="subtle"
-          label="Contribution" class="cursor-pointer" />
+        <div class="px-2">
+          <UTooltip text="Go back to the previous page">
+            <UButton block square leading-icon="i-lucide-arrow-left" color="neutral" variant="subtle"
+              class="cursor-pointer rounded-xl" @click="router.back()" />
+          </UTooltip>
+        </div>
       </template>
     </USidebar>
 
-    <div class="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden bg-dark-50 dark:bg-dark-950 h-full p-2">
-      <div class="flex h-12 shrink-0 items-center gap-2 border-b border-default px-3 lg:px-4">
-        <UButton icon="i-lucide-panel-left" color="neutral" variant="ghost" square class="cursor-pointer"
-          aria-label="Toggle sidebar" @click="sidebarOpen = !sidebarOpen" />
+    <!--CONTENT CONTAINER-->
+    <div
+      class="flex min-h-0 min-w-0 flex-1 flex-col overflow-y-scroll overflow-x-hidden bg-white dark:bg-black p-2 relative h-screen">
+      <!--HEADER CONTAINER-->
+      <div
+        class="sticky top-0 left-0 h-12 w-full z-10 shrink-0 backdrop-blur-2xl bg-dark-50/95 dark:bg-dark-900/95 rounded-2xl ring-1 ring-dark-950/10 shadow shadow-dark-950/10 dark:ring-dark-50/15 dark:shadow-2xs dark:shadow-black">
+        <div class="flex items-center justify-between h-full px-2">
+
+          <AppSwitchMode />
+        </div>
       </div>
 
-      <div class="h-screen flex-1 overflow-y-auto p-2 bg-dark-50 dark:bg-dark-950">
+      <!--CONTENT/BODY-->
+      <div class="flex-1 w-full h-full">
         <slot />
       </div>
     </div>
@@ -52,13 +58,40 @@
 </template>
 
 <script setup lang="ts">
+import { usePreferredReducedMotion } from "@vueuse/core";
 import type { NavigationMenuItem } from "@nuxt/ui";
 import type { Elements } from "../../types/index";
 
 const config = useRuntimeConfig();
 const route = useRoute();
+const router = useRouter();
+const reduceMotion = usePreferredReducedMotion();
 
 const sidebarOpen = ref(true);
+
+const componentsHubSidebarUi = {
+  gap: "relative w-(--sidebar-width) bg-transparent transition-none",
+  container:
+    "fixed bottom-0 p-2 left-0 z-10 hidden h-full w-(--sidebar-width) transition-none lg:flex bg-white dark:bg-black",
+  inner:
+    "size-full py-2 max-h-full rounded-2xl bg-dark-50 dark:bg-dark-900 ring-1 shadow-md ring-dark-950/10 shadow-dark-950/10 dark:ring-dark-50/15 dark:shadow-2xs dark:shadow-black ",
+  body: "min-h-0 overflow-y-auto p-0",
+  header: "shrink-0 p-0 min-h-0",
+  footer: "shrink-0 p-0",
+} as const;
+
+const toggleButtonTapped = computed(() => {
+  if (reduceMotion.value) {
+    return { scale: 1 };
+  }
+  return {
+    scale: 0.96,
+    transition: {
+      duration: 100,
+      ease: [0.23, 1, 0.32, 1] as [number, number, number, number],
+    },
+  };
+});
 
 const categories = await fetchElementsCategories();
 

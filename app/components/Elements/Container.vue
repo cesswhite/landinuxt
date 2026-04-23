@@ -1,5 +1,5 @@
 <template>
-  <div class="grid w-full grid-cols-12 gap-2">
+  <div class="grid w-full grid-cols-12 gap-2 h-screen py-4">
     <template v-for="_comp in _components" :key="_comp.name">
       <ElementsTile :data="_comp" />
     </template>

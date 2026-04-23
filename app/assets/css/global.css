@@ -7,6 +7,15 @@
 * {
   margin: 0;
 }
+/* Page chrome: true white in light mode, true black in dark (matches `app.vue` body sync) */
+html {
+  background-color: white;
+}
+
+html.dark {
+  background-color: black;
+}
+
 html,
 body {
   height: 100%;
@@ -15,8 +24,11 @@ body {
   position: relative;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  background-color: inherit;
   transition: background-color 180ms ease;
+}
+
+body {
+  background-color: inherit;
 }
 
 @media (prefers-reduced-motion: no-preference) {
