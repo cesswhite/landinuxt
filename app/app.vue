@@ -51,6 +51,7 @@ onMounted(() => {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .page-enter-active,
   .page-leave-active {
     transition: none;

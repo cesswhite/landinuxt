@@ -26,23 +26,23 @@ const route = useRoute()
 const _faq = await queryContent("faq").find();
 
 useSeoMeta({
-  title: "FAQ Components | LandiNuxt",
-  description: "Explore our FAQ section to find answers to common questions. We've curated a list of the most frequently asked questions to help you navigate our website with ease.",
-  ogTitle: "FAQ Components | LandiNuxt",
-  ogDescription: "Explore our FAQ section to find answers to common questions. We've curated a list of the most frequently asked questions to help you navigate our website with ease.",
-  ogImage: "/og-landinuxt.jpg",
-  ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
-  twitterCard: "summary_large_image",
-  twitterTitle: "FAQ Components | LandiNuxt",
-  twitterDescription: "Explore our FAQ section to find answers to common questions. We've curated a list of the most frequently asked questions to help you navigate our website with ease.",
-  twitterImage: "/og-landinuxt.jpg",
-  ogImageWidth: 1200,
-  ogImageHeight: 630,
+    title: "FAQ Components | LandiNuxt",
+    description: "Explore our FAQ section to find answers to common questions. We've curated a list of the most frequently asked questions to help you navigate our website with ease.",
+    ogTitle: "FAQ Components | LandiNuxt",
+    ogDescription: "Explore our FAQ section to find answers to common questions. We've curated a list of the most frequently asked questions to help you navigate our website with ease.",
+    ogImage: "/og-landinuxt.jpg",
+    ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
+    twitterCard: "summary_large_image",
+    twitterTitle: "FAQ Components | LandiNuxt",
+    twitterDescription: "Explore our FAQ section to find answers to common questions. We've curated a list of the most frequently asked questions to help you navigate our website with ease.",
+    twitterImage: "/og-landinuxt.jpg",
+    ogImageWidth: 1200,
+    ogImageHeight: 630,
 })
 
 useHead({
-  htmlAttrs: {
-    lang: 'en'
-  }
+    htmlAttrs: {
+        lang: 'en'
+    }
 })
 </script>

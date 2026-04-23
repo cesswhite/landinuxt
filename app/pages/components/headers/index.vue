@@ -1,6 +1,6 @@
 <template>
-  <NuxtLayout name="default">
-    <div class="relative w-full py-24 px-4">
+  <NuxtLayout name="components-hub">
+    <div class="relative w-full">
       <ElementsHeader name="Headers" :number="_headers.length"
         description="Explore a diverse collection of headers sections crafted to captivate your audience. From clean and simple to feature-rich designs, these sections are designed to effectively convey your message and engage users." />
       <ContentList path="/headers" v-slot="{ list }">

@@ -1,12 +1,59 @@
 <template>
-  <NuxtLayout name="components-hub">
-    <ElementsContainer :categories="filteredCategories" />
-  </NuxtLayout>
+  <div class="flex w-full h-full">
+    <USidebar v-model:open="sidebarOpen" collapsible="icon" rail :ui="{
+      container:
+        'fixed bottom-0 p-2 left-0 z-10 hidden h-full w-(--sidebar-width) transition-[left,right,width] duration-200 ease-linear lg:flex',
+      inner:
+        'size-full max-h-full ? rounded-xl',
+      body: 'min-h-0 gap-3 overflow-y-auto py-3',
+      header: 'min-h-12 shrink-0',
+      footer: 'shrink-0',
+    }">
+      <template #header>
+        <div class="w-full">
+          <NuxtLink to="/" class="flex w-full h-8 items-center justify-start gap-x-2">
+            <div class="size-8">
+              <AppLogo />
+            </div>
+            <template v-if="sidebarOpen">
+              <div class="h-5">
+                <AppName />
+              </div>
+            </template>
+          </NuxtLink>
+        </div>
+      </template>
+
+      <template #default>
+        <div class="flex min-h-0 flex-1 flex-col gap-3">
+          <!--           <UInput v-model="search" placeholder="Search" icon="i-lucide-search" size="sm" class="w-full shrink-0" /> -->
+          <UNavigationMenu :items="navItems" orientation="vertical" class="min-h-0 min-w-0 flex-1 overflow-y-auto"
+            :ui="{ root: 'min-h-0', link: 'p-1.5 overflow-hidden' }" />
+        </div>
+      </template>
+
+      <template #footer>
+        <UButton to="/contribution" block trailing-icon="i-lucide-arrow-right" color="neutral" variant="subtle"
+          label="Contribution" class="cursor-pointer" />
+      </template>
+    </USidebar>
+
+    <div class="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden bg-dark-50 dark:bg-dark-950 h-full p-2">
+      <div class="flex h-12 shrink-0 items-center gap-2 border-b border-default px-3 lg:px-4">
+        <UButton icon="i-lucide-panel-left" color="neutral" variant="ghost" square class="cursor-pointer"
+          aria-label="Toggle sidebar" @click="sidebarOpen = !sidebarOpen" />
+      </div>
+
+      <div class="h-screen flex-1 overflow-y-auto p-2 bg-dark-50 dark:bg-dark-950">
+        <slot />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
 import type { NavigationMenuItem } from "@nuxt/ui";
-import type { Elements } from "../../../types/index";
+import type { Elements } from "../../types/index";
 
 const config = useRuntimeConfig();
 const route = useRoute();
