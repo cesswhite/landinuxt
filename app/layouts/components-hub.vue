@@ -29,9 +29,9 @@
 
       <template #footer>
         <div class="px-2">
-          <UTooltip text="Go back to the previous page">
-            <UButton block square leading-icon="i-lucide-arrow-left" color="neutral" variant="subtle"
-              class="cursor-pointer rounded-xl" @click="router.back()" />
+          <UTooltip text="Go to home">
+            <UButton block square leading-icon="i-lucide-home" color="neutral" variant="subtle"
+              class="cursor-pointer rounded-xl" @click="router.push('/')" />
           </UTooltip>
         </div>
       </template>
@@ -42,11 +42,15 @@
       class="flex min-h-0 min-w-0 flex-1 flex-col overflow-y-scroll overflow-x-hidden bg-white dark:bg-black p-2 relative h-screen">
       <!--HEADER CONTAINER-->
       <div
-        class="sticky top-0 left-0 h-12 w-full z-10 shrink-0 backdrop-blur-2xl bg-dark-50/95 dark:bg-dark-900/95 rounded-2xl ring-1 ring-dark-950/10 shadow shadow-dark-950/10 dark:ring-dark-50/15 dark:shadow-2xs dark:shadow-black">
+        class="sticky top-0 left-0 h-12 w-full z-999 shrink-0 backdrop-blur-2xl bg-dark-50/95 dark:bg-dark-900/95 rounded-2xl ring-1 ring-dark-950/10 shadow shadow-dark-950/10 dark:ring-dark-50/15 dark:shadow-2xs dark:shadow-black">
         <div class="flex items-center justify-between h-full px-2">
-
+          <div class="flex items-center justify-between h-full px-2">
+            <UButton to="/components" icon="i-lucide-arrow-left" size="sm" color="neutral" variant="ghost" square
+              class="cursor-pointer" aria-label="Back to all components" />
+          </div>
           <AppSwitchMode />
         </div>
+
       </div>
 
       <!--CONTENT/BODY-->
