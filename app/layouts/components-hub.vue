@@ -48,7 +48,11 @@
             <UButton to="/components" icon="i-lucide-arrow-left" size="sm" color="neutral" variant="ghost" square
               class="cursor-pointer" aria-label="Back to all components" />
           </div>
-          <AppSwitchMode />
+          <div class="flex items-center justify-end gap-x-1">
+            <AppSwitchMode />
+            <AppSwitchPrimaryColor />
+          </div>
+
         </div>
 
       </div>
