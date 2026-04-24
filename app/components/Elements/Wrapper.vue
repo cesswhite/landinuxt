@@ -1,7 +1,7 @@
 <template>
   <div class="relative mt-12 w-full">
     <div
-      class="ring-1 ring-dark-950/10 shadow shadow-dark-950/10 dark:ring-dark-50/15 dark:shadow-2xs dark:shadow-black mb-12 h-full overflow-hidden rounded-2xl bg-dark-50 p-2 lg:h-full">
+      class="mb-12 h-full overflow-hidden p-2 rounded-2xl bg-dark-50 dark:bg-dark-950 ring-1 shadow-md ring-dark-950/10 shadow-dark-950/10 dark:ring-dark-50/10 dark:shadow-2xs dark:shadow-black lg:h-full">
       <div class="flex items-center justify-between">
         <div class="flex min-w-0 flex-col text-base">
           <div class="flex items-center gap-2">
@@ -38,7 +38,7 @@
       </div>
       <Transition name="wrapper-panel" mode="out-in">
         <div v-if="previewCode" key="preview"
-          class="scrollbar-hide scrollbar-hide mt-4 h-auto overflow-x-hidden rounded-xl bg-dark-200/80 p-2 dark:bg-dark-900"
+          class="scrollbar-hide scrollbar-hide mt-4 h-auto overflow-x-hidden rounded-b-xl bg-dark-200/80 p-2 dark:bg-dark-900"
           :class="setHeightClass">
           <slot name="components" />
         </div>
@@ -229,9 +229,9 @@ watch(
 const setHeightClass = computed(() => {
   if (props.item.parent === "headers") {
     if (props.item.title === "agency") {
-      return "min-h-[420px]";
+      return "min-h-[305px]";
     }
-    return "min-h-[120px] flex items-center justify-center";
+    return "min-h-[80px] flex items-center justify-center";
   }
   if (props.item.parent === "footers") {
     return "min-h-[420px] flex items-end justify-end";

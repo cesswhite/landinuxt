@@ -42,7 +42,7 @@
       class="flex min-h-0 min-w-0 flex-1 flex-col overflow-y-scroll overflow-x-hidden bg-white dark:bg-black p-2 relative h-screen">
       <!--HEADER CONTAINER-->
       <div
-        class="sticky top-0 left-0 h-12 w-full z-999 shrink-0 backdrop-blur-2xl bg-dark-50/95 dark:bg-dark-900/95 rounded-2xl ring-1 ring-dark-950/10 shadow shadow-dark-950/10 dark:ring-dark-50/15 dark:shadow-2xs dark:shadow-black">
+        class="sticky top-0 left-0 h-12 w-full z-999 shrink-0 backdrop-blur-2xl rounded-2xl bg-dark-50 dark:bg-dark-950 ring-1 shadow-md ring-dark-950/10 shadow-dark-950/10 dark:ring-dark-50/10 dark:shadow-2xs dark:shadow-black">
         <div class="flex items-center justify-between h-full px-2">
           <div class="flex items-center justify-between h-full px-2">
             <UButton to="/components" icon="i-lucide-arrow-left" size="sm" color="neutral" variant="ghost" square
@@ -82,7 +82,7 @@ const componentsHubSidebarUi = {
   container:
     "fixed bottom-0 p-2 left-0 z-10 hidden h-full w-(--sidebar-width) transition-none lg:flex bg-white dark:bg-black",
   inner:
-    "size-full py-2 max-h-full rounded-2xl bg-dark-50 dark:bg-dark-900 ring-1 shadow-md ring-dark-950/10 shadow-dark-950/10 dark:ring-dark-50/15 dark:shadow-2xs dark:shadow-black ",
+    "size-full py-2 max-h-full rounded-2xl bg-dark-50 dark:bg-dark-950 ring-1 shadow-md ring-dark-950/10 shadow-dark-950/10 dark:ring-dark-50/10 dark:shadow-2xs dark:shadow-black",
   body: "min-h-0 overflow-y-auto p-0",
   header: "shrink-0 p-0 min-h-0",
   footer: "shrink-0 p-0",

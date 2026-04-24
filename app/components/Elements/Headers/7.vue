@@ -9,15 +9,15 @@
       </div>
       <nav class="relative z-10 hidden items-center justify-start gap-2 lg:flex">
         <UButton variant="link" color="neutral" size="lg" to="#"> Home </UButton>
-        <UButton @click="showMenu = !showMenu" variant="link" color="neutral" size="lg">
+        <UButton @click="showMenu = !showMenu" variant="link" color="neutral" size="lg" class="cursor-pointer">
           <template #trailing>
             <UIcon v-if="showMenu" name="i-heroicons-chevron-up" class="size-4" />
             <UIcon v-else name="i-heroicons-chevron-down" class="size-4" />
           </template>
           Services
         </UButton>
-        <UButton variant="link" color="neutral" size="lg" to="#"> Tools </UButton>
-        <UButton variant="link" color="neutral" size="lg" to="#">
+        <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer"> Tools </UButton>
+        <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer">
           Contact
         </UButton>
       </nav>
@@ -25,11 +25,11 @@
         <UButton color="neutral" icon="i-heroicons-bars-3" variant="link" size="xl" class="inline-block lg:hidden" />
         <template #body>
           <nav class="relative z-10 flex flex-col items-center justify-start gap-2">
-            <UButton variant="link" color="neutral" size="lg" to="#">
+            <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer">
               Home
             </UButton>
             <UCollapsible class="w-auto">
-              <UButton variant="soft" color="neutral" size="lg">
+              <UButton variant="soft" color="neutral" size="lg" class="cursor-pointer">
                 Services
                 <template #trailing>
                   <UIcon v-if="showMenu" name="i-heroicons-chevron-up" class="size-4" />
@@ -53,23 +53,21 @@
                 </div>
               </template>
             </UCollapsible>
-            <UButton variant="link" color="neutral" size="lg" to="#">
+            <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer">
               Tools
             </UButton>
-            <UButton variant="link" color="neutral" size="lg" to="#">
+            <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer">
               Contact
             </UButton>
           </nav>
         </template>
       </USlideover>
     </header>
-    <Transition enter-active-class="transition-all duration-500" enter-from-class="opacity-0 -translate-y-2"
-      enter-to-class="opacity-100" leave-active-class="transition-all duration-500" leave-from-class="opacity-100 "
-      leave-to-class="opacity-0 -translate-y-2" mode="out-in">
-      <div v-if="showMenu"
-        class="absolute top-0 left-0 z-10 hidden h-72 w-full rounded-xl border bg-dark-100 pt-16 px-4 lg:flex dark:border-dark-950/50 dark:bg-dark-900">
-        <div class="flex w-3/5 items-center">
-          <template v-for="(service, index) in services" :key="index">
+    <Transition name="mega-menu" mode="out-in">
+      <div v-if="showMenu" key="desktop-services-panel"
+        class="mega-menu-panel absolute top-0 left-0 z-10 hidden h-72 w-full origin-top rounded-xl  bg-dark-100 px-4 pt-16 lg:flex dark:border-dark-950/50 dark:bg-dark-900">
+        <div class="flex w-3/5 items-center gap-8">
+          <template v-for="service in services" :key="service.name">
             <div class="flex flex-col gap-y-2">
               <div
                 class="flex size-8 items-center justify-center rounded-md border border-dark-950/20 bg-dark-200/20 p-1 dark:border-dark-700 dark:bg-dark-800">
@@ -93,12 +91,11 @@
               Discover how our services can help you achieve your business
               goals.
             </p>
-            <div class="mt-6 flex h-full">
-              <template v-for="(image, index) in images">
-                <div
-                  class="flex-1 rotate-4 transform-gpu overflow-hidden rounded-xl transition-all duration-300 ease-in-out hover:-translate-y-4 hover:rotate-0">
+            <div class="mt-6 flex h-full gap-2">
+              <template v-for="image in images" :key="image">
+                <div class="mega-menu-image flex-1 rotate-3 transform-gpu overflow-hidden rounded-xl">
                   <NuxtImg :src="image" class="h-full w-full object-cover object-center" loading="lazy"
-                    alt="my-company-logo-description" :placeholder="[50, 25, 75, 5]" format="webp" />
+                    alt="Portfolio preview image" :placeholder="[50, 25, 75, 5]" format="webp" />
                 </div>
               </template>
             </div>
@@ -137,3 +134,62 @@ const services = ref([
   },
 ]);
 </script>
+
+<style scoped>
+/*
+ * Mega menu: enter/exit = ease-out, opacity + transform only (GPU).
+ * Panel anchors from top (origin-top) so scale reads as “dropping” from the header.
+ */
+.mega-menu-enter-active {
+  transition:
+    opacity 220ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 220ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.mega-menu-leave-active {
+  transition:
+    opacity 175ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 175ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.mega-menu-enter-from,
+.mega-menu-leave-to {
+  opacity: 0;
+  transform: translateY(-8px) scale(0.98);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .mega-menu-enter-active,
+  .mega-menu-leave-active {
+    transition: none;
+  }
+
+  .mega-menu-enter-from,
+  .mega-menu-leave-to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Image tiles: only transform transitions; hover lift only on fine pointers */
+.mega-menu-image {
+  transition: transform 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mega-menu-image:hover {
+    transform: translateY(-0.5rem) rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mega-menu-image {
+    transition: none;
+  }
+
+  .mega-menu-image:hover {
+    transform: rotate(3deg);
+  }
+}
+</style>
