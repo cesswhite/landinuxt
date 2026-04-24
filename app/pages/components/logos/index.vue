@@ -5,7 +5,7 @@
                 description="Elevate your brand's visibility with our diverse range of Logos section components. Each component is designed to showcase your partnerships and collaborations in a visually appealing way." />
             <ContentList path="/logos" v-slot="{ list }">
                 <template v-for="(item, index) in list" :key="item._path">
-                    <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
+                    <ElementsWrapper :item="item" :title="item.title">
                         <template #components>
                             <LazyElementsLogos1 v-if="item.title === ('simple' as LogosTemplates)" />
                             <LazyElementsLogos2 v-if="item.title === ('animated' as LogosTemplates)" />

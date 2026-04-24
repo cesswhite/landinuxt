@@ -5,7 +5,7 @@
         description="Transform your website's conversion rates with our premium Call-to-Action components. Each component is optimized for maximum engagement and designed to turn visitors into customers." />
       <ContentList path="/cta" v-slot="{ list }">
         <template v-for="(item, index) in list" :key="item._path">
-          <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
+          <ElementsWrapper :item="item" :title="item.title">
             <template #components>
               <LazyElementsCTA1 v-if="item.title === ('simple' as CTATemplates)" />
               <LazyElementsCTA2 v-if="item.title === ('social' as CTATemplates)" />

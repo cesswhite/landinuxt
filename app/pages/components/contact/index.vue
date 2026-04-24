@@ -5,7 +5,7 @@
                 description="Enhance your website's user experience with our advanced Contact section components. Each component is crafted for seamless interaction and designed to facilitate meaningful connections." />
             <ContentList path="/contact" v-slot="{ list }">
                 <template v-for="(item, index) in list" :key="item._path">
-                    <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
+                    <ElementsWrapper :item="item" :title="item.title">
                         <template #components>
                             <LazyElementsContact1 v-if="item.title === ('simple' as ContactTemplates)" />
                             <LazyElementsContact2 v-if="item.title === ('single' as ContactTemplates)" />

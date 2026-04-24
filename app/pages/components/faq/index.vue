@@ -5,7 +5,7 @@
                 description="Explore our FAQ section to find answers to common questions. We've curated a list of the most frequently asked questions to help you navigate our website with ease." />
             <ContentList path="/faq" v-slot="{ list }">
                 <template v-for="(item, index) in list" :key="item._path">
-                    <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
+                    <ElementsWrapper :item="item" :title="item.title">
                         <template #components>
                             <LazyElementsFAQ1 v-if="item.title === ('simple' as FAQTemplates)" />
                             <LazyElementsFAQ2 v-if="item.title === ('border' as FAQTemplates)" />

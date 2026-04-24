@@ -5,7 +5,7 @@
                 description="Enhance your website's user experience with our advanced authentication components. Each component is designed for seamless interaction and to facilitate essential tasks such as signin, signup, password recovery, and token management, covering all aspects of the authentication flow." />
             <ContentList path="/auth" v-slot="{ list }">
                 <template v-for="(item, index) in list" :key="item._path">
-                    <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
+                    <ElementsWrapper :item="item" :title="item.title">
                         <template #components>
                             <LazyElementsAuth1 v-if="item.title === ('simple' as AuthTemplates)" />
                             <LazyElementsAuth2 v-if="item.title === ('logo' as AuthTemplates)" />

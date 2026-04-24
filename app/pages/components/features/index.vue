@@ -5,7 +5,7 @@
         description="Discover a diverse range of feature sections tailored to elevate your website's user experience. Spanning from minimalist to feature-packed designs, these sections are meticulously crafted to convey your brand's message and captivate your target audience." />
       <ContentList path="/features" v-slot="{ list }">
         <template v-for="(item, index) in list" :key="item._path">
-          <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
+          <ElementsWrapper :item="item" :title="item.title">
             <template #components>
               <LazyElementsFeatures1 v-if="item.title === ('elegance' as FeaturesTemplates)" />
               <LazyElementsFeatures2 v-if="item.title === ('puzzle' as FeaturesTemplates)" />

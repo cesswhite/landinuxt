@@ -5,7 +5,7 @@
                 description="Enhance your website's credibility with our premium Testimonials components. Each component is crafted to showcase customer satisfaction and build trust with potential clients." />
             <ContentList path="/testimonials" v-slot="{ list }">
                 <template v-for="(item, index) in list" :key="item._path">
-                    <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
+                    <ElementsWrapper :item="item" :title="item.title">
                         <template #components>
                             <LazyElementsTestimonials1 v-if="item.title === ('masonry' as TestimonialsTemplates)" />
                             <LazyElementsTestimonials2 v-if="item.title === ('pastelide' as TestimonialsTemplates)" />

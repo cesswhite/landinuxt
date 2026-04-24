@@ -1,6 +1,7 @@
 <template>
   <div class="relative mt-24 w-full">
-    <div class="border-dark-500/10 mb-12 h-full overflow-hidden rounded-md border p-2 lg:h-full">
+    <div
+      class="ring-1 ring-dark-950/10 shadow shadow-dark-950/10 dark:ring-dark-50/15 dark:shadow-2xs dark:shadow-black mb-12 h-full overflow-hidden rounded-xl bg-dark-50 p-2 lg:h-full">
       <div class="flex flex-col items-start justify-between">
         <div class="text-base">
           <div class="flex items-center gap-2">
@@ -35,11 +36,18 @@
         <slot name="components" />
       </div>
       <div v-else id="code" class="mt-2 min-h-96">
-        <ContentQuery :path="item._path" find="one" v-slot="{ data }">
-          <ContentRenderer>
-            <ContentRendererMarkdown :value="data" class="prose max-w-full" />
-          </ContentRenderer>
-        </ContentQuery>
+        <template v-if="usesRawElementSource">
+          <div
+            class="scrollbar-hide overflow-x-auto rounded-md border border-dark-500/10 text-sm [&_.shiki]:rounded-md [&_pre]:m-0"
+            v-html="highlightedCodeHtml" />
+        </template>
+        <template v-else>
+          <ContentQuery :path="item._path" find="one" v-slot="{ data }">
+            <ContentRenderer>
+              <ContentRendererMarkdown :value="data" class="prose max-w-full" />
+            </ContentRenderer>
+          </ContentQuery>
+        </template>
       </div>
     </div>
   </div>
@@ -60,6 +68,70 @@ import type {
   GalleryTemplates,
 } from "../../../types/templates";
 import { useClipboard } from "@vueuse/core";
+import { codeToHtml } from "shiki";
+
+/** Matches `content.highlight.theme.default` in nuxt.config.ts */
+const CODE_THEME = "github-dark";
+
+/** Maps `Elements/<Folder>/N.vue` to content frontmatter `parent` */
+const FOLDER_TO_PARENT: Record<string, string> = {
+  Headers: "headers",
+  Hero: "hero",
+  Logos: "logos",
+  Features: "features",
+  Footers: "footers",
+  CTA: "cta",
+  Testimonials: "testimonials",
+  Contact: "contact",
+  Auth: "auth",
+  FAQ: "faq",
+  Gallery: "gallery",
+};
+
+const elementRawGlob = import.meta.glob<string>(
+  [
+    "./Headers/*.vue",
+    "./Hero/*.vue",
+    "./Logos/*.vue",
+    "./Features/*.vue",
+    "./Footers/*.vue",
+    "./CTA/*.vue",
+    "./Testimonials/*.vue",
+    "./Contact/*.vue",
+    "./Auth/*.vue",
+    "./FAQ/*.vue",
+    "./Gallery/*.vue",
+  ],
+  { query: "?raw", import: "default", eager: true },
+);
+
+function buildElementSources(
+  glob: Record<string, string>,
+): Record<string, Record<number, string>> {
+  const out: Record<string, Record<number, string>> = {};
+  for (const filePath in glob) {
+    const match = filePath.match(/\.\/([^/]+)\/(\d+)\.vue$/);
+    if (!match) {
+      continue;
+    }
+    const folder = match[1];
+    if (!folder) {
+      continue;
+    }
+    const parent = FOLDER_TO_PARENT[folder];
+    if (!parent) {
+      continue;
+    }
+    const n = Number(match[2]);
+    if (!out[parent]) {
+      out[parent] = {};
+    }
+    out[parent][n] = glob[filePath] as string;
+  }
+  return out;
+}
+
+const ELEMENT_SOURCES = buildElementSources(elementRawGlob);
 
 const current = ref<
   | HeroTemplates
@@ -78,27 +150,75 @@ const current = ref<
   | string
 >(null);
 
-const props = defineProps<{
-  item: any;
-  code: string;
-  title:
-  | HeroTemplates
-  | FeaturesTemplates
-  | HeadersTemplates
-  | FootersTemplates
-  | CTATemplates
-  | TestimonialsTemplates
-  | ContactTemplates
-  | LogosTemplates
-  | AuthTemplates
-  | FAQTemplates
-  | GalleryTemplates
-  | string
-  | undefined;
-}>();
+const props = withDefaults(
+  defineProps<{
+    item: any;
+    code?: string;
+    title:
+    | HeroTemplates
+    | FeaturesTemplates
+    | HeadersTemplates
+    | FootersTemplates
+    | CTATemplates
+    | TestimonialsTemplates
+    | ContactTemplates
+    | LogosTemplates
+    | AuthTemplates
+    | FAQTemplates
+    | GalleryTemplates
+    | string
+    | undefined;
+  }>(),
+  { code: "" },
+);
 
+const resolvedCode = computed(() => {
+  const parent = props.item.parent as string;
+  const byParent = ELEMENT_SOURCES[parent];
+  if (byParent) {
+    const n = Number(props.item.component);
+    return byParent[n] ?? props.code ?? "";
+  }
+  return props.code ?? "";
+});
+
+const usesRawElementSource = computed(() =>
+  Object.hasOwn(ELEMENT_SOURCES, props.item.parent),
+);
 
 const previewCode = ref(props.item.preview);
+
+const highlightedCodeHtml = ref("");
+let codeHighlightSeq = 0;
+
+watch(
+  () =>
+    ({
+      useRaw: usesRawElementSource.value,
+      preview: previewCode.value,
+      code: resolvedCode.value,
+    }) as const,
+  async ({ useRaw, preview, code }) => {
+    if (!useRaw || preview) {
+      highlightedCodeHtml.value = "";
+      return;
+    }
+    if (!code) {
+      highlightedCodeHtml.value = "";
+      return;
+    }
+    const seq = ++codeHighlightSeq;
+    const html = await codeToHtml(code, {
+      lang: "vue",
+      theme: CODE_THEME,
+    });
+    if (seq === codeHighlightSeq) {
+      highlightedCodeHtml.value = html;
+    }
+  },
+  { immediate: true },
+);
+
 const setHeightClass = computed(() => {
   if (props.item.parent === "headers") {
     return "min-h-[420px] ";
@@ -126,7 +246,7 @@ const setHeightClass = computed(() => {
 
 function copyCode() {
   const { copy, copied } = useClipboard();
-  copy(props.code);
+  copy(resolvedCode.value);
   if (props.title) {
     current.value = props.title;
   }
