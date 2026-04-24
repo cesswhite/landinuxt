@@ -237,10 +237,10 @@ const setHeightClass = computed(() => {
     return "min-h-[420px] flex items-end justify-end";
   }
   if (props.item.parent == "hero") {
-    return "min-h-[1024px]";
+    return "max-h-[720px]";
   }
   if (props.item.parent == "features") {
-    return "min-h-[1024px]";
+    return "min-h-[420px]";
   }
   if (props.item.parent == "cta") {
     return "min-h-[540px] flex items-center justify-center";

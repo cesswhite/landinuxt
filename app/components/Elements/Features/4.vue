@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-full flex-col bg-dark-50  py-12 dark:bg-dark-900">
+  <div class="flex w-full flex-col bg-dark-50  py-12 dark:bg-dark-950">
     <div class="flex w-full flex-col gap-4 md:flex-row md:gap-0">
       <div class="mx-auto flex w-full flex-col items-center justify-center gap-2 md:w-1/2">
         <UBadge variant="outline" color="neutral"

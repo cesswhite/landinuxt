@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-full flex-col gap-12 rounded-xl border bg-dark-50 bg-dark-100 p-4 md:gap-24 dark:bg-dark-900">
+  <div class="flex w-full flex-col gap-12 rounded-xl bg-dark-50 p-4 md:gap-24 dark:bg-dark-950">
     <div class="flex w-full flex-col gap-4 md:flex-row md:gap-0">
       <div class="flex w-full flex-col gap-2 md:w-1/2">
         <div class="text-primary-600 dark:text-primary-500 text-sm">
