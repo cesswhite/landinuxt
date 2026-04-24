@@ -1,9 +1,9 @@
 <template>
-  <div class="relative mt-24 w-full">
+  <div class="relative mt-12 w-full">
     <div
-      class="ring-1 ring-dark-950/10 shadow shadow-dark-950/10 dark:ring-dark-50/15 dark:shadow-2xs dark:shadow-black mb-12 h-full overflow-hidden rounded-xl bg-dark-50 p-2 lg:h-full">
-      <div class="flex flex-col items-start justify-between">
-        <div class="text-base">
+      class="ring-1 ring-dark-950/10 shadow shadow-dark-950/10 dark:ring-dark-50/15 dark:shadow-2xs dark:shadow-black mb-12 h-full overflow-hidden rounded-2xl bg-dark-50 p-2 lg:h-full">
+      <div class="flex items-center justify-between">
+        <div class="flex min-w-0 flex-col text-base">
           <div class="flex items-center gap-2">
             <span class="text-dark-900 dark:text-dark-50/90 inline-block text-base font-bold capitalize">
               {{ props.item.title }}
@@ -19,36 +19,43 @@
             {{ props.item.description }}
           </p>
         </div>
-        <div class="mt-4 flex w-full items-center justify-end">
-          <UButton @click="previewCode = true" icon="i-heroicons-eye" label="Preview"
-            :variant="previewCode ? 'solid' : 'link'" class="cursor-pointer" />
-          <UButton @click="previewCode = false" icon="i-heroicons-code-bracket" label="Code"
-            :variant="!previewCode ? 'solid' : 'link'" class="cursor-pointer" />
-          <UButton @click="copyCode()" :icon="current === props.item.title
-            ? 'i-heroicons-clipboard-document-check'
-            : 'i-heroicons-clipboard-document-list'
-            " variant="ghost" class="cursor-pointer" />
+        <div class="flex shrink-0 items-center justify-end gap-1">
+          <UTooltip text="Preview">
+            <UButton square icon="i-heroicons-eye" :variant="previewCode ? 'subtle' : 'link'" class="cursor-pointer"
+              aria-label="Preview" @click="previewCode = true" />
+          </UTooltip>
+          <UTooltip text="Code">
+            <UButton square icon="i-heroicons-code-bracket" :variant="!previewCode ? 'subtle' : 'link'"
+              class="cursor-pointer" aria-label="Code" @click="previewCode = false" />
+          </UTooltip>
+          <UTooltip :text="current === props.item.title ? 'Copied' : 'Copy code'">
+            <UButton square variant="ghost" class="cursor-pointer" :icon="current === props.item.title
+              ? 'i-heroicons-clipboard-document-check'
+              : 'i-heroicons-clipboard-document-list'
+              " :aria-label="current === props.item.title ? 'Copied' : 'Copy code'" @click="copyCode()" />
+          </UTooltip>
         </div>
       </div>
-      <div v-if="previewCode"
-        class="scrollbar-hide scrollbar-hide bg-dark-200/80 dark:bg-dark-900 mt-4 h-auto overflow-x-hidden rounded-md p-2"
-        :class="setHeightClass">
-        <slot name="components" />
-      </div>
-      <div v-else id="code" class="mt-2 min-h-96">
-        <template v-if="usesRawElementSource">
-          <div
-            class="scrollbar-hide overflow-x-auto rounded-md border border-dark-500/10 text-sm [&_.shiki]:rounded-md [&_pre]:m-0"
-            v-html="highlightedCodeHtml" />
-        </template>
-        <template v-else>
-          <ContentQuery :path="item._path" find="one" v-slot="{ data }">
-            <ContentRenderer>
-              <ContentRendererMarkdown :value="data" class="prose max-w-full" />
-            </ContentRenderer>
-          </ContentQuery>
-        </template>
-      </div>
+      <Transition name="wrapper-panel" mode="out-in">
+        <div v-if="previewCode" key="preview"
+          class="scrollbar-hide scrollbar-hide mt-4 h-auto overflow-x-hidden rounded-xl bg-dark-200/80 p-2 dark:bg-dark-900"
+          :class="setHeightClass">
+          <slot name="components" />
+        </div>
+        <div v-else id="code" key="code" class="mt-2 min-h-96">
+          <template v-if="usesRawElementSource">
+            <div class="scrollbar-hide overflow-x-auto rounded-2xl text-sm [&_.shiki]:rounded-md [&_pre]:m-0"
+              v-html="highlightedCodeHtml" />
+          </template>
+          <template v-else>
+            <ContentQuery :path="item._path" find="one" v-slot="{ data }">
+              <ContentRenderer>
+                <ContentRendererMarkdown :value="data" class="prose max-w-full" />
+              </ContentRenderer>
+            </ContentQuery>
+          </template>
+        </div>
+      </Transition>
     </div>
   </div>
 </template>
@@ -221,7 +228,10 @@ watch(
 
 const setHeightClass = computed(() => {
   if (props.item.parent === "headers") {
-    return "min-h-[420px] ";
+    if (props.item.title === "agency") {
+      return "min-h-[420px]";
+    }
+    return "min-h-[120px] flex items-center justify-center";
   }
   if (props.item.parent === "footers") {
     return "min-h-[420px] flex items-end justify-end";
@@ -259,3 +269,44 @@ function copyCode() {
   }, 1500);
 }
 </script>
+
+<style scoped>
+/* Preview ↔ Code: opacity + transform only (GPU-friendly). Easing: ease-out-quint per animations playbook. */
+.wrapper-panel-enter-active {
+  transition:
+    opacity 220ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 220ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.wrapper-panel-leave-active {
+  transition:
+    opacity 175ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 175ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.wrapper-panel-enter-from,
+.wrapper-panel-leave-to {
+  opacity: 0;
+  transform: translateY(6px) scale(0.98);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .wrapper-panel-enter-active,
+  .wrapper-panel-leave-active {
+    transition: none;
+  }
+
+  .wrapper-panel-enter-from,
+  .wrapper-panel-leave-to {
+    opacity: 1;
+    transform: none;
+  }
+}
+</style>
+
+<style>
+pre {
+  padding: 0.75rem;
+}
+</style>
