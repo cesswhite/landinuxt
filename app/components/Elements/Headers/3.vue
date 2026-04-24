@@ -6,56 +6,55 @@
         :placeholder="[50, 25, 75, 5]" format="webp" />
     </div>
     <nav class="hidden w-full flex-1 items-center justify-center gap-2 lg:flex">
-      <UButton variant="ghost" color="neutral" size="lg" to="#" class="rounded-full">
+      <UButton variant="ghost" color="neutral" size="lg" to="#" class="rounded-full cursor-pointer">
         Home
       </UButton>
-      <UButton variant="ghost" color="neutral" size="lg" to="#" class="rounded-full">
+      <UButton variant="ghost" color="neutral" size="lg" to="#" class="rounded-full cursor-pointer">
         About
       </UButton>
 
       <UDropdownMenu :items="items">
-        <UButton variant="ghost" color="neutral" size="lg" label="Services" class="rounded-full">
+        <UButton variant="ghost" color="neutral" size="lg" label="Services" class="rounded-full cursor-pointer">
           <template #trailing>
             <UIcon name="i-heroicons-chevron-down" />
           </template>
         </UButton>
         <template #item="{ item }">
           <span class="truncate text-sm font-medium">{{ item.label }}</span>
-          <UIcon v-if="item.icon" :name="item.icon"
-            class="flex-shrink-0 ms-auto h-4 w-4 text-dark-700 dark:text-dark-700" />
+          <UIcon v-if="item.icon" :name="item.icon" class="shrink-0 ms-auto size-4 text-dark-700 dark:text-dark-700" />
         </template>
       </UDropdownMenu>
-      <UButton variant="ghost" color="neutral" size="lg" to="#" class="rounded-full">
+      <UButton variant="ghost" color="neutral" size="lg" to="#" class="rounded-full cursor-pointer">
         Pricing
       </UButton>
-      <UButton variant="ghost" color="neutral" size="lg" to="#" class="rounded-full">
+      <UButton variant="ghost" color="neutral" size="lg" to="#" class="rounded-full cursor-pointer">
         Contact
       </UButton>
     </nav>
     <div class="flex flex-1 items-center justify-end gap-4 lg:flex-none">
-      <UButton block label="English" variant="ghost" color="primary" size="lg" icon="i-heroicons-globe-alt"
-        class="hidden w-auto rounded-full lg:flex" />
+      <UButton block label="English" variant="ghost" color="neutral" size="lg" icon="i-heroicons-globe-alt"
+        class="hidden w-auto rounded-full lg:flex cursor-pointer" />
       <UButton block label="Register now" variant="solid" color="primary" size="lg"
-        class="hidden w-auto rounded-full lg:flex" />
+        class="hidden w-auto rounded-full lg:flex cursor-pointer" />
       <USlideover title="Menu" close-icon="i-heroicons-x-mark">
         <div class="inline-block md:hidden">
-          <UButton icon="i-heroicons-bars-3" variant="link" color="primary" size="lg" />
+          <UButton icon="i-heroicons-bars-3" variant="link" color="primary" size="lg" class="cursor-pointer" />
         </div>
         <template #body>
           <nav class="flex w-full flex-col">
-            <UButton block variant="link" color="primary" size="lg" to="#">
+            <UButton block variant="link" color="neutral" size="lg" to="#" class="cursor-pointer">
               Home
             </UButton>
-            <UButton block variant="link" color="primary" size="lg" to="#">
+            <UButton block variant="link" color="neutral" size="lg" to="#" class="cursor-pointer">
               About
             </UButton>
-            <UButton block variant="link" color="primary" size="lg" to="#">
+            <UButton block variant="link" color="neutral" size="lg" to="#" class="cursor-pointer">
               Services
             </UButton>
-            <UButton block variant="link" color="primary" size="lg" to="#">
+            <UButton block variant="link" color="neutral" size="lg" to="#" class="cursor-pointer">
               Contact
             </UButton>
-            <UButton block variant="link" color="primary" size="lg" to="#">
+            <UButton block variant="link" color="neutral" size="lg" to="#" class="cursor-pointer">
               Blog
             </UButton>
           </nav>

@@ -1,17 +1,17 @@
 <template>
   <header class="relative flex w-full items-center justify-between bg-white px-4 py-2 dark:bg-dark-950">
     <div class="hidden items-center justify-start md:flex">
-      <UButton variant="link" color="primary" size="lg" to="#"> Home </UButton>
-      <UButton variant="link" color="primary" size="lg" to="#">
+      <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer"> Home </UButton>
+      <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer">
         Products
       </UButton>
-      <UButton variant="link" color="primary" size="lg" to="#">
+      <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer">
         Services
       </UButton>
-      <UButton variant="link" color="primary" size="lg" to="#">
+      <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer">
         Pricing
       </UButton>
-      <UButton variant="link" color="primary" size="lg" to="#"> Blog </UButton>
+      <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer"> Blog </UButton>
     </div>
     <div class="size-8">
       <NuxtImg src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/icon-neutral_hxtgng.webp"
@@ -20,12 +20,12 @@
     </div>
 
     <div class="hidden items-center justify-start md:flex">
-      <UButton variant="link" color="primary" size="lg" to="#"> About </UButton>
-      <UButton variant="link" color="primary" size="lg" to="#"> Team </UButton>
-      <UButton variant="link" color="primary" size="lg" to="#">
+      <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer"> About </UButton>
+      <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer"> Team </UButton>
+      <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer">
         Contact
       </UButton>
-      <UButton variant="solid" color="primary" size="lg" class="px-6">
+      <UButton variant="solid" color="primary" size="lg" class="px-6 cursor-pointer rounded-xl">
         Join us
       </UButton>
     </div>

@@ -6,18 +6,18 @@
         :placeholder="[50, 25, 75, 5]" format="webp" />
     </div>
     <div
-      class="hidden items-center justify-center rounded-full border border-dark-200/60 bg-dark-50/30 py-1 px-24 backdrop-blur md:flex dark:border-dark-500/5 dark:bg-dark-900/90">
+      class="hidden items-center justify-center rounded-full ring-1 ring-dark-950/10 bg-dark-50/20 py-1 px-24 backdrop-blur md:flex dark:ring-dark-50/5 dark:bg-dark-900/60">
       <nav class="flex w-full items-center justify-center gap-2">
-        <UButton variant="ghost" color="primary" size="lg" to="#" class="rounded-full px-4">
+        <UButton variant="ghost" color="neutral" size="lg" to="#" class="rounded-full px-4 cursor-pointer">
           Home
         </UButton>
-        <UButton variant="ghost" color="primary" size="lg" to="#" class="rounded-full px-4">
+        <UButton variant="ghost" color="neutral" size="lg" to="#" class="rounded-full px-4 cursor-pointer">
           About
         </UButton>
-        <UButton variant="ghost" color="primary" size="lg" to="#" class="rounded-full px-4">
+        <UButton variant="ghost" color="neutral" size="lg" to="#" class="rounded-full px-4 cursor-pointer">
           Pricing
         </UButton>
-        <UButton variant="ghost" color="primary" size="lg" to="#" class="rounded-full px-4">
+        <UButton variant="ghost" color="neutral" size="lg" to="#" class="rounded-full px-4 cursor-pointer">
           Contact
         </UButton>
       </nav>

@@ -21,15 +21,15 @@
         </div>
         <div class="flex shrink-0 items-center justify-end gap-1">
           <UTooltip text="Preview">
-            <UButton square icon="i-heroicons-eye" :variant="previewCode ? 'subtle' : 'link'" class="cursor-pointer"
-              aria-label="Preview" @click="previewCode = true" />
+            <UButton color="neutral" square icon="i-heroicons-eye" :variant="previewCode ? 'subtle' : 'link'"
+              class="cursor-pointer" aria-label="Preview" @click="previewCode = true" />
           </UTooltip>
           <UTooltip text="Code">
-            <UButton square icon="i-heroicons-code-bracket" :variant="!previewCode ? 'subtle' : 'link'"
+            <UButton color="neutral" square icon="i-heroicons-code-bracket" :variant="!previewCode ? 'subtle' : 'link'"
               class="cursor-pointer" aria-label="Code" @click="previewCode = false" />
           </UTooltip>
           <UTooltip :text="current === props.item.title ? 'Copied' : 'Copy code'">
-            <UButton square variant="ghost" class="cursor-pointer" :icon="current === props.item.title
+            <UButton color="neutral" square variant="ghost" class="cursor-pointer" :icon="current === props.item.title
               ? 'i-heroicons-clipboard-document-check'
               : 'i-heroicons-clipboard-document-list'
               " :aria-label="current === props.item.title ? 'Copied' : 'Copy code'" @click="copyCode()" />
