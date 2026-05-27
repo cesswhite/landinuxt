@@ -48,7 +48,9 @@
       </div>
     </div>
     <div class="relative z-20 w-full py-2">
-      <UMarquee pause-on-hover>
+      <UMarquee pause-on-hover :ui="{
+        root: 'before:!from-dark-50 after:!from-dark-50 dark:before:!from-dark-950 dark:after:!from-dark-950',
+      }">
         <div class="flex w-full items-center justify-center gap-12">
           <template v-for="icon in icons">
             <div class="size-auto items-center justify-center p-2">

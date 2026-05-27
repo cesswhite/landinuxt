@@ -29,55 +29,55 @@ const testimonials = shallowRef(
             "name": "Emily Johnson",
             "username": "@emilyj",
             "text": "This service transformed my business. The tools provided are easy to use and incredibly effective. Highly recommend!",
-            "class-color": "bg-blue-100"
+            "class-color": "bg-primary-100"
         },
         {
             "name": "Ana Rodríguez",
             "username": "@anarod",
             "text": "Este servicio ha transformado mi negocio. Las herramientas son fáciles de usar y extremadamente efectivas. ¡Lo recomiendo mucho!",
-            "class-color": "bg-green-100"
+            "class-color": "bg-primary-200"
         },
         {
             "name": "Michael Lee",
             "username": "@michaellee",
             "text": "Amazing experience! The platform is intuitive and helped me save a lot of time on my projects.",
-            "class-color": "bg-yellow-100"
+            "class-color": "bg-dark-200"
         },
         {
             "name": "Laura Fernández",
             "username": "@laurafern",
             "text": "La mejor herramienta que he usado para crear landing pages. Es rápida, confiable, y el equipo de soporte es muy útil.",
-            "class-color": "bg-red-100"
+            "class-color": "bg-primary-300"
         },
         {
             "name": "John Davis",
             "username": "@johndavis",
             "text": "I was able to launch my site in just a few hours thanks to the incredible components provided. A game changer!",
-            "class-color": "bg-purple-100"
+            "class-color": "bg-dark-300"
         },
         {
             "name": "Luis Pérez",
             "username": "@luisp",
             "text": "Pude lanzar mi sitio en solo unas horas gracias a los increíbles componentes que ofrecen. ¡Un cambio total!",
-            "class-color": "bg-pink-200"
+            "class-color": "bg-primary-400/30"
         },
         {
             "name": "David Wilson",
             "username": "@davidw",
             "text": "Exceeded all my expectations! The UI is beautiful and the features are exactly what I needed for my project.",
-            "class-color": "bg-indigo-100"
+            "class-color": "bg-dark-400/20"
         },
         {
             "name": "Ricardo Sánchez",
             "username": "@ricardos",
             "text": "¡Superó todas mis expectativas! La interfaz es hermosa y las características son justo lo que necesitaba para mi proyecto.",
-            "class-color": "bg-cyan-100"
+            "class-color": "bg-primary-500/20"
         },
         {
             "name": "Olivia Martinez",
             "username": "@oliviam",
             "text": "As a designer, I found it very easy to customize and integrate with my existing projects. Absolutely love it!",
-            "class-color": "bg-teal-100"
+            "class-color": "bg-dark-100"
         },
     ]);
 

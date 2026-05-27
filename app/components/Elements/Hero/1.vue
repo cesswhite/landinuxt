@@ -9,7 +9,7 @@
         <div class="relative z-20 w-10/12">
             <div class="flex flex-col gap-4">
                 <h1
-                    class="text-center text-5xl font-semibold text-white sm:text-6xl md:text-left md:text-7xl 2xl:text-8xl">
+                    class="text-center text-5xl font-semibold text-dark-50 sm:text-6xl md:text-left md:text-7xl 2xl:text-8xl">
                     Support your <br />
                     friends with <br />
                     heartfelt care

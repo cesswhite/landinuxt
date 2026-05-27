@@ -8,7 +8,9 @@
                     </h2>
                 </div>
                 <div class="w-full md:w-1/2">
-                    <UMarquee pause-on-hover>
+                    <UMarquee pause-on-hover :ui="{
+                        root: 'before:!from-dark-50 after:!from-dark-50 dark:before:!from-dark-950 dark:after:!from-dark-950',
+                    }">
                         <div class="flex items-center gap-x-8">
                             <div class="flex h-24 w-full items-center justify-center">
                                 <UIcon name="i-logos-nuxt" class="text-3xl" />

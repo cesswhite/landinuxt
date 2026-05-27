@@ -1,5 +1,5 @@
 <template>
-    <div class="h-auto w-full grid grid-cols-12 items-center justify-center bg-white dark:bg-black gap-2 min-h-screen">
+    <div class="grid h-auto min-h-screen w-full grid-cols-12 items-center justify-center gap-2 bg-dark-50 dark:bg-dark-950">
         <div class="col-span-full md:col-span-6 rounded-lg flex flex-col relative items-center justify-center h-full">
             <div
                 class="relative flex flex-col gap-y-12 w-full py-32 px-2 md:px-4 md:w-11/12 lg:w-10/12 xl:w-8/12 md:py-24">
@@ -81,7 +81,7 @@
         </div>
         <div class="col-span-full hidden md:block md:col-span-6 relative h-screen">
             <div
-                class="absolute z-20 bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 via-black/40 to-transparent rounded-lg pointer-events-none flex items-end justify-center">
+                class="pointer-events-none absolute bottom-0 left-0 z-20 flex h-1/3 w-full items-end justify-center rounded-lg bg-gradient-to-t from-dark-950/80 via-dark-950/40 to-transparent">
                 <div class="w-full px-4 2xl:px-12 flex flex-col gap-y-2 pb-12">
                     <h1 class="text-dark-50 text-3xl lg:text-4xl font-bold text-center tracking-tight">
                         The best way to manage your business from anywhere

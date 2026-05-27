@@ -38,7 +38,7 @@
       </div>
       <Transition name="wrapper-panel" mode="out-in">
         <div v-if="previewCode" key="preview"
-          class="scrollbar-hide scrollbar-hide mt-4 h-auto overflow-x-hidden rounded-xl bg-dark-200/80 px-2 py-2 dark:bg-black"
+          class="scrollbar-hide scrollbar-hide mt-4 h-auto overflow-x-hidden rounded-xl bg-white px-2 py-2 dark:bg-black"
           :class="setHeightClass">
           <slot name="components" />
         </div>

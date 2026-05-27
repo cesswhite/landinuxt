@@ -1,5 +1,5 @@
 <template>
-  <header class="relative flex w-full items-center justify-between bg-white py-2 px-4 dark:bg-dark-950">
+  <header class="relative flex w-full items-center justify-between bg-dark-50 py-2 px-4 dark:bg-dark-950">
     <div class="flex items-center gap-2">
       <USlideover side="left" title="Menu" close-icon="i-heroicons-x-mark">
         <UButton icon="i-heroicons-bars-3-bottom-left" variant="link" color="primary" size="xl" />

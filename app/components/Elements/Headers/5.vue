@@ -1,5 +1,5 @@
 <template>
-  <header class="relative flex w-full items-center justify-between bg-white px-4 py-2 dark:bg-dark-950">
+  <header class="relative flex w-full items-center justify-between bg-dark-50 px-4 py-2 dark:bg-dark-950">
     <div class="hidden items-center justify-start md:flex">
       <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer"> Home </UButton>
       <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer">
