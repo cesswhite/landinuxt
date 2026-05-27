@@ -3,7 +3,7 @@
         <div class="relative w-full">
             <ElementsHeader name="Testimonials" :number="_testimonials.length"
                 description="Enhance your website's credibility with our premium Testimonials components. Each component is crafted to showcase customer satisfaction and build trust with potential clients." />
-            <ContentList path="/testimonials" v-slot="{ list }">
+            <ElementsContentList path="/testimonials" v-slot="{ list }">
                 <template v-for="(item, index) in list" :key="item._path">
                     <ElementsWrapper :item="item" :title="item.title">
                         <template #components>
@@ -17,7 +17,7 @@
                         </template>
                     </ElementsWrapper>
                 </template>
-            </ContentList>
+            </ElementsContentList>
         </div>
     </NuxtLayout>
 </template>

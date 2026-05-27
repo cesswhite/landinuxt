@@ -3,7 +3,7 @@
     <div class="relative w-full">
       <ElementsHeader name="Gallery" :number="_gallery.length"
         description="Showcase your visual content with beautiful gallery sections. From grid layouts to lightbox displays, these components help you present images, portfolios, and media in an engaging and professional way." />
-      <ContentList path="/gallery" v-slot="{ list }">
+      <ElementsContentList path="/gallery" v-slot="{ list }">
         <template v-for="(item, index) in list" :key="item._path">
           <ElementsWrapper :item="item" :title="item.title">
             <template #components>
@@ -14,7 +14,7 @@
             </template>
           </ElementsWrapper>
         </template>
-      </ContentList>
+      </ElementsContentList>
     </div>
   </NuxtLayout>
 </template>

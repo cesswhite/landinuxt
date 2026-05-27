@@ -3,7 +3,7 @@
     <div class="relative w-full">
       <ElementsHeader name="Headers" :number="_headers.length"
         description="Explore a diverse collection of headers sections crafted to captivate your audience. From clean and simple to feature-rich designs, these sections are designed to effectively convey your message and engage users." />
-      <ContentList path="/headers" v-slot="{ list }">
+      <ElementsContentList path="/headers" v-slot="{ list }">
         <template v-for="(item, index) in list" :key="item._path">
           <ElementsWrapper :item="item" :title="item.title">
             <template #components>
@@ -17,7 +17,7 @@
             </template>
           </ElementsWrapper>
         </template>
-      </ContentList>
+      </ElementsContentList>
     </div>
   </NuxtLayout>
 </template>

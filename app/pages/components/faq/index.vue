@@ -3,7 +3,7 @@
         <div class="relative w-full">
             <ElementsHeader name="FAQ" :number="_faq.length"
                 description="Explore our FAQ section to find answers to common questions. We've curated a list of the most frequently asked questions to help you navigate our website with ease." />
-            <ContentList path="/faq" v-slot="{ list }">
+            <ElementsContentList path="/faq" v-slot="{ list }">
                 <template v-for="(item, index) in list" :key="item._path">
                     <ElementsWrapper :item="item" :title="item.title">
                         <template #components>
@@ -14,7 +14,7 @@
                         </template>
                     </ElementsWrapper>
                 </template>
-            </ContentList>
+            </ElementsContentList>
         </div>
     </NuxtLayout>
 </template>

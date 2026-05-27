@@ -3,7 +3,7 @@
         <div class="relative w-full">
             <ElementsHeader name="Logos" :number="_logos.length"
                 description="Elevate your brand's visibility with our diverse range of Logos section components. Each component is designed to showcase your partnerships and collaborations in a visually appealing way." />
-            <ContentList path="/logos" v-slot="{ list }">
+            <ElementsContentList path="/logos" v-slot="{ list }">
                 <template v-for="(item, index) in list" :key="item._path">
                     <ElementsWrapper :item="item" :title="item.title">
                         <template #components>
@@ -16,7 +16,7 @@
                         </template>
                     </ElementsWrapper>
                 </template>
-            </ContentList>
+            </ElementsContentList>
         </div>
     </NuxtLayout>
 </template>

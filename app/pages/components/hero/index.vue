@@ -3,7 +3,7 @@
     <div class="relative w-full">
       <ElementsHeader name="Hero" :number="_hero.length"
         description="Discover a wide range of hero sections tailored to engage your audience. Clean and simple to feature-rich designs, these sections are designed to convey your message effectively and captivate users." />
-      <ContentList path="/hero" v-slot="{ list }">
+      <ElementsContentList path="/hero" v-slot="{ list }">
         <template v-for="(item, index) in list" :key="item._path">
           <ElementsWrapper :item="item" :title="item.title">
             <template #components>
@@ -28,7 +28,7 @@
             </template>
           </ElementsWrapper>
         </template>
-      </ContentList>
+      </ElementsContentList>
     </div>
   </NuxtLayout>
 </template>

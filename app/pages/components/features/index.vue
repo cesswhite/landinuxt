@@ -3,7 +3,7 @@
     <div class="relative w-full">
       <ElementsHeader name="Features" :number="_features.length"
         description="Discover a diverse range of feature sections tailored to elevate your website's user experience. Spanning from minimalist to feature-packed designs, these sections are meticulously crafted to convey your brand's message and captivate your target audience." />
-      <ContentList path="/features" v-slot="{ list }">
+      <ElementsContentList path="/features" v-slot="{ list }">
         <template v-for="(item, index) in list" :key="item._path">
           <ElementsWrapper :item="item" :title="item.title">
             <template #components>
@@ -24,7 +24,7 @@
             </template>
           </ElementsWrapper>
         </template>
-      </ContentList>
+      </ElementsContentList>
     </div>
   </NuxtLayout>
 </template>

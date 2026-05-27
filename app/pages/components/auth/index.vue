@@ -3,7 +3,7 @@
         <div class="relative w-full">
             <ElementsHeader name="Auth" :number="_auth.length"
                 description="Enhance your website's user experience with our advanced authentication components. Each component is designed for seamless interaction and to facilitate essential tasks such as signin, signup, password recovery, and token management, covering all aspects of the authentication flow." />
-            <ContentList path="/auth" v-slot="{ list }">
+            <ElementsContentList path="/auth" v-slot="{ list }">
                 <template v-for="(item, index) in list" :key="item._path">
                     <ElementsWrapper :item="item" :title="item.title">
                         <template #components>
@@ -15,7 +15,7 @@
                         </template>
                     </ElementsWrapper>
                 </template>
-            </ContentList>
+            </ElementsContentList>
         </div>
     </NuxtLayout>
 </template>

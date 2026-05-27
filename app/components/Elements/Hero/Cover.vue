@@ -1,6 +1,6 @@
 <template>
-  <div class="flex h-full w-full items-center justify-center will-change-auto">
-    <svg viewBox="0 0 1080 670" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-dark-800 dark:fill-dark-50">
+  <div class="size-full">
+    <svg viewBox="0 0 1080 670" fill="none" xmlns="http://www.w3.org/2000/svg" class="size-full fill-dark-800 dark:fill-dark-50">
       <rect x="2" y="2" width="1076" height="666" rx="30" fill-opacity="0.05" stroke-width="4" />
       <rect x="501" y="431" width="78" height="20" rx="4" />
       <rect x="389" y="373" width="302" height="12" rx="6" fill-opacity="0.4" />

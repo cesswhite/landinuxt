@@ -3,7 +3,7 @@
     <div class="relative w-full">
       <ElementsHeader name="CTA" :number="_cta.length"
         description="Transform your website's conversion rates with our premium Call-to-Action components. Each component is optimized for maximum engagement and designed to turn visitors into customers." />
-      <ContentList path="/cta" v-slot="{ list }">
+      <ElementsContentList path="/cta" v-slot="{ list }">
         <template v-for="(item, index) in list" :key="item._path">
           <ElementsWrapper :item="item" :title="item.title">
             <template #components>
@@ -23,7 +23,7 @@
             </template>
           </ElementsWrapper>
         </template>
-      </ContentList>
+      </ElementsContentList>
     </div>
   </NuxtLayout>
 </template>

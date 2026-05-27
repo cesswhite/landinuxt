@@ -1,8 +1,8 @@
 <template>
-    <div class="flex h-full w-full items-center justify-center will-change-auto">
+    <div class="size-full">
 
 
-        <svg class="fill-dark-800 dark:fill-dark-50" viewBox="0 0 1080 670" fill="none"
+        <svg class="size-full fill-dark-800 dark:fill-dark-50" viewBox="0 0 1080 670" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <rect x="2" y="2" width="1076" height="666" rx="30" fill-opacity="0.05" stroke-width="4" />
             <rect x="234" y="275" width="155" height="12" rx="6" fill-opacity="0.4" />

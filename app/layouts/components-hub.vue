@@ -42,13 +42,13 @@
       class="flex min-h-0 min-w-0 flex-1 flex-col overflow-y-scroll overflow-x-hidden bg-white dark:bg-black p-2 relative h-screen">
       <!--HEADER CONTAINER-->
       <div
-        class="sticky top-0 left-0 h-12 w-full z-999 shrink-0 backdrop-blur-2xl rounded-2xl bg-dark-50 dark:bg-dark-950 ring-1 shadow-md ring-dark-950/10 shadow-dark-950/10 dark:ring-dark-50/10 dark:shadow-2xs dark:shadow-black">
-        <div class="flex items-center justify-between h-full px-2">
-          <div class="flex items-center justify-between h-full px-2">
+        class="sticky top-0 left-0 h-12 w-full z-999 shrink-0 backdrop-blur-sm rounded-2xl bg-dark-50 dark:bg-dark-50/6 ring-1 shadow-md ring-dark-950/10 shadow-dark-950/10 dark:ring-dark-50/15 dark:shadow-2xs dark:shadow-black">
+        <div class="flex items-center h-full px-2">
+          <UTooltip v-if="showBackToComponents" text="Back to all components">
             <UButton to="/components" icon="i-lucide-arrow-left" size="sm" color="neutral" variant="ghost" square
               class="cursor-pointer" aria-label="Back to all components" />
-          </div>
-          <div class="flex items-center justify-end gap-x-1">
+          </UTooltip>
+          <div class="ml-auto flex items-center justify-end gap-x-1">
             <AppSwitchMode />
             <AppSwitchPrimaryColor />
           </div>
@@ -77,12 +77,14 @@ const reduceMotion = usePreferredReducedMotion();
 
 const sidebarOpen = ref(true);
 
+const showBackToComponents = computed(() => route.path !== "/components");
+
 const componentsHubSidebarUi = {
   gap: "relative w-(--sidebar-width) bg-transparent transition-none",
   container:
     "fixed bottom-0 p-2 left-0 z-10 hidden h-full w-(--sidebar-width) transition-none lg:flex bg-white dark:bg-black",
   inner:
-    "size-full py-2 max-h-full rounded-2xl bg-dark-50 dark:bg-dark-950 ring-1 shadow-md ring-dark-950/10 shadow-dark-950/10 dark:ring-dark-50/10 dark:shadow-2xs dark:shadow-black",
+    "size-full py-2 max-h-full rounded-2xl bg-dark-50 dark:bg-dark-50/6 ring-1 shadow-md ring-dark-950/10 shadow-dark-950/10 dark:ring-dark-50/15 dark:shadow-2xs dark:shadow-black",
   body: "min-h-0 overflow-y-auto p-0",
   header: "shrink-0 p-0 min-h-0",
   footer: "shrink-0 p-0",

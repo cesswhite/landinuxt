@@ -3,7 +3,7 @@
         <div class="relative w-full">
             <ElementsHeader name="Footers" :number="_footers.length"
                 description="Discover a range of footer sections designed to provide both functionality and style. From minimal to content-rich designs, these footers are crafted to enhance user experience and ensure seamless navigation." />
-            <ContentList path="/footers" v-slot="{ list }">
+            <ElementsContentList path="/footers" v-slot="{ list }">
                 <template v-for="(item, index) in list" :key="item._path">
                     <ElementsWrapper :item="item" :title="item.title">
                         <template #components>
@@ -18,7 +18,7 @@
                         </template>
                     </ElementsWrapper>
                 </template>
-            </ContentList>
+            </ElementsContentList>
         </div>
     </NuxtLayout>
 </template>
