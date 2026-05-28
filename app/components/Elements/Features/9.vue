@@ -1,7 +1,7 @@
 <template>
-    <div class="flex flex-col gap-x-24 lg:flex-row justify-start items-center">
+    <div class="flex flex-col items-center justify-start gap-x-24 bg-dark-50 lg:flex-row dark:bg-dark-950">
         <div class="flex flex-col gap-y-24 w-full lg:w-1/2">
-            <div class="flex flex-col gap-y-2">
+            <div class="flex flex-col gap-y-2 p-4">
                 <span class="text-3xl font-bold text-dark-950 dark:text-dark-50 inline-block">Features</span>
                 <p class="text-lg font-normal text-dark-950/50 dark:text-dark-50/50">Explore the wide range of features
                     our

@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w-full py-12">
+    <div class="relative w-full bg-dark-50 py-12 dark:bg-dark-950">
         <UContainer>
             <div class="grid grid-cols-12 gap-4 w-full">
                 <div

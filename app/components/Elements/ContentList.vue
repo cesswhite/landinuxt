@@ -5,11 +5,12 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   path: string;
 }>();
 
-const contentQuery = {
-  sort: { component: -1 },
-};
+const contentQuery = computed(() => ({
+  where: { parent: props.path.replace(/^\//, "") },
+  sort: [{ component: -1, $numeric: true }],
+}));
 </script>

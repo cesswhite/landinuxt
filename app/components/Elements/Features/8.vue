@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col gap-y-32 w-full">
+    <div class="flex w-full flex-col gap-y-32 bg-dark-50 dark:bg-dark-950">
         <template v-for="(feat, index) in features" :key="index">
             <div class="flex flex-col-reverse md:flex-row md:even:flex-row-reverse  w-full items-end justify-start">
                 <div class="w-full mt-12 md:w-1/2 h-[320px] lg:h-[640px]">

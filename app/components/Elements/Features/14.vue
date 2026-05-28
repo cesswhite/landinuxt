@@ -1,11 +1,12 @@
 <template>
-    <section id="features" class="w-full h-auto lg:h-[calc(100dvh*1.5)] xl:h-[calc(100dvh*2.5)] relative py-24">
+    <section id="features"
+        class="relative h-auto w-full bg-dark-50 py-24 lg:h-[calc(100dvh*1.5)] xl:h-[calc(100dvh*2.5)] dark:bg-dark-950">
         <div class="absolute top-0 left-0 w-full h-full">
             <NuxtImg
                 src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Lifestyle photoshoot with natural light" width="100%" height="100dvh" loading="eager"
-                fetchpriority="high"
-                class="absolute inset-0 w-full h-full object-cover object-center" format="webp" quality="100" />
+                fetchpriority="high" class="absolute inset-0 w-full h-full object-cover object-center" format="webp"
+                quality="100" />
         </div>
         <div class="w-full text-center mx-auto relative z-10">
             <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center w-full text-dark-50">
@@ -24,7 +25,7 @@
                         <div v-motion-fade-visible :duration="400" class="col-span-full md:col-span-6 xl:col-span-4">
                             <UIcon :name="feature.icon" class="text-dark-50 text-3xl" />
                             <p class="text-lg text-dark-50/95 w-full max-w-3xl mx-auto text-left font-medium">
-                                <span class="text-dark-50 inline-block font-bold">
+                                <span class="text-dark-50 inline-block font-bold ">
                                     {{ feature.title }}
                                 </span>
                                 {{ feature.description }}
