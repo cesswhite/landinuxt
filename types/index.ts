@@ -4,6 +4,15 @@ export interface Component {
   name: Elements;
   total: number;
 }
+export interface ElementCatalogItem {
+  title: string;
+  description: string;
+  parent: Elements;
+  component: number;
+  tags: string[];
+  animated: boolean;
+  dark: boolean;
+}
 export interface Landing {
   name: LandingPages;
   image: string

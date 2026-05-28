@@ -1,5 +1,5 @@
 <template>
-  <div class="relative mt-12 w-full">
+  <div :id="anchorId" class="relative mt-12 w-full scroll-mt-20">
     <div
       class="mb-12 h-full overflow-hidden p-2 rounded-2xl bg-dark-50 dark:bg-dark-50/6 ring-1 shadow-md ring-dark-950/10 shadow-dark-950/10 dark:ring-dark-50/15 dark:shadow-2xs dark:shadow-black lg:h-full">
       <div class="flex items-center justify-between">
@@ -85,6 +85,7 @@ import type {
 } from "../../../types/templates";
 import { useClipboard } from "@vueuse/core";
 import { codeToHtml } from "shiki";
+import { componentAnchorId } from "../../utils/elementsSearch";
 
 /** Matches `content.highlight.theme.default` in nuxt.config.ts */
 const CODE_THEME = "github-dark";
@@ -131,6 +132,8 @@ const props = withDefaults(
   }>(),
   { code: "" },
 );
+
+const anchorId = computed(() => componentAnchorId(String(props.item.title ?? props.title ?? "")));
 
 const resolvedCode = computed(() => {
   const parent = props.item.parent as string;

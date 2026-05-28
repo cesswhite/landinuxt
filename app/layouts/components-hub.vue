@@ -25,12 +25,12 @@
           <UInput
             v-model="search"
             icon="i-lucide-search"
-            placeholder="Search categories..."
+            placeholder="Search sections & components..."
             size="sm"
             color="neutral"
             variant="outline"
             class="w-full"
-            aria-label="Search component categories"
+            aria-label="Search sections and components"
           />
           <UNavigationMenu :items="navItems" orientation="vertical" class="min-h-0 min-w-0 flex-1 overflow-y-auto"
             :ui="{ root: 'min-h-0', link: 'p-1.5 overflow-hidden' }" />
@@ -65,7 +65,13 @@
       </div>
       <!--CONTENT/BODY-->
       <div class="flex-1 w-full h-full">
-        <slot />
+        <ElementsSearchResults
+          v-if="isSearching"
+          :query-label="search.trim()"
+          :sections="filteredCategories"
+          :components="filteredComponents"
+        />
+        <slot v-else />
       </div>
     </div>
   </div>
@@ -74,16 +80,22 @@
 <script setup lang="ts">
 import { usePreferredReducedMotion } from "@vueuse/core";
 import type { NavigationMenuItem } from "@nuxt/ui";
-import { categoryNavLabel, filterCategoriesBySearch } from "../utils/elementsNav";
+import { categoryNavLabel } from "../utils/elementsNav";
+import {
+  fetchElementsCatalog,
+  filterCategoriesBySearch,
+  filterComponentsBySearch,
+} from "../utils/elementsSearch";
 
 const route = useRoute();
 const router = useRouter();
 const reduceMotion = usePreferredReducedMotion();
 
 const sidebarOpen = ref(true);
-const { search } = useComponentsHubSearch();
+const { search, clearSearch } = useComponentsHubSearch();
 
 const showBackToComponents = computed(() => route.path !== "/components");
+const isSearching = computed(() => search.value.trim().length > 0);
 
 const componentsHubSidebarUi = {
   gap: "relative w-(--sidebar-width) bg-transparent transition-none",
@@ -109,10 +121,17 @@ const toggleButtonTapped = computed(() => {
   };
 });
 
-const categories = await fetchElementsCategories();
+const [categories, catalog] = await Promise.all([
+  fetchElementsCategories(),
+  fetchElementsCatalog(),
+]);
 
 const filteredCategories = computed(() =>
   filterCategoriesBySearch(categories, search.value),
+);
+
+const filteredComponents = computed(() =>
+  filterComponentsBySearch(catalog, search.value),
 );
 
 const navItems = computed<NavigationMenuItem[]>(() =>
@@ -123,4 +142,40 @@ const navItems = computed<NavigationMenuItem[]>(() =>
     active: route.path === `/components/${c.name}`,
   })),
 );
+
+function scrollToHash(retries = 0) {
+  if (!route.hash) {
+    return;
+  }
+
+  const id = route.hash.slice(1);
+  const target = document.getElementById(id);
+
+  if (target) {
+    target.scrollIntoView({
+      behavior: reduceMotion.value ? "auto" : "smooth",
+      block: "start",
+    });
+    return;
+  }
+
+  if (retries < 12) {
+    window.setTimeout(() => scrollToHash(retries + 1), 50);
+  }
+}
+
+watch(
+  () => route.fullPath,
+  async () => {
+    if (isSearching.value) {
+      clearSearch();
+    }
+    await nextTick();
+    scrollToHash();
+  },
+);
+
+onMounted(() => {
+  scrollToHash();
+});
 </script>

@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { filterCategoriesBySearch } from "../../utils/elementsNav";
+import { filterCategoriesBySearch } from "../../utils/elementsSearch";
 
 const categories = await fetchElementsCategories();
 const { search } = useComponentsHubSearch();
