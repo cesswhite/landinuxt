@@ -21,7 +21,17 @@
       </template>
 
       <template #default="{ open: isOpen }">
-        <div v-if="isOpen" class="flex min-h-0 flex-1 flex-col gap-3 mt-8">
+        <div v-if="isOpen" class="flex min-h-0 flex-1 flex-col gap-3 mt-4">
+          <UInput
+            v-model="search"
+            icon="i-lucide-search"
+            placeholder="Search categories..."
+            size="sm"
+            color="neutral"
+            variant="outline"
+            class="w-full"
+            aria-label="Search component categories"
+          />
           <UNavigationMenu :items="navItems" orientation="vertical" class="min-h-0 min-w-0 flex-1 overflow-y-auto"
             :ui="{ root: 'min-h-0', link: 'p-1.5 overflow-hidden' }" />
         </div>
@@ -31,7 +41,7 @@
         <div class="px-2">
           <UTooltip text="Go to home">
             <UButton block square leading-icon="i-lucide-home" color="neutral" variant="subtle"
-              class="cursor-pointer rounded-xl" @click="router.push('/')" />
+              class="cursor-pointer rounded-xl" aria-label="Go to home" @click="router.push('/')" />
           </UTooltip>
         </div>
       </template>
@@ -64,14 +74,14 @@
 <script setup lang="ts">
 import { usePreferredReducedMotion } from "@vueuse/core";
 import type { NavigationMenuItem } from "@nuxt/ui";
-import type { Elements } from "../../types/index";
+import { categoryNavLabel, filterCategoriesBySearch } from "../utils/elementsNav";
 
-const config = useRuntimeConfig();
 const route = useRoute();
 const router = useRouter();
 const reduceMotion = usePreferredReducedMotion();
 
 const sidebarOpen = ref(true);
+const { search } = useComponentsHubSearch();
 
 const showBackToComponents = computed(() => route.path !== "/components");
 
@@ -101,28 +111,9 @@ const toggleButtonTapped = computed(() => {
 
 const categories = await fetchElementsCategories();
 
-const search = ref("");
-
-const filteredCategories = computed(() => {
-  const needle = search.value.trim().toLowerCase();
-  if (!needle) {
-    return categories;
-  }
-  return categories.filter((c) => {
-    const label = categoryNavLabel(c.name).toLowerCase();
-    return c.name.toLowerCase().includes(needle) || label.includes(needle);
-  });
-});
-
-function categoryNavLabel(name: Elements): string {
-  if (name === "cta") {
-    return "CTA";
-  }
-  if (name === "faq") {
-    return "FAQ";
-  }
-  return name.charAt(0).toUpperCase() + name.slice(1);
-}
+const filteredCategories = computed(() =>
+  filterCategoriesBySearch(categories, search.value),
+);
 
 const navItems = computed<NavigationMenuItem[]>(() =>
   filteredCategories.value.map((c) => ({
@@ -132,29 +123,4 @@ const navItems = computed<NavigationMenuItem[]>(() =>
     active: route.path === `/components/${c.name}`,
   })),
 );
-
-useSeoMeta({
-  title:
-    "All Nuxt Landing Components | Hero, Features, Pricing, FAQ, CTA, Headers, Footers | LandiNuxt",
-  description:
-    "Browse 100+ pre-built Nuxt landing page components. Hero sections, features, pricing tables, FAQ sections, CTAs, headers, footers, testimonials, contact forms, and more. Copy-paste ready, fully compatible with Nuxt UI v4.",
-  ogTitle: "All Nuxt Landing Components | LandiNuxt",
-  ogDescription:
-    "Browse 100+ pre-built Nuxt landing page components. Hero, features, pricing, FAQ, CTA, headers, footers, and more. Copy-paste ready for Nuxt UI v4.",
-  ogImage: "/og-landinuxt.jpg",
-  ogUrl: `${config.public.siteUrl || "https://www.landinuxt.com"}${route.path}`,
-  twitterCard: "summary_large_image",
-  twitterTitle: "All Nuxt Landing Components | LandiNuxt",
-  twitterDescription:
-    "Browse 100+ pre-built Nuxt landing page components. Copy-paste ready for Nuxt UI v4.",
-  twitterImage: "/og-landinuxt.jpg",
-  ogImageWidth: 1200,
-  ogImageHeight: 630,
-});
-
-useHead({
-  htmlAttrs: {
-    lang: "en",
-  },
-});
 </script>

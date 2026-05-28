@@ -5,70 +5,14 @@
 </template>
 
 <script setup lang="ts">
-import type { NavigationMenuItem } from "@nuxt/ui";
-import type { Elements } from "../../../types/index";
-
-const config = useRuntimeConfig();
-const route = useRoute();
-
-const sidebarOpen = ref(true);
+import { filterCategoriesBySearch } from "../../utils/elementsNav";
 
 const categories = await fetchElementsCategories();
+const { search } = useComponentsHubSearch();
 
-const search = ref("");
-
-const filteredCategories = computed(() => {
-  const needle = search.value.trim().toLowerCase();
-  if (!needle) {
-    return categories;
-  }
-  return categories.filter((c) => {
-    const label = categoryNavLabel(c.name).toLowerCase();
-    return c.name.toLowerCase().includes(needle) || label.includes(needle);
-  });
-});
-
-function categoryNavLabel(name: Elements): string {
-  if (name === "cta") {
-    return "CTA";
-  }
-  if (name === "faq") {
-    return "FAQ";
-  }
-  return name.charAt(0).toUpperCase() + name.slice(1);
-}
-
-const navItems = computed<NavigationMenuItem[]>(() =>
-  filteredCategories.value.map((c) => ({
-    label: categoryNavLabel(c.name),
-    to: `/components/${c.name}`,
-    badge: String(c.total).padStart(2, "0"),
-    active: route.path === `/components/${c.name}`,
-  })),
+const filteredCategories = computed(() =>
+  filterCategoriesBySearch(categories, search.value),
 );
 
-useSeoMeta({
-  title:
-    "All Nuxt Landing Components | Hero, Features, Pricing, FAQ, CTA, Headers, Footers | LandiNuxt",
-  description:
-    "Browse 100+ pre-built Nuxt landing page components. Hero sections, features, pricing tables, FAQ sections, CTAs, headers, footers, testimonials, contact forms, and more. Copy-paste ready, fully compatible with Nuxt UI v4.",
-  ogTitle: "All Nuxt Landing Components | LandiNuxt",
-  ogDescription:
-    "Browse 100+ pre-built Nuxt landing page components. Hero, features, pricing, FAQ, CTA, headers, footers, and more. Copy-paste ready for Nuxt UI v4.",
-  ogImage: "/og-landinuxt.jpg",
-  ogUrl: `${config.public.siteUrl || "https://www.landinuxt.com"}${route.path}`,
-  twitterCard: "summary_large_image",
-  twitterTitle: "All Nuxt Landing Components | LandiNuxt",
-  twitterDescription:
-    "Browse 100+ pre-built Nuxt landing page components. Copy-paste ready for Nuxt UI v4.",
-  twitterImage: "/og-landinuxt.jpg",
-  ogImageWidth: 1200,
-  ogImageHeight: 630,
-});
-
-useHead({
-  htmlAttrs: {
-    lang: "en",
-  },
-});
+useComponentsHubIndexSeo();
 </script>

@@ -32,8 +32,7 @@ const props = defineProps<{
 }>();
 
 function goToRepo(url: string, name: string) {
-    const umami = window.umami
-    umami.track(`click-to-repo-${name}`)
-    window.open(url, '_blank')
+    trackUmami(`click-to-repo-${name}`);
+    window.open(url, "_blank");
 }
 </script>

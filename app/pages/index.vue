@@ -15,7 +15,7 @@ useSeoMeta({
   title: "LandiNuxt | Pre-built Nuxt Landing Components & Templates | Build Landing Pages Faster",
   ogTitle: "LandiNuxt | Pre-built Nuxt Landing Components & Templates",
   description:
-    "Build beautiful, responsive Nuxt landing pages faster with pre-built components: Hero, Features, Pricing, FAQ, CTA sections, and complete templates. Fully compatible with Nuxt UI v4. Copy-paste ready, SSR/ISR optimized, dark mode support.",
+    "Build beautiful, responsive Nuxt landing pages faster with pre-built components: Hero, Features, FAQ, CTA, headers, footers, and complete templates. Fully compatible with Nuxt UI v4. Copy-paste ready, dark mode support.",
   ogDescription:
     "Pre-built Nuxt landing page components and templates. Build high-converting landing pages faster with copy-paste components fully integrated with Nuxt UI v4. Perfect for Nuxt developers.",
   ogImage: "/og-landinuxt.jpg",
@@ -23,7 +23,7 @@ useSeoMeta({
   twitterCard: "summary_large_image",
   twitterImage: "/og-landinuxt.jpg",
   twitterTitle: "LandiNuxt | Pre-built Nuxt Landing Components & Templates",
-  twitterDescription: "Build beautiful, responsive Nuxt landing pages faster with pre-built components. Copy-paste ready, SSR/ISR optimized, dark mode support.",
+  twitterDescription: "Build beautiful, responsive Nuxt landing pages faster with pre-built components. Copy-paste ready, dark mode support.",
   ogImageWidth: 1200,
   ogImageHeight: 630,
 });

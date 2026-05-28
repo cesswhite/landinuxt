@@ -63,7 +63,7 @@
             heartfelt care
           </h1>
           <div class="mt-4 mx-auto w-full sm:w-96 md:mx-0">
-            <UButton block to="/" size="xl" type="solid" color="primary"
+            <UButton block to="/" size="xl" variant="solid" color="primary"
               class="flex items-center justify-center gap-6 rounded-full" aria-label="Explore our proposals">
               Explore our proposals
               <template #trailing>

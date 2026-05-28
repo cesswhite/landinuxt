@@ -38,6 +38,7 @@
 </template>
 
 <script setup lang="ts">
+// Replace: phone, copyright, navigation links, and social URLs.
 const navigation = [
     {
         label: "Development",

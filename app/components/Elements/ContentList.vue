@@ -1,6 +1,8 @@
 <template>
-  <ContentList :path="path" :query="contentQuery" v-slot="slotProps">
-    <slot v-bind="slotProps" />
+  <ContentList :path="path" :query="contentQuery">
+    <template #default="slotProps: any">
+      <slot v-bind="slotProps" />
+    </template>
   </ContentList>
 </template>
 

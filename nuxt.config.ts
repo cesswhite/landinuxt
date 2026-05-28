@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+  // SPA mode for the component hub. routeRules prerender/ISR apply at generate/deploy time.
   ssr: false,
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.landinuxt.com',
@@ -31,8 +32,7 @@ export default defineNuxtConfig({
       meta: [
         {
           name: "viewport",
-          content:
-            "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0",
+          content: "width=device-width, initial-scale=1",
         },
         {
           charset: "utf-8",
@@ -47,7 +47,6 @@ export default defineNuxtConfig({
     "@nuxt/ui", 
     "@nuxt/content", 
     "@nuxt/image", 
-    "@pinia/nuxt", 
     '@vueuse/motion/nuxt',
     "@nuxtjs/seo"
   ],

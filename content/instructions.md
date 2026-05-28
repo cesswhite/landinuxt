@@ -8,7 +8,7 @@
 - **Nuxt Image**
 - **Vue Use Motion**
 
-We will added more modules and Nuxt Libraries in the future
+We will add more modules and Nuxt libraries in the future.
 
 ## Installing Nuxt UI 🔧
 

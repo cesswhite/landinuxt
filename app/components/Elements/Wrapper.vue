@@ -9,10 +9,10 @@
               {{ props.item.title }}
             </span>
             <UTooltip v-if="props.item.dark" text="Component with color mode support">
-              <UIcon name="i-heroicons-moon-20-solid" class="text-dark-950 dark:text-dark-50 mt-0.5 text-xs" />
+              <UIcon name="i-lucide-moon" class="text-dark-950 dark:text-dark-50 mt-0.5 text-xs" />
             </UTooltip>
             <UTooltip v-if="props.item.animated" text="Component with animation">
-              <UIcon name="i-heroicons-sparkles-20-solid" class="text-dark-950 dark:text-dark-50 mt-0.5 text-sm" />
+              <UIcon name="i-lucide-sparkles" class="text-dark-950 dark:text-dark-50 mt-0.5 text-sm" />
             </UTooltip>
           </div>
           <p class="text-dark-400 dark:text-dark-50/40 text-sm font-normal">
@@ -21,17 +21,17 @@
         </div>
         <div class="flex shrink-0 items-center justify-end gap-1">
           <UTooltip text="Preview">
-            <UButton color="neutral" square icon="i-heroicons-eye" :variant="previewCode ? 'subtle' : 'link'"
+            <UButton color="neutral" square icon="i-lucide-eye" :variant="previewCode ? 'subtle' : 'link'"
               class="cursor-pointer" aria-label="Preview" @click="previewCode = true" />
           </UTooltip>
           <UTooltip text="Code">
-            <UButton color="neutral" square icon="i-heroicons-code-bracket" :variant="!previewCode ? 'subtle' : 'link'"
+            <UButton color="neutral" square icon="i-lucide-code-xml" :variant="!previewCode ? 'subtle' : 'link'"
               class="cursor-pointer" aria-label="Code" @click="previewCode = false" />
           </UTooltip>
           <UTooltip :text="current === props.item.title ? 'Copied' : 'Copy code'">
             <UButton color="neutral" square variant="ghost" class="cursor-pointer" :icon="current === props.item.title
-              ? 'i-heroicons-clipboard-document-check'
-              : 'i-heroicons-clipboard-document-list'
+              ? 'i-lucide-clipboard-check'
+              : 'i-lucide-clipboard'
               " :aria-label="current === props.item.title ? 'Copied' : 'Copy code'" @click="copyCode()" />
           </UTooltip>
         </div>
@@ -262,7 +262,9 @@ function copyCode() {
   }
 
 
-  window.umami.track(`component-copied-${props.item.parent.toLowerCase()}-${props.title?.toLowerCase()}`);
+  trackUmami(
+    `component-copied-${props.item.parent.toLowerCase()}-${props.title?.toLowerCase()}`,
+  );
 
   setTimeout(() => {
     current.value = null;

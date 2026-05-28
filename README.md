@@ -77,9 +77,23 @@ In addition to Nuxt UI, you'll need the following modules for full component fun
 
 Once everything is set up, you're ready to go! Just copy and paste the component code from LandiNuxt into your project, and you’re all set to create stunning landing pages with ease.
 
+## Rendering mode
+
+The demo site runs as a **client-side SPA** (`ssr: false` in `nuxt.config.ts`). `routeRules` with `prerender` / `isr` still apply when you run `nuxt generate` or deploy a static build. Copy-paste components work the same in SSR or SPA Nuxt apps.
+
+## Development scripts
+
+```bash
+pnpm verify:elements  # Ensures content/*.md counts match Elements/*.vue per category
+pnpm typecheck
+pnpm check            # verify + typecheck + build (same as GitHub Actions)
+```
+
 ## Contributions
 
 Contributions are welcome! If you want to improve or add new features to LandiNuxt, feel free to open an issue or submit a pull request.
+
+When adding a section, follow the contributor skill at [`.cursor/skills/add-landing-component/SKILL.md`](.cursor/skills/add-landing-component/SKILL.md) (category wiring, `content/{n}.{category}/{N}.md`, and self-contained `.vue` files). Run `pnpm verify:elements` before opening a PR.
 
 ## Acknowledgments
 
