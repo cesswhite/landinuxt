@@ -14,12 +14,21 @@
 <script setup lang="ts">
 const route = useRoute()
 const config = useRuntimeConfig()
-const { params } = route
-const name = ref(params.name)
-const _landings = await queryContent(`/landings/${name.value}`).findOne()
+const landingSlug = computed(() => {
+  const param = route.params.name
+  if (typeof param === "string") {
+    return param
+  }
+  if (Array.isArray(param)) {
+    return param[0] ?? ""
+  }
+  return ""
+})
+const name = landingSlug
+const _landings = await queryContent(`/landings/${landingSlug.value}`).findOne()
 
 const landingTitle = computed(() => {
-  const title = _landings?.title || name.value
+  const title = String(_landings?.title || landingSlug.value || "Landing")
   return title.charAt(0).toUpperCase() + title.slice(1)
 })
 

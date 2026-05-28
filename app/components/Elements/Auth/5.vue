@@ -1,5 +1,5 @@
 <template>
-    <div class="h-auto w-full flex items-center justify-center bg-white dark:bg-black gap-2 min-h-screen">
+    <div class="flex h-auto min-h-screen w-full items-center justify-center gap-2 bg-dark-50 dark:bg-dark-950">
         <div
             class="w-full rounded-md md:w-96 bg-dark-50 dark:bg-dark-900 p-4 flex flex-col items-center justify-center">
             <div class="flex items-center justify-center size-8 rounded-full bg-dark-200/60 dark:bg-dark-800">

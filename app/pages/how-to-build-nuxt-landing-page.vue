@@ -172,8 +172,8 @@ const steps = [
     tips: 'Nuxt UI includes Tailwind CSS, so you don\'t need to install it separately. The module handles all configuration automatically.',
   },
   {
-    name: 'Add Hero, Features, Pricing Components',
-    text: 'Copy and paste pre-built components from LandiNuxt. Start with a Hero section, add Features, and include a Pricing or CTA section. Each component is ready to use and fully customizable.',
+    name: 'Add Hero, Features, and CTA Components',
+    text: 'Copy and paste pre-built components from LandiNuxt. Start with a Hero section, add Features, then a CTA or FAQ section. Each component is ready to use and fully customizable.',
     codeVue: 'Import and use pre-built components like ElementsHero1, ElementsFeatures1, and ElementsCTA1 in your page template',
     tips: 'Browse our component library at /components to find the perfect sections for your landing page. All components are copy-paste ready.',
   },

@@ -1,11 +1,11 @@
 <template>
-    <NuxtLayout name="default">
-        <div class="relative w-full px-4 py-24">
+    <NuxtLayout name="components-hub">
+        <div class="relative w-full">
             <ElementsHeader name="Contact" :number="_contact.length"
                 description="Enhance your website's user experience with our advanced Contact section components. Each component is crafted for seamless interaction and designed to facilitate meaningful connections." />
-            <ContentList path="/contact" v-slot="{ list }">
+            <ElementsContentList path="/contact" v-slot="{ list }">
                 <template v-for="(item, index) in list" :key="item._path">
-                    <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
+                    <ElementsWrapper :item="item" :title="item.title">
                         <template #components>
                             <LazyElementsContact1 v-if="item.title === ('simple' as ContactTemplates)" />
                             <LazyElementsContact2 v-if="item.title === ('single' as ContactTemplates)" />
@@ -15,7 +15,7 @@
                         </template>
                     </ElementsWrapper>
                 </template>
-            </ContentList>
+            </ElementsContentList>
         </div>
     </NuxtLayout>
 </template>
@@ -27,23 +27,23 @@ const route = useRoute()
 const _contact = await queryContent("contact").find();
 
 useSeoMeta({
-  title: "Contact Components | LandiNuxt",
-  description: "Enhance your website's user experience with our advanced Contact section components. Each component is crafted for seamless interaction and designed to facilitate meaningful connections.",
-  ogTitle: "Contact Components | LandiNuxt",
-  ogDescription: "Enhance your website's user experience with our advanced Contact section components. Each component is crafted for seamless interaction and designed to facilitate meaningful connections.",
-  ogImage: "/og-landinuxt.jpg",
-  ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
-  twitterCard: "summary_large_image",
-  twitterTitle: "Contact Components | LandiNuxt",
-  twitterDescription: "Enhance your website's user experience with our advanced Contact section components. Each component is crafted for seamless interaction and designed to facilitate meaningful connections.",
-  twitterImage: "/og-landinuxt.jpg",
-  ogImageWidth: 1200,
-  ogImageHeight: 630,
+    title: "Contact Components | LandiNuxt",
+    description: "Enhance your website's user experience with our advanced Contact section components. Each component is crafted for seamless interaction and designed to facilitate meaningful connections.",
+    ogTitle: "Contact Components | LandiNuxt",
+    ogDescription: "Enhance your website's user experience with our advanced Contact section components. Each component is crafted for seamless interaction and designed to facilitate meaningful connections.",
+    ogImage: "/og-landinuxt.jpg",
+    ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
+    twitterCard: "summary_large_image",
+    twitterTitle: "Contact Components | LandiNuxt",
+    twitterDescription: "Enhance your website's user experience with our advanced Contact section components. Each component is crafted for seamless interaction and designed to facilitate meaningful connections.",
+    twitterImage: "/og-landinuxt.jpg",
+    ogImageWidth: 1200,
+    ogImageHeight: 630,
 })
 
 useHead({
-  htmlAttrs: {
-    lang: 'en'
-  }
+    htmlAttrs: {
+        lang: 'en'
+    }
 })
 </script>

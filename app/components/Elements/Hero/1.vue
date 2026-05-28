@@ -9,13 +9,13 @@
         <div class="relative z-20 w-10/12">
             <div class="flex flex-col gap-4">
                 <h1
-                    class="text-center text-5xl font-semibold text-white sm:text-6xl md:text-left md:text-7xl 2xl:text-8xl">
+                    class="text-center text-5xl font-semibold text-dark-50 sm:text-6xl md:text-left md:text-7xl 2xl:text-8xl">
                     Support your <br />
                     friends with <br />
                     heartfelt care
                 </h1>
                 <div class="mx-auto mt-4 w-full sm:w-96 md:mx-0">
-                    <UButton block to="/" size="xl" type="solid" color="primary"
+                    <UButton block to="/" size="xl" variant="solid" color="primary"
                         class="flex items-center justify-center gap-6 rounded-full" aria-label="Explore our proposals">
                         Explore our proposals
                         <template #trailing>

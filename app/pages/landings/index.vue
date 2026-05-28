@@ -24,7 +24,7 @@ const route = useRoute()
 
 useSeoMeta({
   title: "Nuxt Landing Page Templates: Pre-built Complete Landing Pages | LandiNuxt",
-  description: "Explore complete pre-built Nuxt landing page templates: Simple, Showcase, SaaS, and Agency designs. Ready-to-launch templates with Hero, Features, Pricing, FAQ, and CTA sections. Copy-paste ready for Nuxt UI v4.",
+  description: "Explore complete pre-built Nuxt landing page templates: Simple, Showcase, SaaS, and Agency designs. Ready-to-launch templates with Hero, Features, FAQ, and CTA sections. Copy-paste ready for Nuxt UI v4.",
   ogTitle: "Nuxt Landing Page Templates: Pre-built Complete Landing Pages | LandiNuxt",
   ogDescription: "Explore complete pre-built Nuxt landing page templates. Ready-to-launch templates with all sections included. Copy-paste ready for Nuxt UI v4.",
   ogImage: "/og-landinuxt.jpg",

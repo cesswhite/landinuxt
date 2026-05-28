@@ -12,7 +12,7 @@
                     Nuxt Landing Components and Templates
                 </h1>
                 <p class="text-xl/7 text-dark-950/60 dark:text-dark-50/50 w-full md:w-2/3 mx-auto md:text-2xl/7">
-                    Pre-built sections (Hero, Pricing, Features, FAQ, CTA) and complete landing page templates for Nuxt.
+                    Pre-built sections (Hero, Features, FAQ, CTA, headers, footers) and complete landing page templates for Nuxt.
                     Build high-converting landing pages faster with copy-paste components fully integrated with Nuxt UI
                     v4.
                 </p>
@@ -197,9 +197,9 @@ const faqItems = [
 
 // SEO Meta
 useSeoMeta({
-    title: 'Nuxt Landing Components and Templates | Pre-built Sections (Hero, Pricing, FAQ, CTA) | LandiNuxt',
+    title: 'Nuxt Landing Components and Templates | Pre-built Sections (Hero, Features, FAQ, CTA) | LandiNuxt',
     description:
-        'Build Nuxt landing pages faster with pre-built components: Hero, Pricing, Features, FAQ, CTA sections, and complete templates. Fully compatible with Nuxt UI v4. SSR/ISR ready, dark mode support, and accessible.',
+        'Build Nuxt landing pages faster with pre-built components: Hero, Features, FAQ, CTA, headers, footers, and complete templates. Fully compatible with Nuxt UI v4. Dark mode support and accessible patterns.',
     ogTitle: 'Nuxt Landing Components and Templates | LandiNuxt',
     ogDescription:
         'Pre-built Nuxt landing page components and templates. Build high-converting landing pages faster with copy-paste components fully integrated with Nuxt UI v4.',

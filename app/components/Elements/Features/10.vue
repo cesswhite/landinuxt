@@ -1,5 +1,5 @@
 <template>
-    <div class="grid grid-cols-12 gap-y-24">
+    <div class="grid grid-cols-12 gap-y-24 bg-dark-50 dark:bg-dark-950">
         <div class="col-span-full lg:col-span-7">
             <h1 class="text-7xl dark:text-dark-50 font-family-inter font-light">
                 Our features are changing the game in design and development

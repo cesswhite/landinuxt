@@ -1,11 +1,11 @@
 <template>
-  <NuxtLayout name="default">
-    <div class="relative w-full py-24 px-4">
+  <NuxtLayout name="components-hub">
+    <div class="relative w-full">
       <ElementsHeader name="Features" :number="_features.length"
         description="Discover a diverse range of feature sections tailored to elevate your website's user experience. Spanning from minimalist to feature-packed designs, these sections are meticulously crafted to convey your brand's message and captivate your target audience." />
-      <ContentList path="/features" v-slot="{ list }">
+      <ElementsContentList path="/features" v-slot="{ list }">
         <template v-for="(item, index) in list" :key="item._path">
-          <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
+          <ElementsWrapper :item="item" :title="item.title">
             <template #components>
               <LazyElementsFeatures1 v-if="item.title === ('elegance' as FeaturesTemplates)" />
               <LazyElementsFeatures2 v-if="item.title === ('puzzle' as FeaturesTemplates)" />
@@ -24,7 +24,7 @@
             </template>
           </ElementsWrapper>
         </template>
-      </ContentList>
+      </ElementsContentList>
     </div>
   </NuxtLayout>
 </template>
@@ -36,15 +36,15 @@ const route = useRoute()
 const _features = await queryContent("features").find();
 
 useSeoMeta({
-  title: "Nuxt Feature Components: 13+ Pre-built Feature Sections for Landing Pages | LandiNuxt",
-  description: "Discover 13+ pre-built Nuxt feature sections to showcase your product benefits. From minimalist to feature-packed designs with icons, images, and descriptions. Copy-paste ready, fully compatible with Nuxt UI v4.",
-  ogTitle: "Nuxt Feature Components: 13+ Pre-built Feature Sections | LandiNuxt",
-  ogDescription: "Discover 13+ pre-built Nuxt feature sections. Copy-paste ready feature components with icons, images, and descriptions. Fully compatible with Nuxt UI v4.",
+  title: "Nuxt Feature Components: 14 Pre-built Feature Sections for Landing Pages | LandiNuxt",
+  description: "Discover 14 pre-built Nuxt feature sections to showcase your product benefits. From minimalist to feature-packed designs with icons, images, and descriptions. Copy-paste ready, fully compatible with Nuxt UI v4.",
+  ogTitle: "Nuxt Feature Components: 14 Pre-built Feature Sections | LandiNuxt",
+  ogDescription: "Discover 14 pre-built Nuxt feature sections. Copy-paste ready feature components with icons, images, and descriptions. Fully compatible with Nuxt UI v4.",
   ogImage: "/og-landinuxt.jpg",
   ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
   twitterCard: "summary_large_image",
-  twitterTitle: "Nuxt Feature Components: 13+ Pre-built Feature Sections | LandiNuxt",
-  twitterDescription: "Discover 13+ pre-built Nuxt feature sections. Copy-paste ready for Nuxt UI v4.",
+  twitterTitle: "Nuxt Feature Components: 14 Pre-built Feature Sections | LandiNuxt",
+  twitterDescription: "Discover 14 pre-built Nuxt feature sections. Copy-paste ready for Nuxt UI v4.",
   twitterImage: "/og-landinuxt.jpg",
   ogImageWidth: 1200,
   ogImageHeight: 630,

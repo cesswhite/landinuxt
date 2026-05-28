@@ -1,5 +1,5 @@
 <template>
-    <div class="h-auto min-h-dvh w-full grid grid-cols-12 items-center justify-center p-2 bg-white dark:bg-black gap-2">
+    <div class="h-auto min-h-dvh w-full grid grid-cols-12 items-center justify-center gap-2 bg-dark-50 p-2 dark:bg-dark-950">
         <div class="col-span-full hidden md:block md:col-span-6 h-full">
             <div
                 class="w-full h-full flex flex-col items-end justify-end bg-gradient-to-bl from-primary-500 to-primary-700 dark:from-primary-400 dark:to-primary-600 rounded-lg pb-12">

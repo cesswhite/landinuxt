@@ -6,18 +6,18 @@
         :placeholder="[50, 25, 75, 5]" format="webp" />
     </div>
     <nav class="hidden w-full items-center justify-center lg:flex">
-      <UButton variant="link" color="primary" size="lg" to="#"> Home </UButton>
-      <UButton variant="link" color="primary" size="lg" to="#"> About </UButton>
-      <UButton variant="link" color="primary" size="lg" to="#">
+      <UButton variant="link" color="neutral" size="lg" to="#"> Home </UButton>
+      <UButton variant="link" color="neutral" size="lg" to="#"> About </UButton>
+      <UButton variant="link" color="neutral" size="lg" to="#">
         Services
       </UButton>
-      <UButton variant="link" color="primary" size="lg" to="#">
+      <UButton variant="link" color="neutral" size="lg" to="#">
         Contact
       </UButton>
-      <UButton variant="link" color="primary" size="lg" to="#"> Blog </UButton>
+      <UButton variant="link" color="neutral" size="lg" to="#"> Blog </UButton>
     </nav>
     <div class="flex w-full items-center justify-end gap-4">
-      <UButton label="Sign in" variant="ghost" color="primary" size="lg" />
+      <UButton label="Sign in" variant="ghost" color="neutral" size="lg" />
       <UButton label="Sign up" variant="solid" color="primary" size="lg" />
       <USlideover title="Menu" close-icon="i-heroicons-x-mark">
         <div class="inline-block md:hidden">
@@ -25,19 +25,19 @@
         </div>
         <template #body>
           <nav class="flex w-full flex-col">
-            <UButton block variant="link" color="primary" size="lg" to="#">
+            <UButton block variant="link" color="neutral" size="lg" to="#">
               Home
             </UButton>
-            <UButton block variant="link" color="primary" size="lg" to="#">
+            <UButton block variant="link" color="neutral" size="lg" to="#">
               About
             </UButton>
-            <UButton block variant="link" color="primary" size="lg" to="#">
+            <UButton block variant="link" color="neutral" size="lg" to="#">
               Services
             </UButton>
-            <UButton block variant="link" color="primary" size="lg" to="#">
+            <UButton block variant="link" color="neutral" size="lg" to="#">
               Contact
             </UButton>
-            <UButton block variant="link" color="primary" size="lg" to="#">
+            <UButton block variant="link" color="neutral" size="lg" to="#">
               Blog
             </UButton>
           </nav>

@@ -1,11 +1,11 @@
 <template>
-  <NuxtLayout name="default">
-    <div class="relative w-full py-24 px-4">
+  <NuxtLayout name="components-hub">
+    <div class="relative w-full">
       <ElementsHeader name="Gallery" :number="_gallery.length"
         description="Showcase your visual content with beautiful gallery sections. From grid layouts to lightbox displays, these components help you present images, portfolios, and media in an engaging and professional way." />
-      <ContentList path="/gallery" v-slot="{ list }">
+      <ElementsContentList path="/gallery" v-slot="{ list }">
         <template v-for="(item, index) in list" :key="item._path">
-          <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
+          <ElementsWrapper :item="item" :title="item.title">
             <template #components>
               <LazyElementsGallery1 v-if="item.title === ('grid' as GalleryTemplates)" />
               <LazyElementsGallery2 v-if="item.title === ('windows' as GalleryTemplates)" />
@@ -14,7 +14,7 @@
             </template>
           </ElementsWrapper>
         </template>
-      </ContentList>
+      </ElementsContentList>
     </div>
   </NuxtLayout>
 </template>

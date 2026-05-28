@@ -1,11 +1,11 @@
 <template>
-  <NuxtLayout name="default">
-    <div class="relative w-full py-24 px-4">
+  <NuxtLayout name="components-hub">
+    <div class="relative w-full">
       <ElementsHeader name="Hero" :number="_hero.length"
         description="Discover a wide range of hero sections tailored to engage your audience. Clean and simple to feature-rich designs, these sections are designed to convey your message effectively and captivate users." />
-      <ContentList path="/hero" v-slot="{ list }">
+      <ElementsContentList path="/hero" v-slot="{ list }">
         <template v-for="(item, index) in list" :key="item._path">
-          <ElementsWrapper :item="item" :code="item.body?.children[0]?.props?.code" :title="item.title">
+          <ElementsWrapper :item="item" :title="item.title">
             <template #components>
               <LazyElementsHero1 v-if="item.title === ('simple' as HeroTemplates)" />
               <LazyElementsHero2 v-if="item.title === ('main' as HeroTemplates)" />
@@ -28,7 +28,7 @@
             </template>
           </ElementsWrapper>
         </template>
-      </ContentList>
+      </ElementsContentList>
     </div>
   </NuxtLayout>
 </template>

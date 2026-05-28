@@ -1,5 +1,5 @@
 <template>
-  <header class="relative flex w-full items-center justify-between bg-white py-2 px-4 dark:bg-dark-950">
+  <header class="relative flex w-full items-center justify-between bg-dark-50 py-2 px-4 dark:bg-dark-950">
     <div class="flex items-center gap-2">
       <USlideover side="left" title="Menu" close-icon="i-heroicons-x-mark">
         <UButton icon="i-heroicons-bars-3-bottom-left" variant="link" color="primary" size="xl" />
@@ -27,21 +27,21 @@
       </div>
     </div>
     <div class="hidden items-center justify-start gap-2 md:flex">
-      <UButton variant="link" color="primary" size="lg" to="#"> Home </UButton>
-      <UButton variant="link" color="primary" size="lg" to="#"> Woman </UButton>
-      <UButton variant="link" color="primary" size="lg" to="#"> Man </UButton>
-      <UButton variant="link" color="primary" size="lg" to="#"> Kids </UButton>
+      <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer"> Home </UButton>
+      <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer"> Woman </UButton>
+      <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer"> Man </UButton>
+      <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer"> Kids </UButton>
     </div>
     <div class="flex items-center gap-2">
       <UModal>
-        <UButton icon="i-heroicons-magnifying-glass" variant="link" color="primary" size="lg" />
+        <UButton icon="i-heroicons-magnifying-glass" variant="link" color="neutral" class="cursor-pointer" size="lg" />
         <template #content>
           <UCommandPalette multiple placeholder="Search an app..." :groups="groups" class="flex-1" />
         </template>
       </UModal>
 
-      <UChip text="3" size="2xl">
-        <UButton icon="i-heroicons-shopping-cart" variant="link" color="primary" />
+      <UChip text="3" size="3xl">
+        <UButton icon="i-heroicons-shopping-cart" variant="link" color="neutral" class="cursor-pointer" />
       </UChip>
     </div>
   </header>

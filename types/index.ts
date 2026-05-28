@@ -17,8 +17,8 @@ export interface Repository {
 }
 declare global {
   interface Window {
-    umami: {
+    umami?: {
       track: (event: string) => void;
-    }
+    };
   }
 }

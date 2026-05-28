@@ -1,41 +1,49 @@
 <template>
-  <div @click="goToComponentIndex(props.data.name)"
-    class="bg-dark-400/5 dark:bg-dark-500/10 col-span-full h-auto transform-gpu cursor-pointer rounded-lg p-1 transition-transform duration-300 ease-in-out will-change-transform hover:rotate-2 odd:hover:-rotate-2 sm:col-span-6 md:col-span-4 2xl:col-span-3">
-    <div class="bg-dark-950/5 dark:bg-dark-800/10 flex h-56 w-full items-center justify-center rounded-md">
-      <LazyElementsHeroCover v-if="props.data.name === 'hero'" />
-      <LazyElementsHeadersCover v-if="props.data.name === 'headers'" />
-      <LazyElementsFeaturesCover v-if="props.data.name === 'features'" />
-      <LazyElementsFootersCover v-if="props.data.name === 'footers'" />
-      <LazyElementsCTACover v-if="props.data.name === 'cta'" />
-      <LazyElementsTestimonialsCover v-if="props.data.name === 'testimonials'" />
-      <LazyElementsContactCover v-if="props.data.name === 'contact'" />
-      <LazyElementsLogosCover v-if="props.data.name === 'logos'" />
-      <LazyElementsFAQCover v-if="props.data.name === 'faq'" />
-      <LazyElementsAuthCover v-if="props.data.name === 'auth'" />
-      <LazyElementsGalleryCover v-if="props.data.name === 'gallery'" />
+  <NuxtLink
+    :to="`/components/${props.data.name}`"
+    class="col-span-full h-auto transform-gpu cursor-pointer rounded-xl transition-transform duration-300 ease-in-out will-change-transform sm:col-span-6 md:col-span-4 2xl:col-span-3 bg-dark-50 p-1 ring-1 ring-dark-950/10 shadow shadow-dark-950/10 dark:bg-dark-950 dark:ring-dark-50/15 dark:shadow-2xs dark:shadow-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500"
+    @click="onCategoryClick"
+  >
+    <div class="aspect-1080/670 w-full overflow-hidden rounded-lg bg-dark-50 dark:bg-dark-950">
+      <component :is="coverComponent" />
     </div>
-    <div class="text-dark-950/90 dark:text-dark-50/90 mt-2 p-1 text-base font-bold capitalize">
-      {{ props.data.name === 'cta' ? 'CTA' : props.data.name === 'faq' ? 'FAQ' : props.data.name }}
-      <small class="text-dark-400 dark:text-dark-500">({{
-        props.data.total === 0
-          ? "Cooming soon"
-          : `${props.data.total}
-        components`
-      }})</small>
+    <div class="mt-2 p-1 text-base font-bold capitalize text-dark-950/90 dark:text-dark-50/90">
+      {{ categoryLabel }}
+      <small class="text-dark-400 dark:text-dark-500">({{ componentCountLabel }})</small>
     </div>
-  </div>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">
-import type { Component } from "../../../types/index";
+import type { Component as ElementCategory, Elements } from "../../../types/index";
 
 const props = defineProps<{
-  data: Component;
+  data: ElementCategory;
 }>();
 
-function goToComponentIndex(name: string) {
-  navigateTo(`/components/${name}`);
-  const umami = window.umami
-  umami.track(`click-to-${name}`)
+const coverComponents: Record<Elements, ReturnType<typeof resolveComponent>> = {
+  hero: resolveComponent("ElementsHeroCover"),
+  headers: resolveComponent("ElementsHeadersCover"),
+  features: resolveComponent("ElementsFeaturesCover"),
+  footers: resolveComponent("ElementsFootersCover"),
+  cta: resolveComponent("ElementsCTACover"),
+  testimonials: resolveComponent("ElementsTestimonialsCover"),
+  contact: resolveComponent("ElementsContactCover"),
+  logos: resolveComponent("ElementsLogosCover"),
+  faq: resolveComponent("ElementsFAQCover"),
+  auth: resolveComponent("ElementsAuthCover"),
+  gallery: resolveComponent("ElementsGalleryCover"),
+};
+
+const coverComponent = computed(() => coverComponents[props.data.name]);
+
+const categoryLabel = computed(() => categoryNavLabel(props.data.name));
+
+const componentCountLabel = computed(() =>
+  props.data.total === 0 ? "Coming soon" : `${props.data.total} components`,
+);
+
+function onCategoryClick() {
+  trackUmami(`click-to-${props.data.name}`);
 }
 </script>

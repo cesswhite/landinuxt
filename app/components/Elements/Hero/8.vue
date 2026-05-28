@@ -25,7 +25,9 @@
       </div>
       <div class="col-span-full">
         <div class="flex w-full flex-col gap-4">
-          <UMarquee pause-on-hover>
+          <UMarquee pause-on-hover :ui="{
+            root: 'before:!from-dark-50 after:!from-dark-50 dark:before:!from-dark-950 dark:after:!from-dark-950',
+          }">
             <div class="flex w-full items-center justify-center gap-4 first:ml-0 xl:justify-between xl:first:ml-4">
               <template v-for="(f_image, index) in images" :key="index">
                 <NuxtImg class="size-48 object-cover object-center xl:size-52" :src="f_image" loading="lazy"
@@ -33,7 +35,9 @@
               </template>
             </div>
           </UMarquee>
-          <UMarquee pause-on-hover reverse>
+          <UMarquee pause-on-hover reverse :ui="{
+            root: 'before:!from-dark-50 after:!from-dark-50 dark:before:!from-dark-950 dark:after:!from-dark-950',
+          }">
             <div class="flex w-full items-center justify-center gap-4 first:ml-4 xl:first:ml-4">
               <template v-for="(f_image, index) in images" :key="index">
                 <NuxtImg class="size-48 object-cover object-center xl:size-52" :src="f_image" loading="lazy"

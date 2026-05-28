@@ -5,7 +5,10 @@
 .nitro
 .cache
 .cursor
+.agents
 dist
+
+
 
 
 # Node dependencies

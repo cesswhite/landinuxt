@@ -8,7 +8,7 @@
 - **Nuxt Image**
 - **Vue Use Motion**
 
-We will added more modules and Nuxt Libraries in the future
+We will add more modules and Nuxt libraries in the future.
 
 ## Installing Nuxt UI 🔧
 
@@ -88,7 +88,32 @@ In addition to Nuxt UI, you'll need the following modules for full component fun
 
 ## Using Our Components 🎉
 
-Once everything is set up, you're ready to go! Just copy and paste the component code from Landinuxt into your project, and you’re all set to create stunning landing pages with ease.
+Once everything is set up, copy the `.vue` file from LandiNuxt into your project. Each section is a **single self-contained Vue file** using Nuxt UI and Tailwind CSS.
+
+## Component conventions 📐
+
+Every copy-paste section in `app/components/Elements/` follows these rules:
+
+- **Stack**: Vue SFC + Nuxt UI + Tailwind utility classes only.
+- **Colors**: Use `primary-*` and `dark-*` design tokens (defined in `main.css`). Do not use `white`, `black`, `gray-*`, `blue-*`, or other raw Tailwind palette names.
+- **No shared style utils** inside numbered components — configuration that affects visuals (e.g. `UMarquee` fade) lives inline in the same file.
+- **Script optional**: Static sections can be template-only; add `<script setup>` when the demo needs forms, carousels, or sample data.
+- **Hub vs section**: Files like `Wrapper.vue`, `Tile.vue`, and `ContentList.vue` power the component gallery and are not copy-paste targets.
+
+## Per-section dependencies
+
+Before pasting a section, install what it uses. Global setup (Nuxt UI, tokens, fonts) is required for **all** sections.
+
+| Category / pattern | Extra modules | Notes |
+| --- | --- | --- |
+| **All sections** | Nuxt UI, Tailwind, token CSS from below | Color mode support uses `dark:` variants |
+| **Hero, Headers, Gallery, Footers, CTA, …** with images | `@nuxt/image` | Uses `NuxtImg` |
+| **Hero 2, 9, 11 · Features 3, 14 · …** | `@vueuse/motion` | Uses `v-motion` / `v-motion-fade` |
+| **Logos 2, 5, 6 · Hero 4, 8 · …** | Nuxt UI `UMarquee` | Inline `:ui` fade must match section `bg-dark-50 dark:bg-dark-950` |
+| **FAQ, Auth, Contact, …** | Nuxt UI forms | `UForm`, `UInput`, etc. |
+| **Headers 7** | — | Scoped CSS for mega-menu transition (exception) |
+
+Check the section file for `NuxtImg`, `v-motion`, `UMarquee`, or `UForm` to confirm dependencies.
 
 ## How to Contribute 🤝
 

@@ -7,17 +7,35 @@
 * {
   margin: 0;
 }
+/* Page chrome: true white in light mode, true black in dark (matches `app.vue` body sync) */
+html {
+  background-color: white;
+}
+
+html.dark {
+  background-color: black;
+}
+
 html,
 body {
   height: 100%;
-  scroll-behavior: smooth;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   position: relative;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  transition: background-color 180ms ease;
+}
+
+body {
   background-color: inherit;
-  transition: background-color 0.3s ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
 }
 img,
 picture,
@@ -83,13 +101,28 @@ p {
 /* Default class for <Transition> component */
 .fade-enter-active,
 .fade-leave-active {
-  will-change: transition;
-  transition: opacity 0.5s ease;
+  transition: opacity 220ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body {
+    scroll-behavior: auto;
+  }
+
+  body {
+    transition: none;
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: none;
+  }
 }
 
 /* For Webkit-based browsers (Chrome, Safari and Opera) */

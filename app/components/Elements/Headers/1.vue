@@ -6,15 +6,15 @@
         :placeholder="[50, 25, 75, 5]" format="webp" />
     </div>
     <nav class="hidden items-center justify-start md:flex">
-      <UButton variant="link" color="primary" size="lg" to="#"> Home </UButton>
-      <UButton variant="link" color="primary" size="lg" to="#"> About </UButton>
-      <UButton variant="link" color="primary" size="lg" to="#">
+      <UButton variant="link" color="neutral" size="lg" to="#"> Home </UButton>
+      <UButton variant="link" color="neutral" size="lg" to="#"> About </UButton>
+      <UButton variant="link" color="neutral" size="lg" to="#">
         Services
       </UButton>
-      <UButton variant="link" color="primary" size="lg" to="#">
+      <UButton variant="link" color="neutral" size="lg" to="#">
         Contact
       </UButton>
-      <UButton variant="link" color="primary" size="lg" to="#"> Blog </UButton>
+      <UButton variant="link" color="neutral" size="lg" to="#"> Blog </UButton>
     </nav>
     <USlideover title="Menu" close-icon="i-heroicons-x-mark">
       <div class="inline-block md:hidden">
@@ -22,19 +22,19 @@
       </div>
       <template #body>
         <nav class="flex w-full flex-col">
-          <UButton block variant="link" color="primary" size="lg" to="#">
+          <UButton block variant="link" color="neutral" size="lg" to="#">
             Home
           </UButton>
-          <UButton block variant="link" color="primary" size="lg" to="#">
+          <UButton block variant="link" color="neutral" size="lg" to="#">
             About
           </UButton>
-          <UButton block variant="link" color="primary" size="lg" to="#">
+          <UButton block variant="link" color="neutral" size="lg" to="#">
             Services
           </UButton>
-          <UButton block variant="link" color="primary" size="lg" to="#">
+          <UButton block variant="link" color="neutral" size="lg" to="#">
             Contact
           </UButton>
-          <UButton block variant="link" color="primary" size="lg" to="#">
+          <UButton block variant="link" color="neutral" size="lg" to="#">
             Blog
           </UButton>
         </nav>

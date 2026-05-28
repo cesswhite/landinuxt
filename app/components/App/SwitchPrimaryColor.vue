@@ -15,7 +15,7 @@
                                 <UButton variant="link" @click.stop.prevent="setPrimaryColor(color)"
                                     class="cursor-pointer">
                                     <span class="inline-block size-4 rounded-full"
-                                        :class="`bg-[var(--color-light)] dark:bg-[var(--color-dark)]`" :style="{
+                                        :class="`bg-(--color-light) dark:bg-(--color-dark)`" :style="{
                                             '--color-light': `var(--color-${color}-400)`,
                                             '--color-dark': `var(--color-${color}-500)`
                                         }" />
@@ -37,7 +37,7 @@
                                 <UButton v-if="color === 'neutral'" variant="link" square
                                     @click.stop.prevent="setNeutralColor(color)" class="cursor-pointer">
                                     <span class="inline-block size-4 rounded-full"
-                                        :class="`bg-[var(--color-light)] dark:bg-[var(--color-dark)]`" :style="{
+                                        :class="`bg-(--color-light) dark:bg-(--color-dark)`" :style="{
                                             '--color-light': `var(--ui-color-${color}-400)`,
                                             '--color-dark': `var(--ui-color-${color}-500)`
                                         }" />
@@ -45,7 +45,7 @@
                                 <UButton v-else variant="link" square @click.stop.prevent="setNeutralColor(color)"
                                     class="cursor-pointer">
                                     <span class="inline-block size-4 rounded-full"
-                                        :class="`bg-[var(--color-light)] dark:bg-[var(--color-dark)]`" :style="{
+                                        :class="`bg-(--color-light) dark:bg-(--color-dark)`" :style="{
                                             '--color-light': `var(--color-${color}-400)`,
                                             '--color-dark': `var(--color-${color}-500)`
                                         }" />
@@ -74,9 +74,38 @@ const items = [
     ],
 ];
 
-const primaryColors = ['rose', 'red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink']
+// Tailwind v4.2 adds mauve, olive, mist, taupe to the default theme.
+const primaryColors = [
+    "rose",
+    "red",
+    "orange",
+    "amber",
+    "yellow",
+    "lime",
+    "green",
+    "emerald",
+    "teal",
+    "cyan",
+    "sky",
+    "blue",
+    "indigo",
+    "violet",
+    "purple",
+    "fuchsia",
+    "pink",
+];
 
-const neutralColors = ['slate', 'gray', 'zinc', 'neutral', 'stone']
+const neutralColors = [
+    "slate",
+    "gray",
+    "zinc",
+    "neutral",
+    "stone",
+    "mauve",
+    "olive",
+    "mist",
+    "taupe",
+];
 
 const appConfig = useAppConfig();
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-auto w-full flex-col gap-12 p-4 py-24 md:gap-24">
+  <div class="flex h-auto w-full flex-col gap-12 bg-dark-50 p-4 py-24 md:gap-24 dark:bg-dark-950">
     <div class="flex flex-col items-center justify-center gap-y-4">
       <h1 class="text-center text-4xl font-medium text-dark-950 lg:text-5xl dark:text-dark-50">
         Unlock Your Project's Full Potential <br />

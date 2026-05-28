@@ -1,5 +1,5 @@
 <template>
-    <div class="relative h-auto w-full py-24">
+    <div class="relative h-auto w-full py-24 bg-dark-50 dark:bg-dark-950">
         <div class="col-span-full flex flex-col items-center justify-center gap-4 md:col-span-6">
             <h2 class="text-dark-950 dark:text-dark-50 text-4xl font-bold tracking-tight">
                 What Our Clients Say
@@ -30,7 +30,7 @@
                 <div class="mt-12 flex flex-col items-center justify-center">
                     <span class="text-dark-950 dark:text-dark-50 inline-block w-full text-base font-bold text-center">{{
                         item.name
-                        }}</span>
+                    }}</span>
                     <span
                         class="text-dark-950/60 dark:text-dark-50/60 inline-block w-full text-center text-base font-semibold italic">{{
                             item.username

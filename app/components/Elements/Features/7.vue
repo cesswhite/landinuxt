@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid h-auto w-full grid-cols-12 gap-y-24 py-24 xl:gap-x-24 xl:gap-y-0 xl:px-4"
+    class="grid h-auto w-full grid-cols-12 gap-y-24 bg-dark-50 py-24 xl:gap-x-24 xl:gap-y-0 xl:px-4 dark:bg-dark-950"
   >
     <div
       class="col-span-full flex flex-col items-start justify-center gap-y-8 xl:col-span-4"

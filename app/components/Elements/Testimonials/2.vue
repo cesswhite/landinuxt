@@ -9,12 +9,12 @@
             }">
             <div class="px-8 lg:px-24 h-auto min-h-96 flex items-center justify-center flex-col rounded-2xl"
                 :class="item['class-color']">
-                <p class="text-dark-950 text-xl text-center font-medium italic">
+                <p class="text-dark-50 text-xl text-center font-medium italic">
                     "{{ item.text }}"
                 </p>
                 <div class="flex flex-col items-center justify-center mt-12">
-                    <span class="inline-block w-full font-bold text-base text-dark-950">{{ item.name }}</span>
-                    <span class="inline-block w-full font-bold text-base text-dark-950/50 text-center">{{ item.username
+                    <span class="inline-block w-full font-bold text-base text-dark-50">{{ item.name }}</span>
+                    <span class="inline-block w-full font-bold text-base text-dark-50/70 text-center">{{ item.username
                         }}</span>
                 </div>
             </div>
@@ -29,56 +29,55 @@ const testimonials = shallowRef(
             "name": "Emily Johnson",
             "username": "@emilyj",
             "text": "This service transformed my business. The tools provided are easy to use and incredibly effective. Highly recommend!",
-            "class-color": "bg-blue-100"
+            "class-color": "bg-rose-500 dark:bg-rose-400"
         },
         {
             "name": "Ana Rodríguez",
             "username": "@anarod",
             "text": "Este servicio ha transformado mi negocio. Las herramientas son fáciles de usar y extremadamente efectivas. ¡Lo recomiendo mucho!",
-            "class-color": "bg-green-100"
+            "class-color": "bg-amber-500 dark:bg-amber-400"
         },
         {
             "name": "Michael Lee",
             "username": "@michaellee",
             "text": "Amazing experience! The platform is intuitive and helped me save a lot of time on my projects.",
-            "class-color": "bg-yellow-100"
+            "class-color": "bg-sky-500 dark:bg-sky-400"
         },
         {
             "name": "Laura Fernández",
             "username": "@laurafern",
             "text": "La mejor herramienta que he usado para crear landing pages. Es rápida, confiable, y el equipo de soporte es muy útil.",
-            "class-color": "bg-red-100"
+            "class-color": "bg-violet-500 dark:bg-violet-400"
         },
         {
             "name": "John Davis",
             "username": "@johndavis",
             "text": "I was able to launch my site in just a few hours thanks to the incredible components provided. A game changer!",
-            "class-color": "bg-purple-100"
+            "class-color": "bg-emerald-500 dark:bg-emerald-400"
         },
         {
             "name": "Luis Pérez",
             "username": "@luisp",
             "text": "Pude lanzar mi sitio en solo unas horas gracias a los increíbles componentes que ofrecen. ¡Un cambio total!",
-            "class-color": "bg-pink-200"
+            "class-color": "bg-orange-500 dark:bg-orange-400"
         },
         {
             "name": "David Wilson",
             "username": "@davidw",
             "text": "Exceeded all my expectations! The UI is beautiful and the features are exactly what I needed for my project.",
-            "class-color": "bg-indigo-100"
+            "class-color": "bg-cyan-500 dark:bg-cyan-400"
         },
         {
             "name": "Ricardo Sánchez",
             "username": "@ricardos",
             "text": "¡Superó todas mis expectativas! La interfaz es hermosa y las características son justo lo que necesitaba para mi proyecto.",
-            "class-color": "bg-cyan-100"
+            "class-color": "bg-fuchsia-500 dark:bg-fuchsia-400"
         },
         {
             "name": "Olivia Martinez",
             "username": "@oliviam",
             "text": "As a designer, I found it very easy to customize and integrate with my existing projects. Absolutely love it!",
-            "class-color": "bg-teal-100"
+            "class-color": "bg-lime-500 dark:bg-lime-400"
         },
     ]);
-
 </script>
