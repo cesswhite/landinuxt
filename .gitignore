@@ -8,6 +8,9 @@
 .agents
 dist
 
+# Generated server assets for agent .txt exports
+server/assets/elements
+
 
 
 

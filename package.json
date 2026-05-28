@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
+    "build": "node scripts/sync-element-assets.mjs && nuxt build",
+    "dev": "node scripts/sync-element-assets.mjs && nuxt dev",
     "dev:clean": "rm -rf .nuxt && nuxt dev",
     "dev:reset": "lsof -ti :3000 | xargs kill -9 2>/dev/null; rm -rf .nuxt node_modules/.cache && nuxt dev",
     "generate": "nuxt generate",

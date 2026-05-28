@@ -22,7 +22,7 @@ export function buildElementSources(
 ): Record<string, Record<number, string>> {
   const out: Record<string, Record<number, string>> = {}
   for (const filePath in glob) {
-    const match = filePath.match(/\.\/([^/]+)\/(\d+)\.vue$/)
+    const match = filePath.match(/\/([^/]+)\/(\d+)\.vue$/)
     if (!match) {
       continue
     }
