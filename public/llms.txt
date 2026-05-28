@@ -24,6 +24,15 @@ Nuxt developers building marketing sites, SaaS landing pages, product launches, 
 
 Free and open source (MIT License).
 
+## Agent component files
+
+Each component has a machine-readable `.txt` export for AI agents:
+
+- Pattern: `https://www.landinuxt.com/components/{category}/{slug}.txt`
+- Example: https://www.landinuxt.com/components/hero/simple.txt
+
+These files include metadata, integration instructions, attribution to LandiNuxt by Eco Development Studios, and the full Vue SFC source.
+
 ## Stats
 
 - 90+ components across 11 categories

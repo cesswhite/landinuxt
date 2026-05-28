@@ -1,10 +1,31 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+// macOS: avoid EBADF from chokidar/vite watcher instability (nuxt/nuxt#33300)
+if (process.platform === 'darwin' && !process.env.CHOKIDAR_USEPOLLING) {
+  process.env.CHOKIDAR_USEPOLLING = '1'
+}
+
 export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  // SSR globally; component hub stays client-rendered for interactivity.
+  // SSR in production for SEO; SPA in dev for fast local iteration.
   ssr: true,
+
+  $development: {
+    ssr: false,
+    ogImage: {
+      enabled: false,
+    },
+    // DevTools spawns esbuild workers that trigger EBADF on macOS (nuxt/nuxt#33300)
+    devtools: {
+      enabled: false,
+    },
+  },
+
+  devServer: {
+    host: '127.0.0.1',
+  },
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.landinuxt.com',
     name: 'LandiNuxt',
@@ -42,7 +63,7 @@ export default defineNuxtConfig({
   },
 
   css: ["~/assets/css/main.css"],
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: [
     "@nuxt/ui", 
     "@nuxt/content", 
@@ -89,6 +110,8 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/playground': { index: false },
+    // Agent .txt exports for LLMs (dynamic server routes)
+    '/components/**/*.txt': { headers: { 'cache-control': 'public, max-age=3600' } },
     // Component hub — client-only for search/sidebar interactivity
     '/components/**': { ssr: false, isr: 3600 },
     // Marketing & content pages

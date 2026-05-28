@@ -165,7 +165,7 @@ const steps = [
     name: 'Create Nuxt 3 App',
     text: 'Start by creating a new Nuxt 3 project. Use the official Nuxt CLI to scaffold your application with the latest features and best practices.',
     code: 'npx nuxi@latest init my-landing-page\ncd my-landing-page\nnpm install',
-    tips: 'Make sure you have Node.js 18+ installed. Consider using pnpm or bun for faster installs.',
+    tips: 'Make sure you have Node.js 18+ installed. Use bun for installs and scripts in this project.',
   },
   {
     name: 'Install Nuxt UI v4',

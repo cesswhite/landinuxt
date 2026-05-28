@@ -19,20 +19,29 @@
             {{ props.item.description }}
           </p>
         </div>
-        <div class="flex shrink-0 items-center justify-end gap-1">
+        <div class="relative flex shrink-0 items-center justify-end gap-1">
           <UTooltip text="Preview">
             <UButton color="neutral" square icon="i-lucide-eye" :variant="previewCode ? 'subtle' : 'link'"
-              class="cursor-pointer" aria-label="Preview" @click="previewCode = true" />
+              class="cursor-pointer transition-transform duration-150 ease-out active:scale-[0.96]" aria-label="Preview" @click="previewCode = true" />
           </UTooltip>
           <UTooltip text="Code">
             <UButton color="neutral" square icon="i-lucide-code-xml" :variant="!previewCode ? 'subtle' : 'link'"
-              class="cursor-pointer" aria-label="Code" @click="previewCode = false" />
+              class="cursor-pointer transition-transform duration-150 ease-out active:scale-[0.96]" aria-label="Code" @click="previewCode = false" />
           </UTooltip>
-          <UTooltip :text="current === props.item.title ? 'Copied' : 'Copy code'">
-            <UButton color="neutral" square variant="ghost" class="cursor-pointer" :icon="current === props.item.title
-              ? 'i-lucide-clipboard-check'
-              : 'i-lucide-clipboard'
-              " :aria-label="current === props.item.title ? 'Copied' : 'Copy code'" @click="copyCode()" />
+          <ElementsAiCopyMenu
+            v-if="resolvedCode"
+            :category="item.parent"
+            :slug="String(item.title)"
+            :title="String(item.title)"
+            :description="String(item.description ?? '')"
+            :code="resolvedCode"
+          />
+          <UTooltip :text="copied ? 'Copied' : 'Copy code'">
+            <UButton color="neutral" square variant="ghost"
+              class="cursor-pointer transition-transform duration-150 ease-out active:scale-[0.96]"
+              :icon="copied ? 'i-lucide-clipboard-check' : 'i-lucide-clipboard'"
+              :aria-label="copied ? 'Copied' : 'Copy code'"
+              @click="copyCode()" />
           </UTooltip>
         </div>
       </div>
@@ -80,21 +89,6 @@ import { codeToHtml } from "shiki";
 /** Matches `content.highlight.theme.default` in nuxt.config.ts */
 const CODE_THEME = "github-dark";
 
-/** Maps `Elements/<Folder>/N.vue` to content frontmatter `parent` */
-const FOLDER_TO_PARENT: Record<string, string> = {
-  Headers: "headers",
-  Hero: "hero",
-  Logos: "logos",
-  Features: "features",
-  Footers: "footers",
-  CTA: "cta",
-  Testimonials: "testimonials",
-  Contact: "contact",
-  Auth: "auth",
-  FAQ: "faq",
-  Gallery: "gallery",
-};
-
 const elementRawGlob = import.meta.glob<string>(
   [
     "./Headers/*.vue",
@@ -112,50 +106,9 @@ const elementRawGlob = import.meta.glob<string>(
   { query: "?raw", import: "default", eager: true },
 );
 
-function buildElementSources(
-  glob: Record<string, string>,
-): Record<string, Record<number, string>> {
-  const out: Record<string, Record<number, string>> = {};
-  for (const filePath in glob) {
-    const match = filePath.match(/\.\/([^/]+)\/(\d+)\.vue$/);
-    if (!match) {
-      continue;
-    }
-    const folder = match[1];
-    if (!folder) {
-      continue;
-    }
-    const parent = FOLDER_TO_PARENT[folder];
-    if (!parent) {
-      continue;
-    }
-    const n = Number(match[2]);
-    if (!out[parent]) {
-      out[parent] = {};
-    }
-    out[parent][n] = glob[filePath] as string;
-  }
-  return out;
-}
-
 const ELEMENT_SOURCES = buildElementSources(elementRawGlob);
 
-const current = ref<
-  | HeroTemplates
-  | FeaturesTemplates
-  | HeadersTemplates
-  | FootersTemplates
-  | CTATemplates
-  | TestimonialsTemplates
-  | ContactTemplates
-  | LogosTemplates
-  | AuthTemplates
-  | FAQTemplates
-  | GalleryTemplates
-  | undefined
-  | null
-  | string
->(null);
+const { copy, copied } = useClipboard();
 
 const props = withDefaults(
   defineProps<{
@@ -255,20 +208,11 @@ const setHeightClass = computed(() => {
 });
 
 function copyCode() {
-  const { copy, copied } = useClipboard();
   copy(resolvedCode.value);
-  if (props.title) {
-    current.value = props.title;
-  }
-
 
   trackUmami(
     `component-copied-${props.item.parent.toLowerCase()}-${props.title?.toLowerCase()}`,
   );
-
-  setTimeout(() => {
-    current.value = null;
-  }, 1500);
 }
 </script>
 
