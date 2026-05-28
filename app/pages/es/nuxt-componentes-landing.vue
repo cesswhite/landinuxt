@@ -17,6 +17,9 @@
                     Construye landing pages de alta conversión más rápido con componentes listos para copiar y pegar,
                     totalmente integrados con Nuxt UI v4.
                 </p>
+                <p class="text-sm text-dark-950/50 dark:text-dark-50/40">
+                    Última actualización: {{ LAST_UPDATED }}
+                </p>
             </div>
 
             <!-- Component Categories -->
@@ -200,18 +203,18 @@ const faqItems = [
 
 // SEO Meta
 useSeoMeta({
-    title: 'Componentes y Plantillas de Landing Pages para Nuxt | Secciones Pre-construidas | LandiNuxt',
+    title: 'Componentes Landing Nuxt — 90+ Secciones Copy-Paste',
     description:
-        'Construye landing pages en Nuxt más rápido con componentes pre-construidos: Hero, Precios, Características, FAQ, secciones CTA y plantillas completas. Totalmente compatible con Nuxt UI v4. Listo para SSR/ISR, soporte de modo oscuro y accesible.',
-    ogTitle: 'Componentes y Plantillas de Landing Pages para Nuxt | LandiNuxt',
+        'Construye landing pages en Nuxt más rápido con 90+ componentes pre-construidos: Hero, Características, FAQ, CTA, headers, footers y plantillas. Compatible con Nuxt UI v4.',
+    ogTitle: 'Componentes Landing Nuxt — 90+ Secciones',
     ogDescription:
-        'Componentes y plantillas pre-construidas de landing pages para Nuxt. Construye landing pages de alta conversión más rápido con componentes listos para copiar y pegar.',
+        'Componentes y plantillas pre-construidas de landing pages para Nuxt. Copy-paste listo para Nuxt UI v4.',
     ogImage: '/og-landinuxt.jpg',
     ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
     twitterCard: 'summary_large_image',
-    twitterTitle: 'Componentes y Plantillas de Landing Pages para Nuxt | LandiNuxt',
+    twitterTitle: 'Componentes Landing Nuxt — 90+ Secciones',
     twitterDescription:
-        'Componentes y plantillas pre-construidas de landing pages para Nuxt. Construye más rápido con Nuxt UI v4.',
+        '90+ componentes pre-construidos para landing pages en Nuxt. Copy-paste con Nuxt UI v4.',
     twitterImage: '/og-landinuxt.jpg',
     ogImageWidth: 1200,
     ogImageHeight: 630,
@@ -232,30 +235,13 @@ addStructuredData(faqData)
 const websiteData = generateWebSite()
 addStructuredData(websiteData)
 
-useHead({
-    htmlAttrs: {
-        lang: 'es',
-    },
-    link: [
-        {
-            rel: 'canonical',
-            href: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
-        },
-        {
-            rel: 'alternate',
-            hreflang: 'en',
-            href: `${config.public.siteUrl || 'https://www.landinuxt.com'}/nuxt-landing-components`,
-        },
-        {
-            rel: 'alternate',
-            hreflang: 'es',
-            href: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
-        },
-        {
-            rel: 'alternate',
-            hreflang: 'x-default',
-            href: `${config.public.siteUrl || 'https://www.landinuxt.com'}/nuxt-landing-components`,
-        },
+const siteUrl = siteUrlFromConfig(config)
+useCanonicalHead({
+    lang: 'es',
+    alternates: [
+        { hreflang: 'en', href: `${siteUrl}/nuxt-landing-components` },
+        { hreflang: 'es', href: `${siteUrl}${route.path}` },
+        { hreflang: 'x-default', href: `${siteUrl}/nuxt-landing-components` },
     ],
 })
 </script>

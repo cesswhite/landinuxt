@@ -38,6 +38,10 @@
   </NuxtLayout>
 </template>
 <script setup lang="ts">
+definePageMeta({
+  robots: false,
+})
+
 interface Feature {
   icon: string
   title: string

@@ -102,7 +102,10 @@ export const useStructuredData = () => {
       description:
         'Pre-built Nuxt landing page components and templates. Build beautiful, responsive landing pages faster.',
       sameAs: [
-        // Add social media links if available
+        'https://github.com/cesswhite/landingnuxt',
+        'https://www.producthunt.com/posts/landinuxt',
+        'https://x.com/ecostudios_dev',
+        'https://github.com/Eco-Dev-Studios',
       ],
     }
   }
@@ -115,14 +118,6 @@ export const useStructuredData = () => {
       url: siteUrl,
       description:
         'Pre-built Nuxt landing page components and templates. Build beautiful, responsive landing pages faster.',
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: {
-          '@type': 'EntryPoint',
-          urlTemplate: `${siteUrl}/search?q={search_term_string}`,
-        },
-        'query-input': 'required name=search_term_string',
-      },
     }
   }
 

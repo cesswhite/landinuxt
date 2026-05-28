@@ -30,28 +30,7 @@
 
 <script setup lang="ts">
 import type { CTATemplates } from "../../../../types/templates";
-const config = useRuntimeConfig()
-const route = useRoute()
 const _cta = await queryContent("cta").find();
 
-useSeoMeta({
-  title: "Nuxt CTA Components: 13+ High-Converting Call-to-Action Sections | LandiNuxt",
-  description: "Transform your landing page conversion rates with 13+ pre-built Nuxt CTA components. Optimized for maximum engagement with buttons, forms, and compelling copy. Copy-paste ready, fully compatible with Nuxt UI v4.",
-  ogTitle: "Nuxt CTA Components: 13+ High-Converting Call-to-Action Sections | LandiNuxt",
-  ogDescription: "Transform your conversion rates with 13+ pre-built Nuxt CTA components. Copy-paste ready call-to-action sections. Fully compatible with Nuxt UI v4.",
-  ogImage: "/og-landinuxt.jpg",
-  ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
-  twitterCard: "summary_large_image",
-  twitterTitle: "Nuxt CTA Components: 13+ High-Converting Call-to-Action Sections | LandiNuxt",
-  twitterDescription: "Transform your conversion rates with 13+ pre-built Nuxt CTA components. Copy-paste ready for Nuxt UI v4.",
-  twitterImage: "/og-landinuxt.jpg",
-  ogImageWidth: 1200,
-  ogImageHeight: 630,
-})
-
-useHead({
-  htmlAttrs: {
-    lang: 'en'
-  }
-})
+useComponentsHubCategorySeo('cta')
 </script>

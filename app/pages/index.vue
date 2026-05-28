@@ -2,53 +2,44 @@
   <NuxtLayout name="default">
     <LandingHero />
     <LandingFeatures />
+    <LandingFAQ />
     <LandingCTA />
   </NuxtLayout>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const config = useRuntimeConfig()
 const route = useRoute()
-const { generateOrganization, generateWebSite, addStructuredData } = useStructuredData()
+const { generateOrganization, generateWebSite, generateFAQPage, addStructuredData } = useStructuredData()
 
 useSeoMeta({
-  title: "LandiNuxt | Pre-built Nuxt Landing Components & Templates | Build Landing Pages Faster",
-  ogTitle: "LandiNuxt | Pre-built Nuxt Landing Components & Templates",
+  title: 'Nuxt Landing Page Components — 90+ Copy-Paste Sections',
+  ogTitle: 'Nuxt Landing Page Components — 90+ Sections',
   description:
-    "Build beautiful, responsive Nuxt landing pages faster with pre-built components: Hero, Features, FAQ, CTA, headers, footers, and complete templates. Fully compatible with Nuxt UI v4. Copy-paste ready, dark mode support.",
+    'LandiNuxt offers 90+ free, copy-paste Nuxt landing page components: Hero, Features, FAQ, CTA, headers, footers, and complete templates. Built for Nuxt UI v4 with dark mode support.',
   ogDescription:
-    "Pre-built Nuxt landing page components and templates. Build high-converting landing pages faster with copy-paste components fully integrated with Nuxt UI v4. Perfect for Nuxt developers.",
-  ogImage: "/og-landinuxt.jpg",
-  ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
-  twitterCard: "summary_large_image",
-  twitterImage: "/og-landinuxt.jpg",
-  twitterTitle: "LandiNuxt | Pre-built Nuxt Landing Components & Templates",
-  twitterDescription: "Build beautiful, responsive Nuxt landing pages faster with pre-built components. Copy-paste ready, dark mode support.",
+    '90+ pre-built Nuxt landing page components and templates. Copy-paste sections fully integrated with Nuxt UI v4.',
+  ogImage: '/og-landinuxt.jpg',
+  ogUrl: `${siteUrlFromConfig(config)}${route.path}`,
+  twitterCard: 'summary_large_image',
+  twitterImage: '/og-landinuxt.jpg',
+  twitterTitle: 'Nuxt Landing Page Components — 90+ Sections',
+  twitterDescription:
+    '90+ free copy-paste Nuxt landing page components. Hero, features, FAQ, CTA, and templates for Nuxt UI v4.',
   ogImageWidth: 1200,
   ogImageHeight: 630,
-});
-
-// Structured Data
-const organizationData = generateOrganization()
-addStructuredData(organizationData)
-
-const websiteData = generateWebSite()
-addStructuredData(websiteData)
-
-useHead({
-  htmlAttrs: {
-    lang: 'en'
-  },
-  link: [
-    {
-      rel: 'icon',
-      type: 'image/svg+xml',
-      href: '/favicon.svg'
-    },
-    {
-      rel: 'canonical',
-      href: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
-    }
-  ]
 })
+
+addStructuredData(generateOrganization())
+addStructuredData(generateWebSite())
+addStructuredData(
+  generateFAQPage(
+    HOME_FAQ_ITEMS.map((item) => ({
+      question: item.label,
+      answer: item.content,
+    })),
+  ),
+)
+
+useCanonicalHead()
 </script>
