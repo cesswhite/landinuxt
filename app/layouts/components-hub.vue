@@ -36,7 +36,6 @@
         </div>
       </template>
     </USidebar>
-
     <!--CONTENT CONTAINER-->
     <div
       class="flex min-h-0 min-w-0 flex-1 flex-col overflow-y-scroll overflow-x-hidden bg-white dark:bg-black p-2 relative h-screen">
@@ -52,11 +51,8 @@
             <AppSwitchMode />
             <AppSwitchPrimaryColor />
           </div>
-
         </div>
-
       </div>
-
       <!--CONTENT/BODY-->
       <div class="flex-1 w-full h-full">
         <slot />
