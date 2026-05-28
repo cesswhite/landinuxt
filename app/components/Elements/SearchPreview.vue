@@ -1,15 +1,8 @@
 <template>
   <div
-    class="relative aspect-1080/670 w-full shrink-0 overflow-hidden rounded-lg bg-white ring-1 ring-dark-950/5 dark:bg-black dark:ring-dark-50/10"
-  >
-    <div
-      class="absolute inset-0 flex justify-center overflow-hidden"
-      :class="alignClass"
-    >
-      <div
-        class="pointer-events-none w-[1080px] max-w-none origin-top"
-        :class="scaleClass"
-      >
+    class="relative aspect-1080/670 w-full shrink-0 overflow-hidden rounded-lg bg-white ring-1 ring-dark-950/5 dark:bg-black dark:ring-dark-50/10">
+    <div class="absolute inset-0 flex justify-center overflow-hidden" :class="alignClass">
+      <div class="pointer-events-none w-[1080px] max-w-none origin-top" :class="scaleClass">
         <component :is="previewComponent" v-if="previewComponent" />
       </div>
     </div>
