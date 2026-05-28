@@ -85,7 +85,7 @@ const componentsHubSidebarUi = {
     "fixed bottom-0 p-2 left-0 z-10 hidden h-full w-(--sidebar-width) transition-none lg:flex bg-white dark:bg-black",
   inner:
     "size-full py-2 max-h-full rounded-2xl bg-dark-50 dark:bg-dark-50/6 ring-1 shadow-md ring-dark-950/10 shadow-dark-950/10 dark:ring-dark-50/15 dark:shadow-2xs dark:shadow-black",
-  body: "min-h-0 overflow-y-auto p-0",
+  body: "min-h-0 overflow-y-auto p-0 px-2",
   header: "shrink-0 p-0 min-h-0",
   footer: "shrink-0 p-0",
 } as const;

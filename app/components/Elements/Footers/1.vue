@@ -1,5 +1,5 @@
 <template>
-    <footer class="w-full relative">
+    <footer class="w-full relative bg-dark-50 dark:bg-dark-950">
         <div class="flex flex-col">
             <div
                 class="border-b border-dark-950/10 dark:border-dark-50/10 flex items-center justify-between pb-12 px-4 pt-4">

@@ -1,5 +1,6 @@
 <template>
-    <footer class="w-full relative py-2 border-t border-dark-950/10 dark:border-dark-50/50 py-12">
+    <footer
+        class="w-full relative border-t border-dark-950/10 dark:border-dark-50/50 px-4 py-12 bg-dark-50 dark:bg-dark-950">
         <div class="flex flex-col-reverse items-start md:items-end md:flex-row justify-between gap-y-12">
             <div class="flex w-full md:w-1/2 flex-col">
                 <span class="text-sm inline-block text-dark-950/50 dark:text-dark-50/50">

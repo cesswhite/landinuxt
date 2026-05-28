@@ -1,5 +1,5 @@
 <template>
-    <footer class="w-full max-h-dvh h-auto relative p-4 flex flex-col gap-y-56">
+    <footer class="w-full max-h-dvh h-auto relative p-4 flex flex-col gap-y-56 bg-dark-50 dark:bg-dark-950">
         <div class="grid grid-cols-12 w-full gap-6">
             <div class="col-span-6 lg:col-span-6 flex items-start justify-start ">
                 <NuxtImg src="https://res.cloudinary.com/dkr1hluva/image/upload/landinuxt/icon-neutral_hxtgng.webp"
