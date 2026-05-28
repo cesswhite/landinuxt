@@ -1,0 +1,37 @@
+# LandiNuxt
+
+> Pre-built, copy-paste Nuxt landing page components built on Nuxt UI v4.
+
+## What it is
+
+LandiNuxt provides 90+ ready-to-use landing page sections (Hero, Features, FAQ, CTA, Headers, Footers, Auth, Gallery, and more) and complete templates for Nuxt developers. Copy a section, paste it into your project, and customize.
+
+## Who it's for
+
+Nuxt developers building marketing sites, SaaS landing pages, product launches, and agency sites who want production-ready sections without designing from scratch.
+
+## Key pages
+
+- Components hub: https://www.landinuxt.com/components
+- All components overview: https://www.landinuxt.com/nuxt-landing-components
+- How-to guide: https://www.landinuxt.com/how-to-build-nuxt-landing-page
+- Library comparison: https://www.landinuxt.com/nuxt-landing-comparison
+- Landing templates: https://www.landinuxt.com/landings
+- Setup instructions: https://www.landinuxt.com/instructions
+- Spanish overview: https://www.landinuxt.com/es/nuxt-componentes-landing
+
+## Pricing
+
+Free and open source (MIT License).
+
+## Stats
+
+- 90+ components across 11 categories
+- 18 hero sections, 14 feature sections, 13 CTAs, 8 footers
+- Built for Nuxt 4 + Nuxt UI v4
+- Dark mode support on all components
+- Last updated: May 2026
+
+## Repository
+
+https://github.com/cesswhite/landingnuxt

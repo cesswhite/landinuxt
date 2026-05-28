@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  // SPA mode for the component hub. routeRules prerender/ISR apply at generate/deploy time.
-  ssr: false,
+  // SSR globally; component hub stays client-rendered for interactivity.
+  ssr: true,
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.landinuxt.com',
     name: 'LandiNuxt',
@@ -79,21 +79,29 @@ export default defineNuxtConfig({
     },
   },
 
+  sitemap: {
+    exclude: ['/playground'],
+  },
+
+  robots: {
+    disallow: ['/playground'],
+  },
+
   routeRules: {
-    // Landing pages - ISR for better performance
+    '/playground': { index: false },
+    // Component hub — client-only for search/sidebar interactivity
+    '/components/**': { ssr: false, isr: 3600 },
+    // Marketing & content pages
     '/landings/**': { isr: 3600 },
-    '/nuxt-landing-components': { isr: 3600 },
-    '/nuxt-landing-comparison': { isr: 3600 },
-    '/how-to-build-nuxt-landing-page': { isr: 3600 },
-    '/nuxt-landing-performance': { isr: 3600 },
-    // Spanish pages - ISR
-    '/es/**': { isr: 3600 },
-    // Component pages - ISR
-    '/components/**': { isr: 3600 },
-    // Static pages
+    '/nuxt-landing-components': { prerender: true },
+    '/nuxt-landing-comparison': { prerender: true },
+    '/how-to-build-nuxt-landing-page': { prerender: true },
+    '/es/**': { prerender: true },
     '/': { prerender: true },
     '/instructions': { prerender: true },
     '/contribution': { prerender: true },
+    '/repositories': { prerender: true },
+    '/landings': { prerender: true },
   },
 
   compatibilityDate: "2024-10-03"

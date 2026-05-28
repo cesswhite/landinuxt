@@ -42,6 +42,10 @@ const navigation = [
         label: "Components",
         link: "/components",
     },
+    {
+        label: "LLMs",
+        link: "/llms.txt",
+    },
 ];
 
 const social_media_navigation = [

@@ -14,6 +14,9 @@
         <p class="text-xl/7 text-dark-950/60 dark:text-dark-50/50 w-full md:w-2/3 mx-auto md:text-2xl/7">
           Compare Nuxt UI, Shadcn for Nuxt, and free community libraries. Find the best component library for your landing page project.
         </p>
+        <p class="text-sm text-dark-950/50 dark:text-dark-50/40">
+          Last updated: {{ LAST_UPDATED }}
+        </p>
       </div>
 
       <!-- Comparison Table -->
@@ -346,16 +349,16 @@ const formatValue = (value: string) => {
 
 // SEO Meta
 useSeoMeta({
-  title: 'Nuxt UI vs Shadcn vs Free Libraries: Best Components for Landing Pages | LandiNuxt',
+  title: 'Nuxt UI vs Shadcn vs Free Libraries — Compared',
   description:
     'Compare Nuxt UI, Shadcn for Nuxt, and free community libraries. Feature matrices, performance notes, and recommendations for MVP, Enterprise, and Content-heavy use cases.',
-  ogTitle: 'Nuxt UI vs Shadcn vs Free Libraries: Best for Landing Pages',
+  ogTitle: 'Nuxt UI vs Shadcn vs Free Libraries — Compared',
   ogDescription:
     'Compare Nuxt UI, Shadcn, and free libraries. Find the best component library for your Nuxt landing page project with detailed feature comparisons.',
   ogImage: '/og-landinuxt.jpg',
   ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
   twitterCard: 'summary_large_image',
-  twitterTitle: 'Nuxt UI vs Shadcn vs Free Libraries: Best for Landing Pages',
+  twitterTitle: 'Nuxt UI vs Shadcn vs Free Libraries — Compared',
   twitterDescription:
     'Compare Nuxt UI, Shadcn, and free libraries. Find the best component library for your Nuxt landing page project.',
   twitterImage: '/og-landinuxt.jpg',
@@ -372,20 +375,10 @@ const articleData = generateArticle({
   description:
     'Compare Nuxt UI, Shadcn for Nuxt, and free community libraries. Feature matrices, performance notes, and recommendations for MVP, Enterprise, and Content-heavy use cases.',
   datePublished: '2024-01-01',
-  dateModified: '2024-01-01',
+  dateModified: '2026-05-01',
 })
 addStructuredData(articleData)
 
-useHead({
-  htmlAttrs: {
-    lang: 'en',
-  },
-  link: [
-    {
-      rel: 'canonical',
-      href: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
-    },
-  ],
-})
+useCanonicalHead()
 </script>
 

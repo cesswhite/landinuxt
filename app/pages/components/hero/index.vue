@@ -35,28 +35,7 @@
 
 <script setup lang="ts">
 import type { HeroTemplates } from "../../../../types/templates";
-const config = useRuntimeConfig()
-const route = useRoute()
 const _hero = await queryContent("hero").find();
 
-useSeoMeta({
-  title: "Nuxt Hero Components: 18+ Pre-built Hero Sections for Landing Pages | LandiNuxt",
-  description: "Discover 18+ pre-built Nuxt hero sections to engage your audience. From clean and simple to feature-rich designs with CTAs, animations, and images. Copy-paste ready, fully compatible with Nuxt UI v4.",
-  ogTitle: "Nuxt Hero Components: 18+ Pre-built Hero Sections | LandiNuxt",
-  ogDescription: "Discover 18+ pre-built Nuxt hero sections. Copy-paste ready hero components with CTAs, animations, and images. Fully compatible with Nuxt UI v4.",
-  ogImage: "/og-landinuxt.jpg",
-  ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
-  twitterCard: "summary_large_image",
-  twitterTitle: "Nuxt Hero Components: 18+ Pre-built Hero Sections | LandiNuxt",
-  twitterDescription: "Discover 18+ pre-built Nuxt hero sections. Copy-paste ready for Nuxt UI v4.",
-  twitterImage: "/og-landinuxt.jpg",
-  ogImageWidth: 1200,
-  ogImageHeight: 630,
-})
-
-useHead({
-  htmlAttrs: {
-    lang: 'en'
-  }
-})
+useComponentsHubCategorySeo('hero')
 </script>

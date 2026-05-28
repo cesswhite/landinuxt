@@ -16,6 +16,9 @@
                     Build high-converting landing pages faster with copy-paste components fully integrated with Nuxt UI
                     v4.
                 </p>
+                <p class="text-sm text-dark-950/50 dark:text-dark-50/40">
+                    Last updated: {{ LAST_UPDATED }}
+                </p>
             </div>
 
             <!-- Component Categories -->
@@ -197,18 +200,18 @@ const faqItems = [
 
 // SEO Meta
 useSeoMeta({
-    title: 'Nuxt Landing Components and Templates | Pre-built Sections (Hero, Features, FAQ, CTA) | LandiNuxt',
+    title: 'Nuxt Landing Components — 90+ Copy-Paste Sections',
     description:
-        'Build Nuxt landing pages faster with pre-built components: Hero, Features, FAQ, CTA, headers, footers, and complete templates. Fully compatible with Nuxt UI v4. Dark mode support and accessible patterns.',
-    ogTitle: 'Nuxt Landing Components and Templates | LandiNuxt',
+        'Build Nuxt landing pages faster with 90+ pre-built components: Hero, Features, FAQ, CTA, headers, footers, and complete templates. Fully compatible with Nuxt UI v4.',
+    ogTitle: 'Nuxt Landing Components — 90+ Sections',
     ogDescription:
         'Pre-built Nuxt landing page components and templates. Build high-converting landing pages faster with copy-paste components fully integrated with Nuxt UI v4.',
     ogImage: '/og-landinuxt.jpg',
     ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
     twitterCard: 'summary_large_image',
-    twitterTitle: 'Nuxt Landing Components and Templates | LandiNuxt',
+    twitterTitle: 'Nuxt Landing Components — 90+ Sections',
     twitterDescription:
-        'Pre-built Nuxt landing page components and templates. Build high-converting landing pages faster.',
+        '90+ pre-built Nuxt landing page components. Copy-paste ready for Nuxt UI v4.',
     twitterImage: '/og-landinuxt.jpg',
     ogImageWidth: 1200,
     ogImageHeight: 630,
@@ -229,30 +232,12 @@ addStructuredData(faqData)
 const websiteData = generateWebSite()
 addStructuredData(websiteData)
 
-useHead({
-    htmlAttrs: {
-        lang: 'en',
-    },
-    link: [
-        {
-            rel: 'canonical',
-            href: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
-        },
-        {
-            rel: 'alternate',
-            hreflang: 'en',
-            href: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
-        },
-        {
-            rel: 'alternate',
-            hreflang: 'es',
-            href: `${config.public.siteUrl || 'https://www.landinuxt.com'}/es/nuxt-componentes-landing`,
-        },
-        {
-            rel: 'alternate',
-            hreflang: 'x-default',
-            href: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
-        },
+const siteUrl = siteUrlFromConfig(config)
+useCanonicalHead({
+    alternates: [
+        { hreflang: 'en', href: `${siteUrl}${route.path}` },
+        { hreflang: 'es', href: `${siteUrl}/es/nuxt-componentes-landing` },
+        { hreflang: 'x-default', href: `${siteUrl}${route.path}` },
     ],
 })
 </script>

@@ -31,28 +31,7 @@
 
 <script setup lang="ts">
 import type { FeaturesTemplates } from "../../../../types/templates";
-const config = useRuntimeConfig()
-const route = useRoute()
 const _features = await queryContent("features").find();
 
-useSeoMeta({
-  title: "Nuxt Feature Components: 14 Pre-built Feature Sections for Landing Pages | LandiNuxt",
-  description: "Discover 14 pre-built Nuxt feature sections to showcase your product benefits. From minimalist to feature-packed designs with icons, images, and descriptions. Copy-paste ready, fully compatible with Nuxt UI v4.",
-  ogTitle: "Nuxt Feature Components: 14 Pre-built Feature Sections | LandiNuxt",
-  ogDescription: "Discover 14 pre-built Nuxt feature sections. Copy-paste ready feature components with icons, images, and descriptions. Fully compatible with Nuxt UI v4.",
-  ogImage: "/og-landinuxt.jpg",
-  ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
-  twitterCard: "summary_large_image",
-  twitterTitle: "Nuxt Feature Components: 14 Pre-built Feature Sections | LandiNuxt",
-  twitterDescription: "Discover 14 pre-built Nuxt feature sections. Copy-paste ready for Nuxt UI v4.",
-  twitterImage: "/og-landinuxt.jpg",
-  ogImageWidth: 1200,
-  ogImageHeight: 630,
-})
-
-useHead({
-  htmlAttrs: {
-    lang: 'en'
-  }
-})
+useComponentsHubCategorySeo('features')
 </script>

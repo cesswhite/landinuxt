@@ -15,6 +15,9 @@
           Learn how to build a high-converting landing page with Nuxt 3, Nuxt UI v4, and pre-built components. Follow
           this step-by-step guide to launch faster.
         </p>
+        <p class="text-sm text-dark-950/50 dark:text-dark-50/40">
+          Last updated: {{ LAST_UPDATED }}
+        </p>
       </div>
 
       <!-- Steps -->
@@ -199,16 +202,16 @@ const steps = [
 
 // SEO Meta
 useSeoMeta({
-  title: 'How to Build a Nuxt Landing Page: Step-by-Step Guide | LandiNuxt',
+  title: 'How to Build a Nuxt Landing Page — Step-by-Step',
   description:
     'Learn how to build a high-converting Nuxt landing page with Nuxt UI v4. Step-by-step guide covering setup, components, SSR/ISR, metadata, and performance optimization.',
-  ogTitle: 'How to Build a Nuxt Landing Page: Step-by-Step Guide',
+  ogTitle: 'How to Build a Nuxt Landing Page — Step-by-Step',
   ogDescription:
     'Learn how to build a high-converting Nuxt landing page with Nuxt UI v4. Complete guide with code examples and best practices.',
   ogImage: '/og-landinuxt.jpg',
   ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
   twitterCard: 'summary_large_image',
-  twitterTitle: 'How to Build a Nuxt Landing Page: Step-by-Step Guide',
+  twitterTitle: 'How to Build a Nuxt Landing Page — Step-by-Step',
   twitterDescription:
     'Learn how to build a high-converting Nuxt landing page with Nuxt UI v4. Complete guide with code examples.',
   twitterImage: '/og-landinuxt.jpg',
@@ -233,30 +236,12 @@ addStructuredData(howToData)
 const breadcrumbData = generateBreadcrumbList(breadcrumbs)
 addStructuredData(breadcrumbData)
 
-useHead({
-  htmlAttrs: {
-    lang: 'en',
-  },
-  link: [
-    {
-      rel: 'canonical',
-      href: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
-    },
-    {
-      rel: 'alternate',
-      hreflang: 'en',
-      href: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
-    },
-    {
-      rel: 'alternate',
-      hreflang: 'es',
-      href: `${config.public.siteUrl || 'https://www.landinuxt.com'}/es/como-crear-landing-nuxt`,
-    },
-    {
-      rel: 'alternate',
-      hreflang: 'x-default',
-      href: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
-    },
+const siteUrl = siteUrlFromConfig(config)
+useCanonicalHead({
+  alternates: [
+    { hreflang: 'en', href: `${siteUrl}${route.path}` },
+    { hreflang: 'es', href: `${siteUrl}/es/como-crear-landing-nuxt` },
+    { hreflang: 'x-default', href: `${siteUrl}${route.path}` },
   ],
 })
 </script>
