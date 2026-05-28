@@ -22,37 +22,45 @@
       <h2 class="mb-4 text-sm font-semibold uppercase tracking-wide text-dark-500 dark:text-dark-400">
         Components
       </h2>
-      <ul class="flex flex-col gap-3">
+      <ul class="grid grid-cols-1 gap-4 xl:grid-cols-2">
         <li v-for="item in components" :key="`${item.parent}-${item.title}`">
           <NuxtLink
             :to="componentDetailPath(item)"
-            class="group block rounded-xl bg-dark-50 p-4 ring-1 ring-dark-950/10 shadow-sm shadow-dark-950/5 transition-colors duration-150 ease-out hover:bg-dark-100/80 dark:bg-dark-950 dark:ring-dark-50/15 dark:hover:bg-dark-900/80"
+            class="group flex h-full flex-col gap-4 rounded-xl bg-dark-50 p-4 ring-1 ring-dark-950/10 shadow-sm shadow-dark-950/5 transition-colors duration-150 ease-out hover:bg-dark-100/80 sm:flex-row sm:items-stretch dark:bg-dark-950 dark:ring-dark-50/15 dark:hover:bg-dark-900/80"
             @click="onComponentClick(item)"
           >
-            <div class="flex flex-wrap items-center gap-2">
-              <span class="text-base font-semibold capitalize text-dark-950 dark:text-dark-50">
-                {{ item.title }}
-              </span>
-              <UBadge color="neutral" variant="subtle" size="sm">
-                {{ categoryNavLabel(item.parent) }}
-              </UBadge>
-              <UBadge v-if="item.animated" color="primary" variant="subtle" size="sm">
-                Animated
-              </UBadge>
-            </div>
-            <p class="mt-1 line-clamp-2 text-sm text-dark-500 dark:text-dark-400">
-              {{ item.description }}
-            </p>
-            <div v-if="item.tags.length" class="mt-3 flex flex-wrap gap-1.5">
-              <UBadge
-                v-for="tag in item.tags.slice(0, 5)"
-                :key="tag"
-                color="neutral"
-                variant="outline"
-                size="sm"
-              >
-                {{ tag }}
-              </UBadge>
+            <ElementsSearchPreview
+              :parent="item.parent"
+              :component="item.component"
+              :title="item.title"
+              class="sm:w-[min(100%,280px)] sm:max-w-[42%]"
+            />
+            <div class="flex min-w-0 flex-1 flex-col">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-base font-semibold capitalize text-dark-950 dark:text-dark-50">
+                  {{ item.title }}
+                </span>
+                <UBadge color="neutral" variant="subtle" size="sm">
+                  {{ categoryNavLabel(item.parent) }}
+                </UBadge>
+                <UBadge v-if="item.animated" color="primary" variant="subtle" size="sm">
+                  Animated
+                </UBadge>
+              </div>
+              <p class="mt-1 line-clamp-2 text-sm text-dark-500 dark:text-dark-400">
+                {{ item.description }}
+              </p>
+              <div v-if="item.tags.length" class="mt-3 flex flex-wrap gap-1.5">
+                <UBadge
+                  v-for="tag in item.tags.slice(0, 5)"
+                  :key="tag"
+                  color="neutral"
+                  variant="outline"
+                  size="sm"
+                >
+                  {{ tag }}
+                </UBadge>
+              </div>
             </div>
           </NuxtLink>
         </li>
