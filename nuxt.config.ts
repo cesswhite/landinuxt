@@ -196,8 +196,5 @@ export default defineNuxtConfig({
     rollupConfig: {
       onwarn: ignoreBenignRollupWarnings,
     },
-    externals: {
-      inline: ['shiki'],
-    },
   },
 })
