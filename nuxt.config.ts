@@ -5,6 +5,33 @@ if (process.platform === 'darwin' && !process.env.CHOKIDAR_USEPOLLING) {
   process.env.CHOKIDAR_USEPOLLING = '1'
 }
 
+/** Suppress benign Rollup warnings from dependencies and Nuxt plugins (Vercel build logs). */
+function ignoreBenignRollupWarnings(
+  warning: { code?: string; plugin?: string; message?: string },
+  warn: (warning: unknown) => void,
+) {
+  const message = warning.message ?? ''
+
+  if (warning.plugin === 'nuxt:module-preload-polyfill' && message.includes('Sourcemap')) {
+    return
+  }
+  if (warning.plugin === 'unwasm' || message.includes('onig.wasm')) {
+    return
+  }
+  if (message.includes('contains an annotation that Rollup cannot interpret')) {
+    return
+  }
+  if (
+    warning.code === 'CIRCULAR_DEPENDENCY' &&
+    (message.includes('node_modules/nitropack/dist/runtime') ||
+      message.includes('node_modules/@nuxt/content/dist/runtime'))
+  ) {
+    return
+  }
+
+  warn(warning)
+}
+
 export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
@@ -14,9 +41,6 @@ export default defineNuxtConfig({
 
   $development: {
     ssr: false,
-    ogImage: {
-      enabled: false,
-    },
     // DevTools spawns esbuild workers that trigger EBADF on macOS (nuxt/nuxt#33300)
     devtools: {
       enabled: false,
@@ -127,6 +151,11 @@ export default defineNuxtConfig({
     disallow: ['/playground'],
   },
 
+  // Static og-landinuxt.jpg is used everywhere; disable dynamic OG image generation.
+  ogImage: {
+    enabled: false,
+  },
+
   routeRules: {
     '/playground': { index: false },
     // Agent .txt exports for LLMs (dynamic server routes)
@@ -146,5 +175,25 @@ export default defineNuxtConfig({
     '/landings': { prerender: true },
   },
 
-  compatibilityDate: "2024-10-03"
+  compatibilityDate: "2024-10-03",
+
+  sourcemap: false,
+
+  vite: {
+    build: {
+      chunkSizeWarningLimit: 2000,
+      rollupOptions: {
+        onwarn: ignoreBenignRollupWarnings,
+      },
+    },
+  },
+
+  nitro: {
+    rollupConfig: {
+      onwarn: ignoreBenignRollupWarnings,
+    },
+    externals: {
+      inline: ['shiki'],
+    },
+  },
 })

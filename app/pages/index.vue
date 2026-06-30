@@ -16,7 +16,7 @@ useSeoMeta({
   title: 'Nuxt Landing Page Components — 90+ Copy-Paste Sections',
   ogTitle: 'Nuxt Landing Page Components — 90+ Sections',
   description:
-    'LandiNuxt offers 90+ free, copy-paste Nuxt landing page components: Hero, Features, FAQ, CTA, headers, footers, and complete templates. Built for Nuxt UI v4 with dark mode support.',
+    '90+ free copy-paste Nuxt landing components — hero, features, FAQ, CTA, headers, footers and templates. Built for Nuxt UI v4 with dark mode.',
   ogDescription:
     '90+ pre-built Nuxt landing page components and templates. Copy-paste sections fully integrated with Nuxt UI v4.',
   ogImage: '/og-landinuxt.jpg',

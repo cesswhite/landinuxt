@@ -7,9 +7,9 @@
                         <div class="text-primary-500 dark:text-primary-400 relative rounded-full text-left text-sm">
                             Build Faster, Create Better
                         </div>
-                        <h1 class="text-5xl font-bold text-dark-950 dark:text-dark-50">
+                        <h2 class="text-5xl font-bold text-dark-950 dark:text-dark-50">
                             Powerful Components. <br> Instant Pages
-                        </h1>
+                        </h2>
                     </div>
                     <div class="flex w-full items-center justify-end">
                         <p class="font-base w-full text-dark-950/60 md:w-1/2 dark:text-dark-50/80">
