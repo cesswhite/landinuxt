@@ -1,4 +1,5 @@
 import type { Component } from "../../types/index";
+import { queryElementsByParent } from "./contentElements";
 
 export async function fetchElementsCategories(): Promise<Component[]> {
   const [
@@ -14,17 +15,17 @@ export async function fetchElementsCategories(): Promise<Component[]> {
     _auth,
     _gallery,
   ] = await Promise.all([
-    queryContent("hero").find(),
-    queryContent("headers").find(),
-    queryContent("features").find(),
-    queryContent("footers").find(),
-    queryContent("cta").find(),
-    queryContent("testimonials").find(),
-    queryContent("contact").find(),
-    queryContent("logos").find(),
-    queryContent("faq").find(),
-    queryContent("auth").find(),
-    queryContent("gallery").find(),
+    queryElementsByParent("hero"),
+    queryElementsByParent("headers"),
+    queryElementsByParent("features"),
+    queryElementsByParent("footers"),
+    queryElementsByParent("cta"),
+    queryElementsByParent("testimonials"),
+    queryElementsByParent("contact"),
+    queryElementsByParent("logos"),
+    queryElementsByParent("faq"),
+    queryElementsByParent("auth"),
+    queryElementsByParent("gallery"),
   ]);
 
   return [

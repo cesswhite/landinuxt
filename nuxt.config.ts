@@ -119,19 +119,23 @@ export default defineNuxtConfig({
   },
   
   content: {
-    highlight: {
-      langs: [
-        'json',
-        'js',
-        'javascript',
-        'ts',
-        'typescript',
-        'html',
-        'css',
-        'vue',
-      ],
-      theme: {
-        default: 'github-dark'
+    build: {
+      markdown: {
+        highlight: {
+          langs: [
+            'json',
+            'js',
+            'javascript',
+            'ts',
+            'typescript',
+            'html',
+            'css',
+            'vue',
+          ],
+          theme: {
+            default: 'github-dark'
+          }
+        }
       }
     }
   },

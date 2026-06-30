@@ -4,7 +4,7 @@
             <ElementsHeader name="Testimonials" :number="_testimonials.length"
                 description="Enhance your website's credibility with our premium Testimonials components. Each component is crafted to showcase customer satisfaction and build trust with potential clients." />
             <ElementsContentList path="/testimonials" v-slot="{ list }">
-                <template v-for="(item, index) in list" :key="item._path">
+                <template v-for="(item, index) in list" :key="item.path">
                     <ElementsWrapper :item="item" :title="item.title">
                         <template #components>
                             <LazyElementsTestimonials1 v-if="item.title === ('masonry' as TestimonialsTemplates)" />
@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 import type { TestimonialsTemplates } from "../../../../types/templates";
-const _testimonials = await queryContent("testimonials").find();
+const _testimonials = await queryElementsByParent("testimonials");
 
 useComponentsHubCategorySeo('testimonials')
 </script>

@@ -1,5 +1,6 @@
 import type { Component, ElementCatalogItem, Elements } from "../../types/index";
 import { categoryNavLabel } from "./elementsNav";
+import { queryElementsByParent } from "./contentElements";
 
 const ELEMENT_PARENTS: Elements[] = [
   "hero",
@@ -29,7 +30,7 @@ function categoryHaystack(name: Elements) {
 
 export async function fetchElementsCatalog(): Promise<ElementCatalogItem[]> {
   const collections = await Promise.all(
-    ELEMENT_PARENTS.map((parent) => queryContent(parent).find()),
+    ELEMENT_PARENTS.map((parent) => queryElementsByParent(parent)),
   );
 
   return collections.flatMap((items) =>

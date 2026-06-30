@@ -4,7 +4,7 @@
       <ElementsHeader name="Headers" :number="_headers.length"
         description="Explore a diverse collection of headers sections crafted to captivate your audience. From clean and simple to feature-rich designs, these sections are designed to effectively convey your message and engage users." />
       <ElementsContentList path="/headers" v-slot="{ list }">
-        <template v-for="(item, index) in list" :key="item._path">
+        <template v-for="(item, index) in list" :key="item.path">
           <ElementsWrapper :item="item" :title="item.title">
             <template #components>
               <LazyElementsHeaders1 v-if="item.title === ('simple' as HeadersTemplates)" />
@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 import type { HeadersTemplates } from "../../../../types/templates";
-const _headers = await queryContent("headers").find();
+const _headers = await queryElementsByParent("headers");
 
 useComponentsHubCategorySeo('headers')
 </script>

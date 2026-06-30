@@ -18,11 +18,7 @@
             }">
             <div class="flex h-auto min-h-96 flex-col items-center justify-center rounded-2xl px-8 lg:px-24">
                 <div class="flex mx-auto items-start">
-                    <UIcon name="i-lucide-star" class="text-primary-500/80 dark:text-primary-600/80 fill-current" />
-                    <UIcon name="i-lucide-star" class="text-primary-500/80 dark:text-primary-600/80 fill-current" />
-                    <UIcon name="i-lucide-star" class="text-primary-500/80 dark:text-primary-600/80 fill-current" />
-                    <UIcon name="i-lucide-star" class="text-primary-500/80 dark:text-primary-600/80 fill-current" />
-                    <UIcon name="i-lucide-star" class="text-primary-500/40 dark:text-primary-600/40 fill-current" />
+                    <UInputRating empty-icon="i-ph-star" icon="i-ph-star-fill" :default-value="3" />
                 </div>
                 <p class="text-dark-950 dark:text-dark-50 text-center text-xl font-medium italic mt-4">
                     "{{ item.text }}"

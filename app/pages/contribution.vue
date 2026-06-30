@@ -7,13 +7,14 @@
                 </h1>
             </div>
             <div class="">
-                <ContentDoc path="/contribution" class="prose dark:prose-invert" />
+                <ContentRenderer v-if="doc" :value="doc" class="prose dark:prose-invert" />
             </div>
         </div>
     </NuxtLayout>
 </template>
 
 <script setup lang="ts">
+const doc = await queryContentPath('/contribution')
 const config = useRuntimeConfig()
 const route = useRoute()
 

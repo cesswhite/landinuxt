@@ -1,18 +1,14 @@
 <template>
-  <ContentList :path="path" :query="contentQuery">
-    <template #default="slotProps: any">
-      <slot v-bind="slotProps" />
-    </template>
-  </ContentList>
+  <slot :list="list" />
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
-  path: string;
-}>();
+import { queryElementsByParent } from '../../utils/contentElements'
 
-const contentQuery = computed(() => ({
-  where: { parent: props.path.replace(/^\//, "") },
-  sort: [{ component: -1, $numeric: true }],
-}));
+const props = defineProps<{
+  path: string
+}>()
+
+const parent = props.path.replace(/^\//, '')
+const list = await queryElementsByParent(parent)
 </script>

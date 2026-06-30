@@ -4,7 +4,7 @@
       <ElementsHeader name="CTA" :number="_cta.length"
         description="Transform your website's conversion rates with our premium Call-to-Action components. Each component is optimized for maximum engagement and designed to turn visitors into customers." />
       <ElementsContentList path="/cta" v-slot="{ list }">
-        <template v-for="(item, index) in list" :key="item._path">
+        <template v-for="(item, index) in list" :key="item.path">
           <ElementsWrapper :item="item" :title="item.title">
             <template #components>
               <LazyElementsCTA1 v-if="item.title === ('simple' as CTATemplates)" />
@@ -30,7 +30,7 @@
 
 <script setup lang="ts">
 import type { CTATemplates } from "../../../../types/templates";
-const _cta = await queryContent("cta").find();
+const _cta = await queryElementsByParent("cta");
 
 useComponentsHubCategorySeo('cta')
 </script>

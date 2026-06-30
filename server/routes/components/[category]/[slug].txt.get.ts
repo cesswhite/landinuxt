@@ -1,4 +1,4 @@
-import { serverQueryContent } from '#content/server'
+import { queryContentItemByTitleOnServer } from '../../../utils/contentElements'
 import { buildAgentTxtDocument } from '../../../../app/utils/aiExport'
 import { PARENT_TO_FOLDER } from '../../../../app/utils/elementSources'
 import { SITE_URL } from '../../../../app/utils/siteSeo'
@@ -13,9 +13,7 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 404, statusMessage: 'Component not found' })
   }
 
-  const item = await serverQueryContent(event, category)
-    .where({ title: slug })
-    .findOne()
+  const item = await queryContentItemByTitleOnServer(event, category, slug)
 
   if (!item) {
     throw createError({ statusCode: 404, statusMessage: 'Component not found' })

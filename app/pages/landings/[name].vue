@@ -1,6 +1,6 @@
 <template>
     <NuxtLayout name="landings">
-        <LandingPagesWrapper :name="name?.toString() || ''" :code="_landings?.body?.children?.[0]?.props?.code || ''">
+        <LandingPagesWrapper :name="name?.toString() || ''" :code="landingCode">
             <template #component>
                 <LazyLandingPages1 v-if="name === 'simple'" />
                 <LazyLandingPages2 v-if="name === 'showcase'" />
@@ -25,7 +25,9 @@ const landingSlug = computed(() => {
   return ""
 })
 const name = landingSlug
-const _landings = await queryContent(`/landings/${landingSlug.value}`).findOne()
+const _landings = await queryContentPath(`/landings/${landingSlug.value}`)
+
+const landingCode = computed(() => extractVueCodeBlock(_landings?.body))
 
 const landingTitle = computed(() => {
   const title = String(_landings?.title || landingSlug.value || "Landing")

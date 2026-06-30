@@ -4,7 +4,7 @@
             <ElementsHeader name="FAQ" :number="_faq.length"
                 description="Explore our FAQ section to find answers to common questions. We've curated a list of the most frequently asked questions to help you navigate our website with ease." />
             <ElementsContentList path="/faq" v-slot="{ list }">
-                <template v-for="(item, index) in list" :key="item._path">
+                <template v-for="(item, index) in list" :key="item.path">
                     <ElementsWrapper :item="item" :title="item.title">
                         <template #components>
                             <LazyElementsFAQ1 v-if="item.title === ('simple' as FAQTemplates)" />
@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import type { FAQTemplates } from "../../../../types/templates";
-const _faq = await queryContent("faq").find();
+const _faq = await queryElementsByParent("faq");
 
 useComponentsHubCategorySeo('faq')
 </script>

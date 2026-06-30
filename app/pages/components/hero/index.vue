@@ -4,7 +4,7 @@
       <ElementsHeader name="Hero" :number="_hero.length"
         description="Discover a wide range of hero sections tailored to engage your audience. Clean and simple to feature-rich designs, these sections are designed to convey your message effectively and captivate users." />
       <ElementsContentList path="/hero" v-slot="{ list }">
-        <template v-for="(item, index) in list" :key="item._path">
+        <template v-for="(item, index) in list" :key="item.path">
           <ElementsWrapper :item="item" :title="item.title">
             <template #components>
               <LazyElementsHero1 v-if="item.title === ('simple' as HeroTemplates)" />
@@ -35,7 +35,7 @@
 
 <script setup lang="ts">
 import type { HeroTemplates } from "../../../../types/templates";
-const _hero = await queryContent("hero").find();
+const _hero = await queryElementsByParent("hero");
 
 useComponentsHubCategorySeo('hero')
 </script>

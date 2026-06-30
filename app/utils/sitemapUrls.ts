@@ -1,5 +1,5 @@
 import type { H3Event } from 'h3'
-import { serverQueryContent } from '#content/server'
+import { queryElementsByParentOnServer } from '../../server/utils/contentElements'
 import { componentAgentTxtPath } from './elementSources'
 import { SITE_URL } from './siteSeo'
 
@@ -35,7 +35,7 @@ export async function collectExtraSitemapUrls(event: H3Event) {
   ]
 
   for (const category of CONTENT_CATEGORIES) {
-    const items = await serverQueryContent(event, category).find()
+    const items = await queryElementsByParentOnServer(event, category)
     for (const item of items) {
       const slug = item.title
       if (typeof slug === 'string' && slug.length > 0) {

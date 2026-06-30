@@ -4,7 +4,7 @@
             <ElementsHeader name="Auth" :number="_auth.length"
                 description="Enhance your website's user experience with our advanced authentication components. Each component is designed for seamless interaction and to facilitate essential tasks such as signin, signup, password recovery, and token management, covering all aspects of the authentication flow." />
             <ElementsContentList path="/auth" v-slot="{ list }">
-                <template v-for="(item, index) in list" :key="item._path">
+                <template v-for="(item, index) in list" :key="item.path">
                     <ElementsWrapper :item="item" :title="item.title">
                         <template #components>
                             <LazyElementsAuth1 v-if="item.title === ('simple' as AuthTemplates)" />
@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 import type { AuthTemplates } from "../../../../types/templates";
-const _auth = await queryContent("auth").find();
+const _auth = await queryElementsByParent("auth");
 
 useComponentsHubCategorySeo('auth')
 </script>

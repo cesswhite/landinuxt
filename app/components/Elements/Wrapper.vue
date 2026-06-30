@@ -57,11 +57,7 @@
               v-html="highlightedCodeHtml" />
           </template>
           <template v-else>
-            <ContentQuery :path="item._path" find="one" v-slot="{ data }">
-              <ContentRenderer>
-                <ContentRendererMarkdown :value="data" class="prose max-w-full" />
-              </ContentRenderer>
-            </ContentQuery>
+            <ContentRenderer :value="item" class="prose max-w-full" />
           </template>
         </div>
       </Transition>

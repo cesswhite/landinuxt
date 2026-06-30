@@ -12,11 +12,7 @@
             <slot name="component" />
         </div>
         <div v-else class="h-auto w-full relative">
-            <ContentQuery :path="`/landings/${props.name}`" find="one" v-slot="{ data }">
-                <ContentRenderer>
-                    <ContentRendererMarkdown :value="data" class="prose max-w-full" />
-                </ContentRenderer>
-            </ContentQuery>
+            <ContentRenderer v-if="landingContent" :value="landingContent" class="prose max-w-full" />
         </div>
     </div>
 </template>
@@ -24,12 +20,13 @@
 <script setup lang="ts">
 import { useClipboard } from "@vueuse/core";
 
-const view_code = ref(false)
-
 const props = defineProps<{
     name: string,
     code: string;
 }>()
+
+const view_code = ref(false)
+const landingContent = await queryContentPath(`/landings/${props.name}`)
 const current = ref('');
 
 function copyCode() {

@@ -4,7 +4,7 @@
       <ElementsHeader name="Features" :number="_features.length"
         description="Discover a diverse range of feature sections tailored to elevate your website's user experience. Spanning from minimalist to feature-packed designs, these sections are meticulously crafted to convey your brand's message and captivate your target audience." />
       <ElementsContentList path="/features" v-slot="{ list }">
-        <template v-for="(item, index) in list" :key="item._path">
+        <template v-for="(item, index) in list" :key="item.path">
           <ElementsWrapper :item="item" :title="item.title">
             <template #components>
               <LazyElementsFeatures1 v-if="item.title === ('elegance' as FeaturesTemplates)" />
@@ -31,7 +31,7 @@
 
 <script setup lang="ts">
 import type { FeaturesTemplates } from "../../../../types/templates";
-const _features = await queryContent("features").find();
+const _features = await queryElementsByParent("features");
 
 useComponentsHubCategorySeo('features')
 </script>
