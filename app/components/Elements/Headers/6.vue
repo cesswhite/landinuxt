@@ -1,8 +1,8 @@
 <template>
   <header class="relative flex w-full items-center justify-between bg-dark-50 py-2 px-4 dark:bg-dark-950">
     <div class="flex items-center gap-2">
-      <USlideover side="left" title="Menu" close-icon="i-heroicons-x-mark">
-        <UButton icon="i-heroicons-bars-3-bottom-left" variant="link" color="primary" size="xl" />
+      <USlideover side="left" title="Menu" close-icon="i-lucide-x">
+        <UButton icon="i-lucide-align-left" variant="link" color="primary" size="xl" />
         <template #body>
           <nav class="flex w-full flex-col items-center justify-start">
             <UButton variant="link" color="primary" size="lg" to="#">
@@ -34,14 +34,14 @@
     </div>
     <div class="flex items-center gap-2">
       <UModal>
-        <UButton icon="i-heroicons-magnifying-glass" variant="link" color="neutral" class="cursor-pointer" size="lg" />
+        <UButton icon="i-lucide-search" variant="link" color="neutral" class="cursor-pointer" size="lg" />
         <template #content>
           <UCommandPalette multiple placeholder="Search an app..." :groups="groups" class="flex-1" />
         </template>
       </UModal>
 
       <UChip text="3" size="3xl">
-        <UButton icon="i-heroicons-shopping-cart" variant="link" color="neutral" class="cursor-pointer" />
+        <UButton icon="i-lucide-shopping-cart" variant="link" color="neutral" class="cursor-pointer" />
       </UChip>
     </div>
   </header>
@@ -54,15 +54,15 @@ const groups = ref([
     items: [
       {
         label: "Electronics",
-        icon: "i-heroicons-device-phone-mobile",
+        icon: "i-lucide-smartphone",
       },
       {
         label: "Fashion",
-        icon: "i-heroicons-swatch",
+        icon: "i-lucide-palette",
       },
       {
         label: "Home & Garden",
-        icon: "i-heroicons-home",
+        icon: "i-lucide-house",
       },
     ],
   },

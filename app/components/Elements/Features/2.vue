@@ -38,42 +38,42 @@
 <script setup lang="ts">
 const features = [
   {
-    icon: "i-heroicons-command-line",
+    icon: "i-lucide-terminal",
     title: "Development",
     description:
       "Explore the limitless possibilities of your project with our comprehensive design services. From initial conceptualization to final deployment, we guarantee a smooth integration of the latest technologies to propel your business ahead.",
     link: "#",
   },
   {
-    icon: "i-heroicons-swatch",
+    icon: "i-lucide-palette",
     title: "Design",
     description:
       "Explore the limitless possibilities of your project with our comprehensive design services. From initial conceptualization to final deployment, we guarantee a smooth integration of the latest technologies to propel your business ahead.",
     link: "#",
   },
   {
-    icon: "i-heroicons-device-phone-mobile",
+    icon: "i-lucide-smartphone",
     title: "Mobile Apps",
     description:
       "Explore the limitless possibilities of your project with our comprehensive design services. From initial conceptualization to final deployment, we guarantee a smooth integration of the latest technologies to propel your business ahead.",
     link: "#",
   },
   {
-    icon: "i-heroicons-cloud",
+    icon: "i-lucide-cloud",
     title: "Imagene Data",
     description:
       "Explore the limitless possibilities of your project with our comprehensive design services. From initial conceptualization to final deployment, we guarantee a smooth integration of the latest technologies to propel your business ahead.",
     link: "#",
   },
   {
-    icon: "i-heroicons-cloud",
+    icon: "i-lucide-cloud",
     title: "Imagene AI",
     description:
       "Explore the limitless possibilities of your project with our comprehensive design services. From initial conceptualization to final deployment, we guarantee a smooth integration of the latest technologies to propel your business ahead.",
     link: "#",
   },
   {
-    icon: "i-heroicons-cloud",
+    icon: "i-lucide-cloud",
     title: "Imagene Cloud",
     description:
       "Explore the limitless possibilities of your project with our comprehensive design services. From initial conceptualization to final deployment, we guarantee a smooth integration of the latest technologies to propel your business ahead.",

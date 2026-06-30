@@ -16,7 +16,7 @@
       <UDropdownMenu :items="items">
         <UButton variant="ghost" color="neutral" size="lg" label="Services" class="rounded-full cursor-pointer">
           <template #trailing>
-            <UIcon name="i-heroicons-chevron-down" />
+            <UIcon name="i-lucide-chevron-down" />
           </template>
         </UButton>
         <template #item="{ item }">
@@ -32,13 +32,13 @@
       </UButton>
     </nav>
     <div class="flex flex-1 items-center justify-end gap-4 lg:flex-none">
-      <UButton block label="English" variant="ghost" color="neutral" size="lg" icon="i-heroicons-globe-alt"
+      <UButton block label="English" variant="ghost" color="neutral" size="lg" icon="i-lucide-globe"
         class="hidden w-auto rounded-full lg:flex cursor-pointer" />
       <UButton block label="Register now" variant="solid" color="primary" size="lg"
         class="hidden w-auto rounded-full lg:flex cursor-pointer" />
-      <USlideover title="Menu" close-icon="i-heroicons-x-mark">
+      <USlideover title="Menu" close-icon="i-lucide-x">
         <div class="inline-block md:hidden">
-          <UButton icon="i-heroicons-bars-3" variant="link" color="primary" size="lg" class="cursor-pointer" />
+          <UButton icon="i-lucide-menu" variant="link" color="primary" size="lg" class="cursor-pointer" />
         </div>
         <template #body>
           <nav class="flex w-full flex-col">
@@ -69,15 +69,15 @@ const items = [
   [
     {
       label: "Design UI/UX",
-      icon: "i-heroicons-paint-brush",
+      icon: "i-lucide-paintbrush",
     },
     {
       label: "Development",
-      icon: "i-heroicons-command-line",
+      icon: "i-lucide-terminal",
     },
     {
       label: "Mobile App",
-      icon: "i-heroicons-device-phone-mobile",
+      icon: "i-lucide-smartphone",
     },
   ],
 ];

@@ -1,18 +1,13 @@
 import { serverQueryContent } from '#content/server'
-import { buildAgentTxtDocument } from '../../../app/utils/aiExport'
-import { PARENT_TO_FOLDER } from '../../../app/utils/elementSources'
-import { SITE_URL } from '../../../app/utils/siteSeo'
+import { buildAgentTxtDocument } from '../../../../app/utils/aiExport'
+import { PARENT_TO_FOLDER } from '../../../../app/utils/elementSources'
+import { SITE_URL } from '../../../../app/utils/siteSeo'
 
 export default defineEventHandler(async (event) => {
-  const { pathname } = getRequestURL(event)
-  const match = pathname.match(/^\/components\/([^/]+)\/([^/]+)\.txt$/)
-
-  if (!match) {
-    throw createError({ statusCode: 404, statusMessage: 'Component not found' })
-  }
-
-  const category = match[1]
-  const slug = match[2]
+  const params = getRouterParams(event)
+  const category = params.category
+  const slugParam = params['slug.txt'] ?? params.slug
+  const slug = slugParam?.replace(/\.txt$/i, '') ?? ''
 
   if (!category || !slug) {
     throw createError({ statusCode: 404, statusMessage: 'Component not found' })

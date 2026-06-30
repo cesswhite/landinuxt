@@ -53,7 +53,7 @@
         </p>
         <div class="mt-4 flex gap-4">
           <UButton variant="solid" color="neutral" to="#" size="lg" class="px-12"
-            icon="i-heroicons-rocket-launch-solid">
+            icon="i-lucide-rocket">
             Launch rocket
           </UButton>
         </div>

@@ -10,7 +10,7 @@
         <div class="w-full col-span-full lg:col-span-4 lg:py-12">
             <div class="w-full relative flex flex-col gap-y-4 z-10">
                 <div class="mx-auto">
-                    <UIcon name="i-heroicons-sparkles-solid"
+                    <UIcon name="i-lucide-sparkles"
                         class="size-12 text-dark-950 animate-pulse dark:text-dark-50" />
                 </div>
                 <h1 class="text-dark-950/90 dark:text-dark-50/90 text-4xl md:text-5xl font-serif text-center">

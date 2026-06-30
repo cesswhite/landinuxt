@@ -20,7 +20,7 @@
         }">
             <template #content>
                 <div class="relative w-full h-dvh flex items-center justify-center bg-dark-950/90 backdrop-blur-sm">
-                    <UButton @click="isLightboxOpen = false" icon="i-heroicons-x-mark" variant="ghost" color="neutral"
+                    <UButton @click="isLightboxOpen = false" icon="i-lucide-x" variant="ghost" color="neutral"
                         class="absolute right-2 top-2 z-10" />
                     <NuxtImg v-if="currentImage" :src="currentImage.src" :alt="currentImage.alt"
                         class="w-full h-10/12 object-contain" format="webp" />

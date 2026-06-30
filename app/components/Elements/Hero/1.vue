@@ -19,7 +19,7 @@
                         class="flex items-center justify-center gap-6 rounded-full" aria-label="Explore our proposals">
                         Explore our proposals
                         <template #trailing>
-                            <UIcon name="i-heroicons-arrow-right" />
+                            <UIcon name="i-lucide-arrow-right" />
                         </template>
                     </UButton>
                 </div>

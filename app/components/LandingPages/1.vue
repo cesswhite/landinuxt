@@ -19,9 +19,9 @@
                 </UButton>
                 <UButton variant="link" color="neutral" size="lg" to="#"> Blog </UButton>
             </nav>
-            <USlideover title="Menu" close-icon="i-heroicons-x-mark">
+            <USlideover title="Menu" close-icon="i-lucide-x">
                 <div class="inline-block md:hidden">
-                    <UButton icon="i-heroicons-bars-3" variant="link" color="neutral" size="lg" />
+                    <UButton icon="i-lucide-menu" variant="link" color="neutral" size="lg" />
                 </div>
                 <template #body>
                     <nav class="flex w-full flex-col">
@@ -294,7 +294,7 @@
                             pages in minutes.
                         </p>
                     </div>
-                    <UButton to="/components" trailing-icon="i-heroicons-arrow-right" variant="solid" size="xl"
+                    <UButton to="/components" trailing-icon="i-lucide-arrow-right" variant="solid" size="xl"
                         class="bg-dark-50/90 hover:bg-dark-50 text-primary-500 px-6">
                         Connect
                     </UButton>

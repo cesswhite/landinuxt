@@ -37,28 +37,28 @@
 <script setup lang="ts">
 const features = [
     {
-        icon: "i-heroicons-command-line",
+        icon: "i-lucide-terminal",
         title: "Development",
         description:
             "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",
         link: "#",
     },
     {
-        icon: "i-heroicons-swatch",
+        icon: "i-lucide-palette",
         title: "Design",
         description:
             "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",
         link: "#",
     },
     {
-        icon: "i-heroicons-device-phone-mobile",
+        icon: "i-lucide-smartphone",
         title: "Mobile Apps",
         description:
             "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",
         link: "#",
     },
     {
-        icon: "i-heroicons-cloud",
+        icon: "i-lucide-cloud",
         title: "Imagene Data",
         description:
             "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",

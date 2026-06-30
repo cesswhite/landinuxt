@@ -12,16 +12,16 @@
                             <div
                                 class="p-4 flex flex-col items-start justify-between border border-dark-950/10 dark:border-dark-600/30 shadow-xl shadow-dark-950/5 dark:shadow-primary-500/5 rounded-2xl h-full">
                                 <div class="flex items-start w-full">
-                                    <UIcon name="i-heroicons-star-20-solid"
-                                        class="text-primary-500/80 dark:text-primary-400/80" />
-                                    <UIcon name="i-heroicons-star-20-solid"
-                                        class="text-primary-500/80 dark:text-primary-400/80" />
-                                    <UIcon name="i-heroicons-star-20-solid"
-                                        class="text-primary-500/80 dark:text-primary-400/80" />
-                                    <UIcon name="i-heroicons-star-20-solid"
-                                        class="text-primary-500/80 dark:text-primary-400/80" />
-                                    <UIcon name="i-heroicons-star-20-solid"
-                                        class="text-primary-500/40 dark:text-primary-400/40" />
+                                    <UIcon name="i-lucide-star"
+                                        class="text-primary-500/80 dark:text-primary-400/80 fill-current" />
+                                    <UIcon name="i-lucide-star"
+                                        class="text-primary-500/80 dark:text-primary-400/80 fill-current" />
+                                    <UIcon name="i-lucide-star"
+                                        class="text-primary-500/80 dark:text-primary-400/80 fill-current" />
+                                    <UIcon name="i-lucide-star"
+                                        class="text-primary-500/80 dark:text-primary-400/80 fill-current" />
+                                    <UIcon name="i-lucide-star"
+                                        class="text-primary-500/40 dark:text-primary-400/40 fill-current" />
                                 </div>
                                 <p class="text-base text-dark-950/60 dark:text-dark-50/60 mt-8">
                                     {{ testimonial.text }}

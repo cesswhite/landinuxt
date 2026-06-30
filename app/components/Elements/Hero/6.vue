@@ -26,7 +26,7 @@
     </div>
     <div class="absolute right-4 bottom-4 z-20">
       <UTooltip text="Questions? Contact Us">
-        <UButton class="rounded-full" icon="i-heroicons-question-mark-circle" variant="ghost" color="neutral" />
+        <UButton class="rounded-full" icon="i-lucide-circle-help" variant="ghost" color="neutral" />
       </UTooltip>
     </div>
   </div>

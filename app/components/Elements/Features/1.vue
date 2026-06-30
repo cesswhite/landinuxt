@@ -21,7 +21,7 @@
       <div class="flex flex-1 flex-col gap-2">
         <div
           class="flex size-10 items-center justify-center rounded-md border border-dark-950/20 bg-dark-200/20 p-1 dark:border-dark-700 dark:bg-dark-800">
-          <UIcon name="i-heroicons-command-line" class="size-full text-dark-950 dark:text-dark-50" />
+          <UIcon name="i-lucide-terminal" class="size-full text-dark-950 dark:text-dark-50" />
         </div>
 
         <span class="text-xl font-bold text-dark-950 dark:text-dark-50">
@@ -37,7 +37,7 @@
       <div class="flex flex-1 flex-col gap-2">
         <div
           class="flex size-10 items-center justify-center rounded-md border border-dark-950/20 bg-dark-200/20 p-1 dark:border-dark-700 dark:bg-dark-800">
-          <UIcon name="i-heroicons-swatch" class="size-full text-dark-950 dark:text-dark-50" />
+          <UIcon name="i-lucide-palette" class="size-full text-dark-950 dark:text-dark-50" />
         </div>
 
         <span class="text-xl font-bold text-dark-950 dark:text-dark-50">
@@ -53,7 +53,7 @@
       <div class="flex flex-1 flex-col gap-2">
         <div
           class="flex size-10 items-center justify-center rounded-md border border-dark-950/20 bg-dark-200/20 p-1 dark:border-dark-700 dark:bg-dark-800">
-          <UIcon name="i-heroicons-device-phone-mobile" class="size-full text-dark-950 dark:text-dark-50" />
+          <UIcon name="i-lucide-smartphone" class="size-full text-dark-950 dark:text-dark-50" />
         </div>
 
         <span class="text-xl font-bold text-dark-950 dark:text-dark-50">

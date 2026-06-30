@@ -10,7 +10,7 @@
 <script setup lang="ts">
 const config = useRuntimeConfig()
 const route = useRoute()
-const { generateOrganization, generateWebSite, generateFAQPage, addStructuredData } = useStructuredData()
+const { generateOrganization, generateWebSite, generateFAQPage, generateSoftwareApplication, addStructuredData } = useStructuredData()
 
 useSeoMeta({
   title: 'Nuxt Landing Page Components — 90+ Copy-Paste Sections',
@@ -32,6 +32,7 @@ useSeoMeta({
 
 addStructuredData(generateOrganization())
 addStructuredData(generateWebSite())
+addStructuredData(generateSoftwareApplication())
 addStructuredData(
   generateFAQPage(
     HOME_FAQ_ITEMS.map((item) => ({

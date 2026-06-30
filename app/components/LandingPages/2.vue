@@ -21,9 +21,9 @@
       <div class="flex w-full items-center justify-end gap-4">
         <UButton label="Sign in" variant="ghost" color="primary" size="lg" />
         <UButton label="Sign up" variant="solid" color="primary" size="lg" />
-        <USlideover title="Menu" close-icon="i-heroicons-x-mark">
+        <USlideover title="Menu" close-icon="i-lucide-x">
           <div class="inline-block md:hidden">
-            <UButton icon="i-heroicons-bars-3" variant="link" color="primary" size="lg" />
+            <UButton icon="i-lucide-menu" variant="link" color="primary" size="lg" />
           </div>
           <template #body>
             <nav class="flex w-full flex-col">
@@ -67,7 +67,7 @@
               class="flex items-center justify-center gap-6 rounded-full" aria-label="Explore our proposals">
               Explore our proposals
               <template #trailing>
-                <UIcon name="i-heroicons-arrow-right" />
+                <UIcon name="i-lucide-arrow-right" />
               </template>
             </UButton>
           </div>
@@ -221,7 +221,7 @@
             Where Design <br />
             Meets Technology
           </h1>
-          <UButton variant="solid" to="#" size="xl" icon="i-heroicons-chevron-right"
+          <UButton variant="solid" to="#" size="xl" icon="i-lucide-chevron-right"
             class="bg-dark-50/90 hover:bg-dark-50 text-primary-600 dark:bg-dark-950/90 hover:dark:bg-dark-950 dark:text-primary-500" />
         </div>
       </div>
@@ -404,42 +404,42 @@ import type { FormError, FormSubmitEvent } from "#ui/types";
 
 const features = [
   {
-    icon: "i-heroicons-command-line",
+    icon: "i-lucide-terminal",
     title: "Development",
     description:
       "Explore the limitless possibilities of your project with our comprehensive design services. From initial conceptualization to final deployment, we guarantee a smooth integration of the latest technologies to propel your business ahead.",
     link: "#",
   },
   {
-    icon: "i-heroicons-swatch",
+    icon: "i-lucide-palette",
     title: "Design",
     description:
       "Explore the limitless possibilities of your project with our comprehensive design services. From initial conceptualization to final deployment, we guarantee a smooth integration of the latest technologies to propel your business ahead.",
     link: "#",
   },
   {
-    icon: "i-heroicons-device-phone-mobile",
+    icon: "i-lucide-smartphone",
     title: "Mobile Apps",
     description:
       "Explore the limitless possibilities of your project with our comprehensive design services. From initial conceptualization to final deployment, we guarantee a smooth integration of the latest technologies to propel your business ahead.",
     link: "#",
   },
   {
-    icon: "i-heroicons-cloud",
+    icon: "i-lucide-cloud",
     title: "Imagene Data",
     description:
       "Explore the limitless possibilities of your project with our comprehensive design services. From initial conceptualization to final deployment, we guarantee a smooth integration of the latest technologies to propel your business ahead.",
     link: "#",
   },
   {
-    icon: "i-heroicons-cloud",
+    icon: "i-lucide-cloud",
     title: "Imagene AI",
     description:
       "Explore the limitless possibilities of your project with our comprehensive design services. From initial conceptualization to final deployment, we guarantee a smooth integration of the latest technologies to propel your business ahead.",
     link: "#",
   },
   {
-    icon: "i-heroicons-cloud",
+    icon: "i-lucide-cloud",
     title: "Imagene Cloud",
     description:
       "Explore the limitless possibilities of your project with our comprehensive design services. From initial conceptualization to final deployment, we guarantee a smooth integration of the latest technologies to propel your business ahead.",

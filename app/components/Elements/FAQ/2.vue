@@ -14,7 +14,7 @@
                                 class="group cursor-pointer flex items-center justify-between pb-2 border-b border-dark-200 rounded-none"
                                 :label="faq.question" color="neutral" variant="link" block size="xl">
                                 <template #trailing>
-                                    <UIcon :name="faq.open ? 'i-heroicons-minus' : 'i-heroicons-plus'" />
+                                    <UIcon :name="faq.open ? 'i-lucide-minus' : 'i-lucide-plus'" />
                                 </template>
                             </UButton>
                             <template #content>

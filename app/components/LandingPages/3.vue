@@ -25,12 +25,12 @@
                 </nav>
             </div>
             <div class="flex w-auto gap-4">
-                <UButton icon="i-heroicons-user-solid" class="hidden rounded-full md:flex" size="lg">
+                <UButton icon="i-lucide-user" class="hidden rounded-full md:flex" size="lg">
                     Create Account
                 </UButton>
-                <USlideover title="Menu" close-icon="i-heroicons-x-mark">
+                <USlideover title="Menu" close-icon="i-lucide-x">
                     <div class="inline-block md:hidden">
-                        <UButton icon="i-heroicons-bars-3" variant="link" color="primary" size="lg" />
+                        <UButton icon="i-lucide-menu" variant="link" color="primary" size="lg" />
                     </div>
                     <template #body>
                         <nav class="flex w-full flex-col gap-2">
@@ -46,7 +46,7 @@
                             <UButton block variant="ghost" color="primary" size="lg" to="#">
                                 Contact
                             </UButton>
-                            <UButton block icon="i-heroicons-user-solid" size="lg">
+                            <UButton block icon="i-lucide-user" size="lg">
                                 Create Account
                             </UButton>
                         </nav>
@@ -109,7 +109,7 @@
                     </p>
                     <div class="mt-4 flex gap-4">
                         <UButton variant="solid" color="neutral" to="#" size="lg" class="px-12"
-                            icon="i-heroicons-rocket-launch-solid">
+                            icon="i-lucide-rocket">
                             Launch rocket
                         </UButton>
                     </div>
@@ -194,7 +194,7 @@
                     <div class="mx-auto flex w-full flex-col items-center justify-center gap-2 md:w-1/2">
                         <UBadge variant="outline" color="primary"
                             class="flex items-center justify-center gap-4 rounded-full px-4 md:px-12" size="lg">
-                            <UIcon name="i-heroicons-solid-sparkles" size="size-4" />
+                            <UIcon name="i-lucide-sparkles" size="size-4" />
                             Beautifully crafted components
                         </UBadge>
                         <h1
@@ -259,16 +259,16 @@
                                 <div
                                     class="border-dark-950/10 dark:border-dark-600/30 shadow-dark-950/5 dark:shadow-primary-500/5 flex h-full flex-col items-start justify-between rounded-2xl border p-4 shadow-xl">
                                     <div class="flex w-full items-start">
-                                        <UIcon name="i-heroicons-star-20-solid"
-                                            class="text-yellow-500/80 dark:text-yellow-600/80" />
-                                        <UIcon name="i-heroicons-star-20-solid"
-                                            class="text-yellow-500/80 dark:text-yellow-600/80" />
-                                        <UIcon name="i-heroicons-star-20-solid"
-                                            class="text-yellow-500/80 dark:text-yellow-600/80" />
-                                        <UIcon name="i-heroicons-star-20-solid"
-                                            class="text-yellow-500/80 dark:text-yellow-600/80" />
-                                        <UIcon name="i-heroicons-star-20-solid"
-                                            class="text-yellow-500/40 dark:text-yellow-600/40" />
+                                        <UIcon name="i-lucide-star"
+                                            class="text-yellow-500/80 dark:text-yellow-600/80 fill-current" />
+                                        <UIcon name="i-lucide-star"
+                                            class="text-yellow-500/80 dark:text-yellow-600/80 fill-current" />
+                                        <UIcon name="i-lucide-star"
+                                            class="text-yellow-500/80 dark:text-yellow-600/80 fill-current" />
+                                        <UIcon name="i-lucide-star"
+                                            class="text-yellow-500/80 dark:text-yellow-600/80 fill-current" />
+                                        <UIcon name="i-lucide-star"
+                                            class="text-yellow-500/40 dark:text-yellow-600/40 fill-current" />
                                     </div>
                                     <p class="text-dark-950/60 dark:text-dark-50/60 mt-8 text-base">
                                         {{ testimonial.text }}
@@ -310,7 +310,7 @@
                                     class="group border-dark-200 flex cursor-pointer items-center justify-between rounded-none border-b pb-2"
                                     :label="faq.question" color="neutral" variant="link" block size="xl">
                                     <template #trailing>
-                                        <UIcon :name="faq.open ? 'i-heroicons-minus' : 'i-heroicons-plus'" />
+                                        <UIcon :name="faq.open ? 'i-lucide-minus' : 'i-lucide-plus'" />
                                     </template>
                                 </UButton>
                                 <template #content>
@@ -340,21 +340,21 @@
                                     We're just a message away!
                                 </p>
                                 <div class="mt-8 flex w-full items-center justify-start">
-                                    <UIcon name="i-heroicons-envelope"
+                                    <UIcon name="i-lucide-mail"
                                         class="text-dark-900/60 dark:text-dark-50/60 size-4" />
                                     <UButton :to="`mailto:${email}`" variant="link" color="neutral" size="lg">
                                         {{ email }}
                                     </UButton>
                                 </div>
                                 <div class="flex w-full items-center justify-start">
-                                    <UIcon name="i-heroicons-phone"
+                                    <UIcon name="i-lucide-phone"
                                         class="text-dark-900/60 dark:text-dark-50/60 size-4" />
                                     <UButton :to="`tel:${phone}`" variant="link" color="neutral" size="lg">
                                         {{ phone }}
                                     </UButton>
                                 </div>
                                 <div class="flex w-full items-center justify-start">
-                                    <UIcon name="i-heroicons-map-pin"
+                                    <UIcon name="i-lucide-map-pin"
                                         class="text-dark-900/60 dark:text-dark-50/60 size-4" />
                                     <UButton to="#" variant="link" color="neutral" size="lg">
                                         {{ address }}

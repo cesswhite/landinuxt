@@ -37,23 +37,19 @@ const landingDescription = computed(() => {
 })
 
 useSeoMeta({
-  title: `${landingTitle.value} Landing Page | LandiNuxt`,
+  title: `${landingTitle.value} Landing Page`,
   description: landingDescription.value,
-  ogTitle: `${landingTitle.value} Landing Page | LandiNuxt`,
+  ogTitle: `${landingTitle.value} Landing Page`,
   ogDescription: landingDescription.value,
   ogImage: "/og-landinuxt.jpg",
   ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
   twitterCard: "summary_large_image",
-  twitterTitle: `${landingTitle.value} Landing Page | LandiNuxt`,
+  twitterTitle: `${landingTitle.value} Landing Page`,
   twitterDescription: landingDescription.value,
   twitterImage: "/og-landinuxt.jpg",
   ogImageWidth: 1200,
   ogImageHeight: 630,
 })
 
-useHead({
-  htmlAttrs: {
-    lang: 'en'
-  }
-})
+useCanonicalHead()
 </script>

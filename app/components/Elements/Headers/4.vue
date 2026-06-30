@@ -23,12 +23,12 @@
       </nav>
     </div>
     <div class="flex w-auto gap-4">
-      <UButton icon="i-heroicons-user-solid" class="hidden rounded-full md:flex" size="lg">
+      <UButton icon="i-lucide-user" class="hidden rounded-full md:flex" size="lg">
         Create Account
       </UButton>
-      <USlideover title="Menu" close-icon="i-heroicons-x-mark">
+      <USlideover title="Menu" close-icon="i-lucide-x">
         <div class="inline-block md:hidden">
-          <UButton icon="i-heroicons-bars-3" variant="link" color="primary" size="lg" />
+          <UButton icon="i-lucide-menu" variant="link" color="primary" size="lg" />
         </div>
         <template #body>
           <nav class="flex w-full flex-col gap-2">
@@ -44,7 +44,7 @@
             <UButton block variant="ghost" color="primary" size="lg" to="#">
               Contact
             </UButton>
-            <UButton block icon="i-heroicons-user-solid" size="lg">
+            <UButton block icon="i-lucide-user" size="lg">
               Create Account
             </UButton>
           </nav>

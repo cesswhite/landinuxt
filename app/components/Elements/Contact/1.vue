@@ -11,19 +11,19 @@
                         We're just a message away!
                     </p>
                     <div class="flex items-center justify-start w-full mt-8">
-                        <UIcon name="i-heroicons-envelope" class="size-4 text-dark-900/60 dark:text-dark-50/60" />
+                        <UIcon name="i-lucide-mail" class="size-4 text-dark-900/60 dark:text-dark-50/60" />
                         <UButton :to="`mailto:${email}`" variant="link" color="neutral" size="lg" class="cursor-pointer">
                             {{ email }}
                         </UButton>
                     </div>
                     <div class="flex items-center justify-start w-full">
-                        <UIcon name="i-heroicons-phone" class="size-4 text-dark-900/60 dark:text-dark-50/60" />
+                        <UIcon name="i-lucide-phone" class="size-4 text-dark-900/60 dark:text-dark-50/60" />
                         <UButton :to="`tel:${phone}`" variant="link" color="neutral" size="lg" class="cursor-pointer">
                             {{ phone }}
                         </UButton>
                     </div>
                     <div class="flex items-center justify-start w-full">
-                        <UIcon name="i-heroicons-map-pin" class="size-4 text-dark-900/60 dark:text-dark-50/60" />
+                        <UIcon name="i-lucide-map-pin" class="size-4 text-dark-900/60 dark:text-dark-50/60" />
                         <UButton to="#" variant="link" color="neutral" size="lg" class="cursor-pointer">
                             {{ address }}
                         </UButton>

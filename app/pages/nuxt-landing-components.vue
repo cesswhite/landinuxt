@@ -143,7 +143,7 @@ import type { BreadcrumbItem } from '@nuxt/ui'
 const config = useRuntimeConfig()
 const route = useRoute()
 const { generateBreadcrumbs } = useBreadcrumbs()
-const { generateBreadcrumbList, generateFAQPage, generateWebSite, addStructuredData } = useStructuredData()
+const { generateBreadcrumbList, generateFAQPage, generateWebSite, generateSoftwareApplication, addStructuredData } = useStructuredData()
 
 // Breadcrumbs
 const breadcrumbs = generateBreadcrumbs([
@@ -231,6 +231,7 @@ addStructuredData(faqData)
 
 const websiteData = generateWebSite()
 addStructuredData(websiteData)
+addStructuredData(generateSoftwareApplication())
 
 const siteUrl = siteUrlFromConfig(config)
 useCanonicalHead({

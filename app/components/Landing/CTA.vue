@@ -11,7 +11,7 @@
                 customize easily to create effective landing pages in minutes.
             </p>
         </div>
-        <UButton to="/components" trailing-icon="i-heroicons-arrow-right" variant="solid" size="xl"
+        <UButton to="/components" trailing-icon="i-lucide-arrow-right" variant="solid" size="xl"
             class="bg-dark-50/90 hover:bg-dark-50 text-primary-500 rounded-lg px-6">
             Go to Components
         </UButton>

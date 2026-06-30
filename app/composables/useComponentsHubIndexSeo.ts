@@ -23,4 +23,23 @@ export function useComponentsHubIndexSeo() {
   })
 
   useCanonicalHead()
+
+  const { generateBreadcrumbs } = useBreadcrumbs()
+  const { generateBreadcrumbList, generateFAQPage, addStructuredData } = useStructuredData()
+
+  addStructuredData(generateBreadcrumbList(generateBreadcrumbs()))
+  addStructuredData(
+    generateFAQPage([
+      {
+        question: 'How many components does LandiNuxt include?',
+        answer:
+          'LandiNuxt includes 90+ copy-paste landing sections across 11 categories: hero, headers, features, CTAs, testimonials, contact, FAQ, footers, auth, logos, and gallery.',
+      },
+      {
+        question: 'Where can AI agents fetch component source code?',
+        answer:
+          'Each component has a machine-readable export at /components/{category}/{slug}.txt with full Vue SFC source and integration instructions.',
+      },
+    ]),
+  )
 }

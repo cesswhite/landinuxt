@@ -16,9 +16,9 @@
       </UButton>
       <UButton variant="link" color="neutral" size="lg" to="#"> Blog </UButton>
     </nav>
-    <USlideover title="Menu" close-icon="i-heroicons-x-mark">
+    <USlideover title="Menu" close-icon="i-lucide-x">
       <div class="inline-block md:hidden">
-        <UButton icon="i-heroicons-bars-3" variant="link" color="primary" size="lg" />
+        <UButton icon="i-lucide-menu" variant="link" color="primary" size="lg" />
       </div>
       <template #body>
         <nav class="flex w-full flex-col">

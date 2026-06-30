@@ -12,8 +12,8 @@
                     <UButton variant="link" color="neutral" size="lg" to="#"> Home </UButton>
                     <UButton @click="showMenu = !showMenu" variant="link" color="neutral" size="lg" to="#">
                         <template #trailing>
-                            <UIcon v-if="showMenu" name="i-heroicons-chevron-up" class="size-4" />
-                            <UIcon v-else name="i-heroicons-chevron-down" class="size-4" />
+                            <UIcon v-if="showMenu" name="i-lucide-chevron-up" class="size-4" />
+                            <UIcon v-else name="i-lucide-chevron-down" class="size-4" />
                         </template>
                         Services
                     </UButton>
@@ -22,8 +22,8 @@
                         Contact
                     </UButton>
                 </nav>
-                <USlideover title="Menu" close-icon="i-heroicons-x-mark">
-                    <UButton color="neutral" icon="i-heroicons-bars-3" variant="link" size="xl"
+                <USlideover title="Menu" close-icon="i-lucide-x">
+                    <UButton color="neutral" icon="i-lucide-menu" variant="link" size="xl"
                         class="inline-block lg:hidden" />
                     <template #body>
                         <nav class="relative z-10 flex flex-col items-center justify-start gap-2 ">
@@ -34,8 +34,8 @@
                                 <UButton variant="link" color="neutral" size="lg" to="#">
                                     Services
                                     <template #trailing>
-                                        <UIcon v-if="showMenu" name="i-heroicons-chevron-up" class="size-4" />
-                                        <UIcon v-else name="i-heroicons-chevron-down" class="size-4" />
+                                        <UIcon v-if="showMenu" name="i-lucide-chevron-up" class="size-4" />
+                                        <UIcon v-else name="i-lucide-chevron-down" class="size-4" />
                                     </template>
                                 </UButton>
                                 <template #content>
@@ -138,7 +138,7 @@
             </div>
             <div class="absolute right-4 bottom-4 z-20">
                 <UTooltip text="Questions? Contact Us">
-                    <UButton class="rounded-full" icon="i-heroicons-question-mark-circle" variant="ghost"
+                    <UButton class="rounded-full" icon="i-lucide-circle-help" variant="ghost"
                         color="neutral" />
                 </UTooltip>
             </div>
@@ -299,7 +299,7 @@
             <div class="col-span-full w-full lg:col-span-4 lg:py-12">
                 <div class="relative z-10 flex w-full flex-col gap-y-4">
                     <div class="mx-auto">
-                        <UIcon name="i-heroicons-sparkles-solid"
+                        <UIcon name="i-lucide-sparkles"
                             class="text-dark-950 dark:text-dark-50 size-12 animate-pulse" />
                     </div>
                     <h1 class="text-dark-950/90 dark:text-dark-50/90 text-center font-serif text-4xl md:text-5xl">
@@ -455,7 +455,7 @@
                                 totam, quas maiores!
                             </p>
                             <div class="">
-                                <UButton trailing-icon="i-heroicons-arrow-right" variant="link" color="primary"
+                                <UButton trailing-icon="i-lucide-arrow-right" variant="link" color="primary"
                                     class="p-0">
                                     Learn more about us
                                 </UButton>
@@ -550,19 +550,19 @@ const images_features = [
 ];
 const services = ref([
     {
-        icon: "i-heroicons-command-line",
+        icon: "i-lucide-terminal",
         name: "Development",
         description:
             "Our development services focus on crafting scalable, efficient, and user-friendly solutions tailored to your business needs.",
     },
     {
-        icon: "i-heroicons-swatch",
+        icon: "i-lucide-palette",
         name: "Design",
         description:
             "Our design team creates visually stunning and intuitive interfaces that enhance user experience and drive engagement.",
     },
     {
-        icon: "i-heroicons-device-phone-mobile",
+        icon: "i-lucide-smartphone",
         name: "Mobile Apps",
         description:
             "We develop mobile applications that are fast, secure, and optimized for both iOS and Android platforms.",
@@ -570,28 +570,28 @@ const services = ref([
 ]);
 const features = [
     {
-        icon: "i-heroicons-command-line",
+        icon: "i-lucide-terminal",
         title: "Development",
         description:
             "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",
         link: "#",
     },
     {
-        icon: "i-heroicons-swatch",
+        icon: "i-lucide-palette",
         title: "Design",
         description:
             "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",
         link: "#",
     },
     {
-        icon: "i-heroicons-device-phone-mobile",
+        icon: "i-lucide-smartphone",
         title: "Mobile Apps",
         description:
             "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",
         link: "#",
     },
     {
-        icon: "i-heroicons-cloud",
+        icon: "i-lucide-cloud",
         title: "Imagene Data",
         description:
             "Comprehensive design services from conceptualization to deployment, integrating the latest technologies to propel your business.",

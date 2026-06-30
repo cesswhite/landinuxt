@@ -40,7 +40,25 @@ export default defineNuxtConfig({
           rel: 'icon',
           type: 'image/svg+xml',
           href: '/favicon.svg'
-        }
+        },
+        {
+          rel: 'alternate',
+          type: 'text/plain',
+          href: '/llms.txt',
+          title: 'LLMs',
+        },
+        {
+          rel: 'alternate',
+          type: 'text/markdown',
+          href: '/pricing.md',
+          title: 'Pricing',
+        },
+        {
+          rel: 'alternate',
+          type: 'text/markdown',
+          href: '/AGENTS.md',
+          title: 'Agents',
+        },
       ],
       script: [
         {
@@ -102,6 +120,7 @@ export default defineNuxtConfig({
 
   sitemap: {
     exclude: ['/playground'],
+    sources: ['/api/__sitemap__/urls'],
   },
 
   robots: {
@@ -112,8 +131,8 @@ export default defineNuxtConfig({
     '/playground': { index: false },
     // Agent .txt exports for LLMs (dynamic server routes)
     '/components/**/*.txt': { headers: { 'cache-control': 'public, max-age=3600' } },
-    // Component hub — client-only for search/sidebar interactivity
-    '/components/**': { ssr: false, isr: 3600 },
+    // Component hub — SSR for SEO; ISR for fast repeat visits
+    '/components/**': { isr: 3600 },
     // Marketing & content pages
     '/landings/**': { isr: 3600 },
     '/nuxt-landing-components': { prerender: true },

@@ -15,7 +15,7 @@
                             <div class="flex items-center justify-start w-full mt-8">
                                 <div
                                     class="size-8 flex items-center justify-center rounded-md bg-primary-500/20 dark:bg-primary-600/40">
-                                    <UIcon name="i-heroicons-envelope-solid"
+                                    <UIcon name="i-lucide-mail"
                                         class="size-4 text-primary-900/80 dark:text-primary-50/60" />
                                 </div>
                                 <UButton :to="`mailto:${email}`" variant="link" color="neutral" size="xl">
@@ -25,7 +25,7 @@
                             <div class="flex items-center justify-start w-full mt-2">
                                 <div
                                     class="size-8 flex items-center justify-center rounded-md bg-primary-500/20 dark:bg-primary-600/40">
-                                    <UIcon name="i-heroicons-phone-solid"
+                                    <UIcon name="i-lucide-phone"
                                         class="size-4 text-primary-900/80 dark:text-primary-50/60" />
                                 </div>
                                 <UButton :to="`tel:${phone}`" variant="link" color="neutral" size="xl">
@@ -35,7 +35,7 @@
                             <div class="flex items-center justify-start w-full mt-2">
                                 <div
                                     class="size-8 flex items-center justify-center rounded-md bg-primary-500/20 dark:bg-primary-600/40">
-                                    <UIcon name="i-heroicons-map-pin-solid"
+                                    <UIcon name="i-lucide-map-pin"
                                         class="size-4 text-primary-900/80 dark:text-primary-50/60" />
                                 </div>
                                 <UButton to="#" variant="link" color="neutral" size="xl">

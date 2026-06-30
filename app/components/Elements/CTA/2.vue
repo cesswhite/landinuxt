@@ -14,7 +14,7 @@
                 unparalleled success
             </p>
             <div class="w-auto mx-auto flex flex-col items-center justify-center gap-y-12">
-                <UButton size="lg" variant="solid" trailing-icon="i-heroicons-arrow-right">
+                <UButton size="lg" variant="solid" trailing-icon="i-lucide-arrow-right">
                     Discover more about
                 </UButton>
                 <div class="flex flex-col items-center gap-y-2">
@@ -42,11 +42,11 @@
                         <b class="mr-1">5,075,550+ </b> Clients already happy
                     </div>
                     <div class="flex items-center justify-center">
-                        <UIcon name="i-heroicons-star-20-solid" class="text-dark-950/80 dark:text-dark-50/80" />
-                        <UIcon name="i-heroicons-star-20-solid" class="text-dark-950/80 dark:text-dark-50/80" />
-                        <UIcon name="i-heroicons-star-20-solid" class="text-dark-950/80 dark:text-dark-50/80" />
-                        <UIcon name="i-heroicons-star-20-solid" class="text-dark-950/80 dark:text-dark-50/80" />
-                        <UIcon name="i-heroicons-star-20-solid" class="text-dark-950/40 dark:text-dark-50/40" />
+                        <UIcon name="i-lucide-star" class="text-dark-950/80 dark:text-dark-50/80 fill-current" />
+                        <UIcon name="i-lucide-star" class="text-dark-950/80 dark:text-dark-50/80 fill-current" />
+                        <UIcon name="i-lucide-star" class="text-dark-950/80 dark:text-dark-50/80 fill-current" />
+                        <UIcon name="i-lucide-star" class="text-dark-950/80 dark:text-dark-50/80 fill-current" />
+                        <UIcon name="i-lucide-star" class="text-dark-950/40 dark:text-dark-50/40 fill-current" />
                     </div>
                 </div>
             </div>

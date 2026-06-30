@@ -1,7 +1,7 @@
 import type { BreadcrumbItem } from '@nuxt/ui'
 
 export interface StructuredDataOptions {
-  type: 'BreadcrumbList' | 'FAQPage' | 'Article' | 'HowTo' | 'Organization' | 'WebSite'
+  type: 'BreadcrumbList' | 'FAQPage' | 'Article' | 'HowTo' | 'Organization' | 'WebSite' | 'SoftwareApplication'
   data?: Record<string, any>
 }
 
@@ -121,6 +121,31 @@ export const useStructuredData = () => {
     }
   }
 
+  const generateSoftwareApplication = () => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'SoftwareApplication',
+      name: 'LandiNuxt',
+      applicationCategory: 'DeveloperApplication',
+      operatingSystem: 'Web',
+      url: siteUrl,
+      description:
+        'Free open-source library of 90+ copy-paste Nuxt landing page components built on Nuxt UI v4.',
+      softwareVersion: 'Nuxt 4',
+      license: 'https://opensource.org/licenses/MIT',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+      },
+      author: {
+        '@type': 'Organization',
+        name: 'Eco Development Studios',
+        url: 'https://ecostudios.dev',
+      },
+    }
+  }
+
   const addStructuredData = (structuredData: Record<string, any>) => {
     useHead({
       script: [
@@ -139,6 +164,7 @@ export const useStructuredData = () => {
     generateHowTo,
     generateOrganization,
     generateWebSite,
+    generateSoftwareApplication,
     addStructuredData,
   }
 }

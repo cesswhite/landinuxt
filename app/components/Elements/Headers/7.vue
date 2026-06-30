@@ -11,8 +11,8 @@
         <UButton variant="link" color="neutral" size="lg" to="#"> Home </UButton>
         <UButton @click="showMenu = !showMenu" variant="link" color="neutral" size="lg" class="cursor-pointer">
           <template #trailing>
-            <UIcon v-if="showMenu" name="i-heroicons-chevron-up" class="size-4" />
-            <UIcon v-else name="i-heroicons-chevron-down" class="size-4" />
+            <UIcon v-if="showMenu" name="i-lucide-chevron-up" class="size-4" />
+            <UIcon v-else name="i-lucide-chevron-down" class="size-4" />
           </template>
           Services
         </UButton>
@@ -21,8 +21,8 @@
           Contact
         </UButton>
       </nav>
-      <USlideover title="Menu" close-icon="i-heroicons-x-mark">
-        <UButton color="neutral" icon="i-heroicons-bars-3" variant="link" size="xl" class="inline-block lg:hidden" />
+      <USlideover title="Menu" close-icon="i-lucide-x">
+        <UButton color="neutral" icon="i-lucide-menu" variant="link" size="xl" class="inline-block lg:hidden" />
         <template #body>
           <nav class="relative z-10 flex flex-col items-center justify-start gap-2">
             <UButton variant="link" color="neutral" size="lg" to="#" class="cursor-pointer">
@@ -32,8 +32,8 @@
               <UButton variant="soft" color="neutral" size="lg" class="cursor-pointer">
                 Services
                 <template #trailing>
-                  <UIcon v-if="showMenu" name="i-heroicons-chevron-up" class="size-4" />
-                  <UIcon v-else name="i-heroicons-chevron-down" class="size-4" />
+                  <UIcon v-if="showMenu" name="i-lucide-chevron-up" class="size-4" />
+                  <UIcon v-else name="i-lucide-chevron-down" class="size-4" />
                 </template>
               </UButton>
               <template #content>
@@ -115,19 +115,19 @@ const images = [
 ];
 const services = ref([
   {
-    icon: "i-heroicons-command-line",
+    icon: "i-lucide-terminal",
     name: "Development",
     description:
       "Our development services focus on crafting scalable, efficient, and user-friendly solutions tailored to your business needs.",
   },
   {
-    icon: "i-heroicons-swatch",
+    icon: "i-lucide-palette",
     name: "Design",
     description:
       "Our design team creates visually stunning and intuitive interfaces that enhance user experience and drive engagement.",
   },
   {
-    icon: "i-heroicons-device-phone-mobile",
+    icon: "i-lucide-smartphone",
     name: "Mobile Apps",
     description:
       "We develop mobile applications that are fast, secure, and optimized for both iOS and Android platforms.",

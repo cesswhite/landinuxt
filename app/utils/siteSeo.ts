@@ -1,6 +1,6 @@
 export const SITE_URL = 'https://www.landinuxt.com'
 
-export const LAST_UPDATED = 'May 2026'
+export const LAST_UPDATED = 'June 2026'
 
 export const COMPONENT_COUNT = 90
 

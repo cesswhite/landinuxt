@@ -19,9 +19,9 @@
     <div class="flex w-full items-center justify-end gap-4">
       <UButton label="Sign in" variant="ghost" color="neutral" size="lg" />
       <UButton label="Sign up" variant="solid" color="primary" size="lg" />
-      <USlideover title="Menu" close-icon="i-heroicons-x-mark">
+      <USlideover title="Menu" close-icon="i-lucide-x">
         <div class="inline-block md:hidden">
-          <UButton icon="i-heroicons-bars-3" variant="link" color="primary" size="lg" />
+          <UButton icon="i-lucide-menu" variant="link" color="primary" size="lg" />
         </div>
         <template #body>
           <nav class="flex w-full flex-col">

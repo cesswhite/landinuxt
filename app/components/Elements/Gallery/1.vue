@@ -10,7 +10,7 @@
               :placeholder="[50, 25, 75, 5]" format="webp" />
             <div
               class="absolute inset-0 bg-dark-950/0 group-hover:bg-dark-950/40 transition-colors duration-300 flex items-center justify-center">
-              <UIcon name="i-heroicons-magnifying-glass-plus"
+              <UIcon name="i-lucide-zoom-in"
                 class="text-dark-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 size-8" />
             </div>
           </div>
@@ -23,7 +23,7 @@
     }">
       <template #content>
         <div class="relative w-full h-dvh flex items-center justify-center bg-dark-950">
-          <UButton @click="isLightboxOpen = false" icon="i-heroicons-x-mark" variant="ghost" color="neutral"
+          <UButton @click="isLightboxOpen = false" icon="i-lucide-x" variant="ghost" color="neutral"
             class="absolute right-2 top-2 z-10" />
           <NuxtImg v-if="currentImage" :src="currentImage.src" :alt="currentImage.alt"
             class="w-full h-full object-contain" format="webp" />

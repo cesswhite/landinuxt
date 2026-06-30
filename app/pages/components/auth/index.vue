@@ -25,27 +25,4 @@ import type { AuthTemplates } from "../../../../types/templates";
 const _auth = await queryContent("auth").find();
 
 useComponentsHubCategorySeo('auth')
-
-const { generateBreadcrumbs } = useBreadcrumbs()
-const { generateBreadcrumbList, generateFAQPage, addStructuredData } = useStructuredData()
-
-const breadcrumbs = generateBreadcrumbs()
-
-const faqItems = [
-  {
-    question: 'How do I implement authentication with these Nuxt components?',
-    answer: 'These components provide the UI for authentication flows. You\'ll need to integrate them with your authentication backend (like Supabase, Auth0, or a custom API) to handle the actual authentication logic.',
-  },
-  {
-    question: 'Are these authentication components secure?',
-    answer: 'These components provide the UI layer. Security depends on your backend implementation. Always use HTTPS, validate inputs server-side, and follow OWASP security best practices.',
-  },
-  {
-    question: 'Do these components work with Nuxt Auth?',
-    answer: 'Yes, these components are UI-only and can be integrated with any authentication library or service, including Nuxt Auth, Supabase Auth, or custom solutions.',
-  },
-]
-
-addStructuredData(generateBreadcrumbList(breadcrumbs))
-addStructuredData(generateFAQPage(faqItems))
 </script>

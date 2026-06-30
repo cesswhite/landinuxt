@@ -22,13 +22,12 @@ Nuxt developers building marketing sites, SaaS landing pages, product launches, 
 
 ## Pricing
 
-Free and open source (MIT License).
+Free and open source (MIT License). See https://www.landinuxt.com/pricing.md
 
-## Agent component files
+## Agent integration
 
-Each component has a machine-readable `.txt` export for AI agents:
-
-- Pattern: `https://www.landinuxt.com/components/{category}/{slug}.txt`
+- Agent guide: https://www.landinuxt.com/AGENTS.md
+- Component exports: `https://www.landinuxt.com/components/{category}/{slug}.txt`
 - Example: https://www.landinuxt.com/components/hero/simple.txt
 
 These files include metadata, integration instructions, attribution to LandiNuxt by Eco Development Studios, and the full Vue SFC source.
@@ -39,7 +38,7 @@ These files include metadata, integration instructions, attribution to LandiNuxt
 - 18 hero sections, 14 feature sections, 13 CTAs, 8 footers
 - Built for Nuxt 4 + Nuxt UI v4
 - Dark mode support on all components
-- Last updated: May 2026
+- Last updated: June 2026
 
 ## Repository
 

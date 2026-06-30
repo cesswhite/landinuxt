@@ -24,7 +24,7 @@
                     vision to life
                 </span>
             </h1>
-            <UButton variant="solid" to="#" size="xl" trailing-icon="i-heroicons-arrow-right" label="Connect us"
+            <UButton variant="solid" to="#" size="xl" trailing-icon="i-lucide-arrow-right" label="Connect us"
                 class="bg-primary-950/90 hover:bg-primary-950 text-primary-50 dark:bg-dark-50/90 hover:dark:bg-dark-50 dark:text-primary-950 px-12" />
         </div>
     </div>

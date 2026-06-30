@@ -46,6 +46,10 @@ const navigation = [
         label: "LLMs",
         link: "/llms.txt",
     },
+    {
+        label: "Agents",
+        link: "/AGENTS.md",
+    },
 ];
 
 const social_media_navigation = [

@@ -4,7 +4,7 @@
       <div class="mx-auto flex w-full flex-col items-center justify-center gap-2 md:w-1/2">
         <UBadge variant="outline" color="neutral"
           class="flex items-center justify-center gap-4 rounded-full px-4 md:px-12" size="lg">
-          <UIcon name="i-heroicons-solid-sparkles" size="size-4" />
+          <UIcon name="i-lucide-sparkles" size="size-4" />
           Beautifully crafted components
         </UBadge>
         <h1 class="mt-4 text-center text-4xl font-semibold text-dark-900 sm:text-4xl md:text-5xl dark:text-dark-100">

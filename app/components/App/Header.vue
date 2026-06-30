@@ -14,7 +14,7 @@
           <UDropdownMenu :items="items">
             <UButton variant="ghost" color="neutral" size="lg" label="Sections" class="cursor-pointer">
               <template #trailing>
-                <UIcon name="i-heroicons-chevron-down" />
+                <UIcon name="i-lucide-chevron-down" />
               </template>
             </UButton>
             <template #item="{ item }">
@@ -43,9 +43,9 @@
             color="primary" size="lg" />
           <AppSwitchPrimaryColor />
           <AppSwitchMode />
-          <USlideover title="Menu" close-icon="i-heroicons-x-mark">
+          <USlideover title="Menu" close-icon="i-lucide-x">
             <div class="inline-block md:hidden">
-              <UButton icon="i-heroicons-bars-3" variant="link" color="primary" size="lg" />
+              <UButton icon="i-lucide-menu" variant="link" color="primary" size="lg" />
             </div>
             <template #body>
               <nav class="flex w-full flex-col">

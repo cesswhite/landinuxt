@@ -1,11 +1,11 @@
 <template>
     <div class="w-full mt-8">
         <div class="fixed z-40 -translate-x-1/2 left-1/2 bottom-2 mb-4 flex items-center justify-center gap-x-4">
-            <UButton @click="view_code = false" icon="i-heroicons-eye" label="Preview" class="cursor-pointer" />
-            <UButton @click="view_code = true" icon="i-heroicons-code-bracket" label="Code" class="cursor-pointer" />
+            <UButton @click="view_code = false" icon="i-lucide-eye" label="Preview" class="cursor-pointer" />
+            <UButton @click="view_code = true" icon="i-lucide-code" label="Code" class="cursor-pointer" />
             <UButton @click="copyCode()" variant="ghost" class="cursor-pointer" :icon="current === props.name
-                ? 'i-heroicons-clipboard-document-check'
-                : 'i-heroicons-clipboard-document-list'
+                ? 'i-lucide-clipboard-check'
+                : 'i-lucide-clipboard-list'
                 " />
         </div>
         <div v-if="!view_code" class="h-auto w-full">
