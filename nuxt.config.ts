@@ -119,6 +119,10 @@ export default defineNuxtConfig({
   },
   
   content: {
+    experimental: {
+      // better-sqlite3 native binaries break on Vercel serverless; Node 24 has built-in SQLite.
+      sqliteConnector: 'native',
+    },
     build: {
       markdown: {
         highlight: {
