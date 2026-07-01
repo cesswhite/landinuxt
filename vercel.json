@@ -1,5 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "bun install",
-  "buildCommand": "bun rebuild better-sqlite3 && bun run build"
+  "buildCommand": "bun run build"
 }
