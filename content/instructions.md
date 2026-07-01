@@ -88,7 +88,24 @@ In addition to Nuxt UI, you'll need the following modules for full component fun
 
 ## Using Our Components 🎉
 
-Once everything is set up, copy the `.vue` file from LandiNuxt into your project. Each section is a **single self-contained Vue file** using Nuxt UI and Tailwind CSS.
+Once everything is set up, add sections to your project:
+
+### CLI (fastest)
+
+```bash
+npx landinuxt add hero/simple
+npx landinuxt add features/bento
+```
+
+### AI coding agents
+
+- Fetch `https://www.landinuxt.com/components/{category}/{slug}.txt` for machine-readable Vue SFC exports
+- See [For Agents](https://www.landinuxt.com/for-agents) and [AGENTS.md](https://www.landinuxt.com/AGENTS.md)
+- Download the [Cursor rule](https://www.landinuxt.com/cursor-rules/landinuxt.mdc) into `.cursor/rules/`
+
+### Manual copy-paste
+
+Copy the `.vue` file from the component hub. Each section is a **single self-contained Vue file** using Nuxt UI and Tailwind CSS.
 
 ## Component conventions 📐
 

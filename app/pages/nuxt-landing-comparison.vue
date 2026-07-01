@@ -9,10 +9,10 @@
       <!-- Hero Section -->
       <div class="mx-auto text-center pt-12 pb-16 flex flex-col gap-y-4">
         <h1 class="text-4xl font-bold tracking-tight text-dark-950 dark:text-dark-50 sm:text-5xl 2xl:text-6xl">
-          Nuxt UI vs Shadcn vs Free Libraries: Which is Best for Your Landing Page?
+          Nuxt UI vs Shadcn vs LandiNuxt: Which is Best for Your Landing Page?
         </h1>
         <p class="text-xl/7 text-dark-950/60 dark:text-dark-50/50 w-full md:w-2/3 mx-auto md:text-2xl/7">
-          Compare Nuxt UI, Shadcn for Nuxt, and free community libraries. Find the best component library for your landing page project.
+          Compare Nuxt UI, Shadcn for Nuxt, and LandiNuxt — the AI-agent-ready landing library for Nuxt UI v4.
         </p>
         <p class="text-sm text-dark-950/50 dark:text-dark-50/40">
           Last updated: {{ LAST_UPDATED }}
@@ -28,7 +28,7 @@
                 <th class="text-left p-4 font-semibold text-dark-950 dark:text-dark-50">Feature</th>
                 <th class="text-left p-4 font-semibold text-dark-950 dark:text-dark-50">Nuxt UI</th>
                 <th class="text-left p-4 font-semibold text-dark-950 dark:text-dark-50">Shadcn (Nuxt)</th>
-                <th class="text-left p-4 font-semibold text-dark-950 dark:text-dark-50">Free Community Libraries</th>
+                <th class="text-left p-4 font-semibold text-dark-950 dark:text-dark-50">LandiNuxt</th>
               </tr>
             </thead>
             <tbody>
@@ -81,12 +81,12 @@
                 <td class="p-4 text-dark-950/80 dark:text-dark-50/80">
                   <div class="flex items-center gap-2">
                     <Icon
-                      v-if="row.free === 'yes'"
+                      v-if="row.landinuxt === 'yes'"
                       name="i-lucide-check"
                       class="w-5 h-5 text-green-600 dark:text-green-400"
                     />
                     <Icon
-                      v-else-if="row.free === 'partial'"
+                      v-else-if="row.landinuxt === 'partial'"
                       name="i-lucide-minus"
                       class="w-5 h-5 text-yellow-600 dark:text-yellow-400"
                     />
@@ -95,7 +95,7 @@
                       name="i-lucide-x"
                       class="w-5 h-5 text-red-600 dark:text-red-400"
                     />
-                    <span>{{ formatValue(row.free) }}</span>
+                    <span>{{ formatValue(row.landinuxt) }}</span>
                   </div>
                 </td>
               </tr>
@@ -167,32 +167,35 @@
           </div>
         </UCard>
 
-        <!-- Free Libraries Section -->
+        <!-- LandiNuxt Section -->
         <UCard>
           <div class="flex items-start gap-4 mb-4">
             <div class="p-3 rounded-lg bg-primary-100 dark:bg-primary-900">
-              <Icon name="i-lucide-gift" class="w-6 h-6 text-primary-600 dark:text-primary-400" />
+              <Icon name="i-lucide-bot" class="w-6 h-6 text-primary-600 dark:text-primary-400" />
             </div>
             <div class="flex-1">
-              <h2 class="text-2xl font-bold mb-2 text-dark-950 dark:text-dark-50">Free Community Libraries</h2>
+              <h2 class="text-2xl font-bold mb-2 text-dark-950 dark:text-dark-50">LandiNuxt</h2>
               <p class="text-dark-950/60 dark:text-dark-50/60 mb-4">
-                Open-source component collections like LandiNuxt. Free to use, but may have varying quality and maintenance.
+                The AI-agent-ready Nuxt landing library. 90+ copy-paste sections with machine-readable .txt exports, CLI install, and Cursor/Claude prompts.
               </p>
               <div class="space-y-2">
                 <h3 class="font-semibold text-dark-950 dark:text-dark-50">Pros:</h3>
                 <ul class="list-disc list-inside space-y-1 text-dark-950/80 dark:text-dark-50/80">
-                  <li>Completely free and open source</li>
-                  <li>Copy-paste ready components</li>
-                  <li>Community-driven</li>
-                  <li>Good for quick prototypes</li>
+                  <li>Complete landing sections, not just UI primitives</li>
+                  <li>AI agent integration (.txt exports, CLI, Cursor rule)</li>
+                  <li>Built specifically for Nuxt UI v4</li>
+                  <li>MIT licensed, copy-paste ready</li>
+                  <li>Dark mode on every section</li>
                 </ul>
                 <h3 class="font-semibold text-dark-950 dark:text-dark-50 mt-4">Cons:</h3>
                 <ul class="list-disc list-inside space-y-1 text-dark-950/80 dark:text-dark-50/80">
-                  <li>Varying quality and maintenance</li>
-                  <li>May lack comprehensive documentation</li>
-                  <li>Less standardized than official libraries</li>
+                  <li>Landing-focused — not a general UI kit</li>
+                  <li>You maintain copied section code</li>
                 </ul>
               </div>
+              <UButton to="/for-agents" class="mt-4" size="sm">
+                See agent workflow
+              </UButton>
             </div>
           </div>
         </UCard>
@@ -205,10 +208,10 @@
           <UCard>
             <h3 class="font-semibold text-lg mb-2 text-dark-950 dark:text-dark-50">MVP / Quick Launch</h3>
             <p class="text-sm text-dark-950/60 dark:text-dark-50/60 mb-4">
-              Need to ship fast? Use Nuxt UI or free community libraries like LandiNuxt for ready-to-use components.
+              Need to ship fast? Use LandiNuxt for ready landing sections with CLI install and AI agent support.
             </p>
-            <UButton to="/nuxt-landing-components" size="sm" variant="outline">
-              Browse Components
+            <UButton to="/for-agents" size="sm" variant="outline">
+              For AI Agents
             </UButton>
           </UCard>
           <UCard>
@@ -279,64 +282,82 @@ const breadcrumbs = generateBreadcrumbs([
 // Comparison table data
 const comparisonTable = [
   {
+    feature: 'Landing Page Sections',
+    nuxtUi: 'partial',
+    shadcn: 'partial',
+    landinuxt: 'yes',
+  },
+  {
+    feature: 'AI Agent Integration',
+    nuxtUi: 'no',
+    shadcn: 'no',
+    landinuxt: 'yes',
+  },
+  {
+    feature: 'CLI Install',
+    nuxtUi: 'no',
+    shadcn: 'yes',
+    landinuxt: 'yes',
+  },
+  {
     feature: 'Component Coverage',
     nuxtUi: 'partial',
     shadcn: 'yes',
-    free: 'partial',
+    landinuxt: 'yes',
   },
   {
     feature: 'Nuxt Ecosystem Integration',
     nuxtUi: 'yes',
     shadcn: 'partial',
-    free: 'partial',
+    landinuxt: 'yes',
   },
   {
     feature: 'Theming & Customization',
     nuxtUi: 'yes',
     shadcn: 'yes',
-    free: 'partial',
+    landinuxt: 'yes',
   },
   {
     feature: 'Accessibility (a11y)',
     nuxtUi: 'yes',
     shadcn: 'yes',
-    free: 'partial',
+    landinuxt: 'yes',
   },
   {
     feature: 'SSR/ISR Optimization',
     nuxtUi: 'yes',
     shadcn: 'partial',
-    free: 'partial',
+    landinuxt: 'yes',
   },
   {
     feature: 'TypeScript Support',
     nuxtUi: 'yes',
     shadcn: 'yes',
-    free: 'partial',
+    landinuxt: 'yes',
   },
   {
     feature: 'Documentation',
     nuxtUi: 'yes',
     shadcn: 'yes',
-    free: 'partial',
+    landinuxt: 'yes',
   },
   {
     feature: 'License',
     nuxtUi: 'MIT',
     shadcn: 'MIT',
-    free: 'MIT',
+    landinuxt: 'MIT',
   },
   {
     feature: 'Cost',
     nuxtUi: 'Free',
     shadcn: 'Free',
-    free: 'Free',
+    landinuxt: 'Free',
   },
   {
     feature: 'Maintenance',
     nuxtUi: 'Official',
     shadcn: 'Community',
-    free: 'Community',
+    landinuxt: 'Community',
   },
 ]
 
@@ -349,12 +370,12 @@ const formatValue = (value: string) => {
 
 // SEO Meta
 useSeoMeta({
-  title: 'Nuxt UI vs Shadcn vs Free Libraries — Compared',
+  title: 'Nuxt UI vs Shadcn vs LandiNuxt — Compared',
   description:
-    'Compare Nuxt UI, Shadcn for Nuxt, and free community libraries. Feature matrices, performance notes, and recommendations for MVP, Enterprise, and Content-heavy use cases.',
-  ogTitle: 'Nuxt UI vs Shadcn vs Free Libraries — Compared',
+    'Compare Nuxt UI, Shadcn for Nuxt, and LandiNuxt. Feature matrices including AI agent integration, CLI install, and recommendations for MVP and enterprise.',
+  ogTitle: 'Nuxt UI vs Shadcn vs LandiNuxt — Compared',
   ogDescription:
-    'Compare Nuxt UI, Shadcn, and free libraries. Find the best component library for your Nuxt landing page project with detailed feature comparisons.',
+    'Compare Nuxt UI, Shadcn, and LandiNuxt — the AI-agent-ready landing library for Nuxt UI v4.',
   ogImage: '/og-landinuxt.jpg',
   ogUrl: `${config.public.siteUrl || 'https://www.landinuxt.com'}${route.path}`,
   twitterCard: 'summary_large_image',
@@ -371,9 +392,9 @@ const breadcrumbData = generateBreadcrumbList(breadcrumbs)
 addStructuredData(breadcrumbData)
 
 const articleData = generateArticle({
-  headline: 'Nuxt UI vs Shadcn vs Free Libraries: Which is Best for Your Landing Page?',
+  headline: 'Nuxt UI vs Shadcn vs LandiNuxt: Which is Best for Your Landing Page?',
   description:
-    'Compare Nuxt UI, Shadcn for Nuxt, and free community libraries. Feature matrices, performance notes, and recommendations for MVP, Enterprise, and Content-heavy use cases.',
+    'Compare Nuxt UI, Shadcn for Nuxt, and LandiNuxt. Feature matrices including AI agent integration and CLI install.',
   datePublished: '2024-01-01',
   dateModified: '2026-05-01',
 })

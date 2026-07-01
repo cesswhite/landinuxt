@@ -13,19 +13,19 @@ const route = useRoute()
 const { generateOrganization, generateWebSite, generateFAQPage, generateSoftwareApplication, addStructuredData } = useStructuredData()
 
 useSeoMeta({
-  title: 'Nuxt Landing Page Components — 90+ Copy-Paste Sections',
-  ogTitle: 'Nuxt Landing Page Components — 90+ Sections',
+  title: 'AI-Agent-Ready Nuxt Landing Components — 90+ Sections',
+  ogTitle: 'AI-Agent-Ready Nuxt Landing Library',
   description:
-    '90+ free copy-paste Nuxt landing components — hero, features, FAQ, CTA, headers, footers and templates. Built for Nuxt UI v4 with dark mode.',
+    'The AI-agent-ready Nuxt landing library. 90+ sections on Nuxt UI v4 with .txt exports, npx landinuxt CLI, and Cursor/Claude prompts.',
   ogDescription:
-    '90+ pre-built Nuxt landing page components and templates. Copy-paste sections fully integrated with Nuxt UI v4.',
+    '90+ Nuxt landing sections with machine-readable exports and CLI install. Built for Cursor, Claude Code, and Windsurf.',
   ogImage: '/og-landinuxt.jpg',
   ogUrl: `${siteUrlFromConfig(config)}${route.path}`,
   twitterCard: 'summary_large_image',
   twitterImage: '/og-landinuxt.jpg',
-  twitterTitle: 'Nuxt Landing Page Components — 90+ Sections',
+  twitterTitle: 'AI-Agent-Ready Nuxt Landing Library',
   twitterDescription:
-    '90+ free copy-paste Nuxt landing page components. Hero, features, FAQ, CTA, and templates for Nuxt UI v4.',
+    '90+ Nuxt landing sections with .txt exports and CLI. The library built for AI coding agents.',
   ogImageWidth: 1200,
   ogImageHeight: 630,
 })

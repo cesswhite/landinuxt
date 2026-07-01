@@ -1,6 +1,6 @@
 export const SITE_URL = 'https://www.landinuxt.com'
 
-export const LAST_UPDATED = 'June 2026'
+export const LAST_UPDATED = 'July 2026'
 
 export const COMPONENT_COUNT = 90
 
@@ -25,7 +25,12 @@ export const HOME_FAQ_ITEMS = [
   {
     label: 'What is LandiNuxt?',
     content:
-      'LandiNuxt is a free library of 90+ copy-paste Nuxt landing page components built on Nuxt UI v4. It includes hero sections, feature grids, CTAs, FAQ blocks, headers, footers, and complete page templates.',
+      'LandiNuxt is the AI-agent-ready Nuxt landing library: 90+ copy-paste sections on Nuxt UI v4 with machine-readable .txt exports, CLI install, and prompts for Cursor and Claude.',
+  },
+  {
+    label: 'How do AI agents use LandiNuxt?',
+    content:
+      'Agents fetch /components/{category}/{slug}.txt for the full Vue SFC, or run npx landinuxt add hero/simple. See /for-agents and /AGENTS.md for the full workflow.',
   },
   {
     label: 'Is LandiNuxt free to use?',
@@ -40,12 +45,12 @@ export const HOME_FAQ_ITEMS = [
   {
     label: 'How is LandiNuxt different from Nuxt UI?',
     content:
-      'Nuxt UI provides base UI primitives (buttons, inputs, cards). LandiNuxt provides complete landing page sections — ready-to-paste hero, features, FAQ, and CTA blocks built on top of Nuxt UI.',
+      'Nuxt UI provides base UI primitives (buttons, inputs, cards). LandiNuxt provides complete landing page sections — hero, features, FAQ, and CTA blocks — with agent-ready exports on top of Nuxt UI.',
   },
   {
     label: 'How do I get started?',
     content:
-      'Browse the component hub at /components, copy the section you need, and paste it into your Nuxt project. See /instructions for setup steps.',
+      'Run npx landinuxt add hero/simple, browse /components, or ask your coding agent to fetch a .txt export. See /instructions for setup.',
   },
 ] as const
 

@@ -1,0 +1,30 @@
+{
+  "name": "landinuxt",
+  "version": "0.1.0",
+  "description": "CLI to add LandiNuxt landing page sections to your Nuxt project",
+  "type": "module",
+  "bin": {
+    "landinuxt": "./bin/landinuxt.mjs"
+  },
+  "files": [
+    "bin"
+  ],
+  "keywords": [
+    "nuxt",
+    "nuxt-ui",
+    "landing-page",
+    "components",
+    "cli",
+    "ai-agents"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cesswhite/landingnuxt.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://www.landinuxt.com/for-agents",
+  "engines": {
+    "node": ">=18"
+  }
+}

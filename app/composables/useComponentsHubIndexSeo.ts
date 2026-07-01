@@ -5,12 +5,12 @@ export function useComponentsHubIndexSeo() {
   const siteUrl = siteUrlFromConfig(config)
 
   useSeoMeta({
-    title: 'All Nuxt Landing Components — 90+ Copy-Paste Sections',
+    title: 'All Nuxt Landing Components — AI-Agent-Ready Sections',
     description:
-      'Browse 90+ pre-built Nuxt landing page components: hero, headers, features, CTAs, testimonials, contact, FAQ, footers, auth, gallery, and more. Copy-paste ready for Nuxt UI v4.',
-    ogTitle: 'All Nuxt Landing Components — 90+ Sections',
+      'Browse 90+ AI-agent-ready Nuxt landing sections. Each includes .txt exports, CLI install, and Cursor/Claude prompts. Built for Nuxt UI v4.',
+    ogTitle: 'Nuxt Landing Components — AI-Agent-Ready',
     ogDescription:
-      'Browse 90+ pre-built Nuxt landing page components. Hero, features, FAQ, CTA, headers, footers, and more. Copy-paste ready for Nuxt UI v4.',
+      '90+ Nuxt landing sections with machine-readable exports and CLI install. Hero, features, CTA, headers, footers, and more.',
     ogImage: '/og-landinuxt.jpg',
     ogUrl: `${siteUrl}${route.path}`,
     twitterCard: 'summary_large_image',

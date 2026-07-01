@@ -10,6 +10,12 @@ const ES_PAGES = [
   '/es/como-crear-landing-nuxt',
 ] as const
 
+const AGENT_PAGES = [
+  '/for-agents',
+  '/built-with',
+  '/landinuxt-vs-tailwind-ui',
+] as const
+
 const MACHINE_READABLE = ['/llms.txt', '/pricing.md', '/AGENTS.md'] as const
 
 const CONTENT_CATEGORIES = [
@@ -31,6 +37,7 @@ export async function collectExtraSitemapUrls(event: H3Event) {
   const urls: string[] = [
     ...LANDING_SLUGS.map((slug) => `/landings/${slug}`),
     ...ES_PAGES,
+    ...AGENT_PAGES,
     ...MACHINE_READABLE,
   ]
 

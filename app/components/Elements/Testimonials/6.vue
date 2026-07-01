@@ -17,8 +17,16 @@
                 next: 'absolute rounded-full z-10 right-4 lg:right-32 xl:right-72 top-1/2 cursor-pointer',
             }">
             <div class="flex h-auto min-h-96 flex-col items-center justify-center rounded-2xl px-8 lg:px-24">
-                <div class="flex mx-auto items-start">
-                    <UInputRating empty-icon="i-ph-star" icon="i-ph-star-fill" :default-value="3" />
+                <div class="flex mx-auto items-center gap-0.5">
+                    <UIcon
+                        v-for="star in 5"
+                        :key="star"
+                        name="i-lucide-star"
+                        class="size-5"
+                        :class="star <= 3
+                            ? 'text-primary-500 dark:text-primary-400 fill-current'
+                            : 'text-primary-500/30 dark:text-primary-400/30 fill-current'"
+                    />
                 </div>
                 <p class="text-dark-950 dark:text-dark-50 text-center text-xl font-medium italic mt-4">
                     "{{ item.text }}"

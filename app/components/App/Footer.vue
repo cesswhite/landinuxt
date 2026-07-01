@@ -39,8 +39,20 @@ const navigation = [
         link: "/contribution",
     },
     {
+        label: "For Agents",
+        link: "/for-agents",
+    },
+    {
+        label: "Built With",
+        link: "/built-with",
+    },
+    {
         label: "Components",
         link: "/components",
+    },
+    {
+        label: "Repositories",
+        link: "/repositories",
     },
     {
         label: "LLMs",

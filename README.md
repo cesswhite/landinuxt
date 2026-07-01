@@ -1,108 +1,88 @@
 # LandiNuxt
 
-LandiNuxt offers pre-built, copy-paste components to help you create stunning landing pages in no time, fully integrated with the **Nuxt ecosystem**. Our components rely heavily on **Nuxt UI v4**, so make sure to install it for full functionality.
+**The AI-agent-ready Nuxt landing library.** 90+ copy-paste sections built on Nuxt UI v4 — each with machine-readable `.txt` exports, CLI install, and prompts for Cursor and Claude.
 
-## Table of Contents
+## Why LandiNuxt
 
-1. [Features](#features)
-2. [Requirements](#requirements)
-3. [Installation](#installation)
-4. [Nuxt UI v4 Configuration](#nuxt-ui-v4-configuration)
-5. [Additional Required Modules](#additional-required-modules)
-6. [Using the Components](#using-the-components)
-7. [Contributions](#contributions)
-8. [License](#license)
+- **For AI agents:** Every section has a fetchable `.txt` export with full Vue SFC source
+- **CLI install:** `npx landinuxt add hero/simple` — no manual copy-paste
+- **For humans:** Browse, copy, and customize 90+ hero, features, CTA, FAQ, and more sections
+- **Nuxt native:** Nuxt 4, Nuxt UI v4, `@nuxt/image`, `@vueuse/motion`
 
-## Features ✨
+**Site:** https://www.landinuxt.com · **Agent guide:** https://www.landinuxt.com/AGENTS.md
 
-- Ready-to-use components in the Nuxt ecosystem
-- Full compatibility with Nuxt UI v4, Nuxt Image, and Vue Use Motion
-- Dark mode adaptability, optimized typography, and pre-styled components
-- Expandable with future modules
+## Quick start
+
+### Option A — CLI (recommended)
+
+```bash
+# In your Nuxt project
+npx landinuxt add hero/simple
+npx landinuxt add features/bento
+npx landinuxt list
+```
+
+Writes to `app/components/LandiHeroSimple.vue` by default.
+
+### Option B — Ask your coding agent
+
+Tell Cursor, Claude Code, or Windsurf:
+
+> Fetch https://www.landinuxt.com/components/hero/simple.txt and add the Vue SFC to my Nuxt project.
+
+Download the Cursor rule: https://www.landinuxt.com/cursor-rules/landinuxt.mdc
+
+### Option C — Copy from the web
+
+Browse https://www.landinuxt.com/components and copy the Vue source, or use the **Copy for AI** button on any section.
 
 ## Requirements
 
-To ensure optimal functionality, make sure to install:
+- **Nuxt 4**
+- **@nuxt/ui** v4
+- **@nuxt/image**
+- **@vueuse/motion**
 
-- **Nuxt UI v4**
-- **Nuxt Image**
-- **Vue Use Motion**
+See [setup instructions](https://www.landinuxt.com/instructions) for theme tokens and fonts.
 
-> More modules and Nuxt libraries will be added in the future.
+## Agent integration files
 
-## Installation
+| File | URL |
+|------|-----|
+| Agent guide | https://www.landinuxt.com/AGENTS.md |
+| LLMs context | https://www.landinuxt.com/llms.txt |
+| Component export | `https://www.landinuxt.com/components/{category}/{slug}.txt` |
+| For agents page | https://www.landinuxt.com/for-agents |
+| Cursor rule | https://www.landinuxt.com/cursor-rules/landinuxt.mdc |
 
-To get started, clone this repository and navigate to the project folder:
+## Development (this repo)
 
 ```bash
 git clone https://github.com/cesswhite/landingnuxt.git
 cd landingnuxt
-```
-
-Install the dependencies:
-
-```bash
 bun install
+bun run dev
 ```
-
-### Installing Nuxt UI
-
-LandiNuxt depends on Nuxt UI. Follow the setup instructions on the [Nuxt UI official website](https://ui.nuxt.com/).
-
-## Nuxt UI Configuration
-
-Nuxt UI includes pre-configured settings for **Color Mode**, **Fonts**, and **TailwindCSS**. We recommend keeping these default configurations, as our components are optimized to work with them.
-
-### Font Configuration
-
-Currently, our components use the following font families:
-
-```css
---font-family-inter: "Inter", sans-serif;
---font-family-lora: "Lora", serif;
---font-family-instrument: "Instrument Serif", serif;
---font-family-roboto: "Roboto", sans-serif;
-```
-
-For more details on theming, visit the [Nuxt UI Theme Guide](https://ui.nuxt.com/docs/getting-started/theme/design-system).
-
-## Additional Required Modules
-
-In addition to Nuxt UI, you'll need the following modules for full component functionality:
-
-- **Nuxt Image**: [Installation Instructions](https://image.nuxt.com/get-started/installation)
-- **Vue Use Motion**: [Setup Guide](https://motion.vueuse.org/getting-started/nuxt)
-
-## Using the Components
-
-Once everything is set up, you're ready to go! Just copy and paste the component code from LandiNuxt into your project, and you’re all set to create stunning landing pages with ease.
-
-## Rendering mode
-
-The demo site runs as a **client-side SPA** (`ssr: false` in `nuxt.config.ts`). `routeRules` with `prerender` / `isr` still apply when you run `nuxt generate` or deploy a static build. Copy-paste components work the same in SSR or SPA Nuxt apps.
-
-## Development scripts
 
 ```bash
-bun run verify:elements  # Ensures content/*.md counts match Elements/*.vue per category
+bun run verify:elements  # content/*.md counts match Elements/*.vue
 bun run typecheck
-bun run check            # verify + typecheck + build (same as GitHub Actions)
+bun run check            # verify + typecheck + build
+bun run cli -- add hero/simple --dry-run  # test CLI locally
 ```
 
-## Contributions
+### CLI package
 
-Contributions are welcome! If you want to improve or add new features to LandiNuxt, feel free to open an issue or submit a pull request.
+The CLI lives in `packages/cli/`. To publish to npm:
 
-When adding a section, follow the contributor skill at [`.cursor/skills/add-landing-component/SKILL.md`](.cursor/skills/add-landing-component/SKILL.md) (category wiring, `content/{n}.{category}/{N}.md`, and self-contained `.vue` files). Run `bun run verify:elements` before opening a PR.
+```bash
+cd packages/cli && npm publish
+```
 
-## Acknowledgments
+## Contributing
 
-A big thank you to the [Nuxt](https://nuxt.com) team and contributors for building such a powerful framework that inspired _LandiNuxt_.
-
-Special thanks to [Beto from Code with Beto](https://www.youtube.com/@codewithbeto/videos) for his invaluable support, testing and tips.
-
-Thank you all for your contributions and support!
+Contributions welcome! When adding a section, follow [`.cursor/skills/add-landing-component/SKILL.md`](.cursor/skills/add-landing-component/SKILL.md). Run `bun run verify:elements` before opening a PR.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+MIT — see [LICENSE](LICENSE).

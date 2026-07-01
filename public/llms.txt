@@ -1,21 +1,23 @@
 # LandiNuxt
 
-> Pre-built, copy-paste Nuxt landing page components built on Nuxt UI v4.
+> The AI-agent-ready Nuxt landing library. 90+ copy-paste sections on Nuxt UI v4.
 
 ## What it is
 
-LandiNuxt provides 90+ ready-to-use landing page sections (Hero, Features, FAQ, CTA, Headers, Footers, Auth, Gallery, and more) and complete templates for Nuxt developers. Copy a section, paste it into your project, and customize.
+LandiNuxt provides 90+ ready-to-use landing page sections (Hero, Features, FAQ, CTA, Headers, Footers, Auth, Gallery, and more) for Nuxt developers. Every section ships with machine-readable exports for AI coding agents.
 
 ## Who it's for
 
-Nuxt developers building marketing sites, SaaS landing pages, product launches, and agency sites who want production-ready sections without designing from scratch.
+Nuxt developers building marketing sites, SaaS landing pages, and product launches — especially teams using Cursor, Claude Code, Windsurf, or other AI coding agents.
 
 ## Key pages
 
+- For AI agents: https://www.landinuxt.com/for-agents
 - Components hub: https://www.landinuxt.com/components
-- All components overview: https://www.landinuxt.com/nuxt-landing-components
+- Built with LandiNuxt: https://www.landinuxt.com/built-with
 - How-to guide: https://www.landinuxt.com/how-to-build-nuxt-landing-page
 - Library comparison: https://www.landinuxt.com/nuxt-landing-comparison
+- vs Tailwind UI: https://www.landinuxt.com/landinuxt-vs-tailwind-ui
 - Landing templates: https://www.landinuxt.com/landings
 - Setup instructions: https://www.landinuxt.com/instructions
 - Spanish overview: https://www.landinuxt.com/es/nuxt-componentes-landing
@@ -27,6 +29,8 @@ Free and open source (MIT License). See https://www.landinuxt.com/pricing.md
 ## Agent integration
 
 - Agent guide: https://www.landinuxt.com/AGENTS.md
+- Cursor rule: https://www.landinuxt.com/cursor-rules/landinuxt.mdc
+- CLI: `npx landinuxt add hero/simple`
 - Component exports: `https://www.landinuxt.com/components/{category}/{slug}.txt`
 - Example: https://www.landinuxt.com/components/hero/simple.txt
 
@@ -37,8 +41,10 @@ These files include metadata, integration instructions, attribution to LandiNuxt
 - 90+ components across 11 categories
 - 18 hero sections, 14 feature sections, 13 CTAs, 8 footers
 - Built for Nuxt 4 + Nuxt UI v4
+- AI agent exports on every section
+- CLI install via npx landinuxt
 - Dark mode support on all components
-- Last updated: June 2026
+- Last updated: July 2026
 
 ## Repository
 

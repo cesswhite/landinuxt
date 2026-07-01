@@ -5,17 +5,16 @@
                 <div class="flex w-full flex-col gap-4 md:flex-row md:gap-0">
                     <div class="flex w-full flex-col gap-2 md:w-1/2">
                         <div class="text-primary-500 dark:text-primary-400 relative rounded-full text-left text-sm">
-                            Build Faster, Create Better
+                            AI Agent Ready
                         </div>
                         <h2 class="text-5xl font-bold text-dark-950 dark:text-dark-50">
-                            Powerful Components. <br> Instant Pages
+                            Built for Humans.<br> Optimized for Agents.
                         </h2>
                     </div>
                     <div class="flex w-full items-center justify-end">
                         <p class="font-base w-full text-dark-950/60 md:w-1/2 dark:text-dark-50/80">
-                            Build with precision and creativity. <br>
-                            Every component is crafted to enhance your page from the ground
-                            up.
+                            Every section ships with .txt exports, CLI install, and copy-paste prompts
+                            for Cursor, Claude, and ChatGPT.
                         </p>
                     </div>
                 </div>
@@ -53,16 +52,15 @@
                     <div class="col-span-full md:col-span-4 flex flex-1 flex-col gap-2">
                         <div
                             class="flex size-10 items-center justify-center rounded-md border border-dark-950/20 bg-dark-200/20 p-2 dark:border-dark-700 dark:bg-dark-800">
-                            <UIcon name="i-lucide-layout-template" class="size-full text-dark-950 dark:text-dark-50" />
+                            <UIcon name="i-lucide-bot" class="size-full text-dark-950 dark:text-dark-50" />
                         </div>
 
                         <span class="text-xl font-bold text-dark-950 dark:text-dark-50">
-                            Template Repositories
+                            AI Agent Exports
                         </span>
                         <p class="w-full text-base font-normal text-dark-950/60 lg:w-10/12 dark:text-dark-50/60">
-                            Access a growing collection of public GitHub repos with ready-to-edit Nuxt templates.
-                            Perfect
-                            starting points to build fast and learn by example.
+                            Fetch any section at /components/{category}/{slug}.txt or run
+                            npx landinuxt add. Agents install sections without manual copy-paste.
                         </p>
                     </div>
                     <div class="col-span-full md:col-span-4 flex flex-1 flex-col gap-2">

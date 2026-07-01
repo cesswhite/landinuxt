@@ -24,17 +24,17 @@
             </template>
           </UDropdownMenu>
 
+          <UButton variant="ghost" color="neutral" size="lg" to="/for-agents">
+            For Agents
+          </UButton>
           <UButton variant="ghost" color="neutral" size="lg" to="/landings">
             Landing Pages
           </UButton>
-          <UButton variant="ghost" color="neutral" size="lg" to="/repositories">
-            Repositories
+          <UButton variant="ghost" color="neutral" size="lg" to="/built-with">
+            Built With
           </UButton>
           <UButton variant="ghost" color="neutral" size="lg" to="/instructions">
             Instructions
-          </UButton>
-          <UButton variant="ghost" color="neutral" size="lg" to="/contribution">
-            Contribution
           </UButton>
 
         </nav>
@@ -48,18 +48,24 @@
               <UButton icon="i-lucide-menu" variant="link" color="primary" size="lg" />
             </div>
             <template #body>
-              <nav class="flex w-full flex-col">
-                <UButton block variant="link" color="primary" size="lg" to="#">
+              <nav class="flex w-full flex-col gap-1">
+                <UButton block variant="link" color="primary" size="lg" to="/">
                   Home
                 </UButton>
-                <UButton block variant="link" color="primary" size="lg" to="#">
-                  About
+                <UButton block variant="link" color="primary" size="lg" to="/components">
+                  Sections
                 </UButton>
-                <UButton block variant="link" color="primary" size="lg" to="#">
+                <UButton block variant="link" color="primary" size="lg" to="/for-agents">
+                  For Agents
+                </UButton>
+                <UButton block variant="link" color="primary" size="lg" to="/landings">
+                  Landing Pages
+                </UButton>
+                <UButton block variant="link" color="primary" size="lg" to="/built-with">
+                  Built With
+                </UButton>
+                <UButton block variant="link" color="primary" size="lg" to="/instructions">
                   Instructions
-                </UButton>
-                <UButton block variant="link" color="primary" size="lg" to="#">
-                  Contribution
                 </UButton>
               </nav>
             </template>

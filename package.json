@@ -12,7 +12,8 @@
     "postinstall": "nuxt prepare",
     "verify:elements": "node scripts/verify-element-counts.mjs",
     "typecheck": "nuxi typecheck",
-    "check": "bun run verify:elements && bun run typecheck && bun run build"
+    "check": "bun run verify:elements && bun run typecheck && bun run build",
+    "cli": "node packages/cli/bin/landinuxt.mjs"
   },
   "devDependencies": {
     "@iconify-json/lucide": "1.2.115",
