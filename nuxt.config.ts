@@ -166,8 +166,11 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/playground': { index: false },
-    // Agent .txt exports for LLMs (dynamic server routes)
-    '/components/**/*.txt': { headers: { 'cache-control': 'public, max-age=3600' } },
+    // Agent .txt exports for LLMs — fetchable but not indexed (section pages are canonical)
+    '/components/**/*.txt': {
+      index: false,
+      headers: { 'cache-control': 'public, max-age=3600' },
+    },
     // Component hub — SSR for SEO; ISR for fast repeat visits
     '/components/**': { isr: 3600 },
     // Marketing & content pages
