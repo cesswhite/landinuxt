@@ -166,11 +166,14 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/playground': { index: false },
-    // Agent .txt exports for LLMs — fetchable but not indexed (section pages are canonical)
+    // Agent/machine-readable files — fetchable for LLMs, not for Google index
     '/components/**/*.txt': {
       index: false,
       headers: { 'cache-control': 'public, max-age=3600' },
     },
+    '/llms.txt': { index: false },
+    '/AGENTS.md': { index: false },
+    '/pricing.md': { index: false },
     // Component hub — SSR for SEO; ISR for fast repeat visits
     '/components/**': { isr: 3600 },
     // Marketing & content pages

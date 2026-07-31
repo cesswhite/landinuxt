@@ -33,9 +33,5 @@ useSeoMeta({
   ogImageHeight: 630,
 })
 
-useHead({
-  htmlAttrs: {
-    lang: 'en'
-  }
-})
+useCanonicalHead()
 </script>

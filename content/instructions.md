@@ -168,6 +168,6 @@ We welcome contributions from the community! Here’s how you can help:
 
 8. **Engage with Feedback**: Be open to feedback and make any necessary adjustments to your pull request.
 
-For detailed instructions on how to contribute to LandiNuxt, please visit our [Contribution Guide](../contribution).
+For detailed instructions on how to contribute to LandiNuxt, please visit our [Contribution Guide](/contribution).
 
 Thank you for considering contributing to LandiNuxt! Your help is greatly appreciated.

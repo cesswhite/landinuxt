@@ -13,15 +13,12 @@ const AGENT_PAGES = [
   '/landinuxt-vs-tailwind-ui',
 ] as const
 
-const MACHINE_READABLE = ['/llms.txt', '/pricing.md', '/AGENTS.md'] as const
-
-/** Extra URLs not always discovered by the pages scanner (landings, ES, agent docs). */
+/** Extra HTML URLs not always discovered by the pages scanner (landings, ES, agent pages). */
 export function collectExtraSitemapUrls() {
   const urls: string[] = [
     ...LANDING_SLUGS.map((slug) => `/landings/${slug}`),
     ...ES_PAGES,
     ...AGENT_PAGES,
-    ...MACHINE_READABLE,
   ]
 
   return urls.map((loc) => ({
