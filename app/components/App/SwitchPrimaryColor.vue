@@ -109,19 +109,6 @@ const neutralColors = [
 
 const appConfig = useAppConfig();
 
-onMounted(() => {
-    const primaryColor = localStorage.getItem("nuxt-ui-primary");
-    const neutralColor = localStorage.getItem("nuxt-ui-neutral");
-
-    if (primaryColor) {
-        appConfig.ui.colors.primary = primaryColor;
-    }
-
-    if (neutralColor) {
-        appConfig.ui.colors.neutral = neutralColor;
-    }
-});
-
 async function setPrimaryColor(color: string) {
     appConfig.ui.colors.primary = color;
     window.localStorage.setItem('nuxt-ui-primary', appConfig.ui.colors.primary)

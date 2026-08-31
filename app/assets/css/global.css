@@ -7,7 +7,8 @@
 * {
   margin: 0;
 }
-/* Page chrome: true white in light mode, true black in dark (matches `app.vue` body sync) */
+/* Page chrome: true white in light mode, true black in dark.
+   No background-color transition — it makes color-mode / theme restore visible as a flash. */
 html {
   background-color: white;
 }
@@ -24,7 +25,6 @@ body {
   position: relative;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  transition: background-color 180ms ease;
 }
 
 body {
@@ -113,10 +113,6 @@ p {
   html,
   body {
     scroll-behavior: auto;
-  }
-
-  body {
-    transition: none;
   }
 
   .fade-enter-active,

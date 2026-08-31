@@ -1,31 +1,8 @@
 <template>
-  <!-- <AppFullLoading /> -->
   <UApp>
     <NuxtPage />
   </UApp>
 </template>
-
-<script setup>
-const colorMode = useColorMode();
-
-const updateBodyBackground = () => {
-  if (import.meta.client) {
-    // Pure white (light) / black (dark), aligned with `html` rules in `global.css`
-    document.body.style.backgroundColor =
-      colorMode.value === 'dark' ? 'black' : 'white';
-  }
-};
-
-// Watch for color mode changes and update body background color
-watch(() => colorMode.value, () => {
-  updateBodyBackground();
-}, { immediate: true });
-
-// Set initial background color on mount
-onMounted(() => {
-  updateBodyBackground();
-});
-</script>
 
 <style>
 .page-enter-active,
